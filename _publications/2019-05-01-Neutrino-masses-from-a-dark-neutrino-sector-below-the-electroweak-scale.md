@@ -6,4 +6,4 @@ date: 2019-05-01
 venue: 'prd'
 citation: ' Peter {Ballett},  Matheus {Hostert},  Silvia {Pascoli}, &quot;Neutrino masses from a dark neutrino sector below the electroweak scale.&quot; prd, 2019.'
 ---
-Use [Google Scholar](https://scholar.google.com/scholar?q=Neutrino+masses+from+a+dark+neutrino+sector+below+the+electroweak+scale){:target="_blank"} for full citation
+Use [INSPIRE](https://inspirehep.net/literature?q=1903.07590){:target="_blank"} for full citation
