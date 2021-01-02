@@ -89,7 +89,7 @@ author:
   location         : "Minneapolis, USA"
   employer         : 
   pubmed           : 
-  googlescholar    : 
+  googlescholar    : False
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
