@@ -1,9 +1,10 @@
 ---
-title: "Z$^&apos;$s in neutrino scattering at DUNE"
+title: "Z$^'$s in neutrino scattering at DUNE"
+authors:  Peter Ballett,  Matheus Hostert,  Silvia Pascoli,  Yuber Perez-Gonzalez,  Zahra Tabrizi,  Renata Funchal
 collection: publications
 permalink: /publication/2019-09-01-Zs-in-neutrino-scattering-at-DUNE
 date: 2019-09-01
-venue: 'prd'
-citation: ' Peter {Ballett},  Matheus {Hostert},  Silvia {Pascoli},  Yuber {Perez-Gonzalez},  Zahra {Tabrizi},  Renata {Funchal}, &quot;Z$^&amp;apos;$s in neutrino scattering at DUNE.&quot; prd, 2019.'
+venue: '<strong>PRD</strong>'
+citation: '"Z$^'$s in neutrino scattering at DUNE", Peter Ballett,  Matheus Hostert,  Silvia Pascoli,  Yuber Perez-Gonzalez,  Zahra Tabrizi,  Renata Funchal,  <strong>PRD</strong>, 2019, '
+eprint: '1902.08579'
 ---
-Use [INSPIRE](https://inspirehep.net/literature?q=1902.08579){:target="_blank"} for full citation

@@ -90,7 +90,8 @@ author:
   employer         : 
   pubmed           : 
   googlescholar    : False
-  email            :
+  inspirehep       : "https://inspirehep.net/authors/1621061"
+  email            : "mhostert AT umn.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :

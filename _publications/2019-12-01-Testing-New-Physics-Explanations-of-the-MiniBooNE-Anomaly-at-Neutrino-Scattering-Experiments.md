@@ -1,9 +1,10 @@
 ---
 title: "Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments"
+authors:  Carlos Arguelles,  Matheus Hostert,  Yu-Dai Tsai
 collection: publications
 permalink: /publication/2019-12-01-Testing-New-Physics-Explanations-of-the-MiniBooNE-Anomaly-at-Neutrino-Scattering-Experiments
 date: 2019-12-01
-venue: 'prl'
-citation: ' Carlos {Arg{\&quot;u}elles},  Matheus {Hostert},  Yu-Dai {Tsai}, &quot;Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments.&quot; prl, 2019.'
+venue: '<strong>PRL</strong>'
+citation: '"Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments", Carlos Arguelles,  Matheus Hostert,  Yu-Dai Tsai,  <strong>PRL</strong>, 2019, '
+eprint: '1812.08768'
 ---
-Use [INSPIRE](https://inspirehep.net/literature?q=1812.08768){:target="_blank"} for full citation
