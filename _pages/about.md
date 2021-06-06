@@ -15,5 +15,5 @@ I try to widen our net for beyond-the-Standard-Model searches with novel proposa
 
 <figure>
   <figcaption>Logo</figcaption>
-  <img src="images/background.png" alt="background" width="1000" height="670">
+  <img src="https://mhostert.github.io/images/background.png" alt="background" width="1000" height="670">
 </figure>
