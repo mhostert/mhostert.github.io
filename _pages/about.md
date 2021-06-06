@@ -8,21 +8,12 @@ redirect_from:
   - /about.html
 ---
 
-<div class="module">
-  
-  <header>
-    <h1>
-      Skyscraper
-    </h1>
-  </header>
+<div class="container">
+
+<div class="mybg-image"></div>
+
+<div class="mybg-text">
+  <h1>Welcome, </h1>
+  <p>I am a postdoctoral researcher at the Perimeter Institute (CAN) and University of Minnesota (USA). In my research I like to ask questions about the neutrino sector and explore new ideas for the composition of our dark Universe: new forces, dark matter, and hypothetical new light particles. I am interested in rare processes and precision tests of the Standard Model. Some examples include rare kaon decays, neutrino scattering, and astrophysical sources of light dark particles. </p>
 </div>
-
-
-
-<figure>
-  <img src="https://mhostert.github.io/images/background.png" alt="background" width="1000" height="250">
-</figure>
-Hi, I'm Matheus Hostert, a postdoctoral researcher at the Perimeter Institute (CAN) and University of Minnesota (USA). I'm primarily interested in neutrino physics and the dark Universe: new forces, dark matter, and potential new light degrees of freedom.  Like any big fan of the Electroweak sector, I am also interested in rare processes, including neutrino scattering and rare kaons decays.
-
-\\
-I try to widen our net for beyond-the-Standard-Model searches with novel proposals for precision tests and experimental signatures at current facilities. I'm currently involved in studies to explore the physics potential of neutrino oscillation facilities like $\mu$BooNE and DUNE to search for new physics.
+</div>

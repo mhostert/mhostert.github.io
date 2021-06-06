@@ -86,12 +86,11 @@ analytics:
 author:
   name             : "Matheus Hostert"
   avatar           : "profile.png"
-  bio              : "Postdoctoral researcher in particle physics"
-  location         : "Minneapolis, USA"
+  bio              : "Postdoctoral researcher at University of Minnesota and Perimeter Institute."
+  location         : False # "Minneapolis, USA"
   employer         : 
   pubmed           : 
   googlescholar    : False
-  inspirehep       : "https://inspirehep.net/authors/1621061"
   email            : "mhostert AT umn.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -120,6 +119,7 @@ author:
   xing             :
   youtube          :
   wikipedia        :
+  inspirehep       : "https://inspirehep.net/authors/1621061"
 
 
 # Reading Files
