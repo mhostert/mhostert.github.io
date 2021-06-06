@@ -13,3 +13,7 @@ Hi, I'm Matheus Hostert, a postdoctoral researcher at the Perimeter Institute (C
 \\
 I try to widen our net for beyond-the-Standard-Model searches with novel proposals for precision tests and experimental signatures at current facilities. I'm currently involved in studies to explore the physics potential of neutrino oscillation facilities like $\mu$BooNE and DUNE to search for new physics.
 
+<figure>
+  <figcaption>Logo</figcaption>
+  <img src="images/background.png" alt="background" width="1000" height="670">
+</figure>
