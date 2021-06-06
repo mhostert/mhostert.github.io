@@ -8,6 +8,17 @@ redirect_from:
   - /about.html
 ---
 
+<div class="module">
+  
+  <header>
+    <h1>
+      Skyscraper
+    </h1>
+  </header>
+</div>
+
+
+
 <figure>
   <img src="https://mhostert.github.io/images/background.png" alt="background" width="1000" height="250">
 </figure>
