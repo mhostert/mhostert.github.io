@@ -90,7 +90,7 @@ author:
   location         : False # "Minneapolis, USA"
   employer         : 
   pubmed           : 
-  googlescholar    : "https://inspirehep.net/authors/1621061"
+  googlescholar    : False
   email            : "mhostert AT umn.edu"
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
