@@ -9,5 +9,5 @@ main:
   - title: "Talks"
     url: /talks/    
 
-  - title: "Posters"
-    url: /posters/    
+  # - title: "Posters"
+  #   url: /posters/    
