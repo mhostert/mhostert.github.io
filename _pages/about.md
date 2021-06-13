@@ -16,9 +16,9 @@ redirect_from:
 
 <div class="mybg-text">
   <h1>Welcome, </h1>
-  <p>I am a postdoctoral researcher at the Perimeter Institute (CAN) and University of Minnesota (US). I completed my PhD in the UK at Durham University in the Institute for Particle Physics Phenomenology (IPPP) and later moved to the US for my current joint postdoctoral position.</p>
+  <p>I am a postdoctoral researcher at the Perimeter Institute (CAN) and University of Minnesota (US). I completed my PhD in 2019 at the Institute for Particle Physics Phenomenology (IPPP), part of Durham University (UK). I then moved to the US for my current joint postdoctoral position.</p>
 
-  <p>In my research I like to ask questions about the neutrino sector and explore new ideas for the composition of our dark Universe: new forces, dark matter, and hypothetical new light particles. I am interested in rare processes and precision tests of the Standard Model, including rare kaon decays, neutrino scattering, and astrophysical sources of light dark particles.</p>
+  <p>In my research I like to think about the role of neutrinos in physics beyond the Standard Model and their connection to potential dark sectors in our Universe. Some of my recent work is based on neutrino mass generation models with dark forces, production of light particles in kaon decays, and potential solutions to the Muon $g-2$ puzzle. </p>
 
 </div>
 </div>
