@@ -13,7 +13,7 @@
 {% endif %}
 
 
-<li><p> {{ post.citation }} <a href="https://arxiv.org/abs/{{post.eprint}}">arXiv:{{post.eprint}}</a>.</p></li>
+<li><p style="font-size:16px"> {{ post.citation }} <a href="https://arxiv.org/abs/{{post.eprint}}">arXiv:{{post.eprint}}</a>.</p></li>
 
 {% if post.excerpt and site.read_more != 'enabled' %}
 <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>

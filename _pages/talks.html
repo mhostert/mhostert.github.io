@@ -5,16 +5,23 @@ permalink: /talks/
 author_profile: true
 ---
 
-<!-- {% if site.talkmap_link == true %}
+ <!-- {% if site.talkmap_link == true %}
 
 <p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
 
 {% endif %}
  -->
 {% if site.poster_display == true %}
-<p style="text-decoration:underline;"><a href="/posters">See a sample of some of my poster presentations.</a></p>
+<ol>
+<p>
+<p style="font-size:16px">See my some highlights from my scientific poster presentations <a href="/posters">here.</a></p>
 {% endif %}
+</ol>
 
-{% for post in site.talks reversed %}
+
+ <ol>
+{% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
+{% for post in sorted %}
   {% include archive-single-talk.html %}
-{% endfor %}
+{% endfor %} 
+</ol>

@@ -5,7 +5,7 @@ permalink: /publications/
 author_profile: true
 ---
 
-You can find all my articles on my <a href="{{author.inspirehep}}">INSPIRE</a> profile.
+You can find all my articles on <a href="{{author.inspirehep}}">INSPIRE</a>.
 
 {% include base_path %}
 
