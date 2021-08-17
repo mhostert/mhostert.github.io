@@ -3,7 +3,7 @@ collection: talks
 talk_number: "13"
 id_for_sorting: "0013"
 permalink: /talks/0013
-title: A light dark neutrino sector 
+title: "A light dark neutrino sector" 
 type: "PhD forum talk"
 venue: "Invisibles Workshop 2019, Valencia"
 date: 06 /21

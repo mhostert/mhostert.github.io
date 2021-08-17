@@ -3,7 +3,7 @@ collection: talks
 talk_number: "12"
 id_for_sorting: "0012"
 permalink: /talks/0012
-title: New physics in rare neutrino processes 
+title: "New physics in rare neutrino processes" 
 type: "invited talk"
 venue: "Neutrino Theory Network Workshop, Washington U., St Louis"
 date: 05 /21

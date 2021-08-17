@@ -3,7 +3,7 @@ collection: talks
 talk_number: "40"
 id_for_sorting: "0040"
 permalink: /talks/0040
-title: New physics opportunities at vSTORM 
+title: "New physics opportunities at vSTORM" 
 type: "Invited talk"
 venue: "vSTORM collaboration meeting"
 date: 08 /21

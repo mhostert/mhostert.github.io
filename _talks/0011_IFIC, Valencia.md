@@ -3,7 +3,7 @@ collection: talks
 talk_number: "11"
 id_for_sorting: "0011"
 permalink: /talks/0011
-title: A light dark neutrino sector 
+title: "A light dark neutrino sector" 
 type: "invited seminar"
 venue: "IFIC, Valencia"
 date: 05 /21
