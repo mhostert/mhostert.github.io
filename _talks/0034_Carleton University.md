@@ -6,7 +6,7 @@ permalink: /talks/0034
 title:  
 type: "invited seminar"
 venue: "Carleton University"
-date: 04/21
+date: 04 /21
 location: "Canada"
 ---
 

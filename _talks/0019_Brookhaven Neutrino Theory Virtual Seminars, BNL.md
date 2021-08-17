@@ -6,7 +6,7 @@ permalink: /talks/0019
 title:  
 type: " invited talk"
 venue: "Brookhaven Neutrino Theory Virtual Seminars, BNL"
-date: 05/20
+date: 05 /21
 location: "USA"
 link: True 
 talk_url: https://peterdenton.github.io/NDI/index.html 

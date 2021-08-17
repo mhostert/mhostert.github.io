@@ -6,7 +6,7 @@ permalink: /talks/0029
 title:  
 type: "plenary talk"
 venue: "3rd South American Dark Matter Workshop, ICTP"
-date: 10/20
+date: 10 /21
 location: "Brazil"
 ---
 

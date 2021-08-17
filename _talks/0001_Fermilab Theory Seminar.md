@@ -6,7 +6,7 @@ permalink: /talks/0001
 title: Neutrino trident production at near detectors 
 type: "invited seminar"
 venue: "Fermilab Theory Seminar"
-date: 05/18
+date: 05 /21
 location: "USA"
 link: True 
 talk_url: https://theory.fnal.gov/events/event/title-tba-neutrino-3/ 

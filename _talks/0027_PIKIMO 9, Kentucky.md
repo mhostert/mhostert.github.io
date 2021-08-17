@@ -6,7 +6,7 @@ permalink: /talks/0027
 title:  
 type: "plenary talk"
 venue: "PIKIMO 9, Kentucky"
-date: 10/20
+date: 10 /21
 location: "USA"
 ---
 

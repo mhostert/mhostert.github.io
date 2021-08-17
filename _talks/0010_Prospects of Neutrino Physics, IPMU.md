@@ -6,7 +6,7 @@ permalink: /talks/0010
 title: New physics in rare neutrino processes 
 type: "plenary talk"
 venue: "Prospects of Neutrino Physics, IPMU"
-date: 04/19
+date: 04 /21
 location: "Japan"
 link: True 
 talk_url: https://indico.ipmu.jp/event/236/contributions/3340/ 

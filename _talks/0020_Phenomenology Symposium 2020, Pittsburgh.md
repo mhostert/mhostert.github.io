@@ -6,7 +6,7 @@ permalink: /talks/0020
 title:  
 type: "parallel talk"
 venue: "Phenomenology Symposium 2020, Pittsburgh"
-date: 05/20
+date: 05 /21
 location: "USA"
 ---
 

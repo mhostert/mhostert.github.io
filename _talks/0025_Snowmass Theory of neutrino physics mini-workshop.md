@@ -6,7 +6,7 @@ permalink: /talks/0025
 title: Opportunities and signatures of non-minimal HNLs 
 type: " invited talk"
 venue: "Snowmass Theory of neutrino physics mini-workshop"
-date: 09/20
+date: 09 /21
 location: "USA"
 ---
 

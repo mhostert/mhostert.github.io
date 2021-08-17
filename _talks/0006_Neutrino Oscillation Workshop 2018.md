@@ -6,7 +6,7 @@ permalink: /talks/0006
 title: Neutrino trident production at near detectors 
 type: "invited parallel talk"
 venue: "Neutrino Oscillation Workshop 2018"
-date: 09/18
+date: 09 /21
 location: "Italy"
 link: True 
 talk_url: http://www.ba.infn.it/~now/now2018/program.html 

@@ -6,7 +6,7 @@ permalink: /talks/0022
 title:  
 type: "parallel talk"
 venue: "Neutrino 2020, University of Chicago"
-date: 06/20
+date: 06 /21
 location: "USA"
 ---
 

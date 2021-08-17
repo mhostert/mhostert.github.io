@@ -6,7 +6,7 @@ permalink: /talks/0024
 title:  
 type: " invited talk"
 venue: "Snowmass Neutrino Frontier 03 kick-off meeting"
-date: 09/20
+date: 09 /21
 location: "USA"
 ---
 
