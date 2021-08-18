@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "Talks and presentations"
+title: "Presentations"
 permalink: /talks/
 author_profile: true
 ---
@@ -11,17 +11,23 @@ author_profile: true
 
 {% endif %}
  -->
-{% if site.poster_display == true %}
-<ol>
-<p>
-<p style="font-size:16px">See my some highlights from my scientific poster presentations <a href="/posters">here.</a></p>
-{% endif %}
-</ol>
+
 
 
  <ol>
+<h2>Talks</h2>
+<p>
 {% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
 {% for post in sorted %}
   {% include archive-single-talk.html %}
 {% endfor %} 
+</p>
+</ol>
+
+<ol>
+{% if site.poster_display == true %}
+<p>
+<h2>Posters</h2>
+<p style="font-size:16px">See some highlights from my scientific poster presentations <a href="/posters">here.</a></p>
+{% endif %}
 </ol>

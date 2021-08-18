@@ -6,7 +6,7 @@ permalink: /talks/0039
 title: "A last chance for kinetic mixing: Explaining the muon (g-2) with semi-visible dark photons" 
 type: "parallel talk"
 venue: "American Physics Society Division of Particles and Fields meeting"
-date: 07 /21
+date: 07/21
 location: "USA"
 link: True 
 talk_url: https://indico.cern.ch/event/1034469/contributions/4427308/ 

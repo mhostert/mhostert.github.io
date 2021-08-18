@@ -6,7 +6,7 @@ permalink: /talks/0030
 title: "Snowmass Dark Sector Studies at High Intensities Frontier" 
 type: "invited talk"
 venue: "Snowmass Dark Sector Studies at High Intensities Frontier"
-date: 12 /21
+date: 12/20
 location: "USA"
 ---
 

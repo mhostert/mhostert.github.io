@@ -6,7 +6,7 @@ permalink: /talks/0011
 title: "A light dark neutrino sector" 
 type: "invited seminar"
 venue: "IFIC, Valencia"
-date: 05 /21
+date: 05/19
 location: "Spain"
 link: True 
 talk_url: https://indico.ific.uv.es/event/3750/ 

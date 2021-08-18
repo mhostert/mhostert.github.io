@@ -6,6 +6,6 @@ permalink: /talks/0014
 title: "A light dark neutrino sector" 
 type: "invited seminar"
 venue: "MicroBooNE collaboration call"
-date: 08 /21
+date: 08/19
 location: "USA"
 ---

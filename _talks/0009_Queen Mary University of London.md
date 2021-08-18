@@ -6,7 +6,7 @@ permalink: /talks/0009
 title: "A light dark neutrino sector" 
 type: "invited seminar"
 venue: "Queen Mary University of London"
-date: 03 /21
+date: 03/19
 location: "UK"
 link: True 
 talk_url: https://www.qmul.ac.uk/spa/pprc/seminars/2019/items/a-light-dark-neutrino-sector.html 

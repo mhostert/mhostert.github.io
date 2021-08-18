@@ -6,6 +6,6 @@ permalink: /talks/0015
 title: "A light dark neutrino sector" 
 type: "invited seminar"
 venue: "Columbia University"
-date: 08 /21
+date: 08/19
 location: "USA"
 ---
