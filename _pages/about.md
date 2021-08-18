@@ -18,7 +18,7 @@ redirect_from:
 <div class="mybg-text">
   <h1>Welcome, </h1>
     <p>
-      I am a postdoctoral researcher at the Perimeter Institute (CAN) and University of Minnesota (US). I completed my PhD in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University (UK). I then moved to the US for my current joint postdoctoral position.
+      I am a postdoctoral researcher at the Perimeter Institute (Canada) and University of Minnesota (USA). I got my PhD in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University (UK), and moved to the US for my current joint postdoctoral position.
     </p>
 
     <p>
