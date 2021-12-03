@@ -6,7 +6,7 @@ permalink: /talks/0041
 title: "Physics opportunities at vSTORM and ENUBET" 
 type: "invited talk"
 venue: "UK Muon Collider and NuSTORM meeting"
-date: 09/
+date: 09/21
 location: "UK"
 link: True 
 talk_url: https://indico.stfc.ac.uk/event/362/contributions/2277/ 
