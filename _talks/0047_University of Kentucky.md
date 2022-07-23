@@ -6,7 +6,7 @@ permalink: /talks/0047
 title: "Neutrons shinning through walls" 
 type: "invited seminar"
 venue: "University of Kentucky"
-date: 01/21
+date: 01/22
 location: "USA"
 ---
 
