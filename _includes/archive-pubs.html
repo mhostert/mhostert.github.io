@@ -1,24 +1,30 @@
 {% include base_path %}
 
 {% if post.header.teaser %}
-  {% capture teaser %}{{ post.header.teaser }}{% endcapture %}
+{% capture teaser %}{{ post.header.teaser }}{% endcapture %}
 {% else %}
-  {% assign teaser = site.teaser %}
+{% assign teaser = site.teaser %}
 {% endif %}
 
 {% if post.id %}
-  {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
 {% else %}
-  {% assign title = post.title %}
+{% assign title = post.title %}
 {% endif %}
 
+<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 
-<li><p style="font-size:16px"> {{ post.citation }} <a href="https://arxiv.org/abs/{{post.eprint}}">arXiv:{{post.eprint}}</a>.</p></li>
+<li>
+  <p style="font-size:16px"> {{ post.citation }} <a
+      href="https://arxiv.org/abs/{{post.eprint}}">arXiv:{{post.eprint}}</a>.</p>
+</li>
 
 {% if post.excerpt and site.read_more != 'enabled' %}
 <p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
 {% elsif post.excerpt and site.read_more == 'enabled' %}
-<p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
+<p class="archive__item-excerpt" itemprop="description">
+<p>{{ post.excerpt | markdownify | remove: '
+<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
+</p>
 {% endif %}
-
-
