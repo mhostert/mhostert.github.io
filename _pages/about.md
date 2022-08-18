@@ -17,11 +17,13 @@ redirect_from:
 <div class="layer">
 <h3>Welcome,</h3>
     <p>
-      I am a postdoctoral researcher at the Perimeter Institute (Canada) and University of Minnesota (USA). I earned my PhD in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University (UK) before  moving to North America for my current joint postdoctoral position.
+      I am a postdoctoral researcher at the Perimeter Institute, in Canada, and the University of Minnesota, in the US. I earned my PhD in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University, in the UK, before moving to North America for my current joint postdoctoral position.
     </p>
-
     <p>
-      I am interested in extensions of the Standard Model of particle physics and the existence of dark sectors in the Universe. Some of my recent work concerns novel strategies to search for new physics in kaon and neutrino experiments, new theoretical ideas for the origins of neutrino masses, and potential solutions to existing anomalies in experimental data such as the MiniBooNE, LSND, and the Muon g$-$2 puzzles. 
+      I am interested in  extensions of the Standard Model of particle physics.
+      In particular, using neutrinos and high-intensity particle physics experiments, I like to work on novel search strategies for dark photons, heavy neutrinos, and dark higgs bosons.
+      My work generally builds on new theoretical ideas for explaining neutrino masses and the dark matter in our Universe.
+      <!-- Recently, I have dedicated a lot of my time to dark sector models that can explain the MiniBooNE and LSND puzzles. I am interested in their predictions for other neutrino experiments like MINERvA, T2K, and MicroBooNE.  -->
     </p>
 </div>
 <!-- </div> -->
