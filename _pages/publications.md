@@ -11,6 +11,6 @@ You can find all my articles on <a href="https://inspirehep.net/authors/1621061?
 
 <ol>
 {% for post in site.publications reversed %}
-	{% include archive-pubs.html %}
+ {% include archive-pubs.html %}
 {% endfor %}
 </ol>

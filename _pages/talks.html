@@ -5,7 +5,7 @@ permalink: /talks/
 author_profile: true
 ---
 
- <!-- {% if site.talkmap_link == true %}
+<!-- {% if site.talkmap_link == true %}
 
 <p style="text-decoration:underline;"><a href="/talkmap.html">See a map of all the places I've given a talk!</a></p>
 
@@ -14,20 +14,20 @@ author_profile: true
 
 
 
- <ol>
-<h2>Talks</h2>
-<p>
-{% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
-{% for post in sorted %}
-  {% include archive-single-talk.html %}
-{% endfor %} 
-</p>
+<ol>
+  <h2>Talks</h2>
+  <p>
+    {% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
+    {% for post in sorted %}
+    {% include archive-single-talk.html %}
+    {% endfor %}
+  </p>
 </ol>
 
 <ol>
-{% if site.poster_display == true %}
-<p>
-<h2>Posters</h2>
-<p style="font-size:16px">See some highlights from my scientific poster presentations <a href="/posters">here.</a></p>
-{% endif %}
+  {% if site.poster_display == true %}
+  <p>
+  <h2>Posters</h2>
+  <p style="font-size:16px">See some highlights from my scientific poster presentations <a href="/posters">here.</a></p>
+  {% endif %}
 </ol>
