@@ -18,17 +18,17 @@ redirect_from:
 </script>
 </p>
 
-### [Academic CV](https://mhostert.github.io/files/mhostert_CV.pdf)
+### [Academic CV](https://mhostert.github.io/files/academic_CV.pdf)
 
 ---
 
-<embed src="https://mhostert.github.io/files/mhostert_CV.pdf" height="150" type="application/pdf" target="_blank"/>
+<embed src="https://mhostert.github.io/files/academic_CV.pdf" height="150" type="application/pdf" target="_blank"/>
 
-### [Industry CV](https://mhostert.github.io/files/mhostert_CV.pdf)
+### [Industry CV](https://mhostert.github.io/files/industry_CV.pdf)
 
 ---
 
-<embed src="https://mhostert.github.io/files/mhostert_CV.pdf" height="150" type="application/pdf" target="_blank"/>
+<embed src="https://mhostert.github.io/files/industry_CV.pdf" height="150" type="application/pdf" target="_blank"/>
 
 ---
 
