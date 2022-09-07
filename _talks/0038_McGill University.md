@@ -10,4 +10,4 @@ date: 05/21
 location: "Canada"
 ---
 
-Virtual
+Montreal

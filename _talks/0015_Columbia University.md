@@ -9,3 +9,5 @@ venue: "Columbia University"
 date: 08/19
 location: "USA"
 ---
+
+New York

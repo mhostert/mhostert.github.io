@@ -9,3 +9,5 @@ venue: "Perimeter Institute"
 date: 06/18
 location: "Canada"
 ---
+
+Waterloo

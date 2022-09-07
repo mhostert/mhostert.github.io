@@ -10,4 +10,4 @@ date: 04/21
 location: "Switzerland"
 ---
 
-Virtual
+Zurich

@@ -10,4 +10,4 @@ date: 09/21
 location: "Canada"
 ---
 
-Virtual
+Waterloo

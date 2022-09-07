@@ -9,5 +9,3 @@ venue: "Snowmass Theory of neutrino physics mini-workshop"
 date: 09/20
 location: "USA"
 ---
-
-Virtual

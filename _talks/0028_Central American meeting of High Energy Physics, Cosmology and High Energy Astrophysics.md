@@ -10,4 +10,4 @@ date: 11/20
 location: "Central America"
 ---
 
-Virtual
+Cidade da Guatemala

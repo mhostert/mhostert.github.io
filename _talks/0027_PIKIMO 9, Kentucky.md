@@ -10,4 +10,4 @@ date: 10/20
 location: "USA"
 ---
 
-Virtual
+Kentucky

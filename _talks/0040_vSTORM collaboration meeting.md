@@ -13,5 +13,3 @@ talk_url: https://indico.cern.ch/event/1063925/contributions/4471489/attachments
 ---
 
 [More information here](https://indico.cern.ch/event/1063925/contributions/4471489/attachments/2292614/3898221/mhostert_nustorm.pdf)
-
-Virtual

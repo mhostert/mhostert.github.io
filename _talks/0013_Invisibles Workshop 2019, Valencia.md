@@ -13,3 +13,5 @@ talk_url: https://congresos.adeituv.es/invisibles19/ficha.en.html
 ---
 
 [More information here](https://congresos.adeituv.es/invisibles19/ficha.en.html)
+
+Valencia

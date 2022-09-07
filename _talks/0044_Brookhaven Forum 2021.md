@@ -14,4 +14,4 @@ talk_url: https://indico.bnl.gov/event/11389/
 
 [More information here](https://indico.bnl.gov/event/11389/)
 
-virtual
+Brookhaven National Laboratory

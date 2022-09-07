@@ -14,4 +14,4 @@ talk_url: https://peterdenton.github.io/NDI/index.html
 
 [More information here](https://peterdenton.github.io/NDI/index.html)
 
-Virtual
+Brookhaven National Laboratory
