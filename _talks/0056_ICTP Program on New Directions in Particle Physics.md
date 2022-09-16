@@ -13,5 +13,3 @@ talk_url: https://www.ictp-saifr.org/ndfp2022/
 ---
 
 [More information here](https://www.ictp-saifr.org/ndfp2022/)
-
-São Paulo

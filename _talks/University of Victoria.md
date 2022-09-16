@@ -14,4 +14,4 @@ talk_url: https://www.triumf.ca/home/upcoming-events/about-seminars-lectures/upc
 
 [More information here](https://www.triumf.ca/home/upcoming-events/about-seminars-lectures/upcoming-seminars-lectures/previous-seminars-lectures?expand=2364)
 
-Victoria
+Virtual

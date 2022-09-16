@@ -9,5 +9,3 @@ venue: "Fermilab Theory Seminar"
 date: 02/20
 location: "USA"
 ---
-
-Fermilab

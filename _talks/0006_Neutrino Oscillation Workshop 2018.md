@@ -13,5 +13,3 @@ talk_url: http://www.ba.infn.it/~now/now2018/program.html
 ---
 
 [More information here](http://www.ba.infn.it/~now/now2018/program.html)
-
-Ostuni

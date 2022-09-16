@@ -13,5 +13,3 @@ talk_url: https://theory.fnal.gov/events/event/title-tba-neutrino-3/
 ---
 
 [More information here](https://theory.fnal.gov/events/event/title-tba-neutrino-3/)
-
-Fermilab

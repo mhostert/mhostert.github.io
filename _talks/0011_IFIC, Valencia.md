@@ -13,5 +13,3 @@ talk_url: https://indico.ific.uv.es/event/3750/
 ---
 
 [More information here](https://indico.ific.uv.es/event/3750/)
-
-Valencia

@@ -13,5 +13,3 @@ talk_url: https://online.kitp.ucsb.edu/online/neutrinos-c22/hostert/
 ---
 
 [More information here](https://online.kitp.ucsb.edu/online/neutrinos-c22/hostert/)
-
-Santa Barbara

@@ -68,3 +68,12 @@ Poster prize winner
   <img src="https://mhostert.github.io/images/posters/invisibles_2021.png" alt="invisibles_2021"
     style="width:45%; color: white;">
 </a>
+
+---
+
+### Neutrino 2022
+
+<a href="https://mhostert.github.io/images/posters/neutrino_2022.png">
+  <img src="https://mhostert.github.io/images/posters/neutrino_2022.png" alt="neutrino_2022"
+    style="width:45%; color: white;">
+</a>

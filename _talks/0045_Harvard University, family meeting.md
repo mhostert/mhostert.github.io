@@ -9,5 +9,3 @@ venue: "Harvard University, family meeting"
 date: 11/21
 location: "USA"
 ---
-
-Boston

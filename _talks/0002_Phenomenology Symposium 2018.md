@@ -13,5 +13,3 @@ talk_url: https://indico.cern.ch/event/699148/contributions/2986307/
 ---
 
 [More information here](https://indico.cern.ch/event/699148/contributions/2986307/)
-
-Pittsburgh

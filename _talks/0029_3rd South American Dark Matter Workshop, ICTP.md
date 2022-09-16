@@ -10,4 +10,4 @@ date: 10/20
 location: "Brazil"
 ---
 
-São Paulo
+Virtual

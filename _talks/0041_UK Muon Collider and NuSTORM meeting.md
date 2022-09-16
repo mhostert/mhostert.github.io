@@ -13,3 +13,5 @@ talk_url: https://indico.stfc.ac.uk/event/362/contributions/2277/
 ---
 
 [More information here](https://indico.stfc.ac.uk/event/362/contributions/2277/)
+
+Virtual

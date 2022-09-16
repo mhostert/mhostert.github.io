@@ -10,4 +10,4 @@ date: 06/20
 location: "Germany"
 ---
 
-Munich
+Virtual

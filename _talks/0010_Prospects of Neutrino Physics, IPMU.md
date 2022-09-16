@@ -13,5 +13,3 @@ talk_url: https://indico.ipmu.jp/event/236/contributions/3340/
 ---
 
 [More information here](https://indico.ipmu.jp/event/236/contributions/3340/)
-
-Kashiwa

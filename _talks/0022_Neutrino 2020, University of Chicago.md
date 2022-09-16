@@ -10,4 +10,4 @@ date: 06/20
 location: "USA"
 ---
 
-Chicago
+Virtual

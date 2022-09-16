@@ -13,5 +13,3 @@ talk_url: https://physics.tamu.edu/events/tba-76/
 ---
 
 [More information here](https://physics.tamu.edu/events/tba-76/)
-
-College Station

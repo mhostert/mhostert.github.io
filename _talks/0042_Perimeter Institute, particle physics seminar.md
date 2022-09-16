@@ -9,5 +9,3 @@ venue: "Perimeter Institute, particle physics seminar"
 date: 09/21
 location: "Canada"
 ---
-
-Waterloo

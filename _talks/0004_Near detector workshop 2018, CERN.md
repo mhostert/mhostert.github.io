@@ -13,5 +13,3 @@ talk_url: https://indico.cern.ch/event/721473/overview
 ---
 
 [More information here](https://indico.cern.ch/event/721473/overview)
-
-CERN

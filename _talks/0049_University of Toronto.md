@@ -13,5 +13,3 @@ talk_url: https://www.physics.utoronto.ca/research/theoretical-high-energy-physi
 ---
 
 [More information here](https://www.physics.utoronto.ca/research/theoretical-high-energy-physics/thep-events/thep-seminar-on-7-march-2022/)
-
-Toronto

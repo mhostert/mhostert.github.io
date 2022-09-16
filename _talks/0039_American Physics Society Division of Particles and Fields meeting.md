@@ -13,3 +13,5 @@ talk_url: https://indico.cern.ch/event/1034469/contributions/4427308/
 ---
 
 [More information here](https://indico.cern.ch/event/1034469/contributions/4427308/)
+
+Virtual

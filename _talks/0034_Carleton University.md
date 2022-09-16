@@ -10,4 +10,4 @@ date: 04/21
 location: "Canada"
 ---
 
-Carleton
+Virtual

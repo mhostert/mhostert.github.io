@@ -10,4 +10,4 @@ date: 05/20
 location: "USA"
 ---
 
-Pittsburgh
+Virtual

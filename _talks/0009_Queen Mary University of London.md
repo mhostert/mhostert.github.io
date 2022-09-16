@@ -13,5 +13,3 @@ talk_url: https://www.qmul.ac.uk/spa/pprc/seminars/2019/items/a-light-dark-neutr
 ---
 
 [More information here](https://www.qmul.ac.uk/spa/pprc/seminars/2019/items/a-light-dark-neutrino-sector.html)
-
-London

@@ -13,5 +13,3 @@ talk_url: https://indico.phys.vt.edu/event/34/contributions/677/
 ---
 
 [More information here](https://indico.phys.vt.edu/event/34/contributions/677/)
-
-Blacksbourg
