@@ -9,7 +9,7 @@ author_profile: true
 
 ### Perimeter ISSYP 2022
 
-<a href="https://perimeterinstitute.ca/issyp"><img src="https://mhostert.github.io/images/outreach/perimeter_logo.svg" alt="Perimeter Institute"
+<a href="https://perimeterinstitute.ca/issyp"><img src="https://mhostert.github.io/images/outreach/perimeter_logo.png" alt="Perimeter Institute"
   style="height:35px;"></a>
 
 I tutored students at the Perimeter International Summer School for Young Physicists (ISSYP).
@@ -19,13 +19,12 @@ The tutorials involved basic concepts in particle physics as well as hands-on se
 * Final coding exercise: plotting the electron-neutrino disappearance probability at KamLAND.
 
 <img src="https://mhostert.github.io/images/outreach/issyp_kamland.png" alt="KamLAND"
-  style="height:80px;">
+  style="height:200px;">
 
 * The poem written by the students at the end of the week:
 
-<a href="https://mhostert.github.io/files/issyp_poem.pdf">
-<img src="https://mhostert.github.io/images/outreach/issyp_poem.png" alt="ISSYP Poem"
-  style="height:80px;"></a>
+<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://mhostert.github.io/files/issyp_poem.pdf" height="120" type="application/pdf" target="_blank"/>
+
 
 You can read the <a href="https://insidetheperimeter.ca/annual-pi-summer-school-immerses-students-in-a-universe-of-ideas/">insidetheperimeter.ca</a> article on it.
 
@@ -43,7 +42,7 @@ For the 2022 edition of the KITP teacher's conference, I gave a talk on the five
 ### The Orkney Festival
 
 <a href="https://oisf.org/"><img src="https://mhostert.github.io/images/outreach/OISF-Header-Logo.png" alt="Orkney International Science Festival"
-  style="height:35px;margin-right:15px""></a>
+style="height:35px;margin-right:15px"></a>
 <a href="https://www.ippp.dur.ac.uk/"><img src="https://mhostert.github.io/images/outreach/ippp_logo_white-300x97.png" alt="IPPP"
   style="height:35px;"></a>
 
