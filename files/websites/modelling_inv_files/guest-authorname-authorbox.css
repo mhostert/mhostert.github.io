@@ -1,0 +1,782 @@
+.author_bio_section {
+	/* border:1px solid grey; */
+	padding:15px;
+	position:relative;
+	display: table;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom:15px;
+}
+.author_bio_section_border {
+	border:1px solid grey;
+}
+
+.author_bio_section_boxshadow {
+	/*box-shadow:0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+.author_bio_section .fa
+{
+	font-family:FontAwesome!important;
+}
+.author_bio_section .author_details_content_top {
+	text-align:center;
+}
+.author_bio_section .author_name,
+.author_bio_section .author_details,
+.author_bio_section .author_links,
+.author_bio_section .author-social-socialmedia
+{
+	padding:0 0 0 0;
+	margin:0 0 0 0;
+}
+/*.author_bio_section .author-bio-socialmedia {
+	margin-bottom:35px;
+}*/
+.author-social-socialmedia {
+	height:25px;
+}
+.author-social-socialmedia-right {
+	text-align:right;
+}
+.author-social-socialmedia-center {
+	text-align:center;
+}
+.author-social-socialmedia a,
+.author-social-socialmedia a:hover,
+.author-social-socialmedia a:visited
+{
+	background-color:transparent;
+	color:transparent;
+}
+
+
+.author_bio_section .author_bio_top {
+	text-align:center;
+}
+
+/*.author_bio_section .author_name {
+	font-size:16px;
+	font-weight:700;
+	line-height:normal;
+}
+
+.author_bio_section p {
+	padding-bottom:0;
+	margin-bottom:10px!important;
+	margin-top:0!important;
+}
+
+.author_bio_section .author-bio-socialmedia .author_name {
+	margin-bottom:10px;
+	margin-top:0;
+}
+
+.author_bio_section h3 {
+	margin-bottom:10px;
+	margin-top:0;
+} */
+
+.author_bio_section .author_details_img img {
+	border:1px solid #D8D8D8;
+	float:left;
+	margin:10px;
+	text-align:center;
+}
+
+.author_bio_section .author_details_img_left,
+.author_bio_section .author_details_img_right
+ {
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	margin:15px;
+}
+
+.author_bio_section .author_details_content_left,
+.author_bio_section .author_details_content_right {
+	display:table-cell;
+	vertical-align:middle;
+	padding-left:25px;
+}
+
+.author_bio_section .author_details_img_top img {
+	position:relative;
+	display:inline-block;
+	left:50%;
+	transform:translate(-50%);
+}
+
+.author_bio_section .author_details_round img {
+	border-radius:50%;
+}
+
+.author_bio_section:after {
+	content:"";
+	clear:both;
+	display:table;
+}
+
+.author_bio_section .clearfix::after {
+	content:"";
+	clear:both;
+	display:table;
+}
+
+.author_bio_section .social-bar {
+	width:100%;
+	display: table-row;
+	/*	text-align: center; center icons*/
+	text-align:right;
+}
+
+.author_bio_section .social-content {
+	display:inline-block;
+
+}
+.author_bio_section .social-bar .header {
+	display:inline-block;
+	margin:0 7px 0 0;
+	border-bottom:solid 1px;
+	font-size:110%;
+}
+
+.author_bio_section .social-bar a {
+}
+
+.author_bio_section .author-bio-socialmedia {
+}
+
+/*holds the front and back icons*/
+.author_bio_section .social-bar .icon {
+	display:inline-block;
+}
+
+/*back (square) of the stack*/
+..author_bio_section social-bar .icon > .back {
+	background:#333;
+}
+
+/*Front (icon) of the stack*/
+.author_bio_section .social-bar .icon > .front {
+	color:#fff;
+}
+
+.author_bio_section .fas,.author_bio_section .fa {
+	width:25px;
+	height:25px;
+	font-size:20px;
+	line-height:25px;
+	padding:2px;
+	text-align:center;
+	display:inline-block;
+
+}
+
+.author_bio_section_left
+{
+	float:left;
+}
+.author_bio_section_right
+{
+	float:right;
+}
+/*.author_bio_section {
+  background-color: #efefef;
+}*/
+.author_bio_section .fa-500px {
+	background-color:#0099e5;
+}
+
+.author_bio_section .fa-adn {
+	background-color:#4a484c;
+}
+
+.author_bio_section .fa-amazon {
+	background-color:#f90;
+}
+
+.author_bio_section .fa-android {
+	background-color:#a4c639;
+}
+
+.author_bio_section .fa-angellist {
+	background-color:#000;
+}
+
+.author_bio_section .fa-apple {
+	background-color:#979797;
+}
+
+.author_bio_section .fa-behance {
+	background-color:#1769ff;
+}
+
+.author_bio_section .fa-behance-square {
+	background-color:#1769ff;
+}
+
+.author_bio_section .fa-bitbucket {
+	background-color:#205081;
+}
+
+.author_bio_section .fa-bitbucket-square {
+	background-color:#205081;
+}
+
+.author_bio_section .fa-bitcoin {
+	background-color:#ee9209;
+}
+
+.author_bio_section .fa-black-tie {
+	background-color:#222;
+}
+
+.author_bio_section .fa-btc {
+	background-color:#ee9209;
+}
+
+.author_bio_section .fa-buysellads {
+	background-color:#c90100;
+}
+
+.author_bio_section .fa-cc-amex {
+	background-color:#007bc1;
+}
+
+.author_bio_section .fa-cc-diners-club {
+	background-color:#004a97;
+}
+
+.author_bio_section .fa-cc-discover {
+	background-color:#f68121;
+}
+
+.author_bio_section .fa-cc-jcb {
+	background-color:#003a8f;
+}
+
+.author_bio_section .fa-cc-mastercard {
+	background-color:#0a3a82;
+}
+
+.author_bio_section .fa-cc-paypal {
+	background-color:#253b80;
+}
+
+.author_bio_section .fa-cc-stripe {
+	background-color:#00afe1;
+}
+
+.author_bio_section .fa-cc-visa {
+	background-color:#0157a2;
+}
+
+.author_bio_section .fa-chrome {
+	background-color:#4587f3;
+}
+
+.author_bio_section .fa-codepen {
+	background-color:#000;
+}
+
+.author_bio_section .fa-connectdevelop {
+	background-color:#391448;
+}
+
+.author_bio_section .fa-contao {
+	background-color:#eb8623;
+}
+
+.author_bio_section .fa-creative-commons {
+	background-color:#231f20;
+}
+
+.author_bio_section .fa-css3 {
+	background-color:#1680c0;
+}
+
+.author_bio_section .fa-dashcube {
+	background-color:#7f7f7f;
+}
+
+.author_bio_section .fa-delicious {
+	background-color:#39f;
+}
+
+.author_bio_section .fa-deviantart {
+	background-color:#4e6252;
+}
+
+.author_bio_section .fa-digg {
+	background-color:#000;
+}
+
+.author_bio_section .fa-dribbble {
+	background-color:#444;
+}
+
+.author_bio_section .fa-dropbox {
+	background-color:#007ee5;
+}
+
+.author_bio_section .fa-drupal {
+	background-color:#0077c0;
+}
+
+.author_bio_section .fa-empire {
+	background-color:#000;
+}
+
+.author_bio_section .fa-expeditedssl {
+	background-color:#343433;
+}
+
+.author_bio_section .fa-facebook {
+	background-color:#3b5998;
+}
+
+.author_bio_section .fa-facebook-official {
+	background-color:#3b5998;
+}
+
+.author_bio_section .fa-facebook-square {
+	background-color:#3b5998;
+}
+
+.author_bio_section .fa-firefox {
+	background-color:#e66000;
+}
+
+.author_bio_section .fa-flickr {
+	background-color:#ff0084;
+}
+
+.author_bio_section .fa-fonticons {
+	background-color:#1c1e29;
+}
+
+.author_bio_section .fa-forumbee {
+	background-color:#83ad13;
+}
+
+.author_bio_section .fa-foursquare {
+	background-color:#0072b1;
+}
+
+.author_bio_section .fa-ge {
+	background-color:#000;
+}
+
+.author_bio_section .fa-get-pocket {
+	background-color:#d3505a;
+}
+
+.author_bio_section .fa-gg {
+	background-color:#000;
+}
+
+.author_bio_section .fa-gg-circle {
+	background-color:#000;
+}
+
+.author_bio_section .fa-git {
+	background-color:#333;
+}
+
+.author_bio_section .fa-git-square {
+	background-color:#333;
+}
+
+.author_bio_section .fa-github {
+	background-color:#333;
+}
+
+.author_bio_section .fa-github-alt {
+	background-color:#333;
+}
+
+.author_bio_section .fa-github-square {
+	background-color:#333;
+}
+
+.author_bio_section .fa-gittip {
+	background-color:#630;
+}
+
+.author_bio_section .fa-google {
+	background-color:#4285f4;
+}
+
+.author_bio_section .fa-google-plus {
+	background-color:#dd4b39;
+}
+
+.author_bio_section .fa-google-plus-square {
+	background-color:#dd4b39;
+}
+
+.author_bio_section .fa-google-wallet {
+	background-color:#4285f4;
+}
+
+.author_bio_section .fa-hacker-news {
+	background-color:#f60;
+}
+
+.author_bio_section .fa-houzz {
+	background-color:#7ac142;
+}
+
+.author_bio_section .fa-html5 {
+	background-color:#e34f26;
+}
+
+.author_bio_section .fa-instagram {
+	background-color:#3f729b;
+}
+
+.author_bio_section .fa-internet-explorer {
+	background-color:#1ebbee;
+}
+
+.author_bio_section .fa-ioxhost {
+	background-color:#faa729;
+}
+
+.author_bio_section .fa-joomla {
+	background-color:#142849;
+}
+
+.author_bio_section .fa-jsfiddle {
+	background-color:#4679bd;
+}
+
+.author_bio_section .fa-lastfm {
+	background-color:#c3000d;
+}
+
+.author_bio_section .fa-lastfm-square {
+	background-color:#c3000d;
+}
+
+.author_bio_section .fa-leanpub {
+	background-color:#0c0c0c;
+}
+
+.author_bio_section .fa-linkedin {
+	background-color:#0976b4;
+}
+
+.author_bio_section .fa-linkedin-square {
+	background-color:#0976b4;
+}
+
+.author_bio_section .fa-linux {
+	background-color:#333;
+}
+
+.author_bio_section .fa-maxcdn {
+	background-color:#f60;
+}
+
+.author_bio_section .fa-meanpath {
+	background-color:#538ed7;
+}
+
+.author_bio_section .fa-medium {
+	background-color:#000;
+}
+
+.author_bio_section .fa-odnoklassniki {
+	background-color:#ed812b;
+}
+
+.author_bio_section .fa-odnoklassniki-square {
+	background-color:#ed812b;
+}
+
+.author_bio_section .fa-opencart {
+	background-color:#2ac2ef;
+}
+
+.author_bio_section .fa-openid {
+	background-color:#f78c40;
+}
+
+.author_bio_section .fa-opera {
+	background-color:#cc0f16;
+}
+
+.author_bio_section .fa-optin-monster {
+	background-color:#83c11f;
+}
+
+.author_bio_section .fa-pagelines {
+	background-color:#000;
+}
+
+.author_bio_section .fa-paypal {
+	background-color:#253b80;
+}
+
+.author_bio_section .fa-pied-piper {
+	background-color:#2f9f46;
+}
+
+.author_bio_section .fa-pied-piper-alt {
+	background-color:#2f9f46;
+}
+
+.author_bio_section .fa-pied-piper-square {
+	background-color:#2f9f46;
+}
+
+.author_bio_section .fa-pinterest {
+	background-color:#cc2127;
+}
+
+.author_bio_section .fa-pinterest-p {
+	background-color:#cc2127;
+}
+
+.author_bio_section .fa-pinterest-square {
+	background-color:#cc2127;
+}
+
+.author_bio_section .fa-qq {
+	background-color:#000;
+}
+
+.author_bio_section .fa-ra {
+	background-color:#000;
+}
+
+.author_bio_section .fa-rebel {
+	background-color:#000;
+}
+
+.author_bio_section .fa-reddit {
+	background-color:#ff4500;
+}
+
+.author_bio_section .fa-reddit-square {
+	background-color:#ff4500;
+}
+
+.author_bio_section .fa-renren {
+	background-color:#005eac;
+}
+
+.author_bio_section .fa-safari {
+	background-color:#1b88ca;
+}
+
+.author_bio_section .fa-sellsy {
+	background-color:#1f78b9;
+}
+
+.author_bio_section .fa-share-alt {
+	background-color:#01bf01;
+}
+
+.author_bio_section .fa-share-alt-square {
+	background-color:#01bf01;
+}
+
+.author_bio_section .fa-shirtsinbulk {
+	background-color:#dd3a26;
+}
+
+.author_bio_section .fa-simplybuilt {
+	background-color:#000;
+}
+
+.author_bio_section .fa-skyatlas {
+	background-color:#00adbb;
+}
+
+.author_bio_section .fa-skype {
+	background-color:#00aff0;
+}
+
+.author_bio_section .fa-slack {
+	background-color:#0f7965;
+}
+
+.author_bio_section .fa-slideshare {
+	background-color:#e98325;
+}
+
+.author_bio_section .fa-soundcloud {
+	background-color:#f80;
+}
+
+.author_bio_section .fa-spotify {
+	background-color:#7ab800;
+}
+
+.author_bio_section .fa-stack-exchange {
+	background-color:#000;
+}
+
+.author_bio_section .fa-stack-overflow {
+	background-color:#fe7a15;
+}
+
+.author_bio_section .fa-steam {
+	background-color:#0b0b0b;
+}
+
+.author_bio_section .fa-steam-square {
+	background-color:#0b0b0b;
+}
+
+.author_bio_section .fa-stumbleupon {
+	background-color:#eb4924;
+}
+
+.author_bio_section .fa-stumbleupon-circle {
+	background-color:#eb4924;
+}
+
+.author_bio_section .fa-tencent-weibo {
+	background-color:#74af2c;
+}
+
+.author_bio_section .fa-trello {
+	background-color:#256a92;
+}
+
+.author_bio_section .fa-tripadvisor {
+	background-color:#589442;
+}
+
+.author_bio_section .fa-tumblr {
+	background-color:#35465c;
+}
+
+.author_bio_section .fa-tumblr-square {
+	background-color:#35465c;
+}
+
+.author_bio_section .fa-twitch {
+	background-color:#6441a5;
+}
+
+.author_bio_section .fa-twitter {
+	background-color:#55acee;
+}
+
+.author_bio_section .fa-twitter-square {
+	background-color:#55acee;
+}
+
+.author_bio_section .fa-viacoin {
+	background-color:#333;
+}
+
+.author_bio_section .fa-vimeo {
+	background-color:#1ab7ea;
+}
+
+.author_bio_section .fa-vimeo-square {
+	background-color:#1ab7ea;
+}
+
+.author_bio_section .fa-vine {
+	background-color:#00b488;
+}
+
+.author_bio_section .fa-vk {
+	background-color:#45668e;
+}
+
+.author_bio_section .fa-wechat {
+	background-color:#93d034;
+}
+
+.author_bio_section .fa-weibo {
+	background-color:#e71d34;
+}
+
+.author_bio_section .fa-weixin {
+	background-color:#93d034;
+}
+
+.author_bio_section .fa-wikipedia-w {
+	background-color:#000;
+}
+
+.author_bio_section .fa-windows {
+	background-color:#00bcf2;
+}
+
+.author_bio_section .fa-wordpress {
+	background-color:#21759b;
+}
+
+.author_bio_section .fa-xing {
+	background-color:#026466;
+}
+
+.author_bio_section .fa-xing-square {
+	background-color:#026466;
+}
+
+.author_bio_section .fa-y-combinator {
+	background-color:#f0652f;
+}
+
+.author_bio_section .fa-yc {
+	background-color:#f0652f;
+}
+
+.author_bio_section .fa-yahoo {
+	background-color:#400191;
+}
+
+.author_bio_section .fa-yelp {
+	background-color:#af0606;
+}
+
+.author_bio_section .fa-youtube {
+	background-color:#e52d27;
+}
+
+.author_bio_section .fa-youtube-play {
+	background-color:#e52d27;
+}
+
+.author_bio_section .fa-youtube-square {
+	background-color:#e52d27;
+}
+
+
+
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    font-weight:bold;
+}
+/*
+     FILE ARCHIVED ON 13:02:26 Feb 21, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 13:14:33 Sep 18, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 153.232
+  exclusion.robots: 0.079
+  exclusion.robots.policy: 0.072
+  RedisCDXSource: 0.563
+  esindex: 0.007
+  LoadShardBlock: 134.471 (3)
+  PetaboxLoader3.datanode: 207.884 (5)
+  CDXLines.iter: 16.019 (3)
+  load_resource: 157.55 (2)
+  PetaboxLoader3.resolve: 63.096 (2)
+*/

@@ -5,7 +5,8 @@ permalink: /publications/
 author_profile: true
 ---
 
-You can find all my articles on <a href="https://inspirehep.net/authors/1621061?ui-citation-summary=true">INSPIRE</a>.
+
+You can find all my articles on <a href="https://inspirehep.net/authors/1621061?ui-citation-summary=true">Inspire-HEP</a>.
 
 {% include base_path %}
 
