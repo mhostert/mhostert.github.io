@@ -19,12 +19,14 @@ The tutorials involved basic concepts in particle physics as well as hands-on se
 * Final coding exercise: plotting the electron-neutrino disappearance probability at KamLAND.
 
 <img src="https://mhostert.github.io/images/outreach/issyp_kamland.png" alt="KamLAND"
-  style="height:200px;">
+  style="margin-left:40px;height:200px;">
 
 * The poem written by the students at the end of the week:
 
-<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://mhostert.github.io/files/issyp_poem.pdf" height="120" type="application/pdf" target="_blank"/>
-
+<a href="https://mhostert.github.io/files/issyp_poem.pdf">
+<img src="https://mhostert.github.io/images/outreach/issyp_poem.png" alt="KamLAND"
+  style="margin-left:40px;height:200px;">
+</a>
 
 You can read the <a href="https://insidetheperimeter.ca/annual-pi-summer-school-immerses-students-in-a-universe-of-ideas/">insidetheperimeter.ca</a> article on it.
 
