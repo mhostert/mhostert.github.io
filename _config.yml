@@ -75,11 +75,11 @@ social:
 
 # Analytics
 analytics:
-  provider: "google-GA4" # false (default), "google", "google-universal", "custom"
+  provider: "google_ga4" # false (default), "google", "google-universal", "custom"
   google_ga4:
     measurement_id: "G-CXH6Y3RDKP"
   google:
-    tracking_id: UA-XXXXXXXX-XX
+    tracking_id: "UA-XXXXXXXX-XX"
 
 # Site Author
 author:
