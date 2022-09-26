@@ -17,7 +17,7 @@ style="width:100px;margin-right:10px"
 title="DarkNews-logo"> -->
 
 [![DarkNews-generator](https://img.shields.io/badge/Github-DarkNews-lightcyan.svg?logo=GitHub&logoColor=white)](https://github.com/mhostert/DarkNews-generator)
-[![DarkNews-generator](https://img.shields.io/badge/Github-PyPI-pink.svg?logo=PyPI&logoColor=white)](https://pypi.org/project/DarkNews/)
+[![DarkNews-generator](https://img.shields.io/badge/PyPI-DarkNews-pink.svg?logo=PyPI&logoColor=white)](https://pypi.org/project/DarkNews/)
 <!-- ![Tests](https://github.com/mhostert/DarkNews-generator/actions/workflows/tests.yml/badge.svg) [![CodeCov](https://codecov.io/gh/mhostert/DarkNews-generator/graph/badge.svg?branch=master)](https://codecov.io/gh/mhostert/DarkNews-generator/?branch=master) -->
 
 ---
