@@ -95,7 +95,8 @@ $link-color-hover           : mix(#fff, $link-color, 25%) !default;
 $link-color-visited         : mix(#fff, $link-color, 15%) !default;
 $masthead-link-color        : $primary-color !default;
 $masthead-link-color-hover  : mix(#000, $primary-color, 25%) !default;
-$navicon-link-color-hover   : mix(#fff, $primary-color, 75%) !default;
+$navicon-link-color-hover   : mix(#000, $primary-color, 25%) !default;
+// mix(#fff, $primary-color, 75%) !default;
 
 
 /*
@@ -149,6 +150,6 @@ $susy: (
 
 $border-radius              : 4px;
 $box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
-$navicon-width              : 28px;
-$navicon-height             : 4px;
+$navicon-width              : 22px;
+$navicon-height             : 3px;
 $global-transition          : all 0.2s ease-in-out;
