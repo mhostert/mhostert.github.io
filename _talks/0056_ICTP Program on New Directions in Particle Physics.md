@@ -4,7 +4,7 @@ talk_number: "56"
 id_for_sorting: "0056"
 permalink: /talks/0056
 title: "Dark neutrino sectors in modern neutrino experiments" 
-type: "plenary talk"
+type: "invited talk"
 venue: "ICTP Program on New Directions in Particle Physics"
 date: 09/22
 location: "Brazil"

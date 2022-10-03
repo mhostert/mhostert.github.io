@@ -4,7 +4,7 @@ talk_number: "4"
 id_for_sorting: "0004"
 permalink: /talks/0004
 title: "Near detector physics with neutrino experiments" 
-type: "invited plenary talk"
+type: "invited talk"
 venue: "Near detector workshop 2018, CERN"
 date: 06/18
 location: "Switzerland"

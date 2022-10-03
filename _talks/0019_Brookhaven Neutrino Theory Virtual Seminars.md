@@ -4,8 +4,8 @@ talk_number: "19"
 id_for_sorting: "0019"
 permalink: /talks/0019
 title: "" 
-type: "invited talk"
-venue: "Brookhaven Neutrino Theory Virtual Seminars, BNL"
+type: "invited seminar"
+venue: "Brookhaven Neutrino Theory Virtual Seminars"
 date: 05/20
 location: "USA"
 link: True 
