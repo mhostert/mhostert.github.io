@@ -27,7 +27,7 @@ redirect_from:
   <p>
   I am interested in studying and building extensions of the Standard Model of Particle Physics. My research focuses on theoretical ideas to explain shortcomings of the Standard Model: neutrino masses, the dark matter in our Universe, and open questions of naturalness. 
   </p>
-
+  
   <p>
 	Collaboration with experimental colleagues is an essential part of my work. A new generation of experiments can significantly boost direct tests of solutions to the open problems above. In that sense, I find the search for new light particles and rare, beyond-the-Standard-Model phenomena very timely. I focus on high-intensity experiments like neutrino and dark matter detectors, medium- and high-energy colliders, and small-scale projects.
   </p>
