@@ -16,15 +16,14 @@ redirect_from:
 <!-- </div> -->
 <div class="layer">
 <h3>Welcome,</h3>
-    <!-- <p>
+    <p>
       I am a postdoctoral researcher at the Perimeter Institute, in Canada, and the University of Minnesota, in the US. I earned my PhD in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University, in the UK, before moving to North America for my current joint postdoctoral position.
     </p>
-    <p>
+    <!-- <p>
     I am interested in studying and building extensions of the Standard Model of Particle Physics. 
     My work generally builds on new theoretical ideas for explaining neutrino masses and the dark matter in our Universe, and considers current and future experimental data that can discover them.
     I focus on high-intensity experiments like neutrino, dark matter, and collider experiments, where I have developed novel search strategies for light particles and beyond-the-Standard-Model phenomena.
     </p> -->
-
   <p>
   I am interested in studying and building extensions of the Standard Model of Particle Physics. My research focuses on theoretical ideas to explain shortcomings of the Standard Model: neutrino masses, the dark matter in our Universe, and open questions of naturalness. 
   </p>
