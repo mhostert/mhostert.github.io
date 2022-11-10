@@ -4,7 +4,7 @@ talk_number: "44"
 id_for_sorting: "0044"
 permalink: /talks/0044
 title: "Heavy neutrinos at hodoscopic detectors" 
-type: "invited parallel talk"
+type: "contributed talk"
 venue: "Brookhaven Forum 2021"
 date: 11/21
 location: "USA"

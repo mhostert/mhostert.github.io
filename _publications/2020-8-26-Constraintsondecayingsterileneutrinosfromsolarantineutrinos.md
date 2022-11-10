@@ -6,6 +6,6 @@ permalink: /publication/2020-8-26-Constraintsondecayingsterileneutrinosfromsolar
 date: 2020-8-26
 venue: Phys.Rev.D 
 paperurl: 'https://arxiv.org/abs/2008.11851'
-citation: "Constraints on decaying sterile neutrinos from solar antineutrinos, Matheus Hostert, Maxim Pospelov, Phys.Rev.D 104 (2021) 5 055031, 2020, "
+citation: "Constraints on decaying sterile neutrinos from solar antineutrinos, Matheus Hostert, Maxim Pospelov, Phys.Rev.D 104 (2021) 5 055031, "
 eprint: "2008.11851"
 ---
