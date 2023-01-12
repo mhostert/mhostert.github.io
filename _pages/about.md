@@ -29,7 +29,8 @@ redirect_from:
   </p>
 
   <p>
-  Collaboration with experimental colleagues is an essential part of my work. A new generation of experiments is currently testing many of the low-energy solutions to the problems above. In that sense, I find the search for new light particles and rare, beyond-the-Standard-Model phenomena very timely. I am particularly interested in the prospects of high-intensity experiments like neutrino and dark matter detectors, medium- and high-energy colliders, and small-scale projects.
+  <!-- Collaboration with experimental colleagues is an essential part of my work.  -->
+  A new generation of experiments is currently testing many of the solutions to the problems above. In that sense, I find the search for new light particles and rare, beyond-the-Standard-Model phenomena very timely. I am particularly interested in the prospects of high-intensity experiments like neutrino and dark matter detectors, medium- and high-energy colliders, and small-scale projects.
   </p>
 </div>
 <!-- </div> -->
