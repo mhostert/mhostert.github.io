@@ -25,12 +25,8 @@ redirect_from:
     I focus on high-intensity experiments like neutrino, dark matter, and collider experiments, where I have developed novel search strategies for light particles and beyond-the-Standard-Model phenomena.
     </p> -->
   <p>
-  I am interested in studying and building extensions of the Standard Model of Particle Physics. My research focuses on theoretical ideas to explain its shortcomings: neutrino masses, the dark matter in our Universe, and open questions of naturalness.
-  </p>
-
-  <p>
-  <!-- Collaboration with experimental colleagues is an essential part of my work.  -->
-  A new generation of experiments is currently testing many of the solutions to the problems above. In that sense, I find the search for new light particles and rare, beyond-the-Standard-Model phenomena very timely. I am particularly interested in the prospects of high-intensity experiments like neutrino and dark matter detectors, medium- and high-energy colliders, and small-scale projects.
+  I am interested in Particle Physics research. My work focuses on theoretical ideas to explain the physics of neutrino masses, the existence of dark matter in our Universe, and other open questions of beyond-the-Standard-Model physics.
+  Collaboration with experimental colleagues is an essential part of my work. The search for new light particles and rare beyond-the-Standard-Model phenomena is timely, and I am interested in developing this program at high-intensity facilities.
   </p>
 </div>
 <!-- </div> -->

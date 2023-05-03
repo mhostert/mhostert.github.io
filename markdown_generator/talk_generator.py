@@ -3,10 +3,9 @@ import os
 import numpy as np
 
 
-### Importing talks from Google sheets
+# Importing talks from Google sheets
 
 # Google sheets
-
 sheet_id = "1ozMqEZPNpK4szjnODCX-5H8Ks432nAAXP8Ds19_B-2o"
 sheet_name = "my_list_of_talks"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
@@ -14,7 +13,7 @@ url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sh
 talks = pd.read_csv(url, header=0)
 talks
 
-### Escape special characters
+# Escape special characters
 
 # YAML is very picky about how it takes a valid string, so we are replacing single and double quotes (and ampersands) with their HTML encoded equivilents. 
 # This makes them look not so readable in raw format, but they are parsed and rendered nicely.
@@ -22,8 +21,7 @@ talks
 html_escape_table = {
     "&": "&amp;",
     '"': "&quot;",
-    "'": "&apos;"
-    }
+    "'": "&apos;"}
 
 def html_escape(text):
     if type(text) is str:

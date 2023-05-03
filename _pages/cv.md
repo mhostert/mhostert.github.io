@@ -22,7 +22,7 @@ redirect_from:
 ## Professional
 ---
 
-[Download](https://mhostert.github.io/files/industry_CV.pdf)
+[Download](https://mhostert.github.io/files/professional_CV.pdf)
 
 <embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://mhostert.github.io/files/professional_CV.pdf" height="120" type="application/pdf" target="_blank"/>
 

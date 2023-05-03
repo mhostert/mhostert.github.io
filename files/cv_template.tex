@@ -1,6 +1,7 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[bottom=0.8in,top=0.8in, left=0.8in,right=0.8in]{geometry}
 
+
 %A Few Useful Packages
 \usepackage{url,parskip}
 \usepackage{titlesec}	
@@ -15,7 +16,6 @@
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\definecolor{MH}{rgb}{0.0, 0.26, 0.15}
 \hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
 
 \titleformat{\section}{\color{linkcolour} \bf\normalsize}{}{0em}{}[\color{linkcolour}]
@@ -49,7 +49,8 @@
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
-%-------------------- Title section ----------------------
+
+%-------------------- INFO HEADER ----------------------
 % move box to leftmost edge of paper
 \noindent\hspace*{-0.8in}%
 \colorbox{white}{
@@ -88,7 +89,7 @@
 
 %-------------------- SECTIONS ----------------------
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------
 \section{\\EDUCATION}
 \vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
 
@@ -104,7 +105,7 @@ Supervisor: Prof. Z.
 \\
 Comment.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------
 \section{\\ACADEMIC POSITIONS}
 \vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
 
@@ -112,35 +113,37 @@ Comment.
  \\
 Researcher at intitute working with Prof.~X, focusing on xyz.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------
 \section{\\FELLOWSHIPS AND AWARDS}
 \vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
 
 \textbf{Award} (\textsc{month} year): description.
  
  
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------------------
 \section{\\ACADEMIC ENGAGEMENT}
 \vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
 
+%%%%
 \subheader{TRAINING AND RESEARCH PLACEMENTS}
 \begin{enumerate}[label={\tiny$\bullet$}]
 
     \item \textbf{Event or network}, date: what you did.
 \end{enumerate}
 
+%%%%
 \subheader{EXPERIMENTAL COLLABORATIONS}
 \begin{enumerate}[label={\tiny$\bullet$}]
 \item Member of \textbf{experimental} collaboration.
 \end{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
 \subheader{TEACHING AND MENTORING} 
 \begin{enumerate}[label={\tiny$\bullet$}]
 \item \textbf{Role}, period: taught xyz.
 \end{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%
 \subheader{EVENT ORGANIZATION AND COMMUNITY ENGAGEMENT}
 \begin{enumerate}[label={\tiny$\bullet$}]
 
@@ -148,16 +151,15 @@ Researcher at intitute working with Prof.~X, focusing on xyz.
 
 \end{enumerate}
 
+%%%%
 \subheader{SCIENCE OUTREACH}
 \begin{enumerate}[label={\tiny$\bullet$}]
-
 
 \item \textbf{Outreach event}: role, more info.
 
 \end{enumerate}
 
-
-
+%----------------------------------------------------
 \section{\\ INVITED SEMINARS AND CONFERENCE PRESENTATIONS}
 \vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
 
@@ -166,19 +168,20 @@ Researcher at intitute working with Prof.~X, focusing on xyz.
 \item \textbf{University} (Country): date, invited seminar.
 \end{enumerate}
 
+%----------------------------------------------------
 \section{\\PUBLICATIONS}
 \vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
 
 {\textbf{Peer-reviewed publications:}}
 \begin{enumerate}
-    \item \textit{``My title"}, authors, \href{address}{arXiv:xxxxx}, submitted to Journal.
+    \item \textit{``My title"}, authors, PRD 000 00 (2000), \href{https://arxiv.org/abs/0000.00000}{arXiv:0000.00000}.
 
 \end{enumerate}
 
 { \textbf{Preprints:}}
 \begin{enumerate}
-\item \textit{``Feebly-Interacting Particles:FIPs 2020 Workshop Report
-"}, Agrawal, Prateek et al , \href{https://arxiv.org/abs/2102.12143}{arXiv:2102.12143}.
+\item \textit{``New Particles Workshop Report
+"}, Author, Main et al, submitted to PRD, \href{https://arxiv.org/abs/0000.00000}{arXiv:0000.00000}.
 \end{enumerate}
 
 \vspace{1ex}
@@ -186,16 +189,58 @@ Researcher at intitute working with Prof.~X, focusing on xyz.
 {\textbf{Non-peer reviewed publications}}
  \begin{enumerate}
  
-  \item \textit{``A''}, B C \href{address}{NOW2018}.
+  \item \textit{``A''}, B C \href{address}{conference}.
 
 \end{enumerate}
 
 \vspace{1ex}
 
 
+\textbf{Peer-reviewed publications}
+\begin{enumerate}
+\item Dipole-coupled heavy-neutral-lepton explanations of the MiniBooNE excess including constraints from MINERvA data, Nicholas W. Kamp, Matheus Hostert, Austin Schneider, Stefano Vergani, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz, Melissa A. Uchida, Phys.Rev.D 107 (2023) 5 055009, arXiv:2206.07100 [hep-ph], citations: 10.
+\item Efficiently exploring multidimensional parameter spaces beyond the Standard Model, Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert, Phys.Rev.D 107 (2023) 3 035027, arXiv:2205.12273 [hep-ph], citations: 1.
+\item The present and future status of heavy neutral leptons, Asli M. Abdullahi, Pablo Barham Alzas, Brian Batell, James Beacham, Alexey Boyarsky, Saneli Carbajal, Animesh Chatterjee, Jose I. Crespo-Anadon, Frank F. Deppisch, Jaehoon Yu, J.Phys.G 50 (2023) 2 020501, arXiv:2203.08039 [hep-ph], citations: \textbf{76}.
+\item New physics searches at kaon and hyperon factories, Evgueni Goudzovski, Diego Redigolo, Kohsaku Tobioka, Jure Zupan, Gonzalo Alonso-Álvarez, Daniele S. M. Alves, Saurabh Bansal, Martin Bauer, Joachim Brod, Robert Ziegler, Rept.Prog.Phys. 86 (2023) 1 016201, arXiv:2201.07805 [hep-ph], citations: \textbf{51}.
+\item Dark sectors in neutron-shining-through-a-wall and nuclear-absorption signals, Matheus Hostert, David McKeen, Maxim Pospelov, Nirmal Raj, Phys.Rev.D 107 (2023) 7 075034, arXiv:2201.02603 [hep-ph], citations: 7.
+\item MicroBooNE and the <math display="inline"><mrow><msub><mrow><mi>ν</mi></mrow><mrow><mi>e</mi></mrow></msub></mrow></math> Interpretation of the MiniBooNE Low-Energy Excess, C. A. Argüelles, I. Esteban, M. Hostert, Kevin J. Kelly, J. Kopp, P. A. N. Machado, I. Martinez-Soler, Y. F. Perez-Gonzalez, Phys.Rev.Lett. 128 (2022) 24 241802, arXiv:2111.10359 [hep-ph], citations: \textbf{55}.
+\item Heavy neutral leptons below the kaon mass at hodoscopic neutrino detectors, Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert, Phys.Rev.D 105 (2022) 9 095006, arXiv:2109.03831 [hep-ph], citations: \textbf{27}.
+\item Feebly-interacting particles: FIPs 2020 workshop report, Prateek Agrawal, Martin Bauer, James Beacham, Asher Berlin, Alexey Boyarsky, Susana Cebrian, Xabier Cid-Vidal, David d'Enterria, Albert De Roeck, Yu-Dai Tsai, Eur.Phys.J.C 81 (2021) 11 1015, arXiv:2102.12143 [hep-ph], citations: \textbf{174}.
+\item Novel multilepton signatures of dark sectors in light meson decays, Matheus Hostert, Maxim Pospelov, Phys.Rev.D 105 (2022) 1 015017, arXiv:2012.02142 [hep-ph], citations: \textbf{18}.
+\item Constraints on decaying sterile neutrinos from solar antineutrinos, Matheus Hostert, Maxim Pospelov, Phys.Rev.D 104 (2021) 5 055031, arXiv:2008.11851 [hep-ph], citations: \textbf{18}.
+\item A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar, Asli Abdullahi, Matheus Hostert, Silvia Pascoli, Phys.Lett.B 820 (2021) 136531, arXiv:2007.11813 [hep-ph], citations: \textbf{50}.
+\item Pair production of dark particles in meson decays, Matheus Hostert, Kunio Kaneta, Maxim Pospelov, Phys.Rev.D 102 (2020) 5 055016, arXiv:2005.07102 [hep-ph], citations: \textbf{22}.
+\item New opportunities at the next-generation neutrino experiments I: BSM neutrino physics and dark matter, C. A. Argüelles, A. J. Aurisano, B. Batell, J. Berger, M. Bishai, T. Boschi, N. Byrnes, A. Chatterjee, A. Chodos, C. Zhang, Rept.Prog.Phys. 83 (2020) 12 124201, arXiv:1907.08311 [hep-ph], citations: \textbf{71}.
+\item Neutrino Non-Standard Interactions: A Status Report, P. S. Bhupal Dev, K. S. Babu, Peter B. Denton, Pedro A. N. Machado, Carlos A. Argüelles, Joshua L. Barrow, Sabya Sachi Chatterjee, Mu-Chun Chen, André de Gouvêa, Xun-Jie Xu, SciPost Phys.Proc. 2 (2019) 001, arXiv:1907.00991 [hep-ph], citations: \textbf{149}.
+\item Neutrino Masses from a Dark Neutrino Sector below the Electroweak Scale, Peter Ballett, Matheus Hostert, Silvia Pascoli, Phys.Rev.D 99 (2019) 9 091701, arXiv:1903.07590 [hep-ph], citations: \textbf{46}.
+\item Dark Neutrinos and a Three Portal Connection to the Standard Model, Peter Ballett, Matheus Hostert, Silvia Pascoli, Phys.Rev.D 101 (2020) 11 115025, arXiv:1903.07589 [hep-ph], citations: \textbf{66}.
+\item Z^\primes in neutrino scattering at DUNE, Peter Ballett, Matheus Hostert, Silvia Pascoli, Yuber F. Perez-Gonzalez, Zahra Tabrizi, Renata Zukanovich Funchal, Phys.Rev.D 100 (2019) 5 055012, arXiv:1902.08579 [hep-ph], citations: \textbf{60}.
+\item Neutrino trident production at near detectors, Matheus Hostert, PoS NOW2018 (2019) 037, citations: 1.
+\item Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments, Carlos A. Argüelles, Matheus Hostert, Yu-Dai Tsai, Phys.Rev.Lett. 123 (2019) 26 261801, arXiv:1812.08768 [hep-ph], citations: \textbf{66}.
+\item Neutrino Trident Scattering at Near Detectors, Peter Ballett, Matheus Hostert, Silvia Pascoli, Yuber F. Perez-Gonzalez, Zahra Tabrizi, Renata Zukanovich Funchal, JHEP 01 (2019) 119, arXiv:1807.10973 [hep-ph], citations: \textbf{48}.
+\end{enumerate}
+\textbf{Under review or non-peer reviewed publications}
+\begin{enumerate} 
+\item Effective portals to heavy neutral leptons, Enrique Fernández-Martínez, Manuel González-López, Josu Hernández-García, Matheus Hostert, Jacobo López-Pavón, preprint, 2023, arXiv:2304.06772 [hep-ph].
+\item Constraining Light Thermal Inelastic Dark Matter with NA64, Martina Mongillo, Asli Abdullahi, Benjamin Banto Oberhauser, Paolo Crivelli, Matheus Hostert, Daniele Massaro, Laura Molina Bueno, Silvia Pascoli, preprint, 2023, arXiv:2302.05414 [hep-ph], citations: 1.
+\item Semi-Visible Dark Photons below the Electroweak Scale, Asli M. Abdullahi, Matheus Hostert, Daniele Massaro, Silvia Pascoli, preprint, 2023, arXiv:2302.05410 [hep-ph], citations: 1.
+\item Implications of MicroBooNE's low sensitivity to electron antineutrino interactions in the search for the MiniBooNE excess, Nicholas W. Kamp, Matheus Hostert, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz, preprint, 2023, arXiv:2301.12573 [hep-ph].
+\item Dark Sector Studies with Neutrino Beams, Brian Batell, Joshua Berger, Vedran Brdar, Alan D. Bross, Janet M. Conrad, Patrick deNiverville, Valentina De Romeri, Bhaskar Dutta, Saeid Foroughi-Abari, Jaehoon Yu, proceedings, 2022, arXiv:2207.06898 [hep-ph], citations: \textbf{11}.
+\item DarkNews: a Python-based event generator for heavy neutral lepton production in neutrino-nucleus scattering, Asli M. Abdullahi, Jaime Hoefken Zink, Matheus Hostert, Daniele Massaro, Silvia Pascoli, preprint, 2022, arXiv:2207.04137 [hep-ph], citations: 5.
+\item A Snowmass Whitepaper: Dark Matter Production at Intensity-Frontier Experiments, G. Krnjaic, N. Toro, A. Berlin, B. Batell, N. Blinov, L. Darme, P. DeNiverville, P. Harris, C. Hearty, Y. -D. Tsai, preprint, 2022, arXiv:2207.00597 [hep-ph], citations: \textbf{16}.
+\item The Physics Case for a Neutrino Factory, Alex Bogacz, Vedran Brdar, Alan Bross, André de Gouvêa, Jean-Pierre Delahaye, Patrick Huber, Matheus Hostert, Kevin J. Kelly, Ken Long, Zahra Tabrizi, proceedings, 2022, arXiv:2203.08094 [hep-ph], citations: 6.
+\item White Paper on Light Sterile Neutrino Searches and Related Phenomenology, M. A. Acero, C. A. Argüelles, M. Hostert, D. Kalra, G. Karagiorgi, K. J. Kelly, B. Littlejohn, P. Machado, W. Pettus, B. Zamorano, preprint, 2022, arXiv:2203.07323 [hep-ex], citations: \textbf{34}.
+\item Neutrino Self-Interactions: A White Paper, Jeffrey M. Berryman, Nikita Blinov, Vedran Brdar, Thejs Brinckmann, Mauricio Bustamante, Francis-Yan Cyr-Racine, Anirban Das, André de Gouvêa, Peter B. Denton, Yue Zhang, proceedings, 2022, arXiv:2203.01955 [hep-ph], citations: \textbf{23}.
+\item Forward Physics Facility - Snowmass 2021 Letter of Interest, Roshan Mammen Abraham, Henso Abreu, Yoav Afik, Sanjib Kumar Agarwalla, Juliette Alimena, Luis Alfredo Anchordoqui, Claire Antel, Akitaka Ariga, Tomoko Ariga, Yi-Ming Zhong, preprint, 2020, citations: \textbf{17}.
+\item Hidden Physics at the Neutrino Frontier: Tridents, Dark Forces, and Hidden Particles, Matheus. Hostert, thesis, 2019.
+\item Light Sterile Neutrinos at \nuSTORM: Decoherence and CP violation, Peter Ballett, Matheus Hostert, Silvia Pascoli, proceedings, 2017, arXiv:1705.09214 [hep-ph], citations: 1.
+\end{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------
 \section{\\OTHER SKILLS}
 
+
+%------------------ END DOCUMENT ---------------------------
 
 \end{document}
