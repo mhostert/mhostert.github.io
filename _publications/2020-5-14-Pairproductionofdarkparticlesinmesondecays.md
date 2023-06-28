@@ -1,6 +1,6 @@
 ---
 title: 'Pair production of dark particles in meson decays'
-authors:  Matheus Hostert,  Kunio Kaneta,  Maxim Pospelov
+authors: Matheus Hostert, Kunio Kaneta, Maxim Pospelov
 collection: publication
 permalink: /publication/2020-5-14-Pairproductionofdarkparticlesinmesondecays
 date: 2020-5-14

@@ -1,6 +1,6 @@
 ---
 title: 'MicroBooNE and the νe Interpretation of the MiniBooNE Low-Energy Excess'
-authors:  C.A. Argüelles,  I. Esteban,  M. Hostert,  Kevin J. Kelly,  J. Kopp,  P.A.N. Machado,  I. Martinez-Soler,  Y.F. Perez-Gonzalez
+authors: C.A. Argüelles, I. Esteban, M. Hostert, Kevin J. Kelly, J. Kopp, P.A.N. Machado, I. Martinez-Soler, Y.F. Perez-Gonzalez
 collection: publication
 permalink: /publication/2021-11-19-MicroBooNEandtheeInterpretationoftheMiniBooNELow-EnergyExcess
 date: 2021-11-19

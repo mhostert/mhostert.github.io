@@ -1,6 +1,6 @@
 ---
 title: 'Dark sectors in neutron-shining-through-a-wall and nuclear-absorption signals'
-authors:  Matheus Hostert,  David McKeen,  Maxim Pospelov,  Nirmal Raj
+authors: Matheus Hostert, David McKeen, Maxim Pospelov, Nirmal Raj
 collection: publication
 permalink: /publication/2022-1-7-Darksectorsinneutron-shining-through-a-wallandnuclear-absorptionsignals
 date: 2022-1-7

@@ -1,6 +1,6 @@
 ---
 title: 'Novel multilepton signatures of dark sectors in light meson decays'
-authors:  Matheus Hostert,  Maxim Pospelov
+authors: Matheus Hostert, Maxim Pospelov
 collection: publication
 permalink: /publication/2020-12-3-Novelmultileptonsignaturesofdarksectorsinlightmesondecays
 date: 2020-12-3

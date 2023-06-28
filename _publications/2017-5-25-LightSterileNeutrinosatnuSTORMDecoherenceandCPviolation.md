@@ -1,6 +1,6 @@
 ---
 title: 'Light Sterile Neutrinos at \nuSTORM: Decoherence and CP violation'
-authors:  Peter Ballett,  Matheus Hostert,  Silvia Pascoli
+authors: Peter Ballett, Matheus Hostert, Silvia Pascoli
 collection: publication
 permalink: /publication/2017-5-25-LightSterileNeutrinosatnuSTORMDecoherenceandCPviolation
 date: 2017-5-25

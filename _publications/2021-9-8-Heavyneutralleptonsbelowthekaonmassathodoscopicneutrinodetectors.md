@@ -1,6 +1,6 @@
 ---
 title: 'Heavy neutral leptons below the kaon mass at hodoscopic neutrino detectors'
-authors:  Carlos A. Argüelles,  Nicolò Foppiani,  Matheus Hostert
+authors: Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert
 collection: publication
 permalink: /publication/2021-9-8-Heavyneutralleptonsbelowthekaonmassathodoscopicneutrinodetectors
 date: 2021-9-8

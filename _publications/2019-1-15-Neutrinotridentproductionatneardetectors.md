@@ -1,6 +1,6 @@
 ---
 title: 'Neutrino trident production at near detectors'
-authors:  Matheus Hostert
+authors: Matheus Hostert
 collection: publication
 permalink: /publication/2019-1-15-Neutrinotridentproductionatneardetectors
 date: 2019-1-15

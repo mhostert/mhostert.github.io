@@ -1,6 +1,6 @@
 ---
 title: 'Effective portals to heavy neutral leptons'
-authors:  Enrique Fernández-Martínez,  Manuel González-López,  Josu Hernández-García,  Matheus Hostert,  Jacobo López-Pavón
+authors: Enrique Fernández-Martínez, Manuel González-López, Josu Hernández-García, Matheus Hostert, Jacobo López-Pavón
 collection: publication
 permalink: /publication/2023-4-13-Effectiveportalstoheavyneutralleptons
 date: 2023-4-13

@@ -1,6 +1,6 @@
 ---
 title: 'Semi-Visible Dark Photons below the Electroweak Scale'
-authors:  Asli M. Abdullahi,  Matheus Hostert,  Daniele Massaro,  Silvia Pascoli
+authors: Asli M. Abdullahi, Matheus Hostert, Daniele Massaro, Silvia Pascoli
 collection: publication
 permalink: /publication/2023-2-10-Semi-VisibleDarkPhotonsbelowtheElectroweakScale
 date: 2023-2-10
