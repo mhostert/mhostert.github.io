@@ -7,18 +7,18 @@ author_profile: true
 
 ---
 
-## Perimeter ISSYP 2022
+## Perimeter ISSYP 2022 and 2023
 
 <a href="https://perimeterinstitute.ca/issyp"><img src="https://mhostert.github.io/images/outreach/perimeter_logo.png" alt="Perimeter Institute"
   style="height:40px;margin-top:20px"></a>
 
 I tutored students at the Perimeter International Summer School for Young Physicists (ISSYP).
 The tutorials involved basic concepts in particle physics as well as hands-on sessions on Python to calculate neutrino oscillation probabilities.
-You can read the <a href="https://insidetheperimeter.ca/annual-pi-summer-school-immerses-students-in-a-universe-of-ideas/">insidetheperimeter.ca</a> article on it.
+You can read the <a href="https://insidetheperimeter.ca/annual-pi-summer-school-immerses-students-in-a-universe-of-ideas/">insidetheperimeter.ca</a> article on the 2022 edition.
 
 
-<!-- * Notes: <a href="https://mhostert.com/files/ISSYP_exercises.pdf"> all exercises</a>. -->
-<!-- * Final coding exercise: plotting the electron-neutrino disappearance probability at KamLAND. -->
+* Notes: <a href="https://mhostert.com/files/ISSYP_exercises.pdf"> all exercises</a>.
+* Final coding exercise: plotting the electron-neutrino disappearance probability at KamLAND.
 
 <img src="https://mhostert.github.io/images/outreach/issyp_kamland.png" alt="KamLAND"
   style="margin-left:40px;height:200px;">
