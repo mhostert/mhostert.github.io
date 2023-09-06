@@ -17,16 +17,15 @@ redirect_from:
 <div class="layer">
 <h3>Welcome,</h3>
   <p>
-  I am a postdoctoral researcher at the Perimeter Institute in Canada and the University of Minnesota in the US. I earned my Ph.D. in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University, in the UK, before moving to North America for my current joint postdoctoral position.
+  I am a Neutrino Theory Network postdoctoral fellow at Harvard University working on various aspects of particle phyics phenomenology.
+  I was previously a postdoctoral researcher with a joint appointment at the Perimeter Institute in Canada and the University of Minnesota. I earned my Ph.D. in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University, in the United Kingdom.
   </p>
-    <!-- <p>
-    I am interested in studying and building extensions of the Standard Model of Particle Physics. 
-    My work generally builds on new theoretical ideas for explaining neutrino masses and the dark matter in our Universe, and considers current and future experimental data that can discover them.
-    I focus on high-intensity experiments like neutrino, dark matter, and collider experiments, where I have developed novel search strategies for light particles and beyond-the-Standard-Model phenomena.
-    </p> -->
+
   <p>
-  I am interested in Particle Physics research. My work focuses on theoretical ideas to explain the physics of neutrino masses, the existence of dark matter in our Universe, and other open questions of beyond-the-Standard-Model physics.
-  Collaboration with experimental colleagues is an essential part of my work. The search for new light particles and rare beyond-the-Standard-Model phenomena is timely, and I am interested in developing this program at high-intensity facilities.
+  My research aims to improve our understanding of elementary particles and their interactions.
+  I am particularly interested in exploring the exotic properties of neutrinos to learn more about what lies beyond the Standard Model of Particle Physics.
+  I work closely with neutrino, dark matter, and high-intensity experiments to devise new strategies in the search for new rare phenomena and new particles.
+  Discoveries in this field would help us explain open questions like the origin of dark matter in our universe and the nature of neutrino masses.
   </p>
 </div>
 <!-- </div> -->

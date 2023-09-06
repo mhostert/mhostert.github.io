@@ -85,12 +85,12 @@ analytics:
 author:
   name: "Matheus Hostert"
   avatar: "profile.png"
-  bio: "Postdoctoral researcher at the Perimeter Institute and University of Minnesota."
-  location: # "Waterloo, Canada"
+  bio: "Neutrino Theory Network Fellow at Harvard University"
+  location: "Cambridge, MA"
   employer:
   pubmed:
   googlescholar: False
-  email: "matheus.hostert@gmail.com"
+  email: "mhostert@g.harvard.edu"
   researchgate: # example: "https://www.researchgate.net/profile/yourprofile"
   uri:
   bitbucket:
