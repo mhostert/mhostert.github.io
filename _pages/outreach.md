@@ -9,25 +9,27 @@ author_profile: true
 
 ## Perimeter ISSYP 2022 and 2023
 
-<a href="https://perimeterinstitute.ca/issyp"><img src="https://mhostert.github.io/images/outreach/perimeter_logo.png" alt="Perimeter Institute"
-  style="height:40px;margin-top:20px"></a>
+  <a href="https://perimeterinstitute.ca">
+    <img src="https://mhostert.github.io/images/outreach/perimeter_logo.png" alt="Perimeter Institute" style="height:35px;margin-top:20px">
+  </a>
 
 I tutored students at the Perimeter International Summer School for Young Physicists (ISSYP).
 The tutorials involved basic concepts in particle physics as well as hands-on sessions on Python to calculate neutrino oscillation probabilities.
-You can read the <a href="https://insidetheperimeter.ca/annual-pi-summer-school-immerses-students-in-a-universe-of-ideas/">insidetheperimeter.ca</a> article on the 2022 edition.
-
+You can read the <a href="https://insidetheperimeter.ca/annual-pi-summer-school-immerses-students-in-a-universe-of-ideas/">insidetheperimeter.ca</a> article on the 2022 edition of the event.
 
 * Notes: <a href="https://mhostert.com/files/ISSYP_exercises.pdf"> all exercises</a>.
 * Final coding exercise: plotting the electron-neutrino disappearance probability at KamLAND.
 
-<img src="https://mhostert.github.io/images/outreach/issyp_kamland.png" alt="KamLAND"
-  style="margin-left:40px;height:200px;">
+<a href="https://mhostert.github.io/images/outreach/issyp_kamland.png">
+  <img src="https://mhostert.github.io/images/outreach/issyp_kamland.png" alt="KamLAND"
+    style="margin-left:40px;height:100px;">
+</a>
 
 * The poem written by the students at the end of the week:
 
 <a href="https://mhostert.github.io/files/issyp_poem.pdf">
-<img src="https://mhostert.github.io/images/outreach/issyp_poem.png" alt="KamLAND"
-  style="margin-left:40px;height:200px;">
+  <img src="https://mhostert.github.io/images/outreach/issyp_poem.png" alt="KamLAND"
+    style="margin-left:40px;height:100px;">
 </a>
 
 <br>
@@ -76,9 +78,9 @@ In 2017 and 2018, I had the pleasure to volunteer and help organize two Royal So
 
   * <a href="https://www.xikka.com/games/nu-odyssey/">Neutrino game</a>: interact with neutrons around you to avoid being destroybed by the charge-current force. Developed by <a href="https://www.xikka.com/about/">Sunil</a>.
 
-  * <a href="https://www.hyperk.org/?page_id=343">Hyper-Kamiokande virtual reality</a>: Observe the inside of the Super-Kamiokande neutrino detector with virtual reality goggles (<a href=""> </a> by Queen Mary).
+  * <a href="https://www.qmul.ac.uk/media/news/2018/se/queen-mary-neutrino-research-on-show-at-royal-society-summer-science-exhibition.html">Hyper-Kamiokande virtual reality</a>: View of the inside of the Super-Kamiokande neutrino detector with a VR experience developed by the Queen Mary University group. See the <a href="https://www.youtube.com/watch?v=hPvUvyGPcKI">preview video</a>.
   
-* <a href="https://mhostert.github.io/files/websites/modelling_inv.html">
+* <a href="https://mhostert.github.io/files/websites/modelling_inv.md">
   Modellng the Invisible
   </a>
   (2017)

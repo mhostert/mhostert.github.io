@@ -6,7 +6,7 @@ permalink: /talks/0062
 title: "Semi-Visible Dark Photons" 
 type: "invited talk"
 venue: "NA64 collaboration seminar"
-date: 03/22
+date: 03/23
 location: "Switzerland"
 link: True 
 talk_url: https://indico.cern.ch/event/1270345/ 
