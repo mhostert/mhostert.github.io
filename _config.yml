@@ -10,7 +10,7 @@ locale: "en-US"
 title: "M. Hostert"
 title_separator: "-"
 name: &name "Matheus Hostert"
-description: &description "Postdoctoral Researcher"
+description: &description "Postdoctoral Fellow"
 url: https://mhostert.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "mhostert/mhostert.github.io"
@@ -86,7 +86,7 @@ author:
   name: "Matheus Hostert"
   avatar: "profile.png"
   bio: "Neutrino Theory Network Fellow at Harvard University"
-  location: "Cambridge, MA"
+  location: 
   employer:
   pubmed:
   googlescholar: False
@@ -105,7 +105,7 @@ author:
   instagram:
   impactstory: #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm:
-  linkedin: # "https://www.linkedin.com/in/matheus-hostert-308808aa/"
+  linkedin: "https://www.linkedin.com/in/matheus-hostert-308808aa/"
   orcid: "http://orcid.org/0000-0002-9584-8877"
   pinterest:
   soundcloud:
