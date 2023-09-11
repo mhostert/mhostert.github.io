@@ -1,6 +1,6 @@
 ---
 title: 'A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar'
-pub_number: 1
+pub_number: 16
 authors: Asli Abdullahi, Matheus Hostert, Silvia Pascoli
 collection: publication
 permalink: /publication/2020-7-23-AdarkseesawsolutiontolowenergyanomaliesMiniBooNEthemuong2andBaBar
@@ -10,4 +10,5 @@ paperurl: 'https://arxiv.org/abs/2007.11813'
 citation_notitle: 'Asli Abdullahi, Matheus Hostert, Silvia Pascoli, Phys.Lett.B 820 (2021) 136531'
 citation: 'A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar, Asli Abdullahi, Matheus Hostert, Silvia Pascoli, Phys.Lett.B 820 (2021) 136531'
 eprint: '2007.11813'
+
 ---
