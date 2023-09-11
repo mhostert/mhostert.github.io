@@ -12,21 +12,20 @@
 {% assign title = post.title %}
 {% endif %}
 
-<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+<!-- 
 <li>
-  <p style="font-size:16px"> {{ post.citation }}
-    {% if post.eprint %}
-      <a href="https://arxiv.org/abs/{{post.eprint}}">, arXiv:{{post.eprint}}</a>
-    {% endif %}
-  .</p>
-</li>
-
-{% if post.excerpt and site.read_more != 'enabled' %}
-<p class="archive__item-excerpt" itemprop="description">{{ post.excerpt | markdownify }}</p>
-{% elsif post.excerpt and site.read_more == 'enabled' %}
-<p class="archive__item-excerpt" itemprop="description">
-<p>{{ post.excerpt | markdownify | remove: '
-<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p>
-</p>
+<p style="font-size:16px"> {{ post.citation }}
+{% if post.eprint %}
+, <a href="https://arxiv.org/abs/{{post.eprint}}">arXiv:{{post.eprint}}</a>
 {% endif %}
+.
+</p>
+</li> -->
+
+<div class="{{ include.type | default: "list" }}__item" style="font-size:16px;">
+{{ post.pub_number }}. {{post.title}}
+<p class="page__meta">
+  {{post.citation_notitle}}{% if post.paperurl %} | <a href="{{ post.paperurl }}">arXiv:{{ post.eprint }}</a>{% endif %}.
+  <br>
+</p>
+</div>
