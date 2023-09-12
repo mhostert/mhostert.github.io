@@ -25,7 +25,7 @@ redirect_from:
   My research aims to improve our understanding of elementary particles and their interactions.
   I am particularly interested in exploring the exotic properties of neutrinos to learn more about what lies beyond the Standard Model of Particle Physics.
   I work closely with neutrino, dark matter, and high-intensity experiments to devise new strategies in the search for new rare phenomena and new particles.
-  Discoveries in this field would help us explain open questions like the origin of dark matter in our universe and the nature of neutrino masses.
+  Discoveries in this field would help us answer open questions about the origin of dark matter in our universe and the nature of neutrino masses.
   </p>
 </div>
 <!-- </div> -->
