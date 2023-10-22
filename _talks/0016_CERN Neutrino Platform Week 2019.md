@@ -9,7 +9,7 @@ venue: "CERN Neutrino Platform Week 2019"
 date: 10/19
 location: "Switzerland"
 link: True 
-talk_url: 10.5281/zenodo.3509916 
+talk_url: https://doi.org/10.5281/zenodo.3509916 
 ---
 
-[More information here](10.5281/zenodo.3509916)
+[More information here](https://doi.org/10.5281/zenodo.3509916)
