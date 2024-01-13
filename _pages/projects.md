@@ -48,4 +48,8 @@ A Python interface to the Inspire-HEP API. Access your metrics and print publica
 
 ## Illustrations
 
-<script src="https://gist.github.com/mhostert/2b6137e5aa5152c0111a8a95abcb4aeb.js"></script>
+<ol>
+  {% if site.poster_display == true %}
+  <p style="font-size:16px">Some illustrations from talks and papers <a href="/illustrations">here.</a></p>
+  {% endif %}
+</ol>
