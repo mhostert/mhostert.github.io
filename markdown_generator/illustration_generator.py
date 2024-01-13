@@ -42,10 +42,10 @@ check_and_convert_pdfs(directory)
 readme_path = "_pages/illustrations.md"
 
 # GitHub base URL for the files
-base_url = "https://raw.githubusercontent.com/mhostert/mhostert.github.io/main/files/illustrations/"
+base_url = "https://www.mhostert.com/files/illustrations/"
 
 # Fixed width for the images (in pixels)
-fixed_width = 400
+fixed_width = "400"
 
 HEADER = """---
 layout: archive
@@ -86,7 +86,7 @@ with open(readme_path, "w") as readme_file:
             readme_file.write(
                 f'\t<img src="{file_url}" width="{fixed_width}" alt="{filename}" style="display:block; margin:auto;">\n'
             )
-            readme_file.write(f"</div>\n\n")
+            readme_file.write(f"</div> \n\n")
 print(
     f"'readme.md' file has been successfully created with images and PDF links from '{directory}'."
 )
