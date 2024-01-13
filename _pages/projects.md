@@ -48,8 +48,6 @@ A Python interface to the Inspire-HEP API. Access your metrics and print publica
 
 ## Illustrations
 
-<ol>
-  {% if site.poster_display == true %}
-  Some illustrations from talks and papers <a href="/illustrations">here.</a>
-  {% endif %}
-</ol>
+<p>
+Some illustrations from talks and papers <a href="/illustrations">here.</a>
+</p>
