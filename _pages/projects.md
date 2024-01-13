@@ -50,6 +50,6 @@ A Python interface to the Inspire-HEP API. Access your metrics and print publica
 
 <ol>
   {% if site.poster_display == true %}
-  <p style="font-size:16px">Some illustrations from talks and papers <a href="/illustrations">here.</a></p>
+  Some illustrations from talks and papers <a href="/illustrations">here.</a>
   {% endif %}
 </ol>
