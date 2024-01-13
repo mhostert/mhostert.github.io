@@ -43,3 +43,9 @@ A Python interface to the Inspire-HEP API. Access your metrics and print publica
 
 [![Inspy-HEP](https://img.shields.io/badge/Github-InspyHEP-lightcyan.svg?logo=GitHub)](https://github.com/mhostert/inspy-hep)
 <!-- [![InspireHEP](https://img.shields.io/badge/Inspire_HEP-on_GitHub-pink.svg)](https://github.com/inspirehep) -->
+
+---
+
+## Illustrations
+
+<script src="https://gist.github.com/mhostert/2b6137e5aa5152c0111a8a95abcb4aeb.js"></script>
