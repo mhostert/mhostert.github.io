@@ -14,7 +14,6 @@ This is a collection of illustrations from talks and papers.
 </div> 
 
 | [IsoDAR_diagram](https://www.mhostert.com/files/illustrations/IsoDAR_diagram.png) | [IsoDAR_diagram (PDF)](https://www.mhostert.com/files/illustrations/IsoDAR_diagram.pdf) |
-
 <div style="background-color:white; width: 400px">
 	<img src="https://www.mhostert.com/files/illustrations/IsoDAR_diagram.png" width="400" alt="IsoDAR_diagram.png" style="display:block; margin:auto;">
 </div> 
