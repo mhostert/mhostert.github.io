@@ -77,6 +77,7 @@ for row, item in talks.iterrows():
 
         if len(str(item.date)) > 0:
             md += "date: " + month + "/" + year[2:] + "\n"
+
         if len(str(item.location)) > 0:
             md += 'location: "' + str(item.location) + '"\n'
 

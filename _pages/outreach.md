@@ -7,6 +7,21 @@ author_profile: true
 
 ---
 
+## IceCube Masterclass 2024
+
+<a href="https://masterclass.icecube.wisc.edu/"><img src="https://mhostert.github.io/images/outreach/icecube_logo.png" alt="IceCube"
+  style="height:40px;margin-top:20px"></a>
+
+
+This year, we will host an IceCube Masterclass at Harvard. 
+This event brings high-school students to campus to interact with the IceCube group and learn more about neutrinos and the universe.
+Students will be able to talk to the winterovers at the South Pole, analyze real IceCube data, and learn more about what a physicist does.
+You can find the Masterclass poster ad <a href="https://mhostert.github.io/images/outreach/masterclass_2024_poster.pdf">here</a>.
+
+<br>
+
+---
+
 ## Perimeter ISSYP 2022 and 2023
 
   <a href="https://perimeterinstitute.ca">
