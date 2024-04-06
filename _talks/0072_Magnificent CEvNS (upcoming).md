@@ -5,7 +5,7 @@ id_for_sorting: "0072"
 permalink: /talks/0072
 title: "TBD (upcoming)" 
 type: "contributed talk"
-venue: "Magnificent CEvNS"
+venue: "Magnificent CEvNS (upcoming)"
 date: 06/24
 location: "Spain"
 link: True 

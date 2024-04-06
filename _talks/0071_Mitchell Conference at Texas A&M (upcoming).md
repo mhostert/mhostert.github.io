@@ -5,7 +5,7 @@ id_for_sorting: "0071"
 permalink: /talks/0071
 title: "TBD (upcoming)" 
 type: "invited talk "
-venue: "Mitchell Conference at Texas A&M"
+venue: "Mitchell Conference at Texas A&M (upcoming)"
 date: 05/24
 location: "USA"
 link: True 

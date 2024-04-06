@@ -5,7 +5,7 @@ id_for_sorting: "0073"
 permalink: /talks/0073
 title: "TBD (upcoming)" 
 type: "contributed poster"
-venue: "Neutrino 2024"
+venue: "Neutrino 2024 (upcoming)"
 date: 06/24
 location: "Italy"
 link: True 
