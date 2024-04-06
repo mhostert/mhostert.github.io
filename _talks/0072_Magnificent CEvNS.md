@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "71"
-id_for_sorting: "0071"
-permalink: /talks/0071
+talk_number: "72"
+id_for_sorting: "0072"
+permalink: /talks/0072
 title: "TBD (upcoming)" 
 type: "contributed talk"
 venue: "Magnificent CEvNS"

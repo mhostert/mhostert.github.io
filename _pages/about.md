@@ -18,7 +18,7 @@ redirect_from:
 <h3>Welcome,</h3>
   <p>
   I am a Neutrino Theory Network postdoctoral fellow at Harvard University working on various aspects of particle phyics phenomenology.
-  I was previously a postdoctoral researcher with a joint appointment at the Perimeter Institute in Canada and the University of Minnesota. I earned my Ph.D. in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University, in the United Kingdom.
+  I was previously a postdoctoral researcher with a joint appointment at the Perimeter Institute in Canada and the University of Minnesota, and earned my Ph.D. in 2019 at the Institute for Particle Physics Phenomenology, part of Durham University, in the United Kingdom.
   </p>
 
   <p>
