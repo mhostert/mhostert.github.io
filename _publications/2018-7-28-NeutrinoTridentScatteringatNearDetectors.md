@@ -1,7 +1,7 @@
 ---
 title: 'Neutrino Trident Scattering at Near Detectors'
-pub_number: 24
-authors: Peter Ballett, Matheus Hostert, Silvia Pascoli, Yuber F. Perez-Gonzalez, Zahra Tabrizi, Renata Zukanovich Funchal
+pub_number: 25
+authors:  Peter Ballett,  Matheus Hostert,  Silvia Pascoli,  Yuber F. Perez-Gonzalez,  Zahra Tabrizi,  Renata Zukanovich Funchal
 collection: publication
 permalink: /publication/2018-7-28-NeutrinoTridentScatteringatNearDetectors
 date: 2018-7-28

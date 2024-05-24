@@ -1,7 +1,7 @@
 ---
 title: 'Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments'
-pub_number: 23
-authors: Carlos A. Argüelles, Matheus Hostert, Yu-Dai Tsai
+pub_number: 24
+authors:  Carlos A. Argüelles,  Matheus Hostert,  Yu-Dai Tsai
 collection: publication
 permalink: /publication/2018-12-20-TestingNewPhysicsExplanationsoftheMiniBooNEAnomalyatNeutrinoScatteringExperiments
 date: 2018-12-20

@@ -1,7 +1,7 @@
 ---
 title: 'Implications of MicroBooNE’s low sensitivity to electron antineutrino interactions in the search for the MiniBooNE excess'
-pub_number: 7
-authors: Nicholas W. Kamp, Matheus Hostert, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz
+pub_number: 8
+authors:  Nicholas W. Kamp,  Matheus Hostert,  Carlos A. Argüelles,  Janet M. Conrad,  Michael H. Shaevitz
 collection: publication
 permalink: /publication/2023-1-29-ImplicationsofMicroBooNEslowsensitivitytoelectronantineutrinointeractionsinthesearchfortheMiniBooNEexcess
 date: 2023-1-29
