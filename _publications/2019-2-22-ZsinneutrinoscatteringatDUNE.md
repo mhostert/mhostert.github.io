@@ -1,6 +1,6 @@
 ---
 title: 'Zs in neutrino scattering at DUNE'
-pub_number: 22
+pub_number: 23
 authors:  Peter Ballett,  Matheus Hostert,  Silvia Pascoli,  Yuber F. Perez-Gonzalez,  Zahra Tabrizi,  Renata Zukanovich Funchal
 collection: publication
 permalink: /publication/2019-2-22-ZsinneutrinoscatteringatDUNE

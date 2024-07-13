@@ -1,6 +1,6 @@
 ---
 title: 'Dark Neutrinos and a Three Portal Connection to the Standard Model'
-pub_number: 21
+pub_number: 22
 authors:  Peter Ballett,  Matheus Hostert,  Silvia Pascoli
 collection: publication
 permalink: /publication/2019-3-18-DarkNeutrinosandaThreePortalConnectiontotheStandardModel
