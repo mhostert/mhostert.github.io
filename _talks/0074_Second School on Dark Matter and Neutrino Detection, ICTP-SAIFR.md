@@ -5,7 +5,7 @@ id_for_sorting: "0074"
 permalink: /talks/0074
 title: "Neutrinos Beyond the Standard Model" 
 type: "lectures"
-venue: "Second School on Dark Matter and Neutrino Detection, ICTP-SAIFR (upcoming)"
+venue: "Second School on Dark Matter and Neutrino Detection, ICTP-SAIFR"
 date: 07/24
 location: "Brazil"
 link: True 
