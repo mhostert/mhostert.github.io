@@ -7,10 +7,19 @@ author_profile: true
 
 ---
 
+### Neutrino 2024
+
+<a href="https://mhostert.github.io/images/posters/neutrino_2024.png">
+  <img src="https://mhostert.github.io/images/posters/neutrino_2024.png" alt="neutrino_2024"
+    style="width:45%; color: white;">
+</a>
+
+---
+
 ### Table-Top Experiments at Perimeter
 
 <a href="https://mhostert.github.io/images/posters/perimeter_2022.png">
-  <img src="https://mhostert.github.io/images/posters/perimeter_2022.png" alt="neutrino_2022"
+  <img src="https://mhostert.github.io/images/posters/perimeter_2022.png" alt="perimeter_2022"
     style="width:45%; color: white;">
 </a>
 
