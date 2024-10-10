@@ -28,19 +28,19 @@ redirect_from:
   Discoveries in this field would help us to make sense of the patterns we observe in fundamental interactions and particle masses, the origin of dark matter, and the cosmological evolution of our universe.
   </p>
 
-<h3>New group at the University of Iowa</h3>
+<h2>New group at the University of Iowa</h2>
   <p>
   In the Fall of 2025, I will start as an Assistant Professor at the University of Iowa, in Iowa City.
   The University has a strong research program in Physics and Astronomy and it's conveniently located within a three-hour drive of Fermilab, where several neutrino experiments are currently in operation.
   </p>
   
-  <h5>Postdoctoral Researcher Opportunity</h5>
+  <h3>Postdoctoral Researcher Opportunity</h3>
   <p>
   We have an opening for a postdoctoral position in neutrinos, dark matter, and beyond-the-Standard-Model physics with a start date of 2025.
   Interested candidates are encouraged to <a href="https://inspirehep.net/jobs/2834239">apply here</a>.
   </p>
   
-  <h5>Opportunities for Students</h5>
+  <h3>Opportunities for Students</h3>
   <p>
   Graduate and undergraduate students interested in particle physics phenomenology are encouraged to get in contact for research opportunities.
   
