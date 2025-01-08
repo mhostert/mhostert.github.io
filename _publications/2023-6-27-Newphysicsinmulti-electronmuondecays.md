@@ -1,6 +1,6 @@
 ---
 title: 'New physics in multi-electron muon decays'
-pub_number: 5
+pub_number: 6
 authors:  Matheus Hostert,  Tony Menzo,  Maxim Pospelov,  Jure Zupan
 collection: publication
 permalink: /publication/2023-6-27-Newphysicsinmulti-electronmuondecays
