@@ -1,6 +1,6 @@
 ---
 title: 'Constraints on decaying sterile neutrinos from solar antineutrinos'
-pub_number: 19
+pub_number: 21
 authors:  Matheus Hostert,  Maxim Pospelov
 collection: publication
 permalink: /publication/2020-8-26-Constraintsondecayingsterileneutrinosfromsolarantineutrinos
