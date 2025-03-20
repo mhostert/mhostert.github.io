@@ -30,14 +30,8 @@ redirect_from:
 
 <h2>New group at the University of Iowa</h2>
   <p>
-  In the Fall of 2025, I will start as an Assistant Professor at the University of Iowa, in Iowa City.
+  In the Fall of 2025, I start as an Assistant Professor at the University of Iowa, in Iowa City.
   The University has a strong research program in Physics and Astronomy and it's conveniently located within a three-hour drive of Fermilab, where several neutrino experiments are currently in operation.
-  </p>
-  
-  <h3>Postdoctoral Researcher Opportunity</h3>
-  <p>
-  We have an opening for a postdoctoral position in neutrinos, dark matter, and beyond-the-Standard-Model physics with a start date of 2025.
-  Interested candidates are encouraged to <a href="https://inspirehep.net/jobs/2834239">apply here</a>.
   </p>
   
   <h3>Opportunities for Students</h3>
