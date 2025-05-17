@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "87"
-id_for_sorting: "0087"
-permalink: /talks/0087
+talk_number: "89"
+id_for_sorting: "0089"
+permalink: /talks/0089
 title: "Exotic New Physics at the Intensity Frontier" 
 type: "plenary talk"
 venue: "New Physics Opportunities at Neutrino Facilities Workshop (NPN 2025, upcoming)"

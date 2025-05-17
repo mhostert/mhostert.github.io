@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "86"
-id_for_sorting: "0086"
-permalink: /talks/0086
+talk_number: "88"
+id_for_sorting: "0088"
+permalink: /talks/0088
 title: "Searching for Light New Physics with Neutrinos" 
 type: "plenary talk"
 venue: "Interconnection between Particle Physics and Cosmology (PPC2025, upcoming)"
