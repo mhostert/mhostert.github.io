@@ -1,7 +1,7 @@
 ---
 title: 'Neutrino Masses from a Dark Neutrino Sector below the Electroweak Scale'
-pub_number: 24
-authors:  Peter Ballett,  Matheus Hostert,  Silvia Pascoli
+pub_number: 25
+authors: Peter Ballett, Matheus Hostert, Silvia Pascoli
 collection: publication
 permalink: /publication/2019-3-18-NeutrinoMassesfromaDarkNeutrinoSectorbelowtheElectroweakScale
 date: 2019-3-18

@@ -1,7 +1,7 @@
 ---
 title: 'Semi-Visible Dark Photon Phenomenology at the GeV Scale'
-pub_number: 12
-authors:  Asli M. Abdullahi,  Matheus Hostert,  Daniele Massaro,  Silvia Pascoli
+pub_number: 13
+authors: Asli M. Abdullahi, Matheus Hostert, Daniele Massaro, Silvia Pascoli
 collection: publication
 permalink: /publication/2023-2-10-Semi-VisibleDarkPhotonPhenomenologyattheGeVScale
 date: 2023-2-10

@@ -1,7 +1,7 @@
 ---
 title: 'Decaying sterile neutrinos at short baselines'
-pub_number: 5
-authors:  Matheus Hostert,  Kevin J. Kelly,  Tao Zhou
+pub_number: 6
+authors: Matheus Hostert, Kevin J. Kelly, Tao Zhou
 collection: publication
 permalink: /publication/2024-6-6-Decayingsterileneutrinosatshortbaselines
 date: 2024-6-6

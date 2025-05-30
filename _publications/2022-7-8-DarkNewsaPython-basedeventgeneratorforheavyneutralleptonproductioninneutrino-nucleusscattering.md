@@ -1,7 +1,7 @@
 ---
 title: 'DarkNews: A Python-based event generator for heavy neutral lepton production in neutrino-nucleus scattering'
-pub_number: 14
-authors:  Asli M. Abdullahi,  Jaime Hoefken Zink,  Matheus Hostert,  Daniele Massaro,  Silvia Pascoli
+pub_number: 15
+authors: Asli M. Abdullahi, Jaime Hoefken Zink, Matheus Hostert, Daniele Massaro, Silvia Pascoli
 collection: publication
 permalink: /publication/2022-7-8-DarkNewsAPython-basedeventgeneratorforheavyneutralleptonproductioninneutrino-nucleusscattering
 date: 2022-7-8

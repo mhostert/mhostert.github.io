@@ -1,7 +1,7 @@
 ---
 title: 'Dipole-coupled heavy-neutral-lepton explanations of the MiniBooNE excess including constraints from MINERvA data'
-pub_number: 15
-authors:  Nicholas W. Kamp,  Matheus Hostert,  Austin Schneider,  Stefano Vergani,  Carlos A. Argüelles,  Janet M. Conrad,  Michael H. Shaevitz,  Melissa A. Uchida
+pub_number: 16
+authors: Nicholas W. Kamp, Matheus Hostert, Austin Schneider, Stefano Vergani, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz, Melissa A. Uchida
 collection: publication
 permalink: /publication/2022-6-14-Dipole-coupledheavy-neutral-leptonexplanationsoftheMiniBooNEexcessincludingconstraintsfromMINERvAdata
 date: 2022-6-14

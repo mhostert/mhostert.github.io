@@ -1,7 +1,7 @@
 ---
 title: 'Efficiently exploring multidimensional parameter spaces beyond the Standard Model'
-pub_number: 16
-authors:  Carlos A. Argüelles,  Nicolò Foppiani,  Matheus Hostert
+pub_number: 17
+authors: Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert
 collection: publication
 permalink: /publication/2022-5-24-EfficientlyexploringmultidimensionalparameterspacesbeyondtheStandardModel
 date: 2022-5-24
