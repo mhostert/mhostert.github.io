@@ -1,6 +1,6 @@
 ---
 title: 'Resonant Neutrino Flavor Conversion in the Atmosphere'
-pub_number: 7
+pub_number: 8
 authors: Connor Sponsler, Matheus Hostert, Ivan Martinez-Soler, Carlos A. Argüelles
 collection: publication
 permalink: /publication/2024-5-20-ResonantNeutrinoFlavorConversionintheAtmosphere

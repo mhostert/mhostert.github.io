@@ -1,6 +1,6 @@
 ---
 title: 'Astrophysical flux of dark particles as a solution to the KM3NeT and IceCube tension over KM3-230213A'
-pub_number: 1
+pub_number: 2
 authors: Yasaman Farzan, Matheus Hostert
 collection: publication
 permalink: /publication/2025-5-28-AstrophysicalfluxofdarkparticlesasasolutiontotheKM3NeTandIceCubetensionoverKM3-230213A
