@@ -10,7 +10,7 @@ locale: "en-US"
 title: "M. Hostert"
 title_separator: "-"
 name: &name "Matheus Hostert"
-description: &description "Postdoctoral Fellow"
+description: &description "Assistant Professor"
 url: https://mhostert.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: "" # the subpath of your site, e.g. "/blog"
 repository: "mhostert/mhostert.github.io"
@@ -85,12 +85,12 @@ analytics:
 author:
   name: "Matheus Hostert"
   avatar: "profile.png"
-  bio: "Neutrino Theory Network Fellow at Harvard University"
+  bio: "University of Iowa"
   location: 
   employer:
   pubmed:
   googlescholar: False
-  email: "mhostert@g.harvard.edu"
+  email: "matheus-hostert@uiowa.edu"
   researchgate: # example: "https://www.researchgate.net/profile/yourprofile"
   uri:
   bitbucket:
