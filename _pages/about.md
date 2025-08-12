@@ -16,11 +16,10 @@ redirect_from:
 <!-- </div> -->
 <div class="layer">
 
-<h4>Welcome,</h4>
+<h3>Welcome,</h3>
 
   <p>
   I am an Assistant Professor at the University of Iowa, in Iowa City.
-
 
   My research focuses on theoretical and phenomenological aspects of neutrino, dark matter, and beyond-the-Standard Model physics.
   I like to devise new strategies in the search for new rare phenomena and new particles.
@@ -28,7 +27,7 @@ redirect_from:
   Discoveries in this field would help us to make sense of the patterns we observe in fundamental interactions and particle masses, the origin of dark matter, and the cosmological evolution of our universe.
   </p>
 
-  <h4>Opportunities for Students</h4>
+  <h3>Opportunities for Students</h3>
   <p>
   Graduate and undergraduate students interested in particle physics phenomenology are encouraged to get in contact for research opportunities.
   
