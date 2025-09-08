@@ -5,7 +5,7 @@ id_for_sorting: "0097"
 permalink: /talks/0097
 title: "Neutrino Facilities as Versatile Probes of New Physics" 
 type: "invited talk"
-venue: "APS Global Summit"
+venue: "APS Global Summit (upcoming)"
 date: 03/26
 location: "USA"
 link: True 
