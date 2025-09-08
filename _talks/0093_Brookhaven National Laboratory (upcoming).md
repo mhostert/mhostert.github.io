@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "92"
-id_for_sorting: "0092"
-permalink: /talks/0092
+talk_number: "93"
+id_for_sorting: "0093"
+permalink: /talks/0093
 title: "TBD" 
 type: "invited seminar"
 venue: "Brookhaven National Laboratory (upcoming)"
