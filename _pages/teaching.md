@@ -5,7 +5,7 @@ permalink: /teaching/
 author_profile: true
 ---
 
-### Fall 2025: Particle Physics Beyond the Standard Model
+## Fall 2025: Particle Physics Beyond the Standard Model
 
 ![Photos of particle tracks in a bubble chamber with high yellow and blue contrast.](image.png){: width="60%" .align-center}
 
