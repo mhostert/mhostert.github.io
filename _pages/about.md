@@ -30,7 +30,9 @@ redirect_from:
   <h3>Opportunities for Students</h3>
   <p>
   Graduate and undergraduate students interested in particle physics phenomenology are encouraged to get in contact for research opportunities.
-  
+  </p>
+
+  <p>
   Prospective students can find more details about the U. of Iowa Ph.D program <a href="https://physics.uiowa.edu/graduate/phd-physics">here</a>.
   </p>
 </div>
