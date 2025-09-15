@@ -7,10 +7,12 @@ author_profile: true
 
 ## Fall 2025: Particle Physics Beyond the Standard Model
 
-![Photos of particle tracks in a bubble chamber with high yellow and blue contrast.](image.png){: width="60%" .align-center}
-
 PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/files/teaching/PPBSM_flyer.pdf"> </a>
 <a href="https://mhostert.github.io/files/teaching/PPBSM_syllabus_2025.pdf">Syllabus</a> / <a href="https://mhostert.github.io/files/teaching/Additional_resources_and_textbooks.pdf"> Additional reading</a>
+
+![Photos of particle tracks in a bubble chamber with high yellow and blue contrast.](image.png){: width="60%" .align-center}
+
+
 
 **Notes:**
 
