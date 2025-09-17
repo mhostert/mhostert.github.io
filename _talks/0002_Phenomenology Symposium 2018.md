@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "2.0"
-id_for_sorting: "02.0"
-permalink: /talks/02.0
+talk_number: "2"
+id_for_sorting: "0002"
+permalink: /talks/0002
 title: "Leptophilic Z’s in neutrino scattering" 
 type: "invited parallel talk"
 venue: "Phenomenology Symposium 2018"

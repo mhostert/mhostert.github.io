@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "8.0"
-id_for_sorting: "08.0"
-permalink: /talks/08.0
+talk_number: "8"
+id_for_sorting: "0008"
+permalink: /talks/0008
 title: "New physics in neutrino scattering" 
 type: "invited talk"
 venue: "Physics Opportunities at the Near Detector of DUNE (PONDD), Fermilab"

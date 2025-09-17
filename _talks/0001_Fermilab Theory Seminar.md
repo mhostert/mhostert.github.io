@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "1.0"
-id_for_sorting: "01.0"
-permalink: /talks/01.0
+talk_number: "1"
+id_for_sorting: "0001"
+permalink: /talks/0001
 title: "Neutrino trident production at near detectors" 
 type: "invited seminar"
 venue: "Fermilab Theory Seminar"
