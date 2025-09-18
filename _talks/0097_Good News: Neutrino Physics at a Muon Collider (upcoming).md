@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "96"
-id_for_sorting: "0096"
-permalink: /talks/0096
+talk_number: "97"
+id_for_sorting: "0097"
+permalink: /talks/0097
 title: "TBD" 
 type: "invited talk"
 venue: "Good News: Neutrino Physics at a Muon Collider (upcoming)"

@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "98"
-id_for_sorting: "0098"
-permalink: /talks/0098
+talk_number: "99"
+id_for_sorting: "0099"
+permalink: /talks/0099
 title: "TBD" 
 type: "colloquium "
 venue: "Columbia University (upcoming)"

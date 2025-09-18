@@ -1,8 +1,8 @@
 ---
 collection: talks
-talk_number: "95"
-id_for_sorting: "0095"
-permalink: /talks/0095
+talk_number: "96"
+id_for_sorting: "0096"
+permalink: /talks/0096
 title: "TBD" 
 type: "colloquium "
 venue: "Idaho State University (upcoming)"

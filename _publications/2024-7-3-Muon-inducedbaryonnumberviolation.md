@@ -1,6 +1,6 @@
 ---
 title: 'Muon-induced baryon number violation'
-pub_number: 6
+pub_number: 7
 authors: Patrick J. Fox, Matheus Hostert, Tony Menzo, Maxim Pospelov, Jure Zupan
 collection: publication
 permalink: /publication/2024-7-3-Muon-inducedbaryonnumberviolation
