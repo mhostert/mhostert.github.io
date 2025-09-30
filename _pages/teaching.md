@@ -20,12 +20,12 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
 
 **Neutrino physics:**
 * [Neutrino oscillations](https://mhostert.github.io/files/teaching/notes_oscillations.pdf)
-<!-- * [Neutrino oscillations beyond plane waves](https://mhostert.github.io/files/teaching/notes_oscillations.pdf)
+<!-- * [Neutrino oscillations beyond plane waves](https://mhostert.github.io/files/teaching/notes_oscillations.pdf) 
 * Neutrino oscillations in matter and the MSW effect
 * Detection of neutrino masses
-* The seesaw mechanism -->
+* The seesaw mechanism 
 
-<!-- **Dark matter:**
+**Dark matter:**
 * Evidence for dark matter
 * Thermal dark matter -->
 
