@@ -33,7 +33,7 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
 
  * [The cosmic neutrino background](https://mhostert.github.io/files/teaching/Assingment_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_1.pdf))
  * [Proton decay](https://mhostert.github.io/files/teaching/Assingment_2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_2.pdf))
- * [Oscillations with non-Hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_3.pdf) (discussion and solution)
+ * [Oscillations with non-Hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_3_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_3.pdf))
 
 
 ![Photos of particle tracks in a bubble chamber with high yellow and blue contrast.](image.png){: width="60%" .align-center}
