@@ -20,13 +20,13 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
 
 **Neutrino physics:**
 * [Neutrino oscillations](https://mhostert.github.io/files/teaching/notes_oscillations.pdf)
-* Neutrino oscillations beyond plane waves
-<!-- * Neutrino oscillations in matter and the MSW effect -->
+* [Neutrino oscillations beyond plane waves](https://mhostert.github.io/files/teaching/notes_osc_beyondPW.pdf)
+* Neutrino oscillations in matter and the MSW effect
 <!-- * Detection of neutrino masses -->
 <!-- * The seesaw mechanism  -->
 
-<!-- **Dark matter:** -->
-<!-- * Evidence for dark matter -->
+**Dark matter:**
+* Early universe basics 
 <!-- * Thermal dark matter  -->
 
 **Assignments:**
@@ -34,6 +34,7 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
  * [The cosmic neutrino background](https://mhostert.github.io/files/teaching/Assingment_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_1.pdf))
  * [Proton decay](https://mhostert.github.io/files/teaching/Assingment_2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_2.pdf))
  * [Oscillations with non-Hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_3_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_3.pdf))
+ * [Oscillations with non-Hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_4a.pdf) (discussion and solution)
 
 
 ![Photos of particle tracks in a bubble chamber with high yellow and blue contrast.](image.png){: width="60%" .align-center}

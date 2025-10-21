@@ -5,7 +5,7 @@ id_for_sorting: "0095"
 permalink: /talks/0095
 title: "TBD" 
 type: "invited seminar"
-venue: "Sydney-CPPC (upcoming)"
+venue: "Sydney-CPPC"
 date: 10/25
 location: "Australia"
 ---
