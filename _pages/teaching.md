@@ -39,7 +39,7 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
 
 
 **Final Projects:**
- * [List of topics](https://mhostert.github.io/files/teaching/Final_projects.pdf)
+ * [List of topics](https://mhostert.github.io/files/teaching/final_project_v3.pdf)
 
 
 ![Photos of particle tracks in a bubble chamber with high yellow and blue contrast.](image.png){: width="60%" .align-center}
