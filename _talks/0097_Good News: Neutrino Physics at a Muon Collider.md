@@ -5,7 +5,7 @@ id_for_sorting: "0097"
 permalink: /talks/0097
 title: "TBD" 
 type: "invited talk"
-venue: "Good News: Neutrino Physics at a Muon Collider (upcoming)"
+venue: "Good News: Neutrino Physics at a Muon Collider"
 date: 10/25
 location: "USA"
 link: True 

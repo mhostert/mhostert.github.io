@@ -5,7 +5,7 @@ id_for_sorting: "0096"
 permalink: /talks/0096
 title: "TBD" 
 type: "colloquium "
-venue: "Idaho State University (upcoming)"
+venue: "Idaho State University"
 date: 10/25
 location: "USA"
 ---
