@@ -22,21 +22,16 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
 * [Neutrino oscillations](https://mhostert.github.io/files/teaching/notes_oscillations.pdf)
 * [Neutrino oscillations beyond plane waves](https://mhostert.github.io/files/teaching/notes_osc_beyondPW.pdf)
 * Neutrino oscillations in matter and the MSW effect
-<!-- * Detection of neutrino masses -->
-<!-- * The seesaw mechanism  -->
+* [The cosmic neutrino background](https://mhostert.github.io/files/teaching/Assingment_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_1.pdf))
+* [Proton decay](https://mhostert.github.io/files/teaching/Assingment_2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_2.pdf))
+* [Oscillations with non-Hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_3_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_3.pdf))
+* [Matter effects](https://mhostert.github.io/files/teaching/Assignment_4a_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_4a.pdf))
+
 
 **Dark matter:**
 * [FLRW geometry](https://mhostert.github.io/files/teaching/notes_geometry.pdf)
-* Early universe basics 
-<!-- * Thermal dark matter  -->
-
-**Assignments:**
-
- * [The cosmic neutrino background](https://mhostert.github.io/files/teaching/Assingment_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_1.pdf))
- * [Proton decay](https://mhostert.github.io/files/teaching/Assingment_2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_2.pdf))
- * [Oscillations with non-Hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_3_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_3.pdf))
- * [Matter effects](https://mhostert.github.io/files/teaching/Assignment_4a_v2.pdf) (discussion and solution)
- * [Redshift](https://mhostert.github.io/files/teaching/Assignment_4b.pdf) (discussion and solution)
+* [Universe expansion](https://mhostert.github.io/files/teaching/Assignment_4b.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_4b.pdf))
+* Thermal dark matter (discussion and solution)
 
 
 **Final Projects:**
