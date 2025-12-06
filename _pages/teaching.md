@@ -24,14 +24,17 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
 * Neutrino oscillations in matter and the MSW effect
 * [The cosmic neutrino background](https://mhostert.github.io/files/teaching/Assingment_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_1.pdf))
 * [Proton decay](https://mhostert.github.io/files/teaching/Assingment_2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_2.pdf))
-* [Oscillations with non-Hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_3_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_3.pdf))
+* [Oscillations with non-hermitian evolution](https://mhostert.github.io/files/teaching/Assignment_3_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_3.pdf))
 * [Matter effects](https://mhostert.github.io/files/teaching/Assignment_4a_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_4a.pdf))
+* [Short-baseline oscillations](https://mhostert.github.io/files/teaching/notes_eV_steriles.pdf)
+* [Seesaw mechanism](https://mhostert.github.io/files/teaching/notes_seesaw.pdf)
+* [More heavy neutrinos](https://mhostert.github.io/files/teaching/Assignment_5a.pdf) (discussion and solution)
 
 
 **Dark matter:**
 * [FLRW geometry](https://mhostert.github.io/files/teaching/notes_geometry.pdf)
 * [Universe expansion](https://mhostert.github.io/files/teaching/Assignment_4b.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_4b.pdf))
-* Thermal dark matter (discussion and solution)
+* [Thermal dark matter](https://mhostert.github.io/files/teaching/Assignment_5b.pdf) (discussion and solution)
 
 
 **Final Projects:**
