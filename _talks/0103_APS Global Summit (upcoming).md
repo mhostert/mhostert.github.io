@@ -3,7 +3,7 @@ collection: talks
 talk_number: "103"
 id_for_sorting: "0103"
 permalink: /talks/0103
-title: "Neutrinos at Muon Colliders" 
+title: "Neutrino Facilities as Versatile Probes of New Physics" 
 type: "invited talk"
 venue: "APS Global Summit (upcoming)"
 date: 03/26
