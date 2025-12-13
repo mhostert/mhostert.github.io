@@ -5,7 +5,7 @@ id_for_sorting: "0100"
 permalink: /talks/0100
 title: "TBD" 
 type: "colloquium "
-venue: "Columbia University (upcoming)"
+venue: "Columbia University "
 date: 12/25
 location: "USA"
 ---

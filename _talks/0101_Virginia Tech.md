@@ -5,7 +5,7 @@ id_for_sorting: "0101"
 permalink: /talks/0101
 title: "TBD" 
 type: "colloquium "
-venue: "Virginia Tech (upcoming)"
+venue: "Virginia Tech"
 date: 12/25
 location: "USA"
 ---
