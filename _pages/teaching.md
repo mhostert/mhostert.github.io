@@ -28,13 +28,13 @@ PHYS:5905:0042 Special Topics in Physics: <a href="https://mhostert.github.io/fi
 * [Matter effects](https://mhostert.github.io/files/teaching/Assignment_4a_v2.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_4a.pdf))
 * [Short-baseline oscillations](https://mhostert.github.io/files/teaching/notes_eV_steriles.pdf)
 * [Seesaw mechanism](https://mhostert.github.io/files/teaching/notes_seesaw.pdf)
-* [More heavy neutrinos](https://mhostert.github.io/files/teaching/Assignment_5a.pdf) (discussion and solution)
+* [More heavy neutrinos](https://mhostert.github.io/files/teaching/Assignment_5a.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_5a.pdf))
 
 
 **Dark matter:**
 * [FLRW geometry](https://mhostert.github.io/files/teaching/notes_geometry.pdf)
 * [Universe expansion](https://mhostert.github.io/files/teaching/Assignment_4b.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_4b.pdf))
-* [Thermal dark matter](https://mhostert.github.io/files/teaching/Assignment_5b.pdf) (discussion and solution)
+* [Thermal dark matter](https://mhostert.github.io/files/teaching/Assignment_5b.pdf) ([discussion and solution](https://mhostert.github.io/files/teaching/solutions_and_discussions_5b.pdf))
 
 
 **Final Projects:**
