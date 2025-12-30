@@ -1,7 +1,7 @@
 ---
 title: 'Pion decay constraints on exotic 17 MeV vector bosons'
-pub_number: 12
-authors: Matheus Hostert, Maxim Pospelov
+pub_number: 13
+authors:  Matheus Hostert,  Maxim Pospelov
 collection: publication
 permalink: /publication/2023-6-26-Piondecayconstraintsonexotic17MeVvectorbosons
 date: 2023-6-26

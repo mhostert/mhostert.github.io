@@ -1,7 +1,7 @@
 ---
 title: 'Neutron portal to ultra-high-energy neutrinos'
-pub_number: 4
-authors: Gustavo F.S. Alves, Matheus Hostert, Maxim Pospelov
+pub_number: 5
+authors:  Gustavo F.S. Alves,  Matheus Hostert,  Maxim Pospelov
 collection: publication
 permalink: /publication/2025-3-18-Neutronportaltoultra-high-energyneutrinos
 date: 2025-3-18

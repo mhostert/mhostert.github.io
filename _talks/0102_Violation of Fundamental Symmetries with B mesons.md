@@ -5,7 +5,7 @@ id_for_sorting: "0102"
 permalink: /talks/0102
 title: "TBD" 
 type: "invited talk"
-venue: "Violation of Fundamental Symmetries with B mesons (upcoming)"
+venue: "Violation of Fundamental Symmetries with B mesons"
 date: 12/25
 location: "USA"
 link: True 

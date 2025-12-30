@@ -1,7 +1,7 @@
 ---
 title: 'Muon Colliders and the Neutrino Slice'
-pub_number: 6
-authors: Luc Bojorquez-Lopez, Matheus Hostert, Carlos A. Argüelles, Zhen Liu
+pub_number: 7
+authors:  Luc Bojorquez-Lopez,  Matheus Hostert,  Carlos A. Argüelles,  Zhen Liu
 collection: publication
 permalink: /publication/2024-12-18-MuonCollidersandtheNeutrinoSlice
 date: 2024-12-18
