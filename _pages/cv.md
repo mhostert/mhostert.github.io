@@ -15,7 +15,7 @@ redirect_from:
 
 [Download](https://mhostert.github.io/files/academic_CV.pdf)
 
-<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://mhostert.github.io/files/academic_CV.pdf" height="120" type="application/pdf" target="_blank"/>
+<embed src="https://drive.google.com/viewerng/viewer?embedded=true&url=https://mhostert.github.io/files/academic_CV.pdf" height="300" type="application/pdf" target="_blank"/>
 
 <!-- <iframe src="http://docs.google.com/gview?url=https://mhostert.github.io/files/academic_CV.pdf&embedded=true" 
 style="width:600px; height:500px;" frameborder="0"></iframe> -->
