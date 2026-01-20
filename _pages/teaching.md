@@ -8,6 +8,7 @@ author_profile: true
 ## Courses
 
 ### [Quantum Mechanics II](/teaching/quantum-mechanics-ii/)
+
 Graduate course in advanced quantum mechanics.
 
 **Spring 2026** - PHYS:5742
