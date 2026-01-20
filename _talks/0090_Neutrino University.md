@@ -4,7 +4,7 @@ talk_number: "90"
 id_for_sorting: "0090"
 permalink: /talks/0090
 title: "New Physics with Neutrinos " 
-type: "lecture"
+type: "lectures"
 venue: "Neutrino University"
 date: "07/2025"
 location: "USA"

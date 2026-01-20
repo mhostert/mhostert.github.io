@@ -3,7 +3,7 @@ collection: talks
 talk_number: "97"
 id_for_sorting: "0097"
 permalink: /talks/0097
-title: "TBD" 
+title: "Review of neutrino physics at a muon collider" 
 type: "invited talk"
 venue: "Good News: Neutrino Physics at a Muon Collider"
 date: "10/2025"

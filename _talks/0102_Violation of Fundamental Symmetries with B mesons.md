@@ -3,7 +3,7 @@ collection: talks
 talk_number: "102"
 id_for_sorting: "0102"
 permalink: /talks/0102
-title: "TBD" 
+title: "Dark sector models at or below the electroweak scale" 
 type: "invited talk"
 venue: "Violation of Fundamental Symmetries with B mesons"
 date: "12/2025"

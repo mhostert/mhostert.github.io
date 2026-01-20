@@ -3,7 +3,7 @@ collection: talks
 talk_number: "93"
 id_for_sorting: "0093"
 permalink: /talks/0093
-title: "TBD" 
+title: "Neutrino spin precession from a majoron background" 
 type: "invited seminar"
 venue: "Brookhaven National Laboratory"
 date: "10/2025"

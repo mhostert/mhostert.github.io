@@ -43,10 +43,13 @@ author_profile: true
 
 <div class="filter-buttons">
   <button class="filter-btn active" onclick="filterTalks('all', this)">All</button>
-  <button class="filter-btn" onclick="filterTalks('invited seminar', this)">Invited Seminars</button>
-  <button class="filter-btn" onclick="filterTalks('invited talk', this)">Invited Talks</button>
-  <button class="filter-btn" onclick="filterTalks('parallel talk', this)">Parallel Talks</button>
-  <button class="filter-btn" onclick="filterTalks('contributed poster', this)">Posters</button>
+  <button class="filter-btn" onclick="filterTalks('seminar', this)">Seminars</button>
+  <button class="filter-btn" onclick="filterTalks('colloquium', this)">Colloquia</button>
+  <button class="filter-btn" onclick="filterTalks('talk', this)">Talks</button>
+  <button class="filter-btn" onclick="filterTalks('plenary', this)">Plenary</button>
+  <button class="filter-btn" onclick="filterTalks('contributed', this)">Contributed</button>
+  <button class="filter-btn" onclick="filterTalks('poster', this)">Posters</button>
+  <button class="filter-btn" onclick="filterTalks('lecture', this)">Lectures</button>
 </div>
 
 <div class="year-section">
@@ -62,7 +65,7 @@ author_profile: true
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
-        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% capture date_str %}{{post.date}}{% endcapture %}{% assign date_parts = date_str | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} {{date_parts[1]}}{% endif %}.
+        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% capture date_string %}{{post.date}}{% endcapture %}{% assign raw_date = date_string | strip %}{% if raw_date and raw_date != '' %}{% assign date_parts = raw_date | split: '/' %}{% if date_parts.size == 2 %}{% assign month_num = date_parts[0] | plus: 0 %}{% case month_num %}{% when 1 %}{% assign month_name = 'January' %}{% when 2 %}{% assign month_name = 'February' %}{% when 3 %}{% assign month_name = 'March' %}{% when 4 %}{% assign month_name = 'April' %}{% when 5 %}{% assign month_name = 'May' %}{% when 6 %}{% assign month_name = 'June' %}{% when 7 %}{% assign month_name = 'July' %}{% when 8 %}{% assign month_name = 'August' %}{% when 9 %}{% assign month_name = 'September' %}{% when 10 %}{% assign month_name = 'October' %}{% when 11 %}{% assign month_name = 'November' %}{% when 12 %}{% assign month_name = 'December' %}{% endcase %} | {{month_name}} {{date_parts[1]}}{% endif %}{% endif %}.
         <br>
         {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
       </p>
@@ -77,7 +80,7 @@ author_profile: true
   
   {% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
   
-  {% for year_num in (2018..2030) reversed %}
+  {% for year_num in (2018..2040) reversed %}
     {% assign year = year_num | append: '' %}
     {% assign has_talks = false %}
     
@@ -106,7 +109,7 @@ author_profile: true
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
-        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% assign date_parts = date_str | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} {{date_parts[1]}}{% endif %}.
+        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% capture date_string %}{{post.date}}{% endcapture %}{% assign raw_date = date_string | strip %}{% if raw_date and raw_date != '' %}{% assign date_parts = raw_date | split: '/' %}{% if date_parts.size == 2 %}{% assign month_num = date_parts[0] | plus: 0 %}{% case month_num %}{% when 1 %}{% assign month_name = 'January' %}{% when 2 %}{% assign month_name = 'February' %}{% when 3 %}{% assign month_name = 'March' %}{% when 4 %}{% assign month_name = 'April' %}{% when 5 %}{% assign month_name = 'May' %}{% when 6 %}{% assign month_name = 'June' %}{% when 7 %}{% assign month_name = 'July' %}{% when 8 %}{% assign month_name = 'August' %}{% when 9 %}{% assign month_name = 'September' %}{% when 10 %}{% assign month_name = 'October' %}{% when 11 %}{% assign month_name = 'November' %}{% when 12 %}{% assign month_name = 'December' %}{% endcase %} | {{month_name}} {{date_parts[1]}}{% endif %}{% endif %}.
         <br>
         {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
       </p>
@@ -144,7 +147,13 @@ function filterTalks(type, button) {
       talk.style.display = 'block';
     } else {
       var talkType = talk.getAttribute('data-type');
-      if (talkType === type) {
+      // Match both "invited X" and "X" variants
+      var matches = (talkType.indexOf(type) !== -1);
+      // Special case: 'contributed' should also match 'parallel'
+      if (type === 'contributed' && talkType.indexOf('parallel') !== -1) {
+        matches = true;
+      }
+      if (matches) {
         talk.style.display = 'block';
       } else {
         talk.style.display = 'none';
