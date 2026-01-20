@@ -6,6 +6,6 @@ permalink: /talks/0060
 title: "Dark Neutrons Underground" 
 type: "invited seminar"
 venue: "Northwestern University"
-date: 12/22
+date: "12/2022"
 location: "USA"
 ---

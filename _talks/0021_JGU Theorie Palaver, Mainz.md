@@ -6,7 +6,7 @@ permalink: /talks/0021
 title: "" 
 type: "invited seminar"
 venue: "JGU Theorie Palaver, Mainz"
-date: 06/20
+date: "06/2020"
 location: "Germany"
 ---
 

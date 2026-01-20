@@ -6,6 +6,6 @@ permalink: /talks/0009
 title: "A light dark neutrino sector" 
 type: "invited seminar"
 venue: "Queen Mary University of London"
-date: 03/19
+date: "03/2019"
 location: "UK"
 ---

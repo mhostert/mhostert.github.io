@@ -6,6 +6,6 @@ permalink: /talks/0099
 title: "TBD" 
 type: "invited seminar"
 venue: "University of Wisconsin, Madison"
-date: 12/25
+date: "12/2025"
 location: "USA"
 ---

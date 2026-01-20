@@ -6,6 +6,6 @@ permalink: /talks/0098
 title: "TBD" 
 type: "invited seminar"
 venue: "Grinnell College"
-date: 11/25
+date: "11/2025"
 location: "USA"
 ---

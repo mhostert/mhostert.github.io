@@ -6,6 +6,6 @@ permalink: /talks/0069
 title: "Into the Dark with Neutrinos" 
 type: "colloquium "
 venue: "University of Iowa"
-date: 01/24
+date: "01/2024"
 location: "USA"
 ---

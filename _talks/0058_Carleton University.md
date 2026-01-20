@@ -6,6 +6,6 @@ permalink: /talks/0058
 title: "Semi-Visible Dark Photons" 
 type: "invited seminar"
 venue: "Carleton University"
-date: 11/22
+date: "11/2022"
 location: "Canada"
 ---

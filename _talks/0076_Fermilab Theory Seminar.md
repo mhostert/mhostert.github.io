@@ -6,7 +6,7 @@ permalink: /talks/0076
 title: "Long-Lived Particles at Spallation Neutron Sources" 
 type: "invited talk"
 venue: "Fermilab Theory Seminar"
-date: 09/24
+date: "09/2024"
 location: "USA"
 link: True 
 talk_url: https://indico.fnal.gov/event/65826/ 

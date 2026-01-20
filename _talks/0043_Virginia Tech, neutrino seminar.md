@@ -6,7 +6,7 @@ permalink: /talks/0043
 title: "The Secret Life of Heavy Neutrinos" 
 type: "invited talk"
 venue: "Virginia Tech, neutrino seminar"
-date: 10/21
+date: "10/2021"
 location: "USA"
 ---
 

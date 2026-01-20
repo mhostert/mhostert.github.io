@@ -6,6 +6,6 @@ permalink: /talks/0080
 title: "The Neutrino Slice of Muon Colliders" 
 type: "invited seminar"
 venue: "University of Iowa"
-date: 10/24
+date: "10/2024"
 location: "USA"
 ---

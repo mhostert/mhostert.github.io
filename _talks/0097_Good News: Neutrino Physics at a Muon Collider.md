@@ -6,7 +6,7 @@ permalink: /talks/0097
 title: "TBD" 
 type: "invited talk"
 venue: "Good News: Neutrino Physics at a Muon Collider"
-date: 10/25
+date: "10/2025"
 location: "USA"
 link: True 
 talk_url: https://indico.global/event/15552/timetable/#20251027.detailed 

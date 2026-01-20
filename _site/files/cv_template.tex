@@ -1,201 +1,118 @@
-\documentclass[a4paper,10pt]{article}
+\documentclass[a4paper,11pt]{article}
 \usepackage[bottom=0.8in,top=0.8in, left=0.8in,right=0.8in]{geometry}
 
+% non-numbered pages
+\pagestyle{empty} 
+
+%%%%%%%%%%% pdflatex %%%%%%%%%
+\usepackage[T1]{fontenc}
+\usepackage{newtxmath,newtxtext}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%% xelatex %%%%%%%%%%%%%%
+% \usepackage{fontspec}
+% \setmainfont{Times New Roman}
+% \setmainfont{TeX Gyre Termes}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %A Few Useful Packages
-\usepackage{url,parskip}
+\usepackage{parskip}
 \usepackage{titlesec}	
-\linespread{1.1}
-\usepackage{enumitem}% 
 \usepackage{multirow}
-
-%colors
-\RequirePackage{color,graphicx}
+\usepackage{graphicx}
 \usepackage[usenames,dvipsnames]{xcolor}
-
-%Setup hyperref package, and colours for links
 \usepackage{hyperref}
 \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-\definecolor{MH}{rgb}{0.0, 0.26, 0.15}
-\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour, linkcolor=linkcolour}
+\hypersetup{colorlinks,breaklinks,urlcolor={linkcolour!90}, linkcolor={linkcolour!90}}
 
-\titleformat{\section}{\color{linkcolour} \bf\normalsize}{}{0em}{}[\color{linkcolour}]
+% line spacing
+\linespread{1.1}
+
+% section reformatting
+\titleformat{\section}{\color{black} \large}{}{0em}{}[\color{black}]
 \titlespacing{\section}{0pt}{3pt}{3pt}
-\titleformat{\subsection}{\large}{}{0em}{}[]
-\titlespacing{\subsection}{0pt}{3pt}{3pt}
-\newcommand{\subheader}[1]{\textcolor{linkcolour}{\footnotesize\textbf{#1}}}
 
-%%%%%%%%%%%%%%
-% for images in line 
-\newcommand*{\img}[1]{%
-    \raisebox{-0.1cm}{%
-        \includegraphics[
-        height=1cm,
-        width=1.5cm,
-        keepaspectratio,
-        ]{#1}%
-    }%
-}
-\newcommand*{\imgg}[1]{%
-    \raisebox{-0.1cm}{%
-        \includegraphics[
-        height=1cm,
-        width=1.2cm,
-        keepaspectratio,
-        ]{#1}%
-    }%
+\newcommand{\sectitle}[1]{
+    \vspace{1.5ex}
+    \section{#1}
+    \vspace{-3ex}
+    \noindent\rule{\textwidth}{0.7pt}
+    \vspace{-4ex}
 }
 
+% new text bold style
+\newsavebox\CBox
+\def\textBF#1{\sbox\CBox{#1}\resizebox{\wd\CBox}{\ht\CBox}{\textcolor{linkcolour}{{#1}}}}
+\parindent=0pt
 
-%--------------------BEGIN DOCUMENT----------------------
+% dummy text
+\newcommand{\mylipsum}{Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Ut purus elit,
+vestibulum ut, placerat ac, adipiscing vitae, felis.}
+
+%-------------------- Begin document ----------------------
 \begin{document}
 
 %-------------------- Title section ----------------------
-% move box to leftmost edge of paper
-\noindent\hspace*{-0.8in}%
-\colorbox{white}{
-\begin{minipage}{\paperwidth}%
-    % Start text back at original margin
+\begin{minipage}{\textwidth}
     \vspace{7ex}
-    \color{white}
-    
-    \par{\centering
+        \par{
+        \centering
         \vspace{-0.9in}
-        {\color{black}\emph{Curriculum Vitae}}
-        
-		\vspace{2ex}
-		{\color{linkcolour} \textbf{\Large YOUR NAME}} \par}
+            % \textcolor{black}{\emph{Curriculum Vitae}}\\
+            \textcolor{linkcolour}{\Large YOUR NAME}
+        \par}
 \end{minipage}
-}
-\vspace{1ex}
-\pagestyle{empty} % non-numbered pages
 
-
+%-------------------- Header ----------------------
 \begin{center}
-\begin{tabular}{rl}
-    \textsc{address:}   & Your department \\ & number street city \\
-    \textsc{phone:}     & your number\\
-    \textsc{email:}     & \href{mailto:your-email@address}{your-email}\\
-    \textsc{webpage:} & \href{address}{your page}\\
-\textsc{orcid:} 
-    % \imgg{orcid.png}
-& \href{http://orcid.org/number}{number}\\
-\textsc{inspire:}
-    % \img{inspire.png}
-    & \href{http://inspirehep.net/author/profile/name.1}{name.1}
-    \end{tabular}
+    Address, YY, XX \,$\cdot$\, \href{mailto:email@address.com}{email@address.com} \,$\cdot$\, \href{https://mywebsite.com/}{mywebsite.com}
 \end{center}
 
+%%% Short paragraph
+My brief description.~\mylipsum
 
 %-------------------- SECTIONS ----------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\\EDUCATION}
-\vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
+\sectitle{Technical Skills}
 
- \textbf{PhD} in subject-- {University}\hfill  \textsc{Duration} 
-\\
-Dissertation: \emph{Title}.
-\\
-Dissertation Committee: Profs. X and Y.
-\\
-Supervisor: Prof. Z.
+\textBF{Programming skills} --- \mylipsum
 
-\textbf{Bachelors degree} in subject -- {University}  \hfill {\sc duration} 
-\\
-Comment.
+\textBF{Data Analysis} --- \mylipsum
+
+\textBF{Visualization} --- \mylipsum
+
+\textBF{Git} --- \mylipsum
+
+\textBF{Unix} --- \mylipsum
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\\ACADEMIC POSITIONS}
-\vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
+\sectitle{Core Competencies}
 
- \textbf{Post-Doctoral Position} \hfill  \textsc{duration} 
- \\
-Researcher at intitute working with Prof.~X, focusing on xyz.
+\textBF{Leadership} --- \mylipsum
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\\FELLOWSHIPS AND AWARDS}
-\vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
+\textBF{Problem-solving} --- \mylipsum
 
-\textbf{Award} (\textsc{month} year): description.
- 
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\\ACADEMIC ENGAGEMENT}
-\vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
+\textBF{Communication} --- \mylipsum
 
-\subheader{TRAINING AND RESEARCH PLACEMENTS}
-\begin{enumerate}[label={\tiny$\bullet$}]
+\textBF{Writing} --- \mylipsum
 
-    \item \textbf{Event or network}, date: what you did.
-\end{enumerate}
-
-\subheader{EXPERIMENTAL COLLABORATIONS}
-\begin{enumerate}[label={\tiny$\bullet$}]
-\item Member of \textbf{experimental} collaboration.
-\end{enumerate}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subheader{TEACHING AND MENTORING} 
-\begin{enumerate}[label={\tiny$\bullet$}]
-\item \textbf{Role}, period: taught xyz.
-\end{enumerate}
+\textBF{Languages} --- \mylipsum
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subheader{EVENT ORGANIZATION AND COMMUNITY ENGAGEMENT}
-\begin{enumerate}[label={\tiny$\bullet$}]
+\sectitle{Positions}
 
-\item \textbf{Weak Interactions and Neutrinos 2021}: role \href{address}{website}.
+\textBF{First Position} --- XYZ Institute \hfill XX 2000 --- Present
 
-\end{enumerate}
-
-\subheader{SCIENCE OUTREACH}
-\begin{enumerate}[label={\tiny$\bullet$}]
-
-
-\item \textbf{Outreach event}: role, more info.
-
-\end{enumerate}
-
-
-
-\section{\\ INVITED SEMINARS AND CONFERENCE PRESENTATIONS}
-\vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
-
-\begin{enumerate}
-
-\item \textbf{University} (Country): date, invited seminar.
-\end{enumerate}
-
-\section{\\PUBLICATIONS}
-\vspace{-3ex}\noindent\rule{\textwidth}{0.7pt}
-
-{\textbf{Peer-reviewed publications:}}
-\begin{enumerate}
-    \item \textit{``My title"}, authors, \href{address}{arXiv:xxxxx}, submitted to Journal.
-
-\end{enumerate}
-
-{ \textbf{Preprints:}}
-\begin{enumerate}
-\item \textit{``Feebly-Interacting Particles:FIPs 2020 Workshop Report
-"}, Agrawal, Prateek et al , \href{https://arxiv.org/abs/2102.12143}{arXiv:2102.12143}.
-\end{enumerate}
-
-\vspace{1ex}
-
-{\textbf{Non-peer reviewed publications}}
- \begin{enumerate}
- 
-  \item \textit{``A''}, B C \href{address}{NOW2018}.
-
-\end{enumerate}
-
-\vspace{1ex}
-
-
+\mylipsum
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{\\OTHER SKILLS}
+\sectitle{Education}
 
+\mylipsum
+
+\textBF{Ph.D.} in YYY -- {XYZ University, CT}\hfill {XX 2000 --- YY XXXX} 
+
+\textBF{B.S.} in XXX -- {XYZ University, CT}  \hfill {XX 2000 --- YY XXXX} 
 
 \end{document}

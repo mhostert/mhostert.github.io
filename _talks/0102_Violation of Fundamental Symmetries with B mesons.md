@@ -6,7 +6,7 @@ permalink: /talks/0102
 title: "TBD" 
 type: "invited talk"
 venue: "Violation of Fundamental Symmetries with B mesons"
-date: 12/25
+date: "12/2025"
 location: "USA"
 link: True 
 talk_url: https://indico.fnal.gov/event/71119/contributions/325794/ 

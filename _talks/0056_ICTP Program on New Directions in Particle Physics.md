@@ -6,7 +6,7 @@ permalink: /talks/0056
 title: "Dark neutrino sectors in modern neutrino experiments" 
 type: "invited talk"
 venue: "ICTP Program on New Directions in Particle Physics"
-date: 09/22
+date: "09/2022"
 location: "Brazil"
 link: True 
 talk_url: https://www.ictp-saifr.org/ndfp2022/ 

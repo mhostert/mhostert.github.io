@@ -6,7 +6,7 @@ permalink: /talks/0072
 title: "Long-Lived Particles at Spallation Neutron Sources" 
 type: "contributed talk"
 venue: "Magnificent CEvNS"
-date: 06/24
+date: "06/2024"
 location: "Spain"
 link: True 
 talk_url: https://indico.cern.ch/event/1342813/contributions/5913924/ 

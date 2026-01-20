@@ -6,7 +6,7 @@ permalink: /talks/0071
 title: "Flavor-violating new physics at the intensity frontier" 
 type: "invited talk "
 venue: "Mitchell Conference at Texas A&M"
-date: 05/24
+date: "05/2024"
 location: "USA"
 link: True 
 talk_url: https://indico.cern.ch/event/1378520/contributions/5952082/ 

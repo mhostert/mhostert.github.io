@@ -6,7 +6,7 @@ permalink: /talks/0096
 title: "TBD" 
 type: "colloquium "
 venue: "Idaho State University"
-date: 10/25
+date: "10/2025"
 location: "USA"
 ---
 

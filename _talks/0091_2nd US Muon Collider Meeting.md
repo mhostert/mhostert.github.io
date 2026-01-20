@@ -6,7 +6,7 @@ permalink: /talks/0091
 title: "Neutrinos Physics at Muon Colliders" 
 type: "plenary talk"
 venue: "2nd US Muon Collider Meeting"
-date: 08/25
+date: "08/2025"
 location: "USA"
 link: True 
 talk_url: https://indico.uchicago.edu/event/479/timetable/ 

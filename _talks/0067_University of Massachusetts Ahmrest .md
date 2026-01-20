@@ -6,6 +6,6 @@ permalink: /talks/0067
 title: "Multiple Leptons from dark sectors at the intensity frontier" 
 type: "invited seminar"
 venue: "University of Massachusetts Ahmrest "
-date: 10/23
+date: "10/2023"
 location: "USA"
 ---

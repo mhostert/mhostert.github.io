@@ -6,6 +6,6 @@ permalink: /talks/0045
 title: "Hidden sector seesaws at the MiniBooNE and MicroBooNE experiments" 
 type: "invited seminar"
 venue: "Harvard University, family meeting"
-date: 11/21
+date: "11/2021"
 location: "USA"
 ---

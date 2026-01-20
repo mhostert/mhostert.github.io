@@ -6,7 +6,7 @@ permalink: /talks/0068
 title: "Production of exotic particles at high-intensity muon facilities" 
 type: "invited talk"
 venue: "Muons in Minneapolis workshop"
-date: 12/23
+date: "12/2023"
 location: "USA"
 link: True 
 talk_url: https://indico.fnal.gov/event/59896/contributions/280020/ 

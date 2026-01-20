@@ -53,11 +53,8 @@ author_profile: true
   <h2 class="year-header">Upcoming Talks</h2>
   <ol id="upcoming-talks">
     {% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
-    {% assign current_date = site.time | date: "%y" | plus: 0 %}
     {% for post in sorted %}
-      {% assign talk_date = post.date | split: '/' %}
-      {% assign talk_year = talk_date[1] | plus: 0 %}
-      {% if talk_year >= current_date and post.venue contains 'upcoming' %}
+      {% if post.venue contains 'upcoming' %}
     <div class="list__item talk-item" data-type="{{ post.type }}" style="font-size:16px;">
       {% if post.link %}
         {{post.talk_number}}. {{post.venue}} <a href="{{ post.talk_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
@@ -65,7 +62,7 @@ author_profile: true
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
-        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% assign date_parts = post.date | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} 20{{date_parts[1]}}{% endif %}.
+        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% capture date_str %}{{post.date}}{% endcapture %}{% assign date_parts = date_str | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} {{date_parts[1]}}{% endif %}.
         <br>
         {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
       </p>
@@ -79,37 +76,42 @@ author_profile: true
   <h2 class="year-header">Past Talks</h2>
   
   {% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
-  {% assign talks_by_year = sorted | group_by_exp: "post", "post.date | split: '/' | last" %}
   
-  {% for year_group in talks_by_year %}
-    {% assign year_num = year_group.name | plus: 0 %}
-    {% assign full_year = year_num | prepend: '20' %}
+  {% for year_num in (2018..2030) reversed %}
+    {% assign year = year_num | append: '' %}
+    {% assign has_talks = false %}
     
-    {% assign has_past_talks = false %}
-    {% for post in year_group.items %}
+    {% for post in sorted %}
       {% unless post.venue contains 'upcoming' %}
-        {% assign has_past_talks = true %}
+        {% capture date_str %}{{post.date}}{% endcapture %}
+        {% if date_str contains year %}
+          {% assign has_talks = true %}
+          {% break %}
+        {% endif %}
       {% endunless %}
     {% endfor %}
     
-    {% if has_past_talks %}
-    <div class="year-section">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">{{ full_year }}</h3>
+    {% if has_talks %}
+    <div class="year-section" data-year="{{ year }}">
+      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">{{ year }}</h3>
       <ol>
-        {% for post in year_group.items %}
+        {% for post in sorted %}
           {% unless post.venue contains 'upcoming' %}
-        <div class="list__item talk-item" data-type="{{ post.type }}" style="font-size:16px;">
-          {% if post.link %}
-            {{post.talk_number}}. {{post.venue}} <a href="{{ post.talk_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
-          {% else %}
-            {{post.talk_number}}. {{post.venue}}
-          {% endif %}
-          <p class="page__meta">
-            {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% assign date_parts = post.date | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} 20{{date_parts[1]}}{% endif %}.
-            <br>
-            {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
-          </p>
-        </div>
+            {% capture date_str %}{{post.date}}{% endcapture %}
+            {% if date_str contains year %}
+    <div class="list__item talk-item" data-type="{{ post.type }}" style="font-size:16px;">
+      {% if post.link %}
+        {{post.talk_number}}. {{post.venue}} <a href="{{ post.talk_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      {% else %}
+        {{post.talk_number}}. {{post.venue}}
+      {% endif %}
+      <p class="page__meta">
+        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% assign date_parts = date_str | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} {{date_parts[1]}}{% endif %}.
+        <br>
+        {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
+      </p>
+    </div>
+            {% endif %}
           {% endunless %}
         {% endfor %}
       </ol>
@@ -141,6 +143,13 @@ function filterTalks(type) {
       const talkType = talk.getAttribute('data-type');
       talk.style.display = talkType === type ? 'block' : 'none';
     }
+  });
+  
+  // Hide empty year sections
+  const yearSections = document.querySelectorAll('[data-year]');
+  yearSections.forEach(section => {
+    const visibleTalks = section.querySelectorAll('.talk-item[style*="display: block"], .talk-item:not([style*="display: none"])');
+    section.style.display = visibleTalks.length > 0 ? 'block' : 'none';
   });
 }
 </script>

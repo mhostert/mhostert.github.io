@@ -6,7 +6,7 @@ permalink: /talks/0101
 title: "TBD" 
 type: "keynote speaker"
 venue: "Virginia Tech, Center for Neutrino Physics Research Day"
-date: 12/25
+date: "12/2025"
 location: "USA"
 link: True 
 talk_url: https://indico.phys.vt.edu/event/82/timetable/?print=1&view=standard 

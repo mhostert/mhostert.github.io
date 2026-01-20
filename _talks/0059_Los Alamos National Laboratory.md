@@ -6,6 +6,6 @@ permalink: /talks/0059
 title: "New limits on heavy neutral leptons with dark forces from neutrino data" 
 type: "invited seminar"
 venue: "Los Alamos National Laboratory"
-date: 12/22
+date: "12/2022"
 location: "USA"
 ---

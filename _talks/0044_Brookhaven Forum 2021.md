@@ -6,7 +6,7 @@ permalink: /talks/0044
 title: "Heavy neutrinos at hodoscopic detectors" 
 type: "contributed talk"
 venue: "Brookhaven Forum 2021"
-date: 11/21
+date: "11/2021"
 location: "USA"
 link: True 
 talk_url: https://indico.bnl.gov/event/11389/ 

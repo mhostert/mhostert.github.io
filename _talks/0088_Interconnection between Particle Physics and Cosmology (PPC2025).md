@@ -6,7 +6,7 @@ permalink: /talks/0088
 title: "Searching for Light New Physics with Neutrinos" 
 type: "plenary talk"
 venue: "Interconnection between Particle Physics and Cosmology (PPC2025)"
-date: 06/25
+date: "06/2025"
 location: "USA"
 link: True 
 talk_url: https://indico.sanfordlab.org/event/138/overview 

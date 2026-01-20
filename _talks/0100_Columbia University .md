@@ -6,6 +6,6 @@ permalink: /talks/0100
 title: "TBD" 
 type: "colloquium "
 venue: "Columbia University "
-date: 12/25
+date: "12/2025"
 location: "USA"
 ---

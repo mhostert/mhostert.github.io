@@ -6,7 +6,7 @@ permalink: /talks/0028
 title: "" 
 type: "plenary talk"
 venue: "Central American meeting of High Energy Physics, Cosmology and High Energy Astrophysics"
-date: 11/20
+date: "11/2020"
 location: "Central America"
 ---
 

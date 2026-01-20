@@ -6,7 +6,7 @@ permalink: /talks/0061
 title: "Neutrino Experiments Beyond the Standard Model" 
 type: "invited talk"
 venue: "PITT PACC Workshop: Nu Tools for BSM at Neutrino Beam Facilities"
-date: 12/22
+date: "12/2022"
 location: "USA"
 link: True 
 talk_url: https://indico.cern.ch/event/1216701/contributions/5167763/ 

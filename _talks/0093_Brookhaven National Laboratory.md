@@ -6,7 +6,7 @@ permalink: /talks/0093
 title: "TBD" 
 type: "invited seminar"
 venue: "Brookhaven National Laboratory"
-date: 10/25
+date: "10/2025"
 location: "USA"
 link: True 
 talk_url: https://indico.bnl.gov/event/29252/ 

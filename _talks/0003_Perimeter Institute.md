@@ -6,6 +6,6 @@ permalink: /talks/0003
 title: "Current status of short-baseline oscillations" 
 type: "invited seminar"
 venue: "Perimeter Institute"
-date: 06/18
+date: "06/2018"
 location: "Canada"
 ---

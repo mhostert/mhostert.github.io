@@ -6,7 +6,7 @@ permalink: /talks/0086
 title: "Oscillation Portals to New Physics in CEvNS" 
 type: "invited talk"
 venue: "Magnificent CEvNS 2025"
-date: 06/25
+date: "06/2025"
 location: "Brazil"
 link: True 
 talk_url: https://indico.cern.ch/event/1458241/contributions/6522283/ 

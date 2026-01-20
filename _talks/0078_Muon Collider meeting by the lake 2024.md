@@ -6,7 +6,7 @@ permalink: /talks/0078
 title: "Neutrino interactions at a muon collider" 
 type: "invited talk"
 venue: "Muon Collider meeting by the lake 2024"
-date: 09/24
+date: "09/2024"
 location: "USA"
 link: True 
 talk_url: https://sites.google.com/view/mucbythelake/home?authuser=0 

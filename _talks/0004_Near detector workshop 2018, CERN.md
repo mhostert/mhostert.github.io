@@ -6,7 +6,7 @@ permalink: /talks/0004
 title: "Near detector physics with neutrino experiments" 
 type: "invited talk"
 venue: "Near detector workshop 2018, CERN"
-date: 06/18
+date: "06/2018"
 location: "Switzerland"
 link: True 
 talk_url: https://indico.cern.ch/event/721473/overview 

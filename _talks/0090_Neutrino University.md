@@ -6,7 +6,7 @@ permalink: /talks/0090
 title: "New Physics with Neutrinos " 
 type: "lecture"
 venue: "Neutrino University"
-date: 07/25
+date: "07/2025"
 location: "USA"
 link: True 
 talk_url: https://npc.fnal.gov/neutrino-university/ 
