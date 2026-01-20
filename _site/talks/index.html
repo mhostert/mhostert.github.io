@@ -10636,27 +10636,48 @@
 <script>
 function filterTalks(type, button) {
   // Update active button
-  const buttons = document.querySelectorAll('.filter-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
+  var buttons = document.querySelectorAll('.filter-btn');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove('active');
+  }
   button.classList.add('active');
   
   // Filter talks
-  const talks = document.querySelectorAll('.talk-item');
-  talks.forEach(talk => {
+  var talks = document.querySelectorAll('.talk-item');
+  for (var i = 0; i < talks.length; i++) {
+    var talk = talks[i];
     if (type === 'all') {
       talk.style.display = 'block';
     } else {
-      const talkType = talk.getAttribute('data-type');
-      talk.style.display = talkType === type ? 'block' : 'none';
+      var talkType = talk.getAttribute('data-type');
+      if (talkType === type) {
+        talk.style.display = 'block';
+      } else {
+        talk.style.display = 'none';
+      }
     }
-  });
+  }
   
   // Hide empty year sections
-  const yearSections = document.querySelectorAll('[data-year]');
-  yearSections.forEach(section => {
-    const visibleTalks = section.querySelectorAll('.talk-item[style*="display: block"], .talk-item:not([style*="display: none"])');
-    section.style.display = visibleTalks.length > 0 ? 'block' : 'none';
-  });
+  var yearSections = document.querySelectorAll('[data-year]');
+  for (var i = 0; i < yearSections.length; i++) {
+    var section = yearSections[i];
+    var sectionTalks = section.querySelectorAll('.talk-item');
+    var hasVisible = false;
+    
+    for (var j = 0; j < sectionTalks.length; j++) {
+      if (sectionTalks[j].style.display !== 'none') {
+        hasVisible = true;
+        break;
+      }
+    }
+    
+    if (hasVisible) {
+      section.style.display = 'block';
+    } else {
+      section.style.display = 'none';
+    }
+  }
 }
 </script>
   </div>
