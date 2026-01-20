@@ -65,7 +65,7 @@ author_profile: true
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
-        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %} | {{post.date | date:'%B 20%y'}}{% endif %}.
+        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% assign date_parts = post.date | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} 20{{date_parts[1]}}{% endif %}.
         <br>
         {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
       </p>
@@ -105,7 +105,7 @@ author_profile: true
             {{post.talk_number}}. {{post.venue}}
           {% endif %}
           <p class="page__meta">
-            {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %} | {{post.date | date:'%B 20%y'}}{% endif %}.
+            {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %}{% assign date_parts = post.date | split: '/' %}{% assign month_num = date_parts[0] | plus: 0 %}{% assign months = "January,February,March,April,May,June,July,August,September,October,November,December" | split: ',' %}{% assign month_index = month_num | minus: 1 %}{% assign month_name = months[month_index] %} | {{month_name}} 20{{date_parts[1]}}{% endif %}.
             <br>
             {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
           </p>
