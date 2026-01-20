@@ -65,7 +65,7 @@ author_profile: true
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
-        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% capture date_string %}{{post.date}}{% endcapture %}{% assign raw_date = date_string | strip %}{% if raw_date and raw_date != '' %}{% assign date_parts = raw_date | split: '/' %}{% if date_parts.size == 2 %}{% assign month_num = date_parts[0] | plus: 0 %}{% case month_num %}{% when 1 %}{% assign month_name = 'January' %}{% when 2 %}{% assign month_name = 'February' %}{% when 3 %}{% assign month_name = 'March' %}{% when 4 %}{% assign month_name = 'April' %}{% when 5 %}{% assign month_name = 'May' %}{% when 6 %}{% assign month_name = 'June' %}{% when 7 %}{% assign month_name = 'July' %}{% when 8 %}{% assign month_name = 'August' %}{% when 9 %}{% assign month_name = 'September' %}{% when 10 %}{% assign month_name = 'October' %}{% when 11 %}{% assign month_name = 'November' %}{% when 12 %}{% assign month_name = 'December' %}{% endcase %} | {{month_name}} {{date_parts[1]}}{% endif %}{% endif %}.
+        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %} | {{ post.date | date: "%B %Y" }}{% endif %}.
         <br>
         {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
       </p>
@@ -109,7 +109,7 @@ author_profile: true
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
-        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% capture date_string %}{{post.date}}{% endcapture %}{% assign raw_date = date_string | strip %}{% if raw_date and raw_date != '' %}{% assign date_parts = raw_date | split: '/' %}{% if date_parts.size == 2 %}{% assign month_num = date_parts[0] | plus: 0 %}{% case month_num %}{% when 1 %}{% assign month_name = 'January' %}{% when 2 %}{% assign month_name = 'February' %}{% when 3 %}{% assign month_name = 'March' %}{% when 4 %}{% assign month_name = 'April' %}{% when 5 %}{% assign month_name = 'May' %}{% when 6 %}{% assign month_name = 'June' %}{% when 7 %}{% assign month_name = 'July' %}{% when 8 %}{% assign month_name = 'August' %}{% when 9 %}{% assign month_name = 'September' %}{% when 10 %}{% assign month_name = 'October' %}{% when 11 %}{% assign month_name = 'November' %}{% when 12 %}{% assign month_name = 'December' %}{% endcase %} | {{month_name}} {{date_parts[1]}}{% endif %}{% endif %}.
+        {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %} | {{ post.date | date: "%B %Y" }}{% endif %}.
         <br>
         {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
       </p>

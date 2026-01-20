@@ -1,5 +1,6 @@
 {% include base_path %}
 
+{% unless page.show_pagination == false %}
 {% if page.previous or page.next %}
   <nav class="pagination">
     {% if page.previous %}
@@ -14,3 +15,4 @@
     {% endif %}
   </nav>
 {% endif %}
+{% endunless %}

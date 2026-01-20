@@ -6,6 +6,7 @@ permalink: /teaching/quantum-mechanics-ii/
 venue: "University of Iowa, Department of Physics and Astronomy"
 date: 2026-01-01
 location: "Iowa City, IA"
+show_pagination: false
 ---
 
 * <a href="https://mhostert.github.io/files/teaching/QM_II/Syllabus.pdf">Syllabus</a> 

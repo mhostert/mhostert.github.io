@@ -6,6 +6,7 @@ permalink: /teaching/bsm-course/
 venue: "University of Iowa, Department of Physics and Astronomy"
 date: 2025-09-01
 location: "Iowa City, IA"
+show_pagination: false
 ---
 
 ## Fall 2025: Particle Physics Beyond the Standard Model
