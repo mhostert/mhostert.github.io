@@ -42,11 +42,11 @@ author_profile: true
 </style>
 
 <div class="filter-buttons">
-  <button class="filter-btn active" onclick="filterTalks('all')">All</button>
-  <button class="filter-btn" onclick="filterTalks('invited seminar')">Invited Seminars</button>
-  <button class="filter-btn" onclick="filterTalks('invited talk')">Invited Talks</button>
-  <button class="filter-btn" onclick="filterTalks('parallel talk')">Parallel Talks</button>
-  <button class="filter-btn" onclick="filterTalks('contributed poster')">Posters</button>
+  <button class="filter-btn active" onclick="filterTalks('all', this)">All</button>
+  <button class="filter-btn" onclick="filterTalks('invited seminar', this)">Invited Seminars</button>
+  <button class="filter-btn" onclick="filterTalks('invited talk', this)">Invited Talks</button>
+  <button class="filter-btn" onclick="filterTalks('parallel talk', this)">Parallel Talks</button>
+  <button class="filter-btn" onclick="filterTalks('contributed poster', this)">Posters</button>
 </div>
 
 <div class="year-section">
@@ -128,11 +128,11 @@ author_profile: true
 {% endif %}
 
 <script>
-function filterTalks(type) {
+function filterTalks(type, button) {
   // Update active button
   const buttons = document.querySelectorAll('.filter-btn');
   buttons.forEach(btn => btn.classList.remove('active'));
-  event.target.classList.add('active');
+  button.classList.add('active');
   
   // Filter talks
   const talks = document.querySelectorAll('.talk-item');
