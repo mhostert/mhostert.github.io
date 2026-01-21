@@ -6,29 +6,6 @@ author_profile: true
 ---
 
 <style>
-.filter-buttons {
-  margin: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.filter-btn {
-  padding: 8px 16px;
-  background-color: #2a2a2a;
-  border: 1px solid #444;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #fff;
-  transition: all 0.3s;
-}
-.filter-btn:hover {
-  background-color: #3a3a3a;
-}
-.filter-btn.active {
-  background-color: #52adc8;
-  border-color: #52adc8;
-}
 .year-section {
   margin: 30px 0;
 }
@@ -40,17 +17,6 @@ author_profile: true
   border-bottom: 2px solid #444;
 }
 </style>
-
-<div class="filter-buttons">
-  <button class="filter-btn active" onclick="filterTalks('all', this)">All</button>
-  <button class="filter-btn" onclick="filterTalks('seminar', this)">Seminars</button>
-  <button class="filter-btn" onclick="filterTalks('colloquium', this)">Colloquia</button>
-  <button class="filter-btn" onclick="filterTalks('talk', this)">Talks</button>
-  <button class="filter-btn" onclick="filterTalks('plenary', this)">Plenary</button>
-  <button class="filter-btn" onclick="filterTalks('contributed', this)">Contributed</button>
-  <button class="filter-btn" onclick="filterTalks('poster', this)">Posters</button>
-  <button class="filter-btn" onclick="filterTalks('lecture', this)">Lectures</button>
-</div>
 
 <div class="year-section">
   <h2 class="year-header">Upcoming Talks</h2>
@@ -129,57 +95,3 @@ author_profile: true
   <p style="font-size:16px">See some highlights from my scientific poster presentations <a href="/posters">here.</a></p>
 </div>
 {% endif %}
-
-<script>
-function filterTalks(type, button) {
-  // Update active button
-  var buttons = document.querySelectorAll('.filter-btn');
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove('active');
-  }
-  button.classList.add('active');
-  
-  // Filter talks
-  var talks = document.querySelectorAll('.talk-item');
-  for (var i = 0; i < talks.length; i++) {
-    var talk = talks[i];
-    if (type === 'all') {
-      talk.style.display = 'block';
-    } else {
-      var talkType = talk.getAttribute('data-type');
-      // Match both "invited X" and "X" variants
-      var matches = (talkType.indexOf(type) !== -1);
-      // Special case: 'contributed' should also match 'parallel'
-      if (type === 'contributed' && talkType.indexOf('parallel') !== -1) {
-        matches = true;
-      }
-      if (matches) {
-        talk.style.display = 'block';
-      } else {
-        talk.style.display = 'none';
-      }
-    }
-  }
-  
-  // Hide empty year sections
-  var yearSections = document.querySelectorAll('[data-year]');
-  for (var i = 0; i < yearSections.length; i++) {
-    var section = yearSections[i];
-    var sectionTalks = section.querySelectorAll('.talk-item');
-    var hasVisible = false;
-    
-    for (var j = 0; j < sectionTalks.length; j++) {
-      if (sectionTalks[j].style.display !== 'none') {
-        hasVisible = true;
-        break;
-      }
-    }
-    
-    if (hasVisible) {
-      section.style.display = 'block';
-    } else {
-      section.style.display = 'none';
-    }
-  }
-}
-</script>

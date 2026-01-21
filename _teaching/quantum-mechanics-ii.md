@@ -9,21 +9,15 @@ location: "Iowa City, IA"
 show_pagination: false
 ---
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/Syllabus.pdf">Syllabus</a> 
+The most up to date information will be available on the UI ICON page.
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/0_Reading_List.pdf"> Reading List</a>
-
-* <a href="https://mhostert.github.io/files/teaching/QM_II/0_Review_Resources.pdf"> Review Resources</a>
-
-
-**Lecture Notes:**
-
-* <a href="https://mhostert.github.io/files/teaching/QM_II/0_Introduction.pdf"> Introduction </a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/Syllabus.pdf">Syllabus</a> / <a href="https://mhostert.github.io/files/teaching/QM_II/0_Reading_List.pdf"> Reading List</a> / <a href="https://mhostert.github.io/files/teaching/QM_II/0_Course_Introduction.pdf"> Course Introduction </a>
 
 **Problem Sets:**
 
-* Coming soon
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 1 </a>) Schrödinger's Equation and probability currents.
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2 </a>) Four different methods to finding correlations.
 
-**Additional Resources:**
+**Homework Assignments:**
 
 * Coming soon
