@@ -15,7 +15,8 @@ The most up to date information will be available on the UI ICON page.
 
 **Notes:**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/review_notes.pdf"> Review Notes</a>.
+* <a href="https://mhostert.github.io/files/teaching/QM_II/1_review_notes.pdf"> Review Notes</a>.
+* <a href="https://mhostert.github.io/files/teaching/QM_II/1_time_evolution.pdf"> Time Evolution</a>.
 
 **Problem Sets:**
 
