@@ -15,13 +15,14 @@ The most up to date information will be available on the UI ICON page.
 
 **Notes:**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/1_review_notes.pdf"> Review Notes</a>.
-* <a href="https://mhostert.github.io/files/teaching/QM_II/1_time_evolution.pdf"> Time Evolution</a>.
+* <a href="https://mhostert.github.io/files/teaching/QM_II/1_review_notes.pdf"> Review Notes</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/1_time_evolution_v2.pdf"> Time Evolution</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/1_variational_methods.pdf"> Variational Method</a>
 
 **Problem Sets:**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger's Equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>).
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Four different methods of finding correlations.
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger's Equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Four different methods of finding correlations
 
 **Homework Assignments:**
 
