@@ -23,8 +23,8 @@ The most up to date information will be available on the UI ICON page.
 **Problem Sets:**
 
 * <a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger's equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Time evolution
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_3.pdf"> Problems 3</a>) Propagators
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Time evolution (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_2.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_3.pdf"> Problems 3</a>) Propagators (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_3.pdf">solutions</a>)
 
 **Homework Assignments:**
 
