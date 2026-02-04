@@ -19,6 +19,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_time_evolution_v3.pdf"> Time Evolution</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_greens_functions.pdf"> Green's Functions</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_variational_methods.pdf"> Variational Method</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/WKB_v0.pdf"> WKB</a>
 
 **Problem Sets:**
 
