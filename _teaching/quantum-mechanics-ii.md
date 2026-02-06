@@ -29,5 +29,5 @@ The most up to date information will be available on the UI ICON page.
 
 **Homework Assignments:**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_1.pdf">HW 1</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_1_solutions.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2.pdf">HW 2</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_1.pdf">HW 1</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_1_solved_v2.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2</a>
