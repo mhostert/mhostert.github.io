@@ -20,7 +20,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_greens_functions.pdf"> Green's Functions</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_variational_methods.pdf"> Variational Method</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_WKB.pdf"> WKB Method</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TI.pdf"> Time-Independent Perturbation Theory</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TI_v2.pdf"> Time-Independent Perturbation Theory</a>
 
 **Problem Sets:**
 
