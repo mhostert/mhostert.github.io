@@ -1,6 +1,6 @@
 ---
 title: 'Constraining light thermal inelastic dark matter with NA64'
-pub_number: 15
+pub_number: 16
 authors:  Martina Mongillo,  Asli Abdullahi,  Benjamin Banto Oberhauser,  Paolo Crivelli,  Matheus Hostert,  Daniele Massaro,  Laura Molina Bueno,  Silvia Pascoli
 collection: publication
 permalink: /publication/2023-2-10-ConstraininglightthermalinelasticdarkmatterwithNA64

@@ -1,6 +1,6 @@
 ---
 title: 'Long-lived axionlike particles from tau decays'
-pub_number: 3
+pub_number: 4
 authors:  Yohei Ema,  Patrick J. Fox,  Matheus Hostert,  Tony Menzo,  Maxim Pospelov,  Anupam Ray,  Jure Zupan
 collection: publication
 permalink: /publication/2025-7-21-Long-livedaxionlikeparticlesfromtaudecays

@@ -1,6 +1,6 @@
 ---
 title: 'Hidden Physics at the Neutrino Frontier: Tridents, Dark Forces, and Hidden Particles'
-pub_number: 32
+pub_number: 33
 authors:  Matheus. Hostert
 collection: publication
 permalink: /publication/2019-1-1-HiddenPhysicsattheNeutrinoFrontierTridentsDarkForcesandHiddenParticles

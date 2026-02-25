@@ -1,6 +1,6 @@
 ---
 title: 'Toward a Robust Confirmation or Refutation of the Sterile-Neutrino Explanation of Short-Baseline Anomalies'
-pub_number: 6
+pub_number: 7
 authors:  Ohana Benevides Rodrigues,  Matheus Hostert,  Kevin J. Kelly,  Bryce Littlejohn,  Pedro A.N. Machado,  Ibrahim Safa,  Tao Zhou
 collection: publication
 permalink: /publication/2025-3-17-TowardaRobustConfirmationorRefutationoftheSterile-NeutrinoExplanationofShort-BaselineAnomalies
