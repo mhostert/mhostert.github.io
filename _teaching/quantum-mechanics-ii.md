@@ -21,8 +21,8 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_variational_methods.pdf"> Variational Method</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_WKB.pdf"> WKB Method</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TI_v2.pdf"> Time-Independent Perturbation Theory</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_II/Lecture_14.pdf"> Hydrogen Fine Structure</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TI_v2.pdf"> Time-Dependent Perturbation Theory</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/2_fine_structure.pdf"> Hydrogen Fine Structure</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TD.pdf"> Time-Dependent Perturbation Theory</a>
 
 **Problem Sets:**
 
@@ -36,4 +36,4 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_v3.pdf">HW 3</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4</a> 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5.pdf">HW 5</a> 
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5.pdf">HW 5</a>  
