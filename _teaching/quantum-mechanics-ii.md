@@ -21,6 +21,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_variational_methods.pdf"> Variational Method</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_WKB.pdf"> WKB Method</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TI_v2.pdf"> Time-Independent Perturbation Theory</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/2_hydrogen.pdf"> Hydrogen Review</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_fine_structure.pdf"> Hydrogen Fine Structure</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TD.pdf"> Time-Dependent Perturbation Theory</a>
 
@@ -32,8 +33,9 @@ The most up to date information will be available on the UI ICON page.
 
 **Homework Assignments:**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_1.pdf">HW 1</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_1_solved_v2.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_solved.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_v3.pdf">HW 3</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_solved.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4</a> 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5.pdf">HW 5</a>  
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_1.pdf">HW 1: probability densities and currents</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_1_solved_v2.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2: variational method for anionic hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_solved.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_v3.pdf">HW 3: WKB quantization conditions</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_solved.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4: relativistic correction to hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_4_solved_v2.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: hyperfine splitting including orbital angular and Zeeman effects momentum</a>  
+* HW 6: adiabatic time evolution and the MSW effect</a>  
