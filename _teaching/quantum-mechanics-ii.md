@@ -37,5 +37,5 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2: variational method for anionic hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_v3.pdf">HW 3: WKB quantization conditions</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4: relativistic correction to hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_4_solved_v2.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: hyperfine splitting including orbital angular and Zeeman effects momentum</a>  
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: hyperfine splitting including orbital angular and Zeeman effects</a>  
 * HW 6: adiabatic time evolution and the MSW effect</a>  
