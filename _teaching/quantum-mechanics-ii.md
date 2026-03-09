@@ -21,7 +21,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_variational_methods.pdf"> Variational Method</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_WKB.pdf"> WKB Method</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TI_v2.pdf"> Time-Independent Perturbation Theory</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_II/2_hydrogen.pdf"> Hydrogen Review</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/2_hydrogen_atom.pdf"> Hydrogen Review</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_fine_structure.pdf"> Hydrogen Fine Structure</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_time_dependent_perturbation_theory.pdf"> Time-Dependent Perturbation Theory</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_interaction_dyson.pdf"> Interaction Picture and Dyson Series</a>
