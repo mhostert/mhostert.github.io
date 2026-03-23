@@ -45,6 +45,6 @@ The most up to date information will be available on the UI ICON page.
 
 **Exams**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/midterm_1.pdf"> Midterm 1 (with solutions)</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/exam_midterm_1.pdf"> Midterm 1</a> (solutions in class)
 * Midterm 2
 * Final exam
