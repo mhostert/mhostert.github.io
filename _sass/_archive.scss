@@ -2,6 +2,219 @@
    ARCHIVE
    ========================================================================== */
 
+/*
+   Year section headings (publications & talks pages)
+   ========================================================================== */
+
+.year-section {
+  margin: 30px 0;
+}
+
+.year-header {
+  font-size: $type-size-4;
+  font-weight: bold;
+  margin: 20px 0 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid $border-color;
+}
+
+.year-subheader {
+  font-size: 1.25em;
+  margin-top: 20px;
+  color: $info-color;
+}
+
+/*
+   Publication expand/collapse controls
+   ========================================================================== */
+
+.pub-controls {
+  margin-bottom: 1.5em;
+
+  #pub-expand-btn {
+    font-family: $sans-serif;
+  }
+}
+
+/*
+   Publication and talk entry items
+   ========================================================================== */
+
+.pub-entry,
+.talk-item {
+  font-size: $type-size-5;
+  margin-bottom: 2.5em;
+}
+
+.pub-entry__header {
+  font-size: $type-size-5;
+  line-height: 1.5;
+
+  .page__meta {
+    font-size: $type-size-6;
+    margin-top: 0.2em;
+  }
+}
+
+.pub-entry__title {
+  font-weight: bold;
+  color: $primary-color;
+}
+
+.pub-entry__authors {
+  font-size: 0.9em;
+  margin-top: 0.2em;
+  margin-bottom: 0;
+  color: mix(#000, $gray, 20%);
+}
+
+.pub-entry__details {
+  margin-top: 0.6em;
+  border-top: 1px solid $border-color;
+
+  &[open] .pub-entry__chevron {
+    transform: rotate(180deg);
+  }
+}
+
+.pub-entry__toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.45em;
+  padding: 0.35em 0;
+  font-size: $type-size-6;
+  color: $gray;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+
+  // hide browser default disclosure triangle
+  &::-webkit-details-marker { display: none; }
+  &::marker { display: none; }
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+.pub-entry__chevron {
+  font-size: 0.75em;
+  transition: transform 0.2s ease;
+}
+
+.pub-entry__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding-top: 0.75em;
+  padding-bottom: 0.25em;
+}
+
+.pub-entry__abstract {
+  font-size: 0.9em;
+  color: mix(#000, $gray, 30%);
+  line-height: 1.6;
+}
+
+.pub-entry__fig {
+  a {
+    display: block;
+    text-decoration: none;
+    border-bottom: none;
+  }
+
+  img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-height: 260px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: left center;
+    border-radius: $border-radius;
+    border: 1px solid $border-color;
+    transition: box-shadow 0.2s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 8px rgba(#000, 0.4);
+    }
+  }
+}
+
+/*
+   Group page member cards
+   ========================================================================== */
+
+.group-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.8em 1.2em;
+  margin-bottom: 2.5em;
+}
+
+.group-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .group-member__photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid $border-color;
+    margin-bottom: 0.65em;
+    flex-shrink: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    &--placeholder {
+      background: $border-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6em;
+      font-weight: bold;
+      color: mix(#000, $gray, 30%);
+    }
+  }
+
+  .group-member__info {
+    h3 {
+      margin: 0 0 0.15em;
+      font-size: $type-size-6;
+    }
+    p {
+      margin: 0;
+      font-size: $type-size-7;
+      color: mix(#000, $gray, 30%);
+    }
+  }
+}
+
+/*
+   Outreach page logos and thumbnails
+   ========================================================================== */
+
+.outreach-logo {
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 15px;
+  vertical-align: middle;
+}
+
+.outreach-thumbnail {
+  display: block;
+  margin-left: 40px;
+  height: 100px;
+}
+
 .archive {
   margin-bottom: 2em;
 
@@ -12,10 +225,11 @@
   @include breakpoint($large) {
     @include span(10 of 12 last);
     @include prefix(0.5 of 12);
+    width: 77%;   // adjusted to pair with the wider sidebar
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
 
     &:hover {
       text-decoration: underline;
@@ -31,7 +245,7 @@
   margin: 1.414em 0 0;
   padding-bottom: 0.5em;
   font-size: $type-size-5;
-  color: mix(#fff, $gray, 25%);
+  color: mix(#000, $gray, 25%);
   border-bottom: 1px solid $border-color;
 
   + .list__item .archive__item-title {

@@ -39,11 +39,12 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2: Variational method for anionic hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_v3.pdf">HW 3: WKB quantization conditions</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4: Relativistic correction to hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_4_solved_v2.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: Hyperfine splitting including orbital angular and Zeeman effects</a>  
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: Hyperfine splitting including orbital angular and Zeeman effects</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_6.pdf">HW 6: Rabi oscillations and the rotating wave approximation</a>  
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_7.pdf">HW 7: Preliminary to Scattering Theory</a>  
 
 **Exams**
 
-* Midterm 1
+* <a href="https://mhostert.github.io/files/teaching/QM_II/midterm_1.pdf"> Midterm 1 (with solutions)</a>
 * Midterm 2
 * Final exam

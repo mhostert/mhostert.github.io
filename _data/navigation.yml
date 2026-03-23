@@ -12,8 +12,11 @@ main:
   - title: "Talks"
     url: /talks/
 
+  - title: "Group"
+    url: /group/
+
   - title: "Projects"
     url: /projects/
 
-  - title: "Outreach"
-    url: /outreach/
+  - title: "Media & Outreach"
+    url: /media/

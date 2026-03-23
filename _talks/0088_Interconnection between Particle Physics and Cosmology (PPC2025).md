@@ -9,7 +9,7 @@ venue: "Interconnection between Particle Physics and Cosmology (PPC2025)"
 date: "06/2025"
 location: "USA"
 link: True 
-talk_url: https://indico.sanfordlab.org/event/138/overview 
+talk_url: https://indico.sanfordlab.org/event/138/contributions/2427/ 
 ---
 
-[More information here](https://indico.sanfordlab.org/event/138/overview)
+[More information here](https://indico.sanfordlab.org/event/138/contributions/2427/)

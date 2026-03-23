@@ -5,35 +5,21 @@ permalink: /talks/
 author_profile: true
 ---
 
-<style>
-.year-section {
-  margin: 30px 0;
-}
-.year-header {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 20px 0 10px 0;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #444;
-}
-</style>
-
 <div class="year-section">
   <h2 class="year-header">Upcoming Talks</h2>
   <ol id="upcoming-talks">
     {% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
     {% for post in sorted %}
       {% if post.venue contains 'upcoming' %}
-    <div class="list__item talk-item" data-type="{{ post.type }}" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="{{ post.type }}">
       {% if post.link %}
-        {{post.talk_number}}. {{post.venue}} <a href="{{ post.talk_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        {{post.talk_number}}. {{post.venue}} <a href="{{ post.talk_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
         {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %} | {{ post.date | date: "%B %Y" }}{% endif %}.
-        <br>
-        {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
+        {% if post.title and post.title != "" %}<br><em>"{{post.title}}"</em>{% endif %}
       </p>
     </div>
       {% endif %}
@@ -43,13 +29,13 @@ author_profile: true
 
 <div class="year-section">
   <h2 class="year-header">Past Talks</h2>
-  
+
   {% assign sorted = site.talks | sort: 'id_for_sorting' | reverse %}
-  
+
   {% for year_num in (2018..2040) reversed %}
     {% assign year = year_num | append: '' %}
     {% assign has_talks = false %}
-    
+
     {% for post in sorted %}
       {% unless post.venue contains 'upcoming' %}
         {% capture date_str %}{{post.date}}{% endcapture %}
@@ -59,25 +45,24 @@ author_profile: true
         {% endif %}
       {% endunless %}
     {% endfor %}
-    
+
     {% if has_talks %}
     <div class="year-section" data-year="{{ year }}">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">{{ year }}</h3>
+      <h3 class="year-subheader">{{ year }}</h3>
       <ol>
         {% for post in sorted %}
           {% unless post.venue contains 'upcoming' %}
             {% capture date_str %}{{post.date}}{% endcapture %}
             {% if date_str contains year %}
-    <div class="list__item talk-item" data-type="{{ post.type }}" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="{{ post.type }}">
       {% if post.link %}
-        {{post.talk_number}}. {{post.venue}} <a href="{{ post.talk_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        {{post.talk_number}}. {{post.venue}} <a href="{{ post.talk_url }}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       {% else %}
         {{post.talk_number}}. {{post.venue}}
       {% endif %}
       <p class="page__meta">
         {{post.type}}{% if post.location %} | {{post.location}}{% endif %}{% if post.date %} | {{ post.date | date: "%B %Y" }}{% endif %}.
-        <br>
-        {% if post.title and post.title != "" %}<em>"{{post.title}}"</em><br>{% endif %}
+        {% if post.title and post.title != "" %}<br><em>"{{post.title}}"</em>{% endif %}
       </p>
     </div>
             {% endif %}
@@ -92,6 +77,6 @@ author_profile: true
 {% if site.poster_display == true %}
 <div class="year-section">
   <h2>Posters</h2>
-  <p style="font-size:16px">See some highlights from my scientific poster presentations <a href="/posters">here.</a></p>
+  <p class="pub-entry">See some highlights from my scientific poster presentations on the <a href="/posters">poster presentations page</a>.</p>
 </div>
 {% endif %}

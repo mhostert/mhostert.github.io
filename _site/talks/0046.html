@@ -90,6 +90,11 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Google Fonts: Roboto -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
@@ -120,16 +125,28 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
-  });
+  };
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  // Re-typeset MathJax when a <details> section is opened
+  document.addEventListener('toggle', function(e) {
+    if (e.target.tagName === 'DETAILS' && e.target.open && window.MathJax) {
+      MathJax.typesetPromise([e.target]);
+    }
+  }, true);
+</script>
 
 <!-- end custom head snippets -->
 
@@ -164,7 +181,7 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">M. Hostert</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Homepage</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
@@ -179,10 +196,13 @@
             <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
           
             
+            <li class="masthead__menu-item"><a href="http://localhost:4000/group/">Group</a></li>
+          
+            
             <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/outreach/">Outreach</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/media/">Media & Outreach</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -208,62 +228,50 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
-    
-    <img src="http://localhost:4000/images/profile.png" class="author__avatar"
-      alt="Matheus Hostert">
-    
+  
+  <div class="author__header--compact">
+    <div class="author__avatar author__avatar--small">
+      
+        <img src="http://localhost:4000/images/profile.png" alt="Matheus Hostert">
+      
+    </div>
+    <div class="author__content">
+      <h3 class="author__name">Matheus Hostert</h3>
+      <p class="author__bio">University of Iowa</p>
+    </div>
   </div>
 
-  <div class="author__content">
-    <h3 class="author__name">Matheus Hostert</h3>
-    <p class="author__bio">University of Iowa</p>
-    <p><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
-    
-  </div>
+  
+  <p class="author__email-line"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
+  
+
+  
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
 
-
-      <!-- BIO INFO -->
       
       
       
 
-
-      <!-- ACADEMIC PAGES -->
       
-      <li><a href="https://inspirehep.net/authors/1621061"><i class="fab fa-fw fa-linkedin-in" aria-hidden="true"></i> Inspire-HEP</a>
-      </li>
+        <li><a href="https://inspirehep.net/authors/1621061"><i class="fas fa-fw fa-atom" aria-hidden="true"></i> Inspire-HEP</a></li>
       
       
       
       
-      <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+        <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
       
       
 
-
-      <!-- PORTFOLIO PAGES -->
       
-      <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i>
-          Github</a></li>
-      
+        <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
       
       
 
-
-      <!-- SOCIAL NETWORKS -->
       
       
-      
-      
-      <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin"
-            aria-hidden="true"></i> LinkedIn</a></li>
-      
-      
+        <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
       
       
       
@@ -271,6 +279,7 @@
     </ul>
   </div>
 </div>
+
   
   </div>
 
@@ -363,7 +372,7 @@
 <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>Follow:</strong></li>
+      <li><strong></strong></li>
     
     
     
@@ -375,7 +384,7 @@
  -->  </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="https://claude.ai">Claude</a>, <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

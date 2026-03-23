@@ -9,7 +9,7 @@ venue: "New Physics Opportunities at Neutrino Facilities Workshop (NPN 2025)"
 date: "06/2025"
 location: "USA"
 link: True 
-talk_url: https://indico.cern.ch/event/1424413/overview 
+talk_url: https://indico.cern.ch/event/1424413/contributions/6468086/ 
 ---
 
-[More information here](https://indico.cern.ch/event/1424413/overview)
+[More information here](https://indico.cern.ch/event/1424413/contributions/6468086/)

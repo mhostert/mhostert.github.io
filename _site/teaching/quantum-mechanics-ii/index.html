@@ -37,7 +37,7 @@
 
 
 
-  <meta property="og:description" content="  Syllabus">
+  <meta property="og:description" content="The most up to date information will be available on the UI ICON page.">
 
 
 
@@ -90,6 +90,11 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Google Fonts: Roboto -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
@@ -120,16 +125,28 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
-  });
+  };
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  // Re-typeset MathJax when a <details> section is opened
+  document.addEventListener('toggle', function(e) {
+    if (e.target.tagName === 'DETAILS' && e.target.open && window.MathJax) {
+      MathJax.typesetPromise([e.target]);
+    }
+  }, true);
+</script>
 
 <!-- end custom head snippets -->
 
@@ -164,7 +181,7 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">M. Hostert</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Homepage</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
@@ -179,10 +196,13 @@
             <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
           
             
+            <li class="masthead__menu-item"><a href="http://localhost:4000/group/">Group</a></li>
+          
+            
             <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/outreach/">Outreach</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/media/">Media & Outreach</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -208,62 +228,50 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
-    
-    <img src="http://localhost:4000/images/profile.png" class="author__avatar"
-      alt="Matheus Hostert">
-    
+  
+  <div class="author__header--compact">
+    <div class="author__avatar author__avatar--small">
+      
+        <img src="http://localhost:4000/images/profile.png" alt="Matheus Hostert">
+      
+    </div>
+    <div class="author__content">
+      <h3 class="author__name">Matheus Hostert</h3>
+      <p class="author__bio">University of Iowa</p>
+    </div>
   </div>
 
-  <div class="author__content">
-    <h3 class="author__name">Matheus Hostert</h3>
-    <p class="author__bio">University of Iowa</p>
-    <p><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
-    
-  </div>
+  
+  <p class="author__email-line"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
+  
+
+  
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
 
-
-      <!-- BIO INFO -->
       
       
       
 
-
-      <!-- ACADEMIC PAGES -->
       
-      <li><a href="https://inspirehep.net/authors/1621061"><i class="fab fa-fw fa-linkedin-in" aria-hidden="true"></i> Inspire-HEP</a>
-      </li>
+        <li><a href="https://inspirehep.net/authors/1621061"><i class="fas fa-fw fa-atom" aria-hidden="true"></i> Inspire-HEP</a></li>
       
       
       
       
-      <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+        <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
       
       
 
-
-      <!-- PORTFOLIO PAGES -->
       
-      <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i>
-          Github</a></li>
-      
+        <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
       
       
 
-
-      <!-- SOCIAL NETWORKS -->
       
       
-      
-      
-      <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin"
-            aria-hidden="true"></i> LinkedIn</a></li>
-      
-      
+        <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
       
       
       
@@ -271,13 +279,14 @@
     </ul>
   </div>
 </div>
+
   
   </div>
 
 
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     <meta itemprop="headline" content="Quantum Mechanics II">
-    <meta itemprop="description" content="  Syllabus">
+    <meta itemprop="description" content="The most up to date information will be available on the UI ICON page.">
     <meta itemprop="datePublished" content="January 01, 2026">
     
 
@@ -299,34 +308,54 @@
       
 
       <section class="page__content" itemprop="text">
-        <ul>
-  <li>
-    <p><a href="https://mhostert.github.io/files/teaching/QM_II/Syllabus.pdf">Syllabus</a></p>
-  </li>
-  <li>
-    <p><a href="https://mhostert.github.io/files/teaching/QM_II/0_Reading_List.pdf"> Reading List</a></p>
-  </li>
-  <li>
-    <p><a href="https://mhostert.github.io/files/teaching/QM_II/0_Review_Resources.pdf"> Review Resources</a></p>
-  </li>
-</ul>
-
-<p><strong>Lecture Notes:</strong></p>
+        <p>The most up to date information will be available on the UI ICON page.</p>
 
 <ul>
-  <li><a href="https://mhostert.github.io/files/teaching/QM_II/0_Introduction.pdf"> Introduction </a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/Syllabus.pdf">Syllabus</a> / <a href="https://mhostert.github.io/files/teaching/QM_II/0_Reading_List.pdf"> Reading List</a> / <a href="https://mhostert.github.io/files/teaching/QM_II/0_Course_Introduction.pdf"> Course Introduction </a></li>
+</ul>
+
+<p><strong>Notes:</strong></p>
+
+<ul>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/1_review_notes.pdf"> Review Notes</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/1_time_evolution_v3.pdf"> Time Evolution</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/1_greens_functions.pdf"> Green’s Functions</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/1_variational_methods.pdf"> Variational Method</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/2_WKB.pdf"> WKB Method</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/2_perturbation_TI_v2.pdf"> Time-Independent Perturbation Theory</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/2_hydrogen_atom.pdf"> Hydrogen Review</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/2_fine_structure.pdf"> Hydrogen Fine Structure</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/2_time_dependent_perturbation_theory.pdf"> Time-Dependent Perturbation Theory</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/2_interaction_dyson.pdf"> Interaction Picture and Dyson Series</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/2_rabi_oscillations.pdf"> Rabi Oscillations</a></li>
 </ul>
 
 <p><strong>Problem Sets:</strong></p>
 
 <ul>
-  <li>Coming soon</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger’s equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>)</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Time evolution (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_2.pdf">solutions</a>)</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/problems_3.pdf"> Problems 3</a>) Propagators (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_3.pdf">solutions</a>)</li>
 </ul>
 
-<p><strong>Additional Resources:</strong></p>
+<p><strong>Homework Assignments:</strong></p>
 
 <ul>
-  <li>Coming soon</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/HW_1.pdf">HW 1: Probability densities and currents</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_1_solved_v2.pdf">solutions</a>)</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2: Variational method for anionic hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_solved.pdf">solutions</a>)</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_v3.pdf">HW 3: WKB quantization conditions</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_solved.pdf">solutions</a>)</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4: Relativistic correction to hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_4_solved_v2.pdf">solutions</a>)</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: Hyperfine splitting including orbital angular and Zeeman effects</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_solved.pdf">solutions</a>)</li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/HW_6.pdf">HW 6: Rabi oscillations and the rotating wave approximation</a></li>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/HW_7.pdf">HW 7: Preliminary to Scattering Theory</a></li>
+</ul>
+
+<p><strong>Exams</strong></p>
+
+<ul>
+  <li><a href="https://mhostert.github.io/files/teaching/QM_II/midterm_1.pdf"> Midterm 1 (with solutions)</a></li>
+  <li>Midterm 2</li>
+  <li>Final exam</li>
 </ul>
 
         
@@ -367,7 +396,7 @@
 <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>Follow:</strong></li>
+      <li><strong></strong></li>
     
     
     
@@ -379,7 +408,7 @@
  -->  </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="https://claude.ai">Claude</a>, <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

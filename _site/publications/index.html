@@ -85,6 +85,11 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Google Fonts: Roboto -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
@@ -115,16 +120,28 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
-  });
+  };
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  // Re-typeset MathJax when a <details> section is opened
+  document.addEventListener('toggle', function(e) {
+    if (e.target.tagName === 'DETAILS' && e.target.open && window.MathJax) {
+      MathJax.typesetPromise([e.target]);
+    }
+  }, true);
+</script>
 
 <!-- end custom head snippets -->
 
@@ -159,7 +176,7 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">M. Hostert</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Homepage</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
@@ -174,10 +191,13 @@
             <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
           
             
+            <li class="masthead__menu-item"><a href="http://localhost:4000/group/">Group</a></li>
+          
+            
             <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/outreach/">Outreach</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/media/">Media & Outreach</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -201,62 +221,50 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
-    
-    <img src="http://localhost:4000/images/profile.png" class="author__avatar"
-      alt="Matheus Hostert">
-    
+  
+  <div class="author__header--compact">
+    <div class="author__avatar author__avatar--small">
+      
+        <img src="http://localhost:4000/images/profile.png" alt="Matheus Hostert">
+      
+    </div>
+    <div class="author__content">
+      <h3 class="author__name">Matheus Hostert</h3>
+      <p class="author__bio">University of Iowa</p>
+    </div>
   </div>
 
-  <div class="author__content">
-    <h3 class="author__name">Matheus Hostert</h3>
-    <p class="author__bio">University of Iowa</p>
-    <p><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
-    
-  </div>
+  
+  <p class="author__email-line"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
+  
+
+  
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
 
-
-      <!-- BIO INFO -->
       
       
       
 
-
-      <!-- ACADEMIC PAGES -->
       
-      <li><a href="https://inspirehep.net/authors/1621061"><i class="fab fa-fw fa-linkedin-in" aria-hidden="true"></i> Inspire-HEP</a>
-      </li>
+        <li><a href="https://inspirehep.net/authors/1621061"><i class="fas fa-fw fa-atom" aria-hidden="true"></i> Inspire-HEP</a></li>
       
       
       
       
-      <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+        <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
       
       
 
-
-      <!-- PORTFOLIO PAGES -->
       
-      <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i>
-          Github</a></li>
-      
+        <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
       
       
 
-
-      <!-- SOCIAL NETWORKS -->
       
       
-      
-      
-      <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin"
-            aria-hidden="true"></i> LinkedIn</a></li>
-      
-      
+        <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
       
       
       
@@ -264,6 +272,7 @@
     </ul>
   </div>
 </div>
+
   
   </div>
 
@@ -272,173 +281,72 @@
     
       <h1 class="page__title">Publications</h1>
     
-    <p>Selected publication list auto-generated by <a href="https://github.com/mhostert/inspy-hep">InsPy-HEP</a>.
-For a complete and up-to-date list of publications, see my <a href="https://inspirehep.net/authors/1621061?ui-citation-summary=true">INSPIRE</a> page.</p>
+    <!-- Selected publication list auto-generated by [InsPy-HEP](https://github.com/mhostert/inspy-hep). -->
+<p>For a complete and up-to-date list of publications, see my <a href="https://inspirehep.net/authors/1621061?ui-citation-summary=true">INSPIRE</a> page.</p>
+
+<div class="pub-controls">
+  <button id="pub-expand-btn" class="btn btn--small">Expand All</button>
+</div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2025</h2>
+    <h2 class="year-subheader">2026</h2>
     <ol>
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">1.</span> <span class="pub-entry__title">Kaon decay constraints on vector bosons coupled to non-conserved currents</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Maxim Pospelov,  Adrian Thompson</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2602.19479">arXiv:2602.19479</a>
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> New Multi-messenger Probe of Dark Matter-Nucleon Interactions from Ultra-high Energy Cosmic Ray Acceleration, Stephan A. Meighen-Berger, P. S. Bhupal Dev, Matheus Hostert, preprint, 2025
-
-, <a href="https://arxiv.org/abs/2512.18093">arXiv:2512.18093</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-1. New Multi-messenger Probe of Dark Matter-Nucleon Interactions from Ultra-high Energy Cosmic Ray Acceleration
-<p class="page__meta">
-  Stephan A. Meighen-Berger, P. S. Bhupal Dev, Matheus Hostert, preprint, 2025 | <a href="https://arxiv.org/abs/2512.18093">arXiv:2512.18093</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We study rare three- and four-body kaon decays as a probe of light vector and axial-vector bosons coupled to non-conserved currents. We find that searches for $K_L \to \pi^0 \pi^0 (X\to e^+e^-)$ decays constrain the couplings of light $X$ bosons to light quarks to be as small as $\mathcal{O}(10^{-5})$. The charged-pion modes $K^+ \to \pi^+ \pi^0 (X \to e^+e^-)$ and $K_L \to \pi^+ \pi^- (X \to e^+e^-)$ provide weaker limits, but constrain complementary combinations of couplings to the $u$, $d$, and $s$ quarks at the level of $\mathcal{O}(10^{-4})$. Finally, we also find that double emission of $X$ in $K \to \pi XX$ decays can provide yet additional constraints on the parameter space of light $X$ bosons due to a double $(m_K/m_X)^2$ enhancement to the rate. For a 17 MeV boson, these limits add to the known tension between spin-1 bosons coupled to vector and axial-vector currents interpretations of the results of the ATOMKI experiment with meson decay data. Finally, we also comment on negative pion capture on hydrogen and deuterium as a source of light particles and discuss the prospects for testing the 17 MeV boson hypothesis.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2602.19479" title="Fig. 1 — Kaon decay constraints on vector bosons coupled to non-conserved currents">
+          <img src="/files/pub_figs/2602.19479.png" alt="Fig. 1 from Kaon decay constraints on vector bosons coupled to non-conserved currents" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Long-Lived Particles from Meson and Muon Decays at Rest at Spallation Sources, Matheus Hostert, Salvador Urrea, preprint, 2025
-
-, <a href="https://arxiv.org/abs/2509.14085">arXiv:2509.14085</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-2. Long-Lived Particles from Meson and Muon Decays at Rest at Spallation Sources
-<p class="page__meta">
-  Matheus Hostert, Salvador Urrea, preprint, 2025 | <a href="https://arxiv.org/abs/2509.14085">arXiv:2509.14085</a>.
-  <br />
-</p>
-</div>
+      
+        
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Long-lived axionlike particles from tau decays, Yohei Ema, Patrick J. Fox, Matheus Hostert, Tony Menzo, Maxim Pospelov, Anupam Ray, Jure Zupan, Phys.Rev.D 112 (2025) 11 115028
-
-, <a href="https://arxiv.org/abs/2507.15271">arXiv:2507.15271</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-3. Long-lived axionlike particles from tau decays
-<p class="page__meta">
-  Yohei Ema, Patrick J. Fox, Matheus Hostert, Tony Menzo, Maxim Pospelov, Anupam Ray, Jure Zupan, Phys.Rev.D 112 (2025) 11 115028 | <a href="https://arxiv.org/abs/2507.15271">arXiv:2507.15271</a>.
-  <br />
-</p>
-</div>
+      
+        
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Astrophysical flux of dark particles as a solution to the KM3NeT and IceCube tension over KM3-230213A, Yasaman Farzan, Matheus Hostert, JHEP 10 (2025) 208
-
-, <a href="https://arxiv.org/abs/2505.22711">arXiv:2505.22711</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-4. Astrophysical flux of dark particles as a solution to the KM3NeT and IceCube tension over KM3-230213A
-<p class="page__meta">
-  Yasaman Farzan, Matheus Hostert, JHEP 10 (2025) 208 | <a href="https://arxiv.org/abs/2505.22711">arXiv:2505.22711</a>.
-  <br />
-</p>
-</div>
-        
       
         
-        
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Neutron portal to ultra-high-energy neutrinos, Gustavo F. S. Alves, Matheus Hostert, Maxim Pospelov, preprint, 2025
-
-, <a href="https://arxiv.org/abs/2503.14419">arXiv:2503.14419</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-5. Neutron portal to ultra-high-energy neutrinos
-<p class="page__meta">
-  Gustavo F. S. Alves, Matheus Hostert, Maxim Pospelov, preprint, 2025 | <a href="https://arxiv.org/abs/2503.14419">arXiv:2503.14419</a>.
-  <br />
-</p>
-</div>
-        
-      
-        
-        
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Toward a Robust Confirmation or Refutation of the Sterile-Neutrino Explanation of Short-Baseline Anomalies, Ohana Benevides Rodrigues, Matheus Hostert, Kevin J. Kelly, Bryce Littlejohn, Pedro A. N. Machado, Ibrahim Safa, Tao Zhou, Phys.Rev.Lett. 135 (2025) 8 081801
-
-, <a href="https://arxiv.org/abs/2503.13594">arXiv:2503.13594</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-6. Toward a Robust Confirmation or Refutation of the Sterile-Neutrino Explanation of Short-Baseline Anomalies
-<p class="page__meta">
-  Ohana Benevides Rodrigues, Matheus Hostert, Kevin J. Kelly, Bryce Littlejohn, Pedro A. N. Machado, Ibrahim Safa, Tao Zhou, Phys.Rev.Lett. 135 (2025) 8 081801 | <a href="https://arxiv.org/abs/2503.13594">arXiv:2503.13594</a>.
-  <br />
-</p>
-</div>
         
       
         
@@ -532,7 +440,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2024</h2>
+    <h2 class="year-subheader">2025</h2>
     <ol>
       
         
@@ -540,125 +448,248 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
       
         
         
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">2.</span> <span class="pub-entry__title">New Multi-messenger Probe of Dark Matter-Nucleon Interactions from Ultra-high Energy Cosmic Ray Acceleration</span>
+    
+    <p class="pub-entry__authors">Stephan A. Meighen-Berger,  P.S. Bhupal Dev,  Matheus Hostert</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2512.18093">arXiv:2512.18093</a>
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
       
-        
-        
+      <div class="pub-entry__abstract">It has been suggested that the density of dark matter (DM) halo can be highly enhanced around supermassive black holes at the centers of massive galaxies. If real, these DM spikes would offer new opportunities to probe the properties of DM. In this work, we point out that DM spikes can significantly impact the composition and survivability of ultra-high-energy cosmic rays accelerated near supermassive black holes. A large DM-nucleon cross section would fragment heavy nuclei into lighter elements and prevent them from attaining the energies observed at Earth. While the origin of cosmic rays remains a mystery, we show that if the highest-energy cosmic rays on Earth come from sources like NGC 1068, then cross sections of size $\sigma_{\chi p} \leq 10^{-33} \left( \frac{m_\chi}{\mathrm{GeV}}\right)\;\mathrm{cm^{2}}$ would be excluded by cosmic ray data. These bounds can be competitive with other existing probes and rule out new parameter space in the DM mass region $m_\chi\in [3\;\mathrm{MeV}, 30\;\mathrm{MeV}]$. While the uncertainties on the acceleration mechanism of cosmic rays prevent us from setting robust limits, our study highlights an important connection between DM spikes and cosmic ray physics that is complementary to existing cosmological and direct detection constraints.</div>
       
-        
-        
       
-        
-        
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2512.18093" title="Fig. 1 — New Multi-messenger Probe of Dark Matter-Nucleon Interactions from Ultra-high Energy Cosmic Ray Acceleration">
+          <img src="/files/pub_figs/2512.18093.png" alt="Fig. 1 from New Multi-messenger Probe of Dark Matter-Nucleon Interactions from Ultra-high Energy Cosmic Ray Acceleration" loading="lazy" />
+        </a>
+      </div>
       
-        
+    </div>
+  </details>
+  
+</div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">3.</span> <span class="pub-entry__title">Long-Lived Particles from Meson and Muon Decays at Rest at Spallation Sources</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Salvador Urrea</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2509.14085">arXiv:2509.14085</a>
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Muon Colliders and the Neutrino Slice, Luc Bojorquez-Lopez, Matheus Hostert, Carlos A. Argüelles, Zhen Liu, Phys.Rev.Lett. 135 (2025) 9 091803
-
-, <a href="https://arxiv.org/abs/2412.14115">arXiv:2412.14115</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-7. Muon Colliders and the Neutrino Slice
-<p class="page__meta">
-  Luc Bojorquez-Lopez, Matheus Hostert, Carlos A. Argüelles, Zhen Liu, Phys.Rev.Lett. 135 (2025) 9 091803 | <a href="https://arxiv.org/abs/2412.14115">arXiv:2412.14115</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We provide a systematic survey of spallation sources around the world and their potential to search for new light particles. We study the sensitivity of existing neutrino detectors to the decay in flight of light particles produced in the decay at rest of pions, muons, and kaons. At J-PARC, we show that the magnetized gaseous argon detectors of ND280 could place leading limits on light particles decaying to $e^+e^-$ and that the liquid-scintillator detectors of the J-PARC Sterile Neutrino Search at the JSNS (JSNS$^2$) experiment can exploit double- and triple-coincidence signals from $\mu^+\mu^-$ and $\pi^+\pi^-$ to place new limits on particles produced in kaon decay. We find that the Coherent Captain Mills detector at Los Alamos and the suite of COHERENT detectors at Oak Ridge, despite their smaller size, would also have a promising sensitivity to particles produced in pion and muon decays, depending on background levels. Spallation sources have the potential to explore more than an order of magnitude beyond current constraints in some new physics models, encouraging further study on data acquisition and background rejection by experimental collaborations.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2509.14085" title="Fig. 1 — Long-Lived Particles from Meson and Muon Decays at Rest at Spallation Sources">
+          <img src="/files/pub_figs/2509.14085.png" alt="Fig. 1 from Long-Lived Particles from Meson and Muon Decays at Rest at Spallation Sources" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">4.</span> <span class="pub-entry__title">Long-lived axionlike particles from tau decays</span>
+    
+    <p class="pub-entry__authors">Yohei Ema,  Patrick J. Fox,  Matheus Hostert,  Tony Menzo,  Maxim Pospelov,  Anupam Ray,  Jure Zupan</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2507.15271">arXiv:2507.15271</a> | Phys.Rev.D 112 (2025) 11 115028
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Muon-induced baryon number violation, Patrick J. Fox, Matheus Hostert, Tony Menzo, Maxim Pospelov, Jure Zupan, Phys.Rev.D 110 (2024) 7 075015
-
-, <a href="https://arxiv.org/abs/2407.03450">arXiv:2407.03450</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-8. Muon-induced baryon number violation
-<p class="page__meta">
-  Patrick J. Fox, Matheus Hostert, Tony Menzo, Maxim Pospelov, Jure Zupan, Phys.Rev.D 110 (2024) 7 075015 | <a href="https://arxiv.org/abs/2407.03450">arXiv:2407.03450</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Axion-like particles (ALPs) are well-motivated examples of light, weakly coupled particles in theories beyond the Standard Model. In this work, we study long-lived ALPs coupled exclusively to leptons in the mass range between $2 m_e$ and $m_\tau - m_e$. For anarchic flavor structure the leptophilic ALP production in tau decays or from ALP-tau bremsstrahlung is enhanced thanks to derivative couplings of the ALP and can surpass production from electron and muon channels, especially for ALPs heavier than $m_\mu$. Using past data from high-energy fixed-target experiments such as CHARM and BEBC we place new constraints on the ALP decay constant $f_a$, reaching scales as high as $\mathcal{O}(10^8)$~GeV in lepton-flavor-violating channels and $f_a \sim \mathcal{O}(10^2)$~GeV in lepton-flavor-conserving ones. We also present projections for the event-rate sensitivity of current and future detectors to ALPs produced at the Fermilab Main Injector, the CERN SPS, and in the forward direction of the LHC. We show that SHiP will be sensitive to $f_a$ values that are over an order of magnitude above the existing constraints.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2507.15271" title="Fig. 1 — Long-lived axionlike particles from tau decays">
+          <img src="/files/pub_figs/2507.15271.png" alt="Fig. 1 from Long-lived axionlike particles from tau decays" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">5.</span> <span class="pub-entry__title">Astrophysical flux of dark particles as a solution to the KM3NeT and IceCube tension over KM3-230213A</span>
+    
+    <p class="pub-entry__authors">Yasaman Farzan,  Matheus Hostert</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2505.22711">arXiv:2505.22711</a> | JHEP 10 (2025) 208
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Decaying sterile neutrinos at short baselines, Matheus Hostert, Kevin J. Kelly, Tao Zhou, Phys.Rev.D 110 (2024) 7 075002
-
-, <a href="https://arxiv.org/abs/2406.04401">arXiv:2406.04401</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-9. Decaying sterile neutrinos at short baselines
-<p class="page__meta">
-  Matheus Hostert, Kevin J. Kelly, Tao Zhou, Phys.Rev.D 110 (2024) 7 075002 | <a href="https://arxiv.org/abs/2406.04401">arXiv:2406.04401</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We entertain the possibility that transient astrophysical sources can produce a flux of dark particles that induce ultra-high-energy signatures at neutrino telescopes such as IceCube and KM3NeT. We construct scenarios where such ``dark flux" can produce meta-stable dark particles inside the Earth that subsequently decay to muons, inducing through-going tracks in large-volume neutrino detectors. We consider such a scenario in light of the $\mathcal{O}(70)$~PeV ultra-high-energy muon observed by KM3NeT and argue that because of its location in the sky and the strong geometrical dependence of the signal, such events would not necessarily have been observed by IceCube. Our model relies on the upscattering of a new particle $X$ onto new metastable particles that decay to dimuons with decay lengths of $\mathcal{O}(100)$~km. This scenario can explain the observation by KM3NeT without being in conflict with the IceCube data.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2505.22711" title="Fig. 1 — Astrophysical flux of dark particles as a solution to the KM3NeT and IceCube tension over KM3-230213A">
+          <img src="/files/pub_figs/2505.22711.png" alt="Fig. 1 from Astrophysical flux of dark particles as a solution to the KM3NeT and IceCube tension over KM3-230213A" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">6.</span> <span class="pub-entry__title">Neutron portal to ultra-high-energy neutrinos</span>
+    
+    <p class="pub-entry__authors">Gustavo F.S. Alves,  Matheus Hostert,  Maxim Pospelov</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2503.14419">arXiv:2503.14419</a>
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Resonant Neutrino Flavor Conversion in the Atmosphere, Connor Sponsler, Matheus Hostert, Ivan Martinez-Soler, Carlos A. Argüelles, preprint, 2024
-
-, <a href="https://arxiv.org/abs/2405.12140">arXiv:2405.12140</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-10. Resonant Neutrino Flavor Conversion in the Atmosphere
-<p class="page__meta">
-  Connor Sponsler, Matheus Hostert, Ivan Martinez-Soler, Carlos A. Argüelles, preprint, 2024 | <a href="https://arxiv.org/abs/2405.12140">arXiv:2405.12140</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Current data on ultra-high-energy (UHE) cosmic rays suggest they are predominantly made of heavy nuclei. This indicates that the flux of neutrinos produced from proton collisions on the cosmic microwave background is small and hard to observe. Motivated by the recent extremely-high-energy muon event reported by KM3NeT, we explore the possibility of enhancing the energy-flux of cosmogenic neutrinos through nuclear photodisintegration in the presence of new physics. Specifically, we speculate that UHE neutrons may oscillate into a new state, dark (or mirror) neutron $n'$ that in turn decays injecting large amount of energy to neutrinos, $n\to n'\to \nu_\text{\tiny UHE}$. While this mechanism does not explain the tension between the KM3NeT event and null results from IceCube, it reconciles the experimental preference for a heavier cosmic ray composition with a large diffuse cosmogenic flux of UHE neutrinos.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2503.14419" title="Fig. 1 — Neutron portal to ultra-high-energy neutrinos">
+          <img src="/files/pub_figs/2503.14419.png" alt="Fig. 1 from Neutron portal to ultra-high-energy neutrinos" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">7.</span> <span class="pub-entry__title">Toward a Robust Confirmation or Refutation of the Sterile-Neutrino Explanation of Short-Baseline Anomalies</span>
+    
+    <p class="pub-entry__authors">Ohana Benevides Rodrigues,  Matheus Hostert,  Kevin J. Kelly,  Bryce Littlejohn,  Pedro A.N. Machado,  Ibrahim Safa,  Tao Zhou</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2503.13594">arXiv:2503.13594</a> | Phys.Rev.Lett. 135 (2025) 8 081801
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">The sterile neutrino interpretation of the LSND and MiniBooNE neutrino anomalies is currently being tested at three Liquid Argon detectors: MicroBooNE, SBND, and ICARUS. It has been argued that a degeneracy between $\nu_\mu \to \nu_e$ and $\nu_e \to \nu_e$ oscillations significantly degrades their sensitivity to sterile neutrinos. Through an independent study, we show two methods to eliminate this concern. First, we resolve this degeneracy by including external constraints on $\nu_e$ disappearance from the PROSPECT reactor experiment. Second, by properly analyzing the full three-dimensional parameter space, we demonstrate that the stronger-than-sensitivity exclusion from MicroBooNE alone already covers the entire 2$\sigma$ preferred regions of MiniBooNE at the level of $2-3\sigma$. We show that upcoming searches at SBND and ICARUS can improve on this beyond the $4\sigma$ level, thereby providing a rigorous test of short-baseline anomalies.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2503.13594" title="Fig. 1 — Toward a Robust Confirmation or Refutation of the Sterile-Neutrino Explanation of Short-Baseline Anomalies">
+          <img src="/files/pub_figs/2503.13594.png" alt="Fig. 1 from Toward a Robust Confirmation or Refutation of the Sterile-Neutrino Explanation of Short-Baseline Anomalies" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
         
       
         
@@ -740,7 +771,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2023</h2>
+    <h2 class="year-subheader">2024</h2>
     <ol>
       
         
@@ -766,200 +797,179 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
       
         
         
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">8.</span> <span class="pub-entry__title">Muon Colliders and the Neutrino Slice</span>
+    
+    <p class="pub-entry__authors">Luc Bojorquez-Lopez,  Matheus Hostert,  Carlos A. Argüelles,  Zhen Liu</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2412.14115">arXiv:2412.14115</a> | Phys.Rev.Lett. 135 (2025) 9 091803
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
       
-        
-        
+      <div class="pub-entry__abstract">Muon colliders provide an exciting new direction to expand the energy frontier of particle physics. We point out a new use of these facilities for neutrino and beyond the Standard Model physics using their main detectors. Muon decays along the accelerator rings create an intense and highly collimated neutrino beam that crosses a thin slice of the kt-scale detector. As a result, it would induce an unprecedented number of neutrino interactions, with $\mathcal{O}(10^4)$ events per second for a 10 TeV $\mu^+\mu^-$ collider. These interactions are highly energetic and possess a distinct timing signature and a large transverse displacement. We discuss promising applications of these events for instrumentation, electroweak, and beyond-the-Standard Model physics. For instance, a sub-percent measurement of the neutrino-electron scattering rate enables new precision measurements of the Weak angle and a novel detection of the neutrino charge radius.</div>
       
-        
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2412.14115" title="Fig. 1 — Muon Colliders and the Neutrino Slice">
+          <img src="/files/pub_figs/2412.14115.png" alt="Fig. 1 from Muon Colliders and the Neutrino Slice" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">9.</span> <span class="pub-entry__title">Muon-induced baryon number violation</span>
+    
+    <p class="pub-entry__authors">Patrick J. Fox,  Matheus Hostert,  Tony Menzo,  Maxim Pospelov,  Jure Zupan</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2407.03450">arXiv:2407.03450</a> | Phys.Rev.D 110 (2024) 7 075015
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Panorama of new-physics explanations to the MiniBooNE excess, Asli M. Abdullahi, Jaime Hoefken Zink, Matheus Hostert, Daniele Massaro, Silvia Pascoli, Phys.Rev.D 111 (2025) 3 035028
-
-, <a href="https://arxiv.org/abs/2308.02543">arXiv:2308.02543</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-11. Panorama of new-physics explanations to the MiniBooNE excess
-<p class="page__meta">
-  Asli M. Abdullahi, Jaime Hoefken Zink, Matheus Hostert, Daniele Massaro, Silvia Pascoli, Phys.Rev.D 111 (2025) 3 035028 | <a href="https://arxiv.org/abs/2308.02543">arXiv:2308.02543</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">The search for charged-lepton flavor violation in muon capture on nuclei is a powerful probe of heavy new physics. A smoking gun signal for $\mu \to e$ conversion is a monochromatic electron with energy almost equal to the muon mass. We show that light new physics can mimic this signature and that it can also lead to electrons above the $\mu \to e$ signal peak. A concrete example of such light new physics is $\mu^- $-nucleon annihilation into a light dark sector, which can produce an energetic $e^-$ as well as $e^+e^-$ byproducts. Due to the size of the muon mass, the exotic muon capture process can be kinematically allowed, while the otherwise stringent constraints, e.g., from proton decay, are kinematically forbidden. We also discuss other relevant constraints, including those from the stability of nuclei and muon capture in the interior of neutron stars.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2407.03450" title="Fig. 1 — Muon-induced baryon number violation">
+          <img src="/files/pub_figs/2407.03450.png" alt="Fig. 1 from Muon-induced baryon number violation" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">10.</span> <span class="pub-entry__title">Decaying sterile neutrinos at short baselines</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Kevin J. Kelly,  Tao Zhou</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2406.04401">arXiv:2406.04401</a> | Phys.Rev.D 110 (2024) 7 075002
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> New physics in multi-electron muon decays, Matheus Hostert, Tony Menzo, Maxim Pospelov, Jure Zupan, JHEP 10 (2023) 006
-
-, <a href="https://arxiv.org/abs/2306.15631">arXiv:2306.15631</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-12. New physics in multi-electron muon decays
-<p class="page__meta">
-  Matheus Hostert, Tony Menzo, Maxim Pospelov, Jure Zupan, JHEP 10 (2023) 006 | <a href="https://arxiv.org/abs/2306.15631">arXiv:2306.15631</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Long-standing anomalous experimental results from short-baseline neutrino experiments have persisted for decades. These results, when interpreted with one or more light sterile neutrinos, are inconsistent with numerous null results experimentally. However, if the sterile neutrino decays en route to the detector, this can mimic $\nu_\mu \to \nu_e$ oscillation signals while avoiding many of these external constraints. We revisit this solution to the MiniBooNE and LSND puzzles in view of new data from the MicroBooNE experiment at Fermilab. Using MicroBooNE's liquid-argon time-projection chamber search for an excess of $\nu_e$ in the Booster beam, we derive new limits in two models' parameter spaces of interest: where the sterile neutrino decays (I) via mixing with the active neutrinos, or (II) via higher-dimensional operators. We also provide an updated, comprehensive fit to the MiniBooNE neutrino- and antineutrino-beam data, including appearance ($\nu_e$) and disappearance ($\nu_\mu$) channels. Despite alleviating the tension with muon neutrino disappearance experiments, we find that the latest MicroBooNE analysis rules out the decaying sterile neutrino solution in a large portion of the parameter space at more than $99\%$~CL.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2406.04401" title="Fig. 1 — Decaying sterile neutrinos at short baselines">
+          <img src="/files/pub_figs/2406.04401.png" alt="Fig. 1 from Decaying sterile neutrinos at short baselines" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">11.</span> <span class="pub-entry__title">Resonant Neutrino Flavor Conversion in the Atmosphere</span>
+    
+    <p class="pub-entry__authors">Connor Sponsler,  Matheus Hostert,  Ivan Martinez-Soler,  Carlos A. Argüelles</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2405.12140">arXiv:2405.12140</a>
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Pion decay constraints on exotic 17 MeV vector bosons, Matheus Hostert, Maxim Pospelov, Phys.Rev.D 108 (2023) 5 055011
-
-, <a href="https://arxiv.org/abs/2306.15077">arXiv:2306.15077</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-13. Pion decay constraints on exotic 17 MeV vector bosons
-<p class="page__meta">
-  Matheus Hostert, Maxim Pospelov, Phys.Rev.D 108 (2023) 5 055011 | <a href="https://arxiv.org/abs/2306.15077">arXiv:2306.15077</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Neutrinos produced in the atmosphere traverse a column density of air before being detected at neutrino observatories like IceCube or KM3NeT. In this work, we extend the neutrino flavor evolution in the nuSQuIDS code accounting for the varying height of neutrino production and the variable air density in the atmosphere. These effects can lead to sizeable spectral distortions in standard neutrino oscillations and are crucial to accurately describe some new physics scenarios. As an example, we study a model of quasi-sterile neutrinos that induce resonant flavor conversions at neutrino energies of $\mathcal{O}(300)\text{ MeV}$ in matter densities of $1 \text{ g/cm}^3$. In atmospheric air densities, the same resonance is then realized at neutrino energies of $\mathcal{O}(300- 700)$~GeV. We find that the new resonance can deplete the $\nu_\mu + \overline{\nu}_\mu$ flux at the IceCube Neutrino Observatory by as much as $10\%$ in the direction of the horizon.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2405.12140" title="Fig. 1 — Resonant Neutrino Flavor Conversion in the Atmosphere">
+          <img src="/files/pub_figs/2405.12140.png" alt="Fig. 1 from Resonant Neutrino Flavor Conversion in the Atmosphere" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Effective portals to heavy neutral leptons, Enrique Fernández-Martínez, Manuel González-López, Josu Hernández-García, Matheus Hostert, Jacobo López-Pavón, JHEP 09 (2023) 001
-
-, <a href="https://arxiv.org/abs/2304.06772">arXiv:2304.06772</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-14. Effective portals to heavy neutral leptons
-<p class="page__meta">
-  Enrique Fernández-Martínez, Manuel González-López, Josu Hernández-García, Matheus Hostert, Jacobo López-Pavón, JHEP 09 (2023) 001 | <a href="https://arxiv.org/abs/2304.06772">arXiv:2304.06772</a>.
-  <br />
-</p>
-</div>
+      
+        
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Semi-Visible Dark Photon Phenomenology at the GeV Scale, Asli M. Abdullahi, Matheus Hostert, Daniele Massaro, Silvia Pascoli, Phys.Rev.D 108 (2023) 1 015032
-
-, <a href="https://arxiv.org/abs/2302.05410">arXiv:2302.05410</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-16. Semi-Visible Dark Photon Phenomenology at the GeV Scale
-<p class="page__meta">
-  Asli M. Abdullahi, Matheus Hostert, Daniele Massaro, Silvia Pascoli, Phys.Rev.D 108 (2023) 1 015032 | <a href="https://arxiv.org/abs/2302.05410">arXiv:2302.05410</a>.
-  <br />
-</p>
-</div>
+      
+        
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Constraining light thermal inelastic dark matter with NA64, Martina Mongillo, Asli Abdullahi, Benjamin Banto Oberhauser, Paolo Crivelli, Matheus Hostert, Daniele Massaro, Laura Molina Bueno, Silvia Pascoli, Eur.Phys.J.C 83 (2023) 5 391
-
-, <a href="https://arxiv.org/abs/2302.05414">arXiv:2302.05414</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-15. Constraining light thermal inelastic dark matter with NA64
-<p class="page__meta">
-  Martina Mongillo, Asli Abdullahi, Benjamin Banto Oberhauser, Paolo Crivelli, Matheus Hostert, Daniele Massaro, Laura Molina Bueno, Silvia Pascoli, Eur.Phys.J.C 83 (2023) 5 391 | <a href="https://arxiv.org/abs/2302.05414">arXiv:2302.05414</a>.
-  <br />
-</p>
-</div>
-        
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Implications of MicroBooNE’s low sensitivity to electron antineutrino interactions in the search for the MiniBooNE excess, Nicholas W. Kamp, Matheus Hostert, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz, Phys.Rev.D 107 (2023) 9 092002
-
-, <a href="https://arxiv.org/abs/2301.12573">arXiv:2301.12573</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-17. Implications of MicroBooNE’s low sensitivity to electron antineutrino interactions in the search for the MiniBooNE excess
-<p class="page__meta">
-  Nicholas W. Kamp, Matheus Hostert, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz, Phys.Rev.D 107 (2023) 9 092002 | <a href="https://arxiv.org/abs/2301.12573">arXiv:2301.12573</a>.
-  <br />
-</p>
-</div>
+      
+        
         
       
         
@@ -1020,7 +1030,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2022</h2>
+    <h2 class="year-subheader">2023</h2>
     <ol>
       
         
@@ -1058,128 +1068,287 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
       
         
         
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">12.</span> <span class="pub-entry__title">Panorama of new-physics explanations to the MiniBooNE excess</span>
+    
+    <p class="pub-entry__authors">Asli M. Abdullahi,  Jaime Hoefken Zink,  Matheus Hostert,  Daniele Massaro,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2308.02543">arXiv:2308.02543</a> | Phys.Rev.D 111 (2025) 3 035028
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
       
-        
-        
+      <div class="pub-entry__abstract">The MiniBooNE low-energy excess stands as an unexplained anomaly in short-baseline neutrino oscillation experiments. It has been shown that it can be explained in the context of dark sector models. Here, we provide an overview of the possible new-physics solutions based on electron, photon, and dilepton final states. We systematically discuss the various production mechanisms for dark particles in neutrino-nucleus scattering. Our main result is a comprehensive fit to the MiniBooNE energy spectrum in the parameter space of dark neutrino models, where short-lived heavy neutral leptons are produced in neutrino interactions and decay to $e^+e^-$ pairs inside the detector. For the first time, other experiments will be able to directly confirm or rule out dark neutrino interpretations of the MiniBooNE low-energy excess.</div>
       
-        
-        
       
-        
-        
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2308.02543" title="Fig. 1 — Panorama of new-physics explanations to the MiniBooNE excess">
+          <img src="/files/pub_figs/2308.02543.png" alt="Fig. 1 from Panorama of new-physics explanations to the MiniBooNE excess" loading="lazy" />
+        </a>
+      </div>
       
-        
-        
-      
-        
+    </div>
+  </details>
+  
+</div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">13.</span> <span class="pub-entry__title">New physics in multi-electron muon decays</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Tony Menzo,  Maxim Pospelov,  Jure Zupan</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2306.15631">arXiv:2306.15631</a> | JHEP 10 (2023) 006
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> DarkNews: A Python-based event generator for heavy neutral lepton production in neutrino-nucleus scattering, Asli M. Abdullahi, Jaime Hoefken Zink, Matheus Hostert, Daniele Massaro, Silvia Pascoli, Comput.Phys.Commun. 297 (2024) 109075
-
-, <a href="https://arxiv.org/abs/2207.04137">arXiv:2207.04137</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-18. DarkNews: A Python-based event generator for heavy neutral lepton production in neutrino-nucleus scattering
-<p class="page__meta">
-  Asli M. Abdullahi, Jaime Hoefken Zink, Matheus Hostert, Daniele Massaro, Silvia Pascoli, Comput.Phys.Commun. 297 (2024) 109075 | <a href="https://arxiv.org/abs/2207.04137">arXiv:2207.04137</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We study the exotic muon decays with five charged tracks in the final state. First, we investigate the Standard Model rate for $μ^+ \to 3e^+\,2e^-\,2ν$ ($B = 4.0\times 10^{-10})$ and find that the Mu3e experiment should have tens to hundreds of signal events per $10^{15}$ $μ^+$ decays, depending on the signal selection strategy. We then turn to a neutrinoless $μ^+ \to 3e^+\,2e^-$ decay that may arise in new-physics models with lepton-flavor-violating effective operators involving a dark Higgs $h_d$. Following its production in $μ^+ \to e^+ h_d$ decays, the dark Higgs can undergo a decay cascade to two $e^+e^-$ pairs through two dark photons, $h_d \to γ_d γ_d \to 2(e^+e^-)$. We show that a $μ^+ \to 3e^+\,2e^-$ search at the Mu3e experiment, with potential sensitivity to the branching ratio at the $O(10^{-12})$ level or below, can explore new regions of parameter space and new physics scales as high as $Λ\sim 10^{15}$ GeV.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2306.15631" title="Fig. 1 — New physics in multi-electron muon decays">
+          <img src="/files/pub_figs/2306.15631.png" alt="Fig. 1 from New physics in multi-electron muon decays" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">14.</span> <span class="pub-entry__title">Pion decay constraints on exotic 17 MeV vector bosons</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Maxim Pospelov</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2306.15077">arXiv:2306.15077</a> | Phys.Rev.D 108 (2023) 5 055011
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Dipole-coupled heavy-neutral-lepton explanations of the MiniBooNE excess including constraints from MINERvA data, Nicholas W. Kamp, Matheus Hostert, Austin Schneider, Stefano Vergani, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz, Melissa A. Uchida, Phys.Rev.D 107 (2023) 5 055009
-
-, <a href="https://arxiv.org/abs/2206.07100">arXiv:2206.07100</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-19. Dipole-coupled heavy-neutral-lepton explanations of the MiniBooNE excess including constraints from MINERvA data
-<p class="page__meta">
-  Nicholas W. Kamp, Matheus Hostert, Austin Schneider, Stefano Vergani, Carlos A. Argüelles, Janet M. Conrad, Michael H. Shaevitz, Melissa A. Uchida, Phys.Rev.D 107 (2023) 5 055009 | <a href="https://arxiv.org/abs/2206.07100">arXiv:2206.07100</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We derive constraints on the couplings of light vector particles to all first-generation Standard Model fermions using leptonic decays of the charged pion, $\pi^+\to e^+ \nu_e X_\mu$. In models where the net charge to which $X_\mu$ couples to is not conserved, no lepton helicity flip is required for the decay to happen, enhancing the decay rate by factors of $\mathcal{O}(m_\pi^4/m_e^2m_X^2)$. A past search at the SINDRUM-I spectrometer severely constrains this possibility. In the context of the hypothesized $17$~MeV particle proposed to explain anomalous $^8$Be, $^4$He, and $^{12}$C nuclear transitions claimed by the ATOMKI experiment, this limit rules out vector-boson explanations and poses strong limits on axial-vector ones.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2306.15077" title="Fig. 1 — Pion decay constraints on exotic 17 MeV vector bosons">
+          <img src="/files/pub_figs/2306.15077.png" alt="Fig. 1 from Pion decay constraints on exotic 17 MeV vector bosons" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">15.</span> <span class="pub-entry__title">Effective portals to heavy neutral leptons</span>
+    
+    <p class="pub-entry__authors">Enrique Fernández-Martínez,  Manuel González-López,  Josu Hernández-García,  Matheus Hostert,  Jacobo López-Pavón</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2304.06772">arXiv:2304.06772</a> | JHEP 09 (2023) 001
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Efficiently exploring multidimensional parameter spaces beyond the Standard Model, Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert, Phys.Rev.D 107 (2023) 3 035027
-
-, <a href="https://arxiv.org/abs/2205.12273">arXiv:2205.12273</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-20. Efficiently exploring multidimensional parameter spaces beyond the Standard Model
-<p class="page__meta">
-  Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert, Phys.Rev.D 107 (2023) 3 035027 | <a href="https://arxiv.org/abs/2205.12273">arXiv:2205.12273</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">The existence of right-handed neutrinos, or heavy neutral leptons (HNLs), is strongly motivated by the observation of neutrino masses and mixing. The mass of these new particles could lie below the electroweak scale, making them accessible to low-energy laboratory experiments. Additional new physics at high energies can mediate new interactions between the Standard Model particles and HNLs, and is most conveniently parametrized by the neutrino Standard Model Effective Field Theory, or $\nu$SMEFT for short. In this work, we consider the dimension six $\nu$SMEFT operators involving one HNL field in the mass range of $\mathcal{O}(1)$~MeV $&lt;M_N&lt; \mathcal{O}(100)$~GeV. By recasting existing experimental limits on the production and decay of new light particles, we constrain the Wilson coefficients and new physics scale of each operator as a function of the HNL mass.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2304.06772" title="Fig. 1 — Effective portals to heavy neutral leptons">
+          <img src="/files/pub_figs/2304.06772.png" alt="Fig. 1 from Effective portals to heavy neutral leptons" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">17.</span> <span class="pub-entry__title">Semi-Visible Dark Photon Phenomenology at the GeV Scale</span>
+    
+    <p class="pub-entry__authors">Asli M. Abdullahi,  Matheus Hostert,  Daniele Massaro,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2302.05410">arXiv:2302.05410</a> | Phys.Rev.D 108 (2023) 1 015032
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Dark sectors in neutron-shining-through-a-wall and nuclear-absorption signals, Matheus Hostert, David McKeen, Maxim Pospelov, Nirmal Raj, Phys.Rev.D 107 (2023) 7 075034
-
-, <a href="https://arxiv.org/abs/2201.02603">arXiv:2201.02603</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-21. Dark sectors in neutron-shining-through-a-wall and nuclear-absorption signals
-<p class="page__meta">
-  Matheus Hostert, David McKeen, Maxim Pospelov, Nirmal Raj, Phys.Rev.D 107 (2023) 7 075034 | <a href="https://arxiv.org/abs/2201.02603">arXiv:2201.02603</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">In rich dark sector models, dark photons heavier than tens of MeV can behave as semi-visible particles: their decays contain both visible and invisible final states. We present models containing multiple dark fermions which allow for such decays and inscribe them in the context of inelastic dark matter and heavy neutral leptons scenarios. Our models represent a generalization of the traditional inelastic dark matter model by means of a charge conjugation symmetry. We revisit constraints on dark photons from $e^+e^-$ colliders and fixed target experiments, including the effect of analysis vetoes on semi-visible decays, $A^\prime \to \psi_i (\psi_j \to \psi_k \ell^+\ell^-)$. We find that in some cases the BaBar and NA64 experiments no longer exclude large kinetic mixing, $\epsilon \sim 10^{-2}$, and, specifically, the related explanation of the discrepancy in the muon $(g-2)$. This reopens an interesting window in parameter space for dark photons with exciting discovery prospects. We point out that a modified missing-energy search at NA64 can target short-lived $A^\prime$ decays and directly probe the newly-open parameter space.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2302.05410" title="Fig. 1 — Semi-Visible Dark Photon Phenomenology at the GeV Scale">
+          <img src="/files/pub_figs/2302.05410.png" alt="Fig. 1 from Semi-Visible Dark Photon Phenomenology at the GeV Scale" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">16.</span> <span class="pub-entry__title">Constraining light thermal inelastic dark matter with NA64</span>
+    
+    <p class="pub-entry__authors">Martina Mongillo,  Asli Abdullahi,  Benjamin Banto Oberhauser,  Paolo Crivelli,  Matheus Hostert,  Daniele Massaro,  Laura Molina Bueno,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2302.05414">arXiv:2302.05414</a> | Eur.Phys.J.C 83 (2023) 5 391
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">A vector portal between the Standard Model and the dark sector is a predictive and compelling framework for thermal dark matter. Through co-annihilations, models of inelastic dark matter (iDM) and inelastic Dirac dark matter (i2DM) can reproduce the observed relic density in the MeV to GeV mass range without violating cosmological limits. In these scenarios, the vector mediator behaves like a semi-visible particle, evading traditional bounds on visible or invisible resonances, and uncovering new parameter space to explain the muon $(g-2)$ anomaly. By means of a more inclusive signal definition at the NA64 experiment, we place new constraints on iDM and i2DM using a missing energy technique. With a recast-based analysis, we contextualize the NA64 exclusion limits in parameter space and estimate the reach of the newly collected and expected future NA64 data. Our results motivate the development of an optimized search program for semi-visible particles, in which fixed-target experiments like NA64 provide a powerful probe in the sub-GeV mass range.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2302.05414" title="Fig. 1 — Constraining light thermal inelastic dark matter with NA64">
+          <img src="/files/pub_figs/2302.05414.png" alt="Fig. 1 from Constraining light thermal inelastic dark matter with NA64" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">18.</span> <span class="pub-entry__title">Implications of MicroBooNE’s low sensitivity to electron antineutrino interactions in the search for the MiniBooNE excess</span>
+    
+    <p class="pub-entry__authors">Nicholas W. Kamp,  Matheus Hostert,  Carlos A. Argüelles,  Janet M. Conrad,  Michael H. Shaevitz</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2301.12573">arXiv:2301.12573</a> | Phys.Rev.D 107 (2023) 9 092002
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">The MicroBooNE experiment searched for an excess of electron-neutrinos in the Booster Neutrino Beam (BNB), providing direct constraints on $\nu_e$-interpretations of the MiniBooNE low-energy excess (LEE). In this article, we show that if the MiniBooNE LEE is caused instead by an excess of $\overline{\nu}_e$, then liquid argon detectors, such as MicroBooNE, SBND and ICARUS, would have poor sensitivity to it. This is due to a strong suppression of $\overline{\nu}_e -{}^{40}$Ar cross sections in the low-energy region of the excess. The MicroBooNE results are consistent at the $2\sigma$~C.L with a scenario in which the MiniBooNE excess is sourced entirely by $\overline{\nu}_e$ interactions. The opportune location of ANNIE, a Gd-loaded water Cherenkov detector, allows for a direct search for a $\overline{\nu}_e$ flux excess in the BNB using inverse-beta-decay events.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2301.12573" title="Fig. 1 — Implications of MicroBooNE’s low sensitivity to electron antineutrino interactions in the search for the MiniBooNE excess">
+          <img src="/files/pub_figs/2301.12573.png" alt="Fig. 1 from Implications of MicroBooNE’s low sensitivity to electron antineutrino interactions in the search for the MiniBooNE excess" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
         
       
         
@@ -1228,7 +1397,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2021</h2>
+    <h2 class="year-subheader">2022</h2>
     <ol>
       
         
@@ -1287,65 +1456,164 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
       
         
         
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">19.</span> <span class="pub-entry__title">DarkNews: A Python-based event generator for heavy neutral lepton production in neutrino-nucleus scattering</span>
+    
+    <p class="pub-entry__authors">Asli M. Abdullahi,  Jaime Hoefken Zink,  Matheus Hostert,  Daniele Massaro,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2207.04137">arXiv:2207.04137</a> | Comput.Phys.Commun. 297 (2024) 109075
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
       
-        
-        
+      <div class="pub-entry__abstract">We introduce , a lightweight -based Monte-Carlo generator for beyond-the-Standard-Model neutrino-nucleus scattering. The generator handles the production and decay of heavy neutral leptons via additional vector or scalar mediators, as well as through transition magnetic moments. samples pre-computed neutrino-nucleus upscattering cross sections and heavy neutrino decay rates to produce dilepton and single-photon events in accelerator neutrino experiments. We present two case studies with differential distributions for models that can explain the MiniBooNE excess. The aim of this code is to aid the neutrino theory and experimental communities in performing searches and sensitivity studies for new particles produced in neutrino upscattering.</div>
       
-        
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2207.04137" title="Fig. 1 — DarkNews: A Python-based event generator for heavy neutral lepton production in neutrino-nucleus scattering">
+          <img src="/files/pub_figs/2207.04137.png" alt="Fig. 1 from DarkNews: A Python-based event generator for heavy neutral lepton production in neutrino-nucleus scattering" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">20.</span> <span class="pub-entry__title">Dipole-coupled heavy-neutral-lepton explanations of the MiniBooNE excess including constraints from MINERvA data</span>
+    
+    <p class="pub-entry__authors">Nicholas W. Kamp,  Matheus Hostert,  Austin Schneider,  Stefano Vergani,  Carlos A. Argüelles,  Janet M. Conrad,  Michael H. Shaevitz,  Melissa A. Uchida</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2206.07100">arXiv:2206.07100</a> | Phys.Rev.D 107 (2023) 5 055009
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> MicroBooNE and the νe Interpretation of the MiniBooNE Low-Energy Excess, C. A. Argüelles, I. Esteban, M. Hostert, Kevin J. Kelly, J. Kopp, P. A. N. Machado, I. Martinez-Soler, Y. F. Perez-Gonzalez, Phys.Rev.Lett. 128 (2022) 24 241802
-
-, <a href="https://arxiv.org/abs/2111.10359">arXiv:2111.10359</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-22. MicroBooNE and the νe Interpretation of the MiniBooNE Low-Energy Excess
-<p class="page__meta">
-  C. A. Argüelles, I. Esteban, M. Hostert, Kevin J. Kelly, J. Kopp, P. A. N. Machado, I. Martinez-Soler, Y. F. Perez-Gonzalez, Phys.Rev.Lett. 128 (2022) 24 241802 | <a href="https://arxiv.org/abs/2111.10359">arXiv:2111.10359</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We revisit models of heavy neutral leptons (neutrissimos) with transition magnetic moments as explanations of the $4.8\sigma$ excess of electron-like events at MiniBooNE. We first re-examine the preferred regions in the model parameter space to explain MiniBooNE, considering also potential contributions from oscillations due to an eV-scale sterile neutrino. We then derive constraints on the model using neutrino-electron elastic scattering data from . To carry out these analyses, we have developed a detailed Monte Carlo simulation of neutrissimo interactions within the MiniBooNE and detectors using the LeptonInjector framework. This simulation allows for a significantly more robust evaluation of the neutrissimo model compared to previous studies in the literature--a necessary step in order to begin making definitive statements about beyond the Standard Model explanations of the MiniBooNE excess. We find that rules out a large region of parameter space, but allowed solutions exist at the $2\sigma$ confidence level. A dedicated analysis would likely be able to probe the entire region of preference of MiniBooNE in this model.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2206.07100" title="Fig. 1 — Dipole-coupled heavy-neutral-lepton explanations of the MiniBooNE excess including constraints from MINERvA data">
+          <img src="/files/pub_figs/2206.07100.png" alt="Fig. 1 from Dipole-coupled heavy-neutral-lepton explanations of the MiniBooNE excess including constraints from MINERvA data" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">21.</span> <span class="pub-entry__title">Efficiently exploring multidimensional parameter spaces beyond the Standard Model</span>
+    
+    <p class="pub-entry__authors">Carlos A. Argüelles,  Nicolò Foppiani,  Matheus Hostert</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2205.12273">arXiv:2205.12273</a> | Phys.Rev.D 107 (2023) 3 035027
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Heavy neutral leptons below the kaon mass at hodoscopic neutrino detectors, Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert, Phys.Rev.D 105 (2022) 9 095006
-
-, <a href="https://arxiv.org/abs/2109.03831">arXiv:2109.03831</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-23. Heavy neutral leptons below the kaon mass at hodoscopic neutrino detectors
-<p class="page__meta">
-  Carlos A. Argüelles, Nicolò Foppiani, Matheus Hostert, Phys.Rev.D 105 (2022) 9 095006 | <a href="https://arxiv.org/abs/2109.03831">arXiv:2109.03831</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We propose a method to ease the challenges of exploring multi-dimensional parameter spaces in beyond-the-Standard Model theories. We evaluate the model likelihood for any choice of parameters by sampling the theory parameters intelligently and building a Kernel Density Estimator. By reducing the number of expensive Monte-Carlo simulations, this method provides a more efficient way to test complex theories. We illustrate our technique to set new limits on a short-lived heavy neutrino $N$, proposed as an explanation of anomalies in neutrino experiments. Using a search for lepton pairs in the T2K near detector, we find exclusion limits on the model parameters in a vast region of parameter space, fully exploiting the advantages of our new method. With a single Monte Carlo simulation, we obtain the differential event rate for arbitrary choices of model parameters, allowing us to cast limits on any slice of the model parameter space. We conclude that $N$ particles with lifetimes greater than $c \tau^0 \gtrsim 3$~cm are excluded by T2K data. We also derive model-independent constraints in terms of the total rate, lifetime, and $N$ mass and provide an approximated analytical formula. This method can be applied in other branches of physics to explore the landscape of theory parameters efficiently.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2205.12273" title="Fig. 1 — Efficiently exploring multidimensional parameter spaces beyond the Standard Model">
+          <img src="/files/pub_figs/2205.12273.png" alt="Fig. 1 from Efficiently exploring multidimensional parameter spaces beyond the Standard Model" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">22.</span> <span class="pub-entry__title">Dark sectors in neutron-shining-through-a-wall and nuclear-absorption signals</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  David McKeen,  Maxim Pospelov,  Nirmal Raj</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2201.02603">arXiv:2201.02603</a> | Phys.Rev.D 107 (2023) 7 075034
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We propose new searches for $n^\prime$, a dark baryon that can mix with the Standard Model neutron. We show that IsoDAR, a proposal to place an intense cyclotron near a large-volume neutrino detector deep underground, can look for $n\to n^\prime \to n$ transitions with much lower backgrounds than surface experiments. This opportune neutron-shining-through-a-wall search would be possible without any modifications to the primary goals of the experiment and would provide the strongest laboratory constraints on the $n$-$n^\prime$ mixing for a wide range of mass splitting. We also consider dark neutrons as dark matter and show that their nuclear absorption at deep-underground detectors such as SNO and Borexino places some of the strongest limits in parameter space. Finally, we describe other $n^\prime$ signatures, such as neutrons shining through walls at spallation sources, reactors, and the disappearance of ultracold neutrons.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2201.02603" title="Fig. 1 — Dark sectors in neutron-shining-through-a-wall and nuclear-absorption signals">
+          <img src="/files/pub_figs/2201.02603.png" alt="Fig. 1 from Dark sectors in neutron-shining-through-a-wall and nuclear-absorption signals" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
+        
+      
+        
+        
+      
+        
         
       
         
@@ -1388,7 +1656,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2020</h2>
+    <h2 class="year-subheader">2021</h2>
     <ol>
       
         
@@ -1459,113 +1727,92 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
       
         
         
-      
-        
-        
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">23.</span> <span class="pub-entry__title">MicroBooNE and the νe Interpretation of the MiniBooNE Low-Energy Excess</span>
+    
+    <p class="pub-entry__authors">C.A. Argüelles,  I. Esteban,  M. Hostert,  Kevin J. Kelly,  J. Kopp,  P.A.N. Machado,  I. Martinez-Soler,  Y.F. Perez-Gonzalez</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2111.10359">arXiv:2111.10359</a> | Phys.Rev.Lett. 128 (2022) 24 241802
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Novel multilepton signatures of dark sectors in light meson decays, Matheus Hostert, Maxim Pospelov, Phys.Rev.D 105 (2022) 1 015017
-
-, <a href="https://arxiv.org/abs/2012.02142">arXiv:2012.02142</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-24. Novel multilepton signatures of dark sectors in light meson decays
-<p class="page__meta">
-  Matheus Hostert, Maxim Pospelov, Phys.Rev.D 105 (2022) 1 015017 | <a href="https://arxiv.org/abs/2012.02142">arXiv:2012.02142</a>.
-  <br />
-</p>
-</div>
-        
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
       
-        
-        
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Constraints on decaying sterile neutrinos from solar antineutrinos, Matheus Hostert, Maxim Pospelov, Phys.Rev.D 104 (2021) 5 055031
-
-, <a href="https://arxiv.org/abs/2008.11851">arXiv:2008.11851</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-25. Constraints on decaying sterile neutrinos from solar antineutrinos
-<p class="page__meta">
-  Matheus Hostert, Maxim Pospelov, Phys.Rev.D 104 (2021) 5 055031 | <a href="https://arxiv.org/abs/2008.11851">arXiv:2008.11851</a>.
-  <br />
-</p>
+      <div class="pub-entry__abstract">\\ A new generation of neutrino experiments is testing the $4.8\sigma$ anomalous excess of electron-like events observed in MiniBooNE. This is of huge importance for particle physics, astrophysics, and cosmology, not only because of the potential discovery of physics beyond the Standard Model, but also because the lessons we will learn about neutrino--nucleus interactions will be crucial for the worldwide neutrino program. MicroBooNE has recently released results that appear to disfavor several explanations of the MiniBooNE anomaly. Here, we show quantitatively that MicroBooNE results, while a promising start, unquestionably do not probe the full parameter space of sterile neutrino models hinted at by MiniBooNE and other data, nor do they probe the $\nu_e$ interpretation of the MiniBooNE excess in a model-independent way. Our analysis code is fully available in this GitHub repository.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2111.10359" title="Fig. 1 — MicroBooNE and the νe Interpretation of the MiniBooNE Low-Energy Excess">
+          <img src="/files/pub_figs/2111.10359.png" alt="Fig. 1 from MicroBooNE and the νe Interpretation of the MiniBooNE Low-Energy Excess" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">24.</span> <span class="pub-entry__title">Heavy neutral leptons below the kaon mass at hodoscopic neutrino detectors</span>
+    
+    <p class="pub-entry__authors">Carlos A. Argüelles,  Nicolò Foppiani,  Matheus Hostert</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2109.03831">arXiv:2109.03831</a> | Phys.Rev.D 105 (2022) 9 095006
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar, Asli Abdullahi, Matheus Hostert, Silvia Pascoli, Phys.Lett.B 820 (2021) 136531
-
-, <a href="https://arxiv.org/abs/2007.11813">arXiv:2007.11813</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-26. A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar
-<p class="page__meta">
-  Asli Abdullahi, Matheus Hostert, Silvia Pascoli, Phys.Lett.B 820 (2021) 136531 | <a href="https://arxiv.org/abs/2007.11813">arXiv:2007.11813</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Heavy neutral leptons ($N$) below the kaon mass are severely constrained by cosmology and lab-based searches for their decays in flight. If $N$ interacts via an additional force, $N\to\nu e^+e^-$ decays are enhanced and cosmological limits can be avoided. We show that the T2K and MicroBooNE neutrino experiments provide the best limits on the mixing of $N$ with muon-neutrinos, outperforming past-generation experiments, previously thought to dominate. We constrain models with electromagnetically-decaying and long-lived $N$, such as in a transition-magnetic-moment portal and in a leptophilic axion-like particle portal, invoked to explain the MiniBooNE excess. By considering these models as representative examples, our results show that explanations of the MiniBooNE excess that involve $e^+e^-$ pairs from long-lived particles are in tension with T2K, PS191, and MicroBooNE data. Similarly, these searches also constrain MiniBooNE explanations based on single photons due to the associated $e^+e^-$ decay mode via a virtual photon.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2109.03831" title="Fig. 1 — Heavy neutral leptons below the kaon mass at hodoscopic neutrino detectors">
+          <img src="/files/pub_figs/2109.03831.png" alt="Fig. 1 from Heavy neutral leptons below the kaon mass at hodoscopic neutrino detectors" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Pair production of dark particles in meson decays, Matheus Hostert, Kunio Kaneta, Maxim Pospelov, Phys.Rev.D 102 (2020) 5 055016
-
-, <a href="https://arxiv.org/abs/2005.07102">arXiv:2005.07102</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-27. Pair production of dark particles in meson decays
-<p class="page__meta">
-  Matheus Hostert, Kunio Kaneta, Maxim Pospelov, Phys.Rev.D 102 (2020) 5 055016 | <a href="https://arxiv.org/abs/2005.07102">arXiv:2005.07102</a>.
-  <br />
-</p>
-</div>
+      
+        
+        
+      
+        
+        
+      
+        
         
       
         
@@ -1596,7 +1843,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2019</h2>
+    <h2 class="year-subheader">2020</h2>
     <ol>
       
         
@@ -1673,142 +1920,173 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
       
         
         
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">25.</span> <span class="pub-entry__title">Novel multilepton signatures of dark sectors in light meson decays</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Maxim Pospelov</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2012.02142">arXiv:2012.02142</a> | Phys.Rev.D 105 (2022) 1 015017
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
       
-        
-        
+      <div class="pub-entry__abstract">We point out kaon decays to multiple charged leptons as a novel probe of light dark particles $X$. Previously neglected channels, such as $K^+\to \pi^+ \left(XX \to 2(e^+e^-)\right)$, $K_L\to \pi^0 \left( XX \to 2(e^+e^-)\right)$, and $K_S\to \left(XX \to 2(e^+e^-)\right)$ may have very large rates, exceeding not only the Standard Model expectations but also possible backgrounds, such as Dalitz decays of neutral pions. We apply this idea to dark sector models where the production of dark Higgses or heavy neutral leptons leads to final states with several visible dark photons. We also investigate a recently proposed model of an MeV-scale QCD axion, where the rates for kaon decays to multiple axion states are large due to the non-linear interactions of the axion with the light mesons. In addition, we point out new probes of this axion in pion decays, such as the single production of $a$ in $\pi^+ \to \nu \left((e^+)^* \to e^+ a\to e^+e^+e^-\right)$, double production in pion capture $\pi^-+(p \text{ or D})\to aa + (n\text{ or }nn) \to 2(e^+e^-) + (n\text{ or }nn)$, as well as $\pi^0 \to aaa\to 3(e^+e^-)$. The latter decay is fixed at $\mathcal{B}(\pi^0\to a a a) = 1.0 \times 10^{-3}$ for a $17$~MeV axion.</div>
       
-        
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2012.02142" title="Fig. 1 — Novel multilepton signatures of dark sectors in light meson decays">
+          <img src="/files/pub_figs/2012.02142.png" alt="Fig. 1 from Novel multilepton signatures of dark sectors in light meson decays" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">26.</span> <span class="pub-entry__title">Constraints on decaying sterile neutrinos from solar antineutrinos</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Maxim Pospelov</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2008.11851">arXiv:2008.11851</a> | Phys.Rev.D 104 (2021) 5 055031
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Neutrino Masses from a Dark Neutrino Sector below the Electroweak Scale, Peter Ballett, Matheus Hostert, Silvia Pascoli, Phys.Rev.D 99 (2019) 9 091701
-
-, <a href="https://arxiv.org/abs/1903.07590">arXiv:1903.07590</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-28. Neutrino Masses from a Dark Neutrino Sector below the Electroweak Scale
-<p class="page__meta">
-  Peter Ballett, Matheus Hostert, Silvia Pascoli, Phys.Rev.D 99 (2019) 9 091701 | <a href="https://arxiv.org/abs/1903.07590">arXiv:1903.07590</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Solar neutrino experiments are highly sensitive to sources of $\nu\to\overline{\nu}$ conversions in the $^8$B neutrino flux. In this work we adapt these searches to non-minimal sterile neutrino models recently proposed to explain the LSND, MiniBooNE, and reactor anomalies. The production of such sterile neutrinos in the Sun, followed the decay chain $\nu_4 \to \nu \phi \to \nu \nu \overline{\nu}$ with a new scalar $\phi$ results in upper limits for the neutrino mixing $|U_{e4}|^2$ at the per mille level. We conclude that a simultaneous explanations of all anomalies is in tension with KamLAND, Super-Kamiokande, and Borexino constraints on the flux of solar antineutrinos. We then present other minimal models that violate parity or lepton number, and discuss the applicability of our constraints in each case. Future improvements can be expected from existing Borexino data as well as from future searches at Super-Kamiokande with added Gd.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2008.11851" title="Fig. 1 — Constraints on decaying sterile neutrinos from solar antineutrinos">
+          <img src="/files/pub_figs/2008.11851.png" alt="Fig. 1 from Constraints on decaying sterile neutrinos from solar antineutrinos" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">27.</span> <span class="pub-entry__title">A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar</span>
+    
+    <p class="pub-entry__authors">Asli Abdullahi,  Matheus Hostert,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2007.11813">arXiv:2007.11813</a> | Phys.Lett.B 820 (2021) 136531
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Dark Neutrinos and a Three Portal Connection to the Standard Model, Peter Ballett, Matheus Hostert, Silvia Pascoli, Phys.Rev.D 101 (2020) 11 115025
-
-, <a href="https://arxiv.org/abs/1903.07589">arXiv:1903.07589</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-29. Dark Neutrinos and a Three Portal Connection to the Standard Model
-<p class="page__meta">
-  Peter Ballett, Matheus Hostert, Silvia Pascoli, Phys.Rev.D 101 (2020) 11 115025 | <a href="https://arxiv.org/abs/1903.07589">arXiv:1903.07589</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">A recent update from MiniBooNE has strengthened the observed $4.8\sigma$ excess of $e$-like events. Motivated by this and other notable deviations from standard model predictions, such as the muon $(g-2)$, we propose a solution to low energy anomalies through a dark neutrino sector. The model is renormalizable and can also explain light neutrino masses with an anomaly-free and dark $U(1)^\prime$ gauge symmetry broken at the GeV scale. Large kinetic mixing leads to s-channel production of heavy neutral leptons at $e^+e^-$ colliders, where we point out and explain a $\gtrsim 2\sigma$ excess observed in the BaBar monophoton data. Our model is also compatible with anomalous $e$-like events seen at old accelerator experiments, as well as with an excess of double vertex signatures observed at CCFR.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2007.11813" title="Fig. 1 — A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar">
+          <img src="/files/pub_figs/2007.11813.png" alt="Fig. 1 from A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (g − 2), and BaBar" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">28.</span> <span class="pub-entry__title">Pair production of dark particles in meson decays</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert,  Kunio Kaneta,  Maxim Pospelov</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/2005.07102">arXiv:2005.07102</a> | Phys.Rev.D 102 (2020) 5 055016
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Zs in neutrino scattering at DUNE, Peter Ballett, Matheus Hostert, Silvia Pascoli, Yuber F. Perez-Gonzalez, Zahra Tabrizi, Renata Zukanovich Funchal, Phys.Rev.D 100 (2019) 5 055012
-
-, <a href="https://arxiv.org/abs/1902.08579">arXiv:1902.08579</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-30. Zs in neutrino scattering at DUNE
-<p class="page__meta">
-  Peter Ballett, Matheus Hostert, Silvia Pascoli, Yuber F. Perez-Gonzalez, Zahra Tabrizi, Renata Zukanovich Funchal, Phys.Rev.D 100 (2019) 5 055012 | <a href="https://arxiv.org/abs/1902.08579">arXiv:1902.08579</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Rare decays of $K$ and $B$ mesons provide a powerful probe of dark sectors with light new particles. We show that the pair production of $O(100\,{\rm MeV})$ dark states can be probed with the decays of $K_L$ mesons, owing to the enhanced two-body kinematics, $K_L\to X_1X_2$ or $X_2X_2$. If either of these two particles is unstable, e.g. $X_2\to X_1\pi^0$, $X_2\to X_1\gamma$ or $X_{1,2}\to \gamma\gamma$, such decays could easily mimic $K_L\to \pi^0 \nu\overline{\nu}$ signatures, while not being ruled out by the decays of charged kaons. We construct explicit models that have enhanced $K_L$ decay signatures, and are constrained by the results of the KOTO experiment. We note that recently reported excess events can also be accommodated while satisfying all other constraints ($B$ decays, colliders, beam dumps). These models are based on the extensions of the gauge and/or scalar sector of the theory. The lightest of $X_{1,2}$ particles, if stable, could constitute the entirety of dark matter.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/2005.07102" title="Fig. 1 — Pair production of dark particles in meson decays">
+          <img src="/files/pub_figs/2005.07102.png" alt="Fig. 1 from Pair production of dark particles in meson decays" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Neutrino trident production at near detectors, Matheus Hostert, PoS NOW2018 (2019) 037
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-31. Neutrino trident production at near detectors
-<p class="page__meta">
-  Matheus Hostert, PoS NOW2018 (2019) 037.
-  <br />
-</p>
-</div>
+      
+        
         
       
         
         
-          
-
-
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Hidden Physics at the Neutrino Frontier: Tridents, Dark Forces, and Hidden Particles, Matheus. Hostert, thesis, 2019
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-32. Hidden Physics at the Neutrino Frontier: Tridents, Dark Forces, and Hidden Particles
-<p class="page__meta">
-  Matheus. Hostert, thesis, 2019.
-  <br />
-</p>
-</div>
+      
+        
+        
+      
+        
         
       
         
@@ -1824,7 +2102,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2018</h2>
+    <h2 class="year-subheader">2019</h2>
     <ol>
       
         
@@ -1913,68 +2191,165 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
       
         
         
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">29.</span> <span class="pub-entry__title">Neutrino Masses from a Dark Neutrino Sector below the Electroweak Scale</span>
+    
+    <p class="pub-entry__authors">Peter Ballett,  Matheus Hostert,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/1903.07590">arXiv:1903.07590</a> | Phys.Rev.D 99 (2019) 9 091701
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
       
-        
-        
+      <div class="pub-entry__abstract">We consider a minimal extension of the Standard Model which advocates a dark neutrino sector charged under a hidden $U(1)^\prime$. We show that neutrino masses can arise radiatively in this model. The observed values are compatible with a light dark sector below the electroweak scale and would imply new heavy fermions which may be testable in the next generation of beam dump searches at DUNE, NA62 and SHIP.</div>
       
-        
-        
       
-        
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/1903.07590" title="Fig. 1 — Neutrino Masses from a Dark Neutrino Sector below the Electroweak Scale">
+          <img src="/files/pub_figs/1903.07590.png" alt="Fig. 1 from Neutrino Masses from a Dark Neutrino Sector below the Electroweak Scale" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">30.</span> <span class="pub-entry__title">Dark Neutrinos and a Three Portal Connection to the Standard Model</span>
+    
+    <p class="pub-entry__authors">Peter Ballett,  Matheus Hostert,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/1903.07589">arXiv:1903.07589</a> | Phys.Rev.D 101 (2020) 11 115025
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments, Carlos A. Argüelles, Matheus Hostert, Yu-Dai Tsai, Phys.Rev.Lett. 123 (2019) 26 261801
-
-, <a href="https://arxiv.org/abs/1812.08768">arXiv:1812.08768</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-33. Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments
-<p class="page__meta">
-  Carlos A. Argüelles, Matheus Hostert, Yu-Dai Tsai, Phys.Rev.Lett. 123 (2019) 26 261801 | <a href="https://arxiv.org/abs/1812.08768">arXiv:1812.08768</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">We introduce a dark neutrino sector which respects a hidden $U(1)^\prime$ gauge symmetry, subsequently broken by the vacuum expectation value of a dark scalar. The model is a self-consistent realisation of an extended hidden sector that communicates with the SM only via the three renormalizable portals, namely neutrino, vector and scalar mixing. The interplay between portal couplings leads to several novel signatures in heavy neutrino, dark photon, and dark scalar searches, typically characterised by multi-leptons plus missing energy and displaced vertices. A striking signature arises in kaon factories such as NA62, where $K^+\to\ell_\alpha^+\nu \ell_\beta^+\ell_\beta^-$ decays could reveal a heavy neutrino and a light dark photon resonance above backgrounds. Given the open parameter space, we also comment on recent ideas to explain outstanding experimental anomalies, and how they would fit in our proposed model. A minimal extension of the model, possibly motivated by anomaly cancellation, can accommodate a dark matter candidate strongly connected to the neutrino sector.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/1903.07589" title="Fig. 1 — Dark Neutrinos and a Three Portal Connection to the Standard Model">
+          <img src="/files/pub_figs/1903.07589.png" alt="Fig. 1 from Dark Neutrinos and a Three Portal Connection to the Standard Model" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
         
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">31.</span> <span class="pub-entry__title">Zs in neutrino scattering at DUNE</span>
+    
+    <p class="pub-entry__authors">Peter Ballett,  Matheus Hostert,  Silvia Pascoli,  Yuber F. Perez-Gonzalez,  Zahra Tabrizi,  Renata Zukanovich Funchal</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/1902.08579">arXiv:1902.08579</a> | Phys.Rev.D 100 (2019) 5 055012
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Neutrino Trident Scattering at Near Detectors, Peter Ballett, Matheus Hostert, Silvia Pascoli, Yuber F. Perez-Gonzalez, Zahra Tabrizi, Renata Zukanovich Funchal, JHEP 01 (2019) 119
-
-, <a href="https://arxiv.org/abs/1807.10973">arXiv:1807.10973</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-34. Neutrino Trident Scattering at Near Detectors
-<p class="page__meta">
-  Peter Ballett, Matheus Hostert, Silvia Pascoli, Yuber F. Perez-Gonzalez, Zahra Tabrizi, Renata Zukanovich Funchal, JHEP 01 (2019) 119 | <a href="https://arxiv.org/abs/1807.10973">arXiv:1807.10973</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Novel leptophilic neutral currents can be tested at upcoming neutrino oscillation experiments using two complementary processes, neutrino trident production and neutrino-electron ($ν-e$) elastic scattering. Considering generic anomaly-free $U(1)$ extensions of the Standard Model, we discuss the characteristics of $ν-e$ scattering as well as $e^+e^-$ and $μ^+μ^-$ trident production at the DUNE near detector in the presence of such BSM scenarios. We then determine the sensitivity of DUNE in constraining the well-known $L_e - L_μ$ and $L_μ- L_τ$ models. We conclude that DUNE will be able to probe these leptophilic models with unprecedented sensitivity, covering unproved explanations of the $(g-2)_μ$ discrepancy.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/1902.08579" title="Fig. 1 — Zs in neutrino scattering at DUNE">
+          <img src="/files/pub_figs/1902.08579.png" alt="Fig. 1 from Zs in neutrino scattering at DUNE" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">32.</span> <span class="pub-entry__title">Neutrino trident production at near detectors</span>
+    
+    <p class="pub-entry__authors">Matheus Hostert</p>
+    
+    <p class="page__meta">
+       | PoS NOW2018 (2019) 037
+    </p>
+  </div>
+
+  
+</div>
+
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">33.</span> <span class="pub-entry__title">Hidden Physics at the Neutrino Frontier: Tridents, Dark Forces, and Hidden Particles</span>
+    
+    <p class="pub-entry__authors">Matheus. Hostert</p>
+    
+    <p class="page__meta">
+      
+    </p>
+  </div>
+
+  
+</div>
+
+        
+      
+        
+        
+      
+        
         
       
         
@@ -1984,8 +2359,198 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
   </div>
 
 <div class="year-section">
-    <h2 style="font-size: 24px; margin-top: 30px; margin-bottom: 15px; color: #52adc8;">2017</h2>
+    <h2 class="year-subheader">2018</h2>
     <ol>
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">34.</span> <span class="pub-entry__title">Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments</span>
+    
+    <p class="pub-entry__authors">Carlos A. Argüelles,  Matheus Hostert,  Yu-Dai Tsai</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/1812.08768">arXiv:1812.08768</a> | Phys.Rev.Lett. 123 (2019) 26 261801
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">https://github.com/mhostert/DarkNews \\ Heavy neutrinos with additional interactions have recently been proposed as an explanation to the MiniBooNE excess. These scenarios often rely on marginally boosted particles to explain the excess angular spectrum, thus predicting large rates at higher-energy neutrino-electron scattering experiments. We place new constraints on this class of models based on neutrino-electron scattering sideband measurements performed at MINER$\nu$A and CHARM-II. A simultaneous explanation of the angular and energy distributions of the MiniBooNE excess in terms of heavy neutrinos with light mediators is severely constrained by our analysis. In general, high-energy neutrino-electron scattering experiments provide strong constraints on explanations of the MiniBooNE observation involving light mediators.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/1812.08768" title="Fig. 1 — Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments">
+          <img src="/files/pub_figs/1812.08768.png" alt="Fig. 1 from Testing New Physics Explanations of the MiniBooNE Anomaly at Neutrino Scattering Experiments" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
+        
+      
+        
+        
+          
+
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">35.</span> <span class="pub-entry__title">Neutrino Trident Scattering at Near Detectors</span>
+    
+    <p class="pub-entry__authors">Peter Ballett,  Matheus Hostert,  Silvia Pascoli,  Yuber F. Perez-Gonzalez,  Zahra Tabrizi,  Renata Zukanovich Funchal</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/1807.10973">arXiv:1807.10973</a> | JHEP 01 (2019) 119
+    </p>
+  </div>
+
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Neutrino trident scattering is a rare Standard Model process where a charged-lepton pair is produced in neutrino-nucleus scattering. To date, only the dimuon final-state has been observed, with around 100 total events, while the other channels are as yet unexplored. In this work, we compute the trident production cross section by performing a complete four-body phase space calculation for different hadronic targets. This provides a correct estimate both of the coherent and the diffractive contributions to these cross sections, but also allows us to address certain inconsistencies in the literature related to the use of the Equivalent Photon Approximation in this context. We show that this approximation can give a reasonable estimate only for the production of dimuon final-states in coherent scattering, being inadmissible for all other cases considered. We provide estimates of the number and distribution of trident events at several current and future near detector facilities subjected to intense neutrino beams from accelerators: five liquid-argon detectors (SBND, $μ$BooNE, ICARUS, DUNE and $ν$STORM), the iron detector of T2K (INGRID) and three detectors made of composite material (MINOS, NO$ν$A and MINER$ν$A). We find that for many experiments, trident measurements are an attainable goal and a valuable addition to their near detector physics programme.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/1807.10973" title="Fig. 1 — Neutrino Trident Scattering at Near Detectors">
+          <img src="/files/pub_figs/1807.10973.png" alt="Fig. 1 from Neutrino Trident Scattering at Near Detectors" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
+</div>
+
+        
+      
+        
+        
+      
+    </ol>
+  </div>
+
+<div class="year-section">
+    <h2 class="year-subheader">2017</h2>
+    <ol>
+      
+        
+        
       
         
         
@@ -2093,31 +2658,57 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
         
           
 
+<div class="list__item pub-entry">
+  <div class="pub-entry__header">
+    <span class="pub-entry__number">36.</span> <span class="pub-entry__title">Light Sterile Neutrinos at \nuSTORM: Decoherence and CP violation</span>
+    
+    <p class="pub-entry__authors">Peter Ballett,  Matheus Hostert,  Silvia Pascoli</p>
+    
+    <p class="page__meta">
+      <a href="https://arxiv.org/abs/1705.09214">arXiv:1705.09214</a>
+    </p>
+  </div>
 
-
-
-
-<!-- 
-<li>
-<p style="font-size:16px"> Light Sterile Neutrinos at \nuSTORM: Decoherence and CP violation, Peter Ballett, Matheus Hostert, Silvia Pascoli, proceedings, 2017
-
-, <a href="https://arxiv.org/abs/1705.09214">arXiv:1705.09214</a>
-
-.
-</p>
-</li> -->
-
-<div class="list__item" style="font-size:16px;">
-35. Light Sterile Neutrinos at \nuSTORM: Decoherence and CP violation
-<p class="page__meta">
-  Peter Ballett, Matheus Hostert, Silvia Pascoli, proceedings, 2017 | <a href="https://arxiv.org/abs/1705.09214">arXiv:1705.09214</a>.
-  <br />
-</p>
+  
+  <details class="pub-entry__details">
+    <summary class="pub-entry__toggle">
+      <i class="fas fa-chevron-down pub-entry__chevron"></i>
+      More details
+    </summary>
+    <div class="pub-entry__body">
+      
+      <div class="pub-entry__abstract">Light sterile neutrino oscillations can be partially or completely washed out at short-baseline experiments due to the breaking of neutrino production coherence. In this work we address this issue in sterile searches at $ν$STORM, an experimental proposal for a beam of neutrinos from the decay of stored muons. We work with 3+1 and 3+2 models, the latter introducing CP violation at short-baselines. We find that decoherence effects are only relevant for sterile masses above $Δm^2 \gtrsim 10$ eV$^2$, and that, even in that regime, we are able to place strong appearance bounds in such clean environments. In addition, the novel signatures of CP violation in the parameter space of interest can be identified with a significance of up to $\gtrsim 3 σ$.</div>
+      
+      
+      <div class="pub-entry__fig">
+        <a href="https://arxiv.org/abs/1705.09214" title="Fig. 1 — Light Sterile Neutrinos at \nuSTORM: Decoherence and CP violation">
+          <img src="/files/pub_figs/1705.09214.png" alt="Fig. 1 from Light Sterile Neutrinos at \nuSTORM: Decoherence and CP violation" loading="lazy" />
+        </a>
+      </div>
+      
+    </div>
+  </details>
+  
 </div>
+
         
       
     </ol>
   </div>
+
+<script>
+(function () {
+  var btn = document.getElementById('pub-expand-btn');
+  var expanded = false;
+  btn.addEventListener('click', function () {
+    expanded = !expanded;
+    document.querySelectorAll('.pub-entry__details').forEach(function (el) {
+      el.open = expanded;
+    });
+    btn.textContent = expanded ? 'Collapse All' : 'Expand All';
+  });
+})();
+</script>
 
 
   </div>
@@ -2135,7 +2726,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
 <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>Follow:</strong></li>
+      <li><strong></strong></li>
     
     
     
@@ -2147,7 +2738,7 @@ For a complete and up-to-date list of publications, see my <a href="https://insp
  -->  </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="https://claude.ai">Claude</a>, <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

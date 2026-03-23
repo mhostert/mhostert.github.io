@@ -85,6 +85,11 @@
   document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
 </script>
 
+<!-- Google Fonts: Roboto -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
 <!-- For all browsers -->
 <link rel="stylesheet" href="http://localhost:4000/assets/css/main.css">
 
@@ -115,16 +120,28 @@
 <meta name="theme-color" content="#ffffff">
 <link rel="stylesheet" href="http://localhost:4000/assets/css/academicons.css"/>
 
-<script type="text/x-mathjax-config"> MathJax.Hub.Config({ TeX: { equationNumbers: { autoNumber: "all" } } }); </script>
-<script type="text/x-mathjax-config">
-  MathJax.Hub.Config({
-    tex2jax: {
-      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-      processEscapes: true
+<script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      tags: 'ams'
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
     }
-  });
+  };
 </script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML' async></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  // Re-typeset MathJax when a <details> section is opened
+  document.addEventListener('toggle', function(e) {
+    if (e.target.tagName === 'DETAILS' && e.target.open && window.MathJax) {
+      MathJax.typesetPromise([e.target]);
+    }
+  }, true);
+</script>
 
 <!-- end custom head snippets -->
 
@@ -159,7 +176,7 @@
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">M. Hostert</a></li>
+          <li class="masthead__menu-item masthead__menu-item--lg"><a href="http://localhost:4000/">Homepage</a></li>
           
             
             <li class="masthead__menu-item"><a href="http://localhost:4000/cv/">CV</a></li>
@@ -174,10 +191,13 @@
             <li class="masthead__menu-item"><a href="http://localhost:4000/talks/">Talks</a></li>
           
             
+            <li class="masthead__menu-item"><a href="http://localhost:4000/group/">Group</a></li>
+          
+            
             <li class="masthead__menu-item"><a href="http://localhost:4000/projects/">Projects</a></li>
           
             
-            <li class="masthead__menu-item"><a href="http://localhost:4000/outreach/">Outreach</a></li>
+            <li class="masthead__menu-item"><a href="http://localhost:4000/media/">Media & Outreach</a></li>
           
         </ul>
         <ul class="hidden-links hidden"></ul>
@@ -201,62 +221,50 @@
 
 <div itemscope itemtype="http://schema.org/Person">
 
-  <div class="author__avatar">
-    
-    <img src="http://localhost:4000/images/profile.png" class="author__avatar"
-      alt="Matheus Hostert">
-    
+  
+  <div class="author__header--compact">
+    <div class="author__avatar author__avatar--small">
+      
+        <img src="http://localhost:4000/images/profile.png" alt="Matheus Hostert">
+      
+    </div>
+    <div class="author__content">
+      <h3 class="author__name">Matheus Hostert</h3>
+      <p class="author__bio">University of Iowa</p>
+    </div>
   </div>
 
-  <div class="author__content">
-    <h3 class="author__name">Matheus Hostert</h3>
-    <p class="author__bio">University of Iowa</p>
-    <p><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
-    
-  </div>
+  
+  <p class="author__email-line"><i class="fas fa-fw fa-envelope" aria-hidden="true"></i> matheus-hostert@uiowa.edu</p>
+  
+
+  
 
   <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
     <ul class="author__urls social-icons">
 
-
-      <!-- BIO INFO -->
       
       
       
 
-
-      <!-- ACADEMIC PAGES -->
       
-      <li><a href="https://inspirehep.net/authors/1621061"><i class="fab fa-fw fa-linkedin-in" aria-hidden="true"></i> Inspire-HEP</a>
-      </li>
+        <li><a href="https://inspirehep.net/authors/1621061"><i class="fas fa-fw fa-atom" aria-hidden="true"></i> Inspire-HEP</a></li>
       
       
       
       
-      <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
+        <li><a href="http://orcid.org/0000-0002-9584-8877"><i class="ai ai-orcid-square ai-fw"></i> ORCID</a></li>
       
       
 
-
-      <!-- PORTFOLIO PAGES -->
       
-      <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i>
-          Github</a></li>
-      
+        <li><a href="https://github.com/mhostert"><i class="fab fa-fw fa-github" aria-hidden="true"></i> Github</a></li>
       
       
 
-
-      <!-- SOCIAL NETWORKS -->
       
       
-      
-      
-      <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin"
-            aria-hidden="true"></i> LinkedIn</a></li>
-      
-      
+        <li><a href="https://www.linkedin.com/in/matheus-hostert-308808aa"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> LinkedIn</a></li>
       
       
       
@@ -264,6 +272,7 @@
     </ul>
   </div>
 </div>
+
   
   </div>
 
@@ -272,82 +281,61 @@
     
       <h1 class="page__title">Presentations</h1>
     
-    <style>
-.filter-buttons {
-  margin: 20px 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.filter-btn {
-  padding: 8px 16px;
-  background-color: #2a2a2a;
-  border: 1px solid #444;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  color: #fff;
-  transition: all 0.3s;
-}
-.filter-btn:hover {
-  background-color: #3a3a3a;
-}
-.filter-btn.active {
-  background-color: #52adc8;
-  border-color: #52adc8;
-}
-.year-section {
-  margin: 30px 0;
-}
-.year-header {
-  font-size: 24px;
-  font-weight: bold;
-  margin: 20px 0 10px 0;
-  padding-bottom: 5px;
-  border-bottom: 2px solid #444;
-}
-</style>
-
-<div class="filter-buttons">
-  <button class="filter-btn active" onclick="filterTalks('all', this)">All</button>
-  <button class="filter-btn" onclick="filterTalks('seminar', this)">Seminars</button>
-  <button class="filter-btn" onclick="filterTalks('colloquium', this)">Colloquia</button>
-  <button class="filter-btn" onclick="filterTalks('talk', this)">Talks</button>
-  <button class="filter-btn" onclick="filterTalks('plenary', this)">Plenary</button>
-  <button class="filter-btn" onclick="filterTalks('contributed', this)">Contributed</button>
-  <button class="filter-btn" onclick="filterTalks('poster', this)">Posters</button>
-  <button class="filter-btn" onclick="filterTalks('lecture', this)">Lectures</button>
-</div>
-
-<div class="year-section">
+    <div class="year-section">
   <h2 class="year-header">Upcoming Talks</h2>
   <ol id="upcoming-talks">
     
     
       
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="lectures">
       
-        106. APS Global Summit (upcoming) <a href="https://www.aps.org/about/partner/global-physics-summit-2026" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        110. International Neutrino Summer School 2026 (upcoming)
       
       <p class="page__meta">
-        invited talk | USA | March 2026.
-        <br>
-        <em>"Neutrinos at Muon Colliders"</em><br>
+        lectures | USA | June 2026.
+        <br><em>"Neutrinos and Dark Sectors"</em>
       </p>
     </div>
       
     
       
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        105. APS Global Summit (upcoming) <a href="https://www.aps.org/about/partner/global-physics-summit-2026" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        109. Neutrino 2026 (upcoming)
       
       <p class="page__meta">
-        invited talk | USA | March 2026.
-        <br>
-        <em>"Neutrino Facilities as Versatile Probes of New Physics"</em><br>
+        plenary talk | USA | June 2026.
+        <br><em>"Theory and Phenomenology of Sterile Neutrinos"</em>
       </p>
     </div>
+      
+    
+      
+    <div class="list__item talk-item" data-type="invited talk">
+      
+        108. Mitchell Conference at Texas A&M (upcoming)
+      
+      <p class="page__meta">
+        invited talk | USA | May 2026.
+        <br><em>"TBD"</em>
+      </p>
+    </div>
+      
+    
+      
+    <div class="list__item talk-item" data-type="plenary talk">
+      
+        107. Phenomenology Symposium 2026 (upcoming)
+      
+      <p class="page__meta">
+        plenary talk | USA | May 2026.
+        <br><em>"Neutrino Physics Phenomenology"</em>
+      </p>
+    </div>
+      
+    
+      
+    
       
     
       
@@ -559,537 +547,25 @@
 
 <div class="year-section">
   <h2 class="year-header">Past Talks</h2>
+
   
-  
-  
-  
-    
-    
-    
-    
-      
-    
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-      
-        
-        
-      
-    
-    
-    
+
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -1602,15 +1078,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -2123,15 +1613,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -2644,15 +2148,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -3165,15 +2683,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -3686,15 +3218,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -4207,15 +3753,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -4728,15 +4288,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -5249,15 +4823,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -5770,15 +5358,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -6291,15 +5893,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -6812,15 +6428,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -7333,15 +6963,29 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
     
       
     
+      
+    
+      
+        
+        
       
     
       
@@ -7854,12 +7498,556 @@
         
       
     
+      
+        
+        
+      
     
+
     
   
     
     
+
     
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
+      
+    
+
+    
+  
+    
+    
+
+    
+      
+    
+      
     
       
     
@@ -7870,10 +8058,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2026">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2026</h3>
+      <h3 class="year-subheader">2026</h3>
       <ol>
         
           
@@ -7881,16 +8069,19 @@
           
         
           
+        
+          
+        
+          
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        104. NPC Mini-Workshop on Short-Baseline Neutrino Anomalies <a href="https://indico.fnal.gov/event/72708/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        106. APS Global Summit <a href="https://mhostert.com/files/talk_slides/APS_26_MC_Hostert.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
-        invited talk | USA | January 2026.
-        <br>
-        <em>"Theory Overview of Global Sterile Neutrino Status"</em><br>
+        invited talk | USA | March 2026.
+        <br><em>"Neutrinos at Muon Colliders"</em>
       </p>
     </div>
             
@@ -7899,14 +8090,43 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        103. Fermilab Neutrino Seminar Series <a href="https://indico.fnal.gov/event/72627/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        105. APS Global Summit <a href="https://mhostert.com/files/talk_slides/APS_26_Neutrino_lowres.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      
+      <p class="page__meta">
+        invited talk | USA | March 2026.
+        <br><em>"Neutrino Facilities as Versatile Probes of New Physics"</em>
+      </p>
+    </div>
+            
+          
+        
+          
+            
+            
+    <div class="list__item talk-item" data-type="invited talk">
+      
+        104. NPC Mini-Workshop on Short-Baseline Neutrino Anomalies <a href="https://indico.fnal.gov/event/72708/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | January 2026.
-        <br>
-        <em>"New Opportunities to Search for Long-Lived Particles at Neutrino Facilities"</em><br>
+        <br><em>"Theory Overview of Global Sterile Neutrino Status"</em>
+      </p>
+    </div>
+            
+          
+        
+          
+            
+            
+    <div class="list__item talk-item" data-type="invited talk">
+      
+        103. Fermilab Neutrino Seminar Series <a href="https://indico.fnal.gov/event/72627/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
+      
+      <p class="page__meta">
+        invited talk | USA | January 2026.
+        <br><em>"New Opportunities to Search for Long-Lived Particles at Neutrino Facilities"</em>
       </p>
     </div>
             
@@ -8418,10 +8638,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -8439,10 +8673,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2025">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2025</h3>
+      <h3 class="year-subheader">2025</h3>
       <ol>
         
           
@@ -8450,6 +8684,15 @@
           
         
           
+        
+          
+        
+          
+            
+            
+          
+        
+          
             
             
           
@@ -8462,14 +8705,18 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+          
+        
+          
+            
+            
+    <div class="list__item talk-item" data-type="invited talk">
       
-        102. Violation of Fundamental Symmetries with B mesons <a href="https://indico.fnal.gov/event/71119/contributions/325794/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        102. Violation of Fundamental Symmetries with B mesons <a href="https://indico.fnal.gov/event/71119/contributions/325794/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | December 2025.
-        <br>
-        <em>"Dark sector models at or below the electroweak scale"</em><br>
+        <br><em>"Dark sector models at or below the electroweak scale"</em>
       </p>
     </div>
             
@@ -8478,14 +8725,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        101. Virginia Tech, Center for Neutrino Physics Research Day <a href="https://indico.phys.vt.edu/event/82/timetable/?print=1&view=standard" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        101. Virginia Tech, Center for Neutrino Physics Research Day <a href="https://indico.phys.vt.edu/event/82/timetable/?print=1&view=standard" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | December 2025.
-        <br>
-        <em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em><br>
+        <br><em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em>
       </p>
     </div>
             
@@ -8494,14 +8740,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="colloquium " style="font-size:16px;">
+    <div class="list__item talk-item" data-type="colloquium ">
       
-        100. Columbia University 
+        100. Columbia University  <a href="https://mhostert.com/files/talk_slides/MH_Columbia_colloquium.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         colloquium  | USA | December 2025.
-        <br>
-        <em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em><br>
+        <br><em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em>
       </p>
     </div>
             
@@ -8510,14 +8755,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         99. University of Wisconsin, Madison
       
       <p class="page__meta">
         invited seminar | USA | December 2025.
-        <br>
-        <em>"New Opportunities to Search for Long-Lived Particles"</em><br>
+        <br><em>"New Opportunities to Search for Long-Lived Particles"</em>
       </p>
     </div>
             
@@ -8526,14 +8770,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         98. Grinnell College
       
       <p class="page__meta">
         invited seminar | USA | November 2025.
-        <br>
-        <em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em><br>
+        <br><em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em>
       </p>
     </div>
             
@@ -8542,14 +8785,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        97. Good News: Neutrino Physics at a Muon Collider <a href="https://indico.global/event/15552/timetable/#20251027.detailed" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        97. Good News: Neutrino Physics at a Muon Collider <a href="https://indico.global/event/15552/timetable/#20251027.detailed" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | October 2025.
-        <br>
-        <em>"Review of neutrino physics at a muon collider"</em><br>
+        <br><em>"Review of neutrino physics at a muon collider"</em>
       </p>
     </div>
             
@@ -8558,14 +8800,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="colloquium " style="font-size:16px;">
+    <div class="list__item talk-item" data-type="colloquium ">
       
         96. Idaho State University
       
       <p class="page__meta">
         colloquium  | USA | October 2025.
-        <br>
-        <em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em><br>
+        <br><em>"Neutrinos as a Window to Physics Beyond the Standard Model"</em>
       </p>
     </div>
             
@@ -8574,14 +8815,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         95. Sydney-CPPC
       
       <p class="page__meta">
         invited seminar | Australia | October 2025.
-        <br>
-        <em>"New Opportunities to Search for Long-Lived Particles"</em><br>
+        <br><em>"New Opportunities to Search for Long-Lived Particles"</em>
       </p>
     </div>
             
@@ -8590,14 +8830,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        93. Brookhaven National Laboratory <a href="https://indico.bnl.gov/event/29252/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        93. Brookhaven National Laboratory <a href="https://indico.bnl.gov/event/29252/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | USA | October 2025.
-        <br>
-        <em>"Neutrino spin precession from a majoron background"</em><br>
+        <br><em>"Neutrino spin precession from a majoron background"</em>
       </p>
     </div>
             
@@ -8606,14 +8845,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="WG5 convener (summary talk)" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="WG5 convener (summary talk)">
       
-        92. NuFact 2025 <a href="https://indico.cern.ch/event/1528564/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        92. NuFact 2025 <a href="https://indico.cern.ch/event/1528564/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         WG5 convener (summary talk) | UK | September 2025.
-        <br>
-        <em>"Working Group 5 convener"</em><br>
+        <br><em>"Working Group 5 convener"</em>
       </p>
     </div>
             
@@ -8622,14 +8860,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        91. 2nd US Muon Collider Meeting <a href="https://indico.uchicago.edu/event/479/timetable/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        91. 2nd US Muon Collider Meeting <a href="https://indico.uchicago.edu/event/479/timetable/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         plenary talk | USA | August 2025.
-        <br>
-        <em>"Neutrinos Physics at Muon Colliders"</em><br>
+        <br><em>"Neutrinos Physics at Muon Colliders"</em>
       </p>
     </div>
             
@@ -8638,14 +8875,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="lectures" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="lectures">
       
-        90. Neutrino University <a href="https://npc.fnal.gov/neutrino-university/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        90. Neutrino University <a href="https://npc.fnal.gov/neutrino-university/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         lectures | USA | July 2025.
-        <br>
-        <em>"New Physics with Neutrinos "</em><br>
+        <br><em>"New Physics with Neutrinos "</em>
       </p>
     </div>
             
@@ -8654,14 +8890,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        89. New Physics Opportunities at Neutrino Facilities Workshop (NPN 2025) <a href="https://indico.cern.ch/event/1424413/overview" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        89. New Physics Opportunities at Neutrino Facilities Workshop (NPN 2025) <a href="https://indico.cern.ch/event/1424413/contributions/6468086/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         plenary talk | USA | June 2025.
-        <br>
-        <em>"Exotic New Physics at the Intensity Frontier"</em><br>
+        <br><em>"Exotic New Physics at the Intensity Frontier"</em>
       </p>
     </div>
             
@@ -8670,14 +8905,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        88. Interconnection between Particle Physics and Cosmology (PPC2025) <a href="https://indico.sanfordlab.org/event/138/overview" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        88. Interconnection between Particle Physics and Cosmology (PPC2025) <a href="https://indico.sanfordlab.org/event/138/contributions/2427/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         plenary talk | USA | June 2025.
-        <br>
-        <em>"Searching for Light New Physics with Neutrinos"</em><br>
+        <br><em>"Searching for Light New Physics with Neutrinos"</em>
       </p>
     </div>
             
@@ -8686,14 +8920,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        87. CIPANP 2025 <a href="https://agenda.hep.wisc.edu/event/2257/contributions/33933/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        87. CIPANP 2025 <a href="https://agenda.hep.wisc.edu/event/2257/contributions/33933/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | June 2025.
-        <br>
-        <em>"Theory Overview of Short-Baseline Neutrino Physics"</em><br>
+        <br><em>"Theory Overview of Short-Baseline Neutrino Physics"</em>
       </p>
     </div>
             
@@ -8702,14 +8935,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        86. Magnificent CEvNS 2025 <a href="https://indico.cern.ch/event/1458241/contributions/6522283/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        86. Magnificent CEvNS 2025 <a href="https://indico.cern.ch/event/1458241/contributions/6522283/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | Brazil | June 2025.
-        <br>
-        <em>"Oscillation Portals to New Physics in CEvNS"</em><br>
+        <br><em>"Oscillation Portals to New Physics in CEvNS"</em>
       </p>
     </div>
             
@@ -8718,14 +8950,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        84. Mitchell Conference at Texas A&M <a href="https://indico.cern.ch/event/1488822/contributions/6480084/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        84. Mitchell Conference at Texas A&M <a href="https://indico.cern.ch/event/1488822/contributions/6480084/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | May 2025.
-        <br>
-        <em>"Neutron Portal to Ultra-High-Energy New Physics"</em><br>
+        <br><em>"Neutron Portal to Ultra-High-Energy New Physics"</em>
       </p>
     </div>
             
@@ -8734,14 +8965,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         83. Argonne National Laboratory
       
       <p class="page__meta">
         invited seminar | USA | March 2025.
-        <br>
-        <em>"Neutron Portal to Ultra-High-Energy New Physics"</em><br>
+        <br><em>"Neutron Portal to Ultra-High-Energy New Physics"</em>
       </p>
     </div>
             
@@ -8750,14 +8980,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk " style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk ">
       
-        82. Aspen Winter Conference <a href="https://indico.fnal.gov/event/65068/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        82. Aspen Winter Conference <a href="https://indico.fnal.gov/event/65068/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk  | USA | March 2025.
-        <br>
-        <em>"The Neutrino Slice of Muon Colliders"</em><br>
+        <br><em>"The Neutrino Slice of Muon Colliders"</em>
       </p>
     </div>
             
@@ -8766,14 +8995,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="contributed talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="contributed talk">
       
-        81. CERN Neutrino Platform Pheno Week <a href="https://indico.cern.ch/event/1454726/overview" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        81. CERN Neutrino Platform Pheno Week <a href="https://indico.cern.ch/event/1454726/overview" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         contributed talk | Switzerland | February 2025.
-        <br>
-        <em>"Ultra-high-energy cosmogenic neutrinos from new physics"</em><br>
+        <br><em>"Ultra-high-energy cosmogenic neutrinos from new physics"</em>
       </p>
     </div>
             
@@ -9185,10 +9413,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -9306,10 +9548,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2024">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2024</h3>
+      <h3 class="year-subheader">2024</h3>
       <ol>
         
           
@@ -9317,8 +9559,7 @@
           
         
           
-            
-            
+        
           
         
           
@@ -9429,14 +9670,28 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+    <div class="list__item talk-item" data-type="invited seminar">
       
         80. University of Iowa
       
       <p class="page__meta">
         invited seminar | USA | October 2024.
-        <br>
-        <em>"The Neutrino Slice of Muon Colliders"</em><br>
+        <br><em>"The Neutrino Slice of Muon Colliders"</em>
       </p>
     </div>
             
@@ -9445,14 +9700,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         79. Northwestern University
       
       <p class="page__meta">
         invited seminar | USA | September 2024.
-        <br>
-        <em>"Exotic Charged Lepton Flavor Violation at Mu3e and Mu2e"</em><br>
+        <br><em>"Exotic Charged Lepton Flavor Violation at Mu3e and Mu2e"</em>
       </p>
     </div>
             
@@ -9461,14 +9715,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        78. Muon Collider meeting by the lake 2024 <a href="https://sites.google.com/view/mucbythelake/home?authuser=0" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        78. Muon Collider meeting by the lake 2024 <a href="https://sites.google.com/view/mucbythelake/home?authuser=0" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | September 2024.
-        <br>
-        <em>"Neutrino interactions at a muon collider"</em><br>
+        <br><em>"Neutrino interactions at a muon collider"</em>
       </p>
     </div>
             
@@ -9477,14 +9730,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        77. NuFact 2024 <a href="https://indico.fnal.gov/event/63406/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        77. NuFact 2024 <a href="https://indico.fnal.gov/event/63406/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | September 2024.
-        <br>
-        <em>"Working Group 5 convener"</em><br>
+        <br><em>"Working Group 5 convener"</em>
       </p>
     </div>
             
@@ -9493,14 +9745,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        76. Fermilab Theory Seminar <a href="https://indico.fnal.gov/event/65826/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        76. Fermilab Theory Seminar <a href="https://indico.fnal.gov/event/65826/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | September 2024.
-        <br>
-        <em>"Long-Lived Particles at Spallation Neutron Sources"</em><br>
+        <br><em>"Long-Lived Particles at Spallation Neutron Sources"</em>
       </p>
     </div>
             
@@ -9509,14 +9760,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="contributed talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="contributed talk">
       
-        75. Inaugural US Muon Collider Community Meeting <a href="https://indico.fnal.gov/event/64493/contributions/297579/attachments/180726/247699/MHostert_nuBIBs.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        75. Inaugural US Muon Collider Community Meeting <a href="https://indico.fnal.gov/event/64493/contributions/297579/attachments/180726/247699/MHostert_nuBIBs.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         contributed talk | USA | August 2024.
-        <br>
-        <em>"Ideas for tangential physics at a muon collider detector"</em><br>
+        <br><em>"Ideas for tangential physics at a muon collider detector"</em>
       </p>
     </div>
             
@@ -9525,14 +9775,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="lectures" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="lectures">
       
-        74. Second School on Dark Matter and Neutrino Detection, ICTP-SAIFR <a href="https://www.ictp-saifr.org/ssdmnd2024/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        74. Second School on Dark Matter and Neutrino Detection, ICTP-SAIFR <a href="https://www.ictp-saifr.org/ssdmnd2024/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         lectures | Brazil | July 2024.
-        <br>
-        <em>"Neutrinos Beyond the Standard Model"</em><br>
+        <br><em>"Neutrinos Beyond the Standard Model"</em>
       </p>
     </div>
             
@@ -9541,14 +9790,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="contributed poster" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="contributed poster">
       
-        73. Neutrino 2024 <a href="https://agenda.infn.it/event/37867/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        73. Neutrino 2024 <a href="https://agenda.infn.it/event/37867/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         contributed poster | Italy | June 2024.
-        <br>
-        <em>"Long-Lived Particles at Spallation Neutron Sources"</em><br>
+        <br><em>"Long-Lived Particles at Spallation Neutron Sources"</em>
       </p>
     </div>
             
@@ -9557,14 +9805,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="contributed talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="contributed talk">
       
-        72. Magnificent CEvNS <a href="https://indico.cern.ch/event/1342813/contributions/5913924/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        72. Magnificent CEvNS <a href="https://indico.cern.ch/event/1342813/contributions/5913924/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         contributed talk | Spain | June 2024.
-        <br>
-        <em>"Long-Lived Particles at Spallation Neutron Sources"</em><br>
+        <br><em>"Long-Lived Particles at Spallation Neutron Sources"</em>
       </p>
     </div>
             
@@ -9573,14 +9820,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk " style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk ">
       
-        71. Mitchell Conference at Texas A&M <a href="https://indico.cern.ch/event/1378520/contributions/5952082/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        71. Mitchell Conference at Texas A&M <a href="https://indico.cern.ch/event/1378520/contributions/5952082/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk  | USA | May 2024.
-        <br>
-        <em>"Flavor-violating new physics at the intensity frontier"</em><br>
+        <br><em>"Flavor-violating new physics at the intensity frontier"</em>
       </p>
     </div>
             
@@ -9589,14 +9835,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        69. 2nd Short-Baseline Experiment-Theory Workshop <a href="https://indico.nevis.columbia.edu/event/6/contributions/15/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        69. 2nd Short-Baseline Experiment-Theory Workshop <a href="https://indico.nevis.columbia.edu/event/6/contributions/15/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | April 2024.
-        <br>
-        <em>"Beyond Sterile Neutrinos at Short-Baseline Experiments"</em><br>
+        <br><em>"Beyond Sterile Neutrinos at Short-Baseline Experiments"</em>
       </p>
     </div>
             
@@ -9605,14 +9850,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="colloquium " style="font-size:16px;">
+    <div class="list__item talk-item" data-type="colloquium ">
       
         69. University of Iowa
       
       <p class="page__meta">
         colloquium  | USA | January 2024.
-        <br>
-        <em>"Into the Dark with Neutrinos"</em><br>
+        <br><em>"Into the Dark with Neutrinos"</em>
       </p>
     </div>
             
@@ -9964,10 +10208,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -10145,10 +10403,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2023">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2023</h3>
+      <h3 class="year-subheader">2023</h3>
       <ol>
         
           
@@ -10156,8 +10414,7 @@
           
         
           
-            
-            
+        
           
         
           
@@ -10328,14 +10585,28 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+    <div class="list__item talk-item" data-type="invited talk">
       
-        68. Muons in Minneapolis workshop <a href="https://indico.fnal.gov/event/59896/contributions/280020/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        68. Muons in Minneapolis workshop <a href="https://indico.fnal.gov/event/59896/contributions/280020/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | December 2023.
-        <br>
-        <em>"Production of exotic particles at high-intensity muon facilities"</em><br>
+        <br><em>"Production of exotic particles at high-intensity muon facilities"</em>
       </p>
     </div>
             
@@ -10344,14 +10615,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         67. University of Massachusetts Ahmrest 
       
       <p class="page__meta">
         invited seminar | USA | October 2023.
-        <br>
-        <em>"Multiple Leptons from dark sectors at the intensity frontier"</em><br>
+        <br><em>"Multiple Leptons from dark sectors at the intensity frontier"</em>
       </p>
     </div>
             
@@ -10360,14 +10630,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         66. Columbia University
       
       <p class="page__meta">
         invited seminar | USA | October 2023.
-        <br>
-        <em>"Is there any room for 17 MeV bosons?"</em><br>
+        <br><em>"Is there any room for 17 MeV bosons?"</em>
       </p>
     </div>
             
@@ -10376,14 +10645,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        65. PhenoBR 2023 <a href="https://workshopparticulas.wixsite.com/phenobr2023" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        65. PhenoBR 2023 <a href="https://workshopparticulas.wixsite.com/phenobr2023" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | June 2023.
-        <br>
-        <em>"New Physics at Low Energies: Dark Photons"</em><br>
+        <br><em>"New Physics at Low Energies: Dark Photons"</em>
       </p>
     </div>
             
@@ -10392,14 +10660,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        64. American Physical Society (APS) April Meeting <a href="https://meetings.aps.org/Meeting/APR23/Session/D05.2" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        64. American Physical Society (APS) April Meeting <a href="https://meetings.aps.org/Meeting/APR23/Session/D05.2" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | April 2023.
-        <br>
-        <em>"Neutrino Portals to Beyond the Standard Model"</em><br>
+        <br><em>"Neutrino Portals to Beyond the Standard Model"</em>
       </p>
     </div>
             
@@ -10408,14 +10675,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         63. California Institute for Technology
       
       <p class="page__meta">
         invited seminar | USA | April 2023.
-        <br>
-        <em>"Dark Photons with Multiple Leptons"</em><br>
+        <br><em>"Dark Photons with Multiple Leptons"</em>
       </p>
     </div>
             
@@ -10424,14 +10690,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        62. NA64 collaboration seminar <a href="https://indico.cern.ch/event/1270345/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        62. NA64 collaboration seminar <a href="https://indico.cern.ch/event/1270345/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | Switzerland | March 2023.
-        <br>
-        <em>"Semi-Visible Dark Photons"</em><br>
+        <br><em>"Semi-Visible Dark Photons"</em>
       </p>
     </div>
             
@@ -10748,10 +11013,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -10964,10 +11243,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2022">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2022</h3>
+      <h3 class="year-subheader">2022</h3>
       <ol>
         
           
@@ -10975,8 +11254,7 @@
           
         
           
-            
-            
+        
           
         
           
@@ -11182,14 +11460,28 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+    <div class="list__item talk-item" data-type="invited talk">
       
-        61. PITT PACC Workshop: Nu Tools for BSM at Neutrino Beam Facilities <a href="https://indico.cern.ch/event/1216701/contributions/5167763/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        61. PITT PACC Workshop: Nu Tools for BSM at Neutrino Beam Facilities <a href="https://indico.cern.ch/event/1216701/contributions/5167763/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | December 2022.
-        <br>
-        <em>"Neutrino Experiments Beyond the Standard Model"</em><br>
+        <br><em>"Neutrino Experiments Beyond the Standard Model"</em>
       </p>
     </div>
             
@@ -11198,14 +11490,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         60. Northwestern University
       
       <p class="page__meta">
         invited seminar | USA | December 2022.
-        <br>
-        <em>"Dark Neutrons Underground"</em><br>
+        <br><em>"Dark Neutrons Underground"</em>
       </p>
     </div>
             
@@ -11214,14 +11505,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         59. Los Alamos National Laboratory
       
       <p class="page__meta">
         invited seminar | USA | December 2022.
-        <br>
-        <em>"New limits on heavy neutral leptons with dark forces from neutrino data"</em><br>
+        <br><em>"New limits on heavy neutral leptons with dark forces from neutrino data"</em>
       </p>
     </div>
             
@@ -11230,14 +11520,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         58. Carleton University
       
       <p class="page__meta">
         invited seminar | Canada | November 2022.
-        <br>
-        <em>"Semi-Visible Dark Photons"</em><br>
+        <br><em>"Semi-Visible Dark Photons"</em>
       </p>
     </div>
             
@@ -11246,14 +11535,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="contributed talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="contributed talk">
       
-        57. Feebly Interacting Particles Workshop 2022 <a href="https://indico.cern.ch/event/1119695/contributions/5033198/attachments/2531664/4356119/Hostert_fips.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        57. Feebly Interacting Particles Workshop 2022 <a href="https://indico.cern.ch/event/1119695/contributions/5033198/attachments/2531664/4356119/Hostert_fips.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         contributed talk | Switzerland | October 2022.
-        <br>
-        <em>"New limits on heavy neutral leptons with dark forces from neutrino data"</em><br>
+        <br><em>"New limits on heavy neutral leptons with dark forces from neutrino data"</em>
       </p>
     </div>
             
@@ -11262,14 +11550,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        56. ICTP Program on New Directions in Particle Physics <a href="https://www.ictp-saifr.org/ndfp2022/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        56. ICTP Program on New Directions in Particle Physics <a href="https://www.ictp-saifr.org/ndfp2022/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | Brazil | September 2022.
-        <br>
-        <em>"Dark neutrino sectors in modern neutrino experiments"</em><br>
+        <br><em>"Dark neutrino sectors in modern neutrino experiments"</em>
       </p>
     </div>
             
@@ -11278,14 +11565,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited parallel talk">
       
-        55. CIPANP 2022 <a href="https://agenda.hep.wisc.edu/event/1644/contributions/25905/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        55. CIPANP 2022 <a href="https://agenda.hep.wisc.edu/event/1644/contributions/25905/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited parallel talk | USA | September 2022.
-        <br>
-        <em>"Simulating and constraining dark neutrino sectors"</em><br>
+        <br><em>"Simulating and constraining dark neutrino sectors"</em>
       </p>
     </div>
             
@@ -11294,14 +11580,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
-        54. TeVPA 2022 <a href="https://indico.cern.ch/event/1082486/contributions/4877542/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        54. TeVPA 2022 <a href="https://indico.cern.ch/event/1082486/contributions/4877542/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         parallel talk | Canada | August 2022.
-        <br>
-        <em>"The Semi-Visible Dark Photon"</em><br>
+        <br><em>"The Semi-Visible Dark Photon"</em>
       </p>
     </div>
             
@@ -11310,14 +11595,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited parallel talk">
       
-        53. Snowmass 2022 <a href="https://indico.fnal.gov/event/22303/contributions/246075/attachments/157745/206534/theory_progress_hostert.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        53. Snowmass 2022 <a href="https://indico.fnal.gov/event/22303/contributions/246075/attachments/157745/206534/theory_progress_hostert.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited parallel talk | USA | July 2022.
-        <br>
-        <em>"NF02 — Experimental Neutrino Anomalies Recent Theory Progress and Interpretations"</em><br>
+        <br><em>"NF02 — Experimental Neutrino Anomalies Recent Theory Progress and Interpretations"</em>
       </p>
     </div>
             
@@ -11326,14 +11610,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
         52. Neutrino Theory Workshop, NuTs
       
       <p class="page__meta">
         invited talk | Spain | June 2022.
-        <br>
-        <em>"New limits on dark sectors in neutrino upscattering"</em><br>
+        <br><em>"New limits on dark sectors in neutrino upscattering"</em>
       </p>
     </div>
             
@@ -11342,14 +11625,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        51. KITP, Interdisciplinary Developments in Neutrino Physics <a href="https://online.kitp.ucsb.edu/online/neutrinos-c22/hostert/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        51. KITP, Interdisciplinary Developments in Neutrino Physics <a href="https://online.kitp.ucsb.edu/online/neutrinos-c22/hostert/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         plenary talk | USA | March 2022.
-        <br>
-        <em>"Beyond the Standard Model Searches with Neutrinos"</em><br>
+        <br><em>"Beyond the Standard Model Searches with Neutrinos"</em>
       </p>
     </div>
             
@@ -11358,14 +11640,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        50. University of Texas A&M <a href="https://physics.tamu.edu/events/tba-76/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        50. University of Texas A&M <a href="https://physics.tamu.edu/events/tba-76/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | USA | March 2022.
-        <br>
-        <em>"From Mini to Micro: New physics explanations of MiniBooNE at the MicroBooNE experiment"</em><br>
+        <br><em>"From Mini to Micro: New physics explanations of MiniBooNE at the MicroBooNE experiment"</em>
       </p>
     </div>
             
@@ -11374,14 +11655,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        49. University of Toronto <a href="https://www.physics.utoronto.ca/research/theoretical-high-energy-physics/thep-events/thep-seminar-on-7-march-2022/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        49. University of Toronto <a href="https://www.physics.utoronto.ca/research/theoretical-high-energy-physics/thep-events/thep-seminar-on-7-march-2022/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | Canada | March 2022.
-        <br>
-        <em>"From Mini to Micro: New physics explanations of MiniBooNE at the MicroBooNE experiment"</em><br>
+        <br><em>"From Mini to Micro: New physics explanations of MiniBooNE at the MicroBooNE experiment"</em>
       </p>
     </div>
             
@@ -11390,14 +11670,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        48. TRIUMF/University of Victoria <a href="https://www.triumf.ca/home/upcoming-events/about-seminars-lectures/upcoming-seminars-lectures/previous-seminars-lectures?expand=2364" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        48. TRIUMF/University of Victoria <a href="https://www.triumf.ca/home/upcoming-events/about-seminars-lectures/upcoming-seminars-lectures/previous-seminars-lectures?expand=2364" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | Canada | February 2022.
-        <br>
-        <em>"From Mini to Micro: New physics explanations of MiniBooNE at the MicroBooNE experiment"</em><br>
+        <br><em>"From Mini to Micro: New physics explanations of MiniBooNE at the MicroBooNE experiment"</em>
       </p>
     </div>
             
@@ -11406,14 +11685,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         47. University of Kentucky
       
       <p class="page__meta">
         invited seminar | USA | January 2022.
-        <br>
-        <em>"Neutrons shinning through walls"</em><br>
+        <br><em>"Neutrons shinning through walls"</em>
       </p>
     </div>
             
@@ -11655,10 +11933,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -11946,10 +12238,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2021">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2021</h3>
+      <h3 class="year-subheader">2021</h3>
       <ol>
         
           
@@ -11957,8 +12249,7 @@
           
         
           
-            
-            
+        
           
         
           
@@ -12239,14 +12530,28 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        46. SLAC <a href="https://mhostert.com/files/talk_slides/SLAC_2021.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        46. SLAC <a href="https://mhostert.com/files/talk_slides/SLAC_2021.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | USA | December 2021.
-        <br>
-        <em>"New physics interpretations of the MiniBooNE excess at the MicroBooNE experiment"</em><br>
+        <br><em>"New physics interpretations of the MiniBooNE excess at the MicroBooNE experiment"</em>
       </p>
     </div>
             
@@ -12255,14 +12560,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         45. Harvard University, family meeting
       
       <p class="page__meta">
         invited seminar | USA | November 2021.
-        <br>
-        <em>"Hidden sector seesaws at the MiniBooNE and MicroBooNE experiments"</em><br>
+        <br><em>"Hidden sector seesaws at the MiniBooNE and MicroBooNE experiments"</em>
       </p>
     </div>
             
@@ -12271,14 +12575,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="contributed talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="contributed talk">
       
-        44. Brookhaven Forum 2021 <a href="https://indico.bnl.gov/event/11389/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        44. Brookhaven Forum 2021 <a href="https://indico.bnl.gov/event/11389/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         contributed talk | USA | November 2021.
-        <br>
-        <em>"Heavy neutrinos at hodoscopic detectors"</em><br>
+        <br><em>"Heavy neutrinos at hodoscopic detectors"</em>
       </p>
     </div>
             
@@ -12287,14 +12590,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
         43. Virginia Tech, neutrino seminar
       
       <p class="page__meta">
         invited talk | USA | October 2021.
-        <br>
-        <em>"The Secret Life of Heavy Neutrinos"</em><br>
+        <br><em>"The Secret Life of Heavy Neutrinos"</em>
       </p>
     </div>
             
@@ -12303,14 +12605,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         42. Perimeter Institute, particle physics seminar
       
       <p class="page__meta">
         invited seminar | Canada | September 2021.
-        <br>
-        <em>"The Secret Life of Heavy Neutrinos"</em><br>
+        <br><em>"The Secret Life of Heavy Neutrinos"</em>
       </p>
     </div>
             
@@ -12319,14 +12620,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        41. UK Muon Collider and NuSTORM meeting <a href="https://indico.stfc.ac.uk/event/362/contributions/2277/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        41. UK Muon Collider and NuSTORM meeting <a href="https://indico.stfc.ac.uk/event/362/contributions/2277/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | UK | September 2021.
-        <br>
-        <em>"Physics opportunities at vSTORM and ENUBET"</em><br>
+        <br><em>"Physics opportunities at vSTORM and ENUBET"</em>
       </p>
     </div>
             
@@ -12335,14 +12635,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        40. vSTORM collaboration meeting <a href="https://indico.cern.ch/event/1063925/contributions/4471489/attachments/2292614/3898221/mhostert_nustorm.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        40. vSTORM collaboration meeting <a href="https://indico.cern.ch/event/1063925/contributions/4471489/attachments/2292614/3898221/mhostert_nustorm.pdf" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | CERN | August 2021.
-        <br>
-        <em>"New physics opportunities at vSTORM"</em><br>
+        <br><em>"New physics opportunities at vSTORM"</em>
       </p>
     </div>
             
@@ -12351,14 +12650,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
-        39. American Physics Society Division of Particles and Fields meeting <a href="https://indico.cern.ch/event/1034469/contributions/4427308/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        39. American Physics Society Division of Particles and Fields meeting <a href="https://indico.cern.ch/event/1034469/contributions/4427308/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         parallel talk | USA | July 2021.
-        <br>
-        <em>"A last chance for kinetic mixing: Explaining the muon (g-2) with semi-visible dark photons"</em><br>
+        <br><em>"A last chance for kinetic mixing: Explaining the muon (g-2) with semi-visible dark photons"</em>
       </p>
     </div>
             
@@ -12367,13 +12665,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         38. McGill University
       
       <p class="page__meta">
         invited seminar | Canada | May 2021.
-        <br>
         
       </p>
     </div>
@@ -12383,13 +12680,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         37. ETH, Zurich
       
       <p class="page__meta">
         invited seminar | Switzerland | April 2021.
-        <br>
         
       </p>
     </div>
@@ -12399,13 +12695,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         36. C3P, UCLouvain
       
       <p class="page__meta">
         invited seminar | Belgium | April 2021.
-        <br>
         
       </p>
     </div>
@@ -12415,13 +12710,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
         35. American Physics Society April Meeting
       
       <p class="page__meta">
         parallel talk | USA | April 2021.
-        <br>
         
       </p>
     </div>
@@ -12431,13 +12725,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         34. Carleton University
       
       <p class="page__meta">
         invited seminar | Canada | April 2021.
-        <br>
         
       </p>
     </div>
@@ -12447,13 +12740,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         33. University of California Santa Cruz
       
       <p class="page__meta">
         invited seminar | USA | March 2021.
-        <br>
         
       </p>
     </div>
@@ -12463,13 +12755,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         32. Neutrino Seminar, Fermilab
       
       <p class="page__meta">
         invited seminar | USA | March 2021.
-        <br>
         
       </p>
     </div>
@@ -12479,13 +12770,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
         31. XIX International Workshop on Neutrino Telescopes
       
       <p class="page__meta">
         parallel talk | Italy | February 2021.
-        <br>
         
       </p>
     </div>
@@ -12648,10 +12938,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -13019,10 +13323,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2020">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2020</h3>
+      <h3 class="year-subheader">2020</h3>
       <ol>
         
           
@@ -13030,6 +13334,20 @@
           
         
           
+        
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+          
+        
+          
             
             
           
@@ -13392,14 +13710,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
         30. Snowmass Dark Sector Studies at High Intensities Frontier
       
       <p class="page__meta">
         invited talk | USA | December 2020.
-        <br>
-        <em>"Snowmass Dark Sector Studies at High Intensities Frontier"</em><br>
+        <br><em>"Snowmass Dark Sector Studies at High Intensities Frontier"</em>
       </p>
     </div>
             
@@ -13408,13 +13725,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
         29. 3rd South American Dark Matter Workshop, ICTP
       
       <p class="page__meta">
         plenary talk | Brazil | October 2020.
-        <br>
         
       </p>
     </div>
@@ -13424,13 +13740,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
         28. Central American meeting of High Energy Physics, Cosmology and High Energy Astrophysics
       
       <p class="page__meta">
         plenary talk | Central America | November 2020.
-        <br>
         
       </p>
     </div>
@@ -13440,13 +13755,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
         27. PIKIMO 9, Kentucky
       
       <p class="page__meta">
         invited talk | USA | October 2020.
-        <br>
         
       </p>
     </div>
@@ -13456,14 +13770,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
         26. Snowmass Baryon and Lepton Number Violating Processes workshop
       
       <p class="page__meta">
         invited talk | USA | October 2020.
-        <br>
-        <em>"Opportunities and signatures of non-minimal HNLs"</em><br>
+        <br><em>"Opportunities and signatures of non-minimal HNLs"</em>
       </p>
     </div>
             
@@ -13472,14 +13785,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
         25. Snowmass Theory of neutrino physics mini-workshop
       
       <p class="page__meta">
         invited talk | USA | September 2020.
-        <br>
-        <em>"Opportunities and signatures of non-minimal HNLs"</em><br>
+        <br><em>"Opportunities and signatures of non-minimal HNLs"</em>
       </p>
     </div>
             
@@ -13488,13 +13800,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
         24. Snowmass Neutrino Frontier 03 kick-off meeting
       
       <p class="page__meta">
         invited talk | USA | September 2020.
-        <br>
         
       </p>
     </div>
@@ -13504,13 +13815,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
         23. ICHEP 2020
       
       <p class="page__meta">
         parallel talk | Czech Republic | July 2020.
-        <br>
         
       </p>
     </div>
@@ -13520,13 +13830,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
         22. Neutrino 2020, University of Chicago
       
       <p class="page__meta">
         parallel talk | USA | June 2020.
-        <br>
         
       </p>
     </div>
@@ -13536,13 +13845,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         21. JGU Theorie Palaver, Mainz
       
       <p class="page__meta">
         invited seminar | Germany | June 2020.
-        <br>
         
       </p>
     </div>
@@ -13552,13 +13860,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
         20. Phenomenology Symposium 2020, Pittsburgh
       
       <p class="page__meta">
         parallel talk | USA | May 2020.
-        <br>
         
       </p>
     </div>
@@ -13568,13 +13875,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        19. Brookhaven Neutrino Theory Virtual Seminars <a href="https://peterdenton.github.io/NDI/index.html" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        19. Brookhaven Neutrino Theory Virtual Seminars <a href="https://peterdenton.github.io/NDI/index.html" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | USA | May 2020.
-        <br>
         
       </p>
     </div>
@@ -13584,13 +13890,12 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         18. Fermilab Theory Seminar
       
       <p class="page__meta">
         invited seminar | USA | February 2020.
-        <br>
         
       </p>
     </div>
@@ -13688,10 +13993,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -14124,10 +14443,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2019">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2019</h3>
+      <h3 class="year-subheader">2019</h3>
       <ol>
         
           
@@ -14135,6 +14454,20 @@
           
         
           
+        
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+          
+        
+          
             
             
           
@@ -14562,14 +14895,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        17. NuPhys 2019 <a href="https://indico.cern.ch/event/818781/contributions/3595998/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        17. NuPhys 2019 <a href="https://indico.cern.ch/event/818781/contributions/3595998/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         plenary talk | UK | December 2019.
-        <br>
-        <em>"Heavy Neutral Leptons and Non-Minimal Dark Sectors"</em><br>
+        <br><em>"Heavy Neutral Leptons and Non-Minimal Dark Sectors"</em>
       </p>
     </div>
             
@@ -14578,14 +14910,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        16. CERN Neutrino Platform Week 2019 <a href="https://doi.org/10.5281/zenodo.3509916" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        16. CERN Neutrino Platform Week 2019 <a href="https://doi.org/10.5281/zenodo.3509916" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         plenary talk | Switzerland | October 2019.
-        <br>
-        <em>"A Light Dark Neutrino Sector"</em><br>
+        <br><em>"A Light Dark Neutrino Sector"</em>
       </p>
     </div>
             
@@ -14594,14 +14925,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         15. Columbia University
       
       <p class="page__meta">
         invited seminar | USA | August 2019.
-        <br>
-        <em>"A light dark neutrino sector"</em><br>
+        <br><em>"A light dark neutrino sector"</em>
       </p>
     </div>
             
@@ -14610,14 +14940,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         14. MicroBooNE collaboration call
       
       <p class="page__meta">
         invited seminar | USA | August 2019.
-        <br>
-        <em>"A light dark neutrino sector"</em><br>
+        <br><em>"A light dark neutrino sector"</em>
       </p>
     </div>
             
@@ -14626,14 +14955,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="parallel talk">
       
-        13. Invisibles Workshop 2019, Valencia <a href="https://congresos.adeituv.es/invisibles19/ficha.en.html" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        13. Invisibles Workshop 2019, Valencia <a href="https://congresos.adeituv.es/invisibles19/ficha.en.html" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         parallel talk | Spain | June 2019.
-        <br>
-        <em>"A light dark neutrino sector"</em><br>
+        <br><em>"A light dark neutrino sector"</em>
       </p>
     </div>
             
@@ -14642,14 +14970,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        12. Neutrino Theory Network Workshop, Washington U., St Louis <a href="https://indico.cern.ch/event/812851/page/16923-overview" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        12. Neutrino Theory Network Workshop, Washington U., St Louis <a href="https://indico.cern.ch/event/812851/page/16923-overview" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | May 2019.
-        <br>
-        <em>"New physics in rare neutrino processes"</em><br>
+        <br><em>"New physics in rare neutrino processes"</em>
       </p>
     </div>
             
@@ -14658,14 +14985,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        11. IFIC, Valencia <a href="https://indico.ific.uv.es/event/3750/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        11. IFIC, Valencia <a href="https://indico.ific.uv.es/event/3750/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | Spain | May 2019.
-        <br>
-        <em>"A light dark neutrino sector"</em><br>
+        <br><em>"A light dark neutrino sector"</em>
       </p>
     </div>
             
@@ -14674,14 +15000,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="plenary talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="plenary talk">
       
-        10. Prospects of Neutrino Physics, IPMU <a href="https://indico.ipmu.jp/event/236/contributions/3340/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        10. Prospects of Neutrino Physics, IPMU <a href="https://indico.ipmu.jp/event/236/contributions/3340/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         plenary talk | Japan | April 2019.
-        <br>
-        <em>"New physics in rare neutrino processes"</em><br>
+        <br><em>"New physics in rare neutrino processes"</em>
       </p>
     </div>
             
@@ -14690,14 +15015,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         9. Queen Mary University of London
       
       <p class="page__meta">
         invited seminar | UK | March 2019.
-        <br>
-        <em>"A light dark neutrino sector"</em><br>
+        <br><em>"A light dark neutrino sector"</em>
       </p>
     </div>
             
@@ -14749,10 +15073,24 @@
   
     
     
-    
+
     
       
     
+      
+    
+      
+    
+      
+    
+      
+        
+        
+      
+    
+      
+        
+        
       
     
       
@@ -15230,10 +15568,10 @@
         
           
           
-    
+
     
     <div class="year-section" data-year="2018">
-      <h3 style="font-size: 20px; margin-top: 20px; color: #52adc8;">2018</h3>
+      <h3 class="year-subheader">2018</h3>
       <ol>
         
           
@@ -15241,6 +15579,20 @@
           
         
           
+        
+          
+        
+          
+            
+            
+          
+        
+          
+            
+            
+          
+        
+          
             
             
           
@@ -15713,14 +16065,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        8. Physics Opportunities at the Near Detector of DUNE (PONDD), Fermilab <a href="https://indico.fnal.gov/event/18430/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        8. Physics Opportunities at the Near Detector of DUNE (PONDD), Fermilab <a href="https://indico.fnal.gov/event/18430/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | USA | December 2018.
-        <br>
-        <em>"New physics in neutrino scattering"</em><br>
+        <br><em>"New physics in neutrino scattering"</em>
       </p>
     </div>
             
@@ -15729,14 +16080,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        7. Max-Planck-Institut fur Kernphysik, Heidelberg <a href="https://www.mpi-hd.mpg.de/lin/seminar_theory.en.php" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        7. Max-Planck-Institut fur Kernphysik, Heidelberg <a href="https://www.mpi-hd.mpg.de/lin/seminar_theory.en.php" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | Germany | November 2018.
-        <br>
-        <em>"Rare neutrino scattering probing new physics"</em><br>
+        <br><em>"Rare neutrino scattering probing new physics"</em>
       </p>
     </div>
             
@@ -15745,14 +16095,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited parallel talk">
       
-        6. Neutrino Oscillation Workshop 2018 <a href="http://www.ba.infn.it/~now/now2018/program.html" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        6. Neutrino Oscillation Workshop 2018 <a href="http://www.ba.infn.it/~now/now2018/program.html" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited parallel talk | Italy | September 2018.
-        <br>
-        <em>"Neutrino trident production at near detectors"</em><br>
+        <br><em>"Neutrino trident production at near detectors"</em>
       </p>
     </div>
             
@@ -15761,14 +16110,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited parallel talk">
       
-        5. NuFact 2018, Virginia <a href="https://indico.phys.vt.edu/event/34/contributions/677/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        5. NuFact 2018, Virginia <a href="https://indico.phys.vt.edu/event/34/contributions/677/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited parallel talk | USA | August 2018.
-        <br>
-        <em>"Neutrino tridents at DUNE"</em><br>
+        <br><em>"Neutrino tridents at DUNE"</em>
       </p>
     </div>
             
@@ -15777,14 +16125,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited talk">
       
-        4. Near detector workshop 2018, CERN <a href="https://indico.cern.ch/event/721473/overview" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        4. Near detector workshop 2018, CERN <a href="https://indico.cern.ch/event/721473/overview" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited talk | Switzerland | June 2018.
-        <br>
-        <em>"Near detector physics with neutrino experiments"</em><br>
+        <br><em>"Near detector physics with neutrino experiments"</em>
       </p>
     </div>
             
@@ -15793,14 +16140,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
         3. Perimeter Institute
       
       <p class="page__meta">
         invited seminar | Canada | June 2018.
-        <br>
-        <em>"Current status of short-baseline oscillations"</em><br>
+        <br><em>"Current status of short-baseline oscillations"</em>
       </p>
     </div>
             
@@ -15809,14 +16155,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited parallel talk" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited parallel talk">
       
-        2. Phenomenology Symposium 2018 <a href="https://indico.cern.ch/event/699148/contributions/2986307/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        2. Phenomenology Symposium 2018 <a href="https://indico.cern.ch/event/699148/contributions/2986307/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited parallel talk | USA | May 2018.
-        <br>
-        <em>"Leptophilic Z’s in neutrino scattering"</em><br>
+        <br><em>"Leptophilic Z’s in neutrino scattering"</em>
       </p>
     </div>
             
@@ -15825,14 +16170,13 @@
           
             
             
-    <div class="list__item talk-item" data-type="invited seminar" style="font-size:16px;">
+    <div class="list__item talk-item" data-type="invited seminar">
       
-        1. Fermilab Theory Seminar <a href="https://theory.fnal.gov/events/event/title-tba-neutrino-3/" rel="permalink"><i class="fa fa-link" aria-hidden="false" title="permalink"></i><span class="sr-only">Permalink</span></a>
+        1. Fermilab Theory Seminar <a href="https://theory.fnal.gov/events/event/title-tba-neutrino-3/" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>
       
       <p class="page__meta">
         invited seminar | USA | May 2018.
-        <br>
-        <em>"Neutrino trident production at near detectors"</em><br>
+        <br><em>"Neutrino trident production at near detectors"</em>
       </p>
     </div>
             
@@ -15846,59 +16190,6 @@
 
 
 
-<script>
-function filterTalks(type, button) {
-  // Update active button
-  var buttons = document.querySelectorAll('.filter-btn');
-  for (var i = 0; i < buttons.length; i++) {
-    buttons[i].classList.remove('active');
-  }
-  button.classList.add('active');
-  
-  // Filter talks
-  var talks = document.querySelectorAll('.talk-item');
-  for (var i = 0; i < talks.length; i++) {
-    var talk = talks[i];
-    if (type === 'all') {
-      talk.style.display = 'block';
-    } else {
-      var talkType = talk.getAttribute('data-type');
-      // Match both "invited X" and "X" variants
-      var matches = (talkType.indexOf(type) !== -1);
-      // Special case: 'contributed' should also match 'parallel'
-      if (type === 'contributed' && talkType.indexOf('parallel') !== -1) {
-        matches = true;
-      }
-      if (matches) {
-        talk.style.display = 'block';
-      } else {
-        talk.style.display = 'none';
-      }
-    }
-  }
-  
-  // Hide empty year sections
-  var yearSections = document.querySelectorAll('[data-year]');
-  for (var i = 0; i < yearSections.length; i++) {
-    var section = yearSections[i];
-    var sectionTalks = section.querySelectorAll('.talk-item');
-    var hasVisible = false;
-    
-    for (var j = 0; j < sectionTalks.length; j++) {
-      if (sectionTalks[j].style.display !== 'none') {
-        hasVisible = true;
-        break;
-      }
-    }
-    
-    if (hasVisible) {
-      section.style.display = 'block';
-    } else {
-      section.style.display = 'none';
-    }
-  }
-}
-</script>
   </div>
 </div>
 
@@ -15914,7 +16205,7 @@ function filterTalks(type, button) {
 <div class="page__footer-follow">
   <ul class="social-icons">
     
-      <li><strong>Follow:</strong></li>
+      <li><strong></strong></li>
     
     
     
@@ -15926,7 +16217,7 @@ function filterTalks(type, button) {
  -->  </ul>
 </div>
 
-<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+<div class="page__footer-copyright">&copy; 2026 Matheus Hostert. Powered by <a href="https://claude.ai">Claude</a>, <a href="http://jekyllrb.com" rel="nofollow">Jekyll</a>, and <a href="https://github.com/academicpages/academicpages.github.io">AcademicPages</a>, a fork of <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
 
       </footer>
     </div>

@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:phys.org)",
+      "WebFetch(domain:www.scientificamerican.com)",
+      "WebFetch(domain:www.symmetrymagazine.org)",
+      "WebFetch(domain:insidetheperimeter.ca)",
+      "WebFetch(domain:perimeterinstitute.ca)",
+      "WebFetch(domain:physics.uiowa.edu)"
+    ]
+  }
+}

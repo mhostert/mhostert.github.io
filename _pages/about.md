@@ -1,38 +1,31 @@
 ---
 permalink: /
-title: 
+title: "Homepage"
 excerpt: "About me"
 author_profile: true
-redirect_from: 
+redirect_from:
   - /about/
   - /about.html
 ---
 
-<!-- <div class="container">
- -->
-<!-- <div class="mybg-image"> -->
-<!-- <img src="../images/multilepton.png" alt="neutrino matter effects" style="width:100%;  padding-top:1%;padding-bottom:1%;padding-right:40px;padding-left:40px; background-color: rgba(256,256,256, 0.6); position: relative; bottom: 0%; border-width: 1px; overflow-x: hidden;">
- -->
-<!-- </div> -->
-<div class="layer">
+### About me
+I am an Assistant Professor at the University of Iowa, in Iowa City.
 
-<h3>Welcome,</h3>
+My research focuses on theoretical and phenomenological aspects of neutrino, dark matter, and beyond-the-Standard Model physics.
+I like to devise new strategies in the search for new rare phenomena and new particles.
 
-  <p>
-  I am an Assistant Professor at the University of Iowa, in Iowa City.
+Discoveries in this field would help us to make sense of the patterns we observe in fundamental interactions and particle masses, the origin of dark matter, and the cosmological evolution of our universe.
 
-  My research focuses on theoretical and phenomenological aspects of neutrino, dark matter, and beyond-the-Standard Model physics.
-  I like to devise new strategies in the search for new rare phenomena and new particles.
+For more, see our [group members](/group/) and our [neutrino journal club](https://meighenbergers.github.io/jc-ppi/index.html).
 
-  Discoveries in this field would help us to make sense of the patterns we observe in fundamental interactions and particle masses, the origin of dark matter, and the cosmological evolution of our universe.
-  </p>
+---
+### Teaching 
 
-  <h3>Opportunities for Students</h3>
-  <p>
-  Graduate and undergraduate students interested in particle physics phenomenology are encouraged to get in contact for research opportunities.
-  </p>
+Currently: [Quantum Mechanics II — Spring 2026](/teaching/quantum-mechanics-ii/)
 
-  <p>
-  Prospective students can find more details about the U. of Iowa Ph.D program <a href="https://physics.uiowa.edu/graduate/phd-physics">here</a>.
-  </p>
-</div>
+---
+### Opportunities for Students
+
+Graduate and undergraduate students interested in particle physics phenomenology are encouraged to get in contact for research opportunities.
+
+Prospective students can find more details about the [U. of Iowa Ph.D program](https://physics.uiowa.edu/graduate/phd-physics).

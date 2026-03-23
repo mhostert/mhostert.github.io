@@ -28,3 +28,5 @@ end
 
 
 gem "webrick", "~> 1.7"
+gem "csv"  # required explicitly in Ruby 4.0+ (removed from stdlib)
+gem "faraday", "~> 1.0"  # github-pages gems expect Faraday 1.x API

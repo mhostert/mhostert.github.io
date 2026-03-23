@@ -1,0 +1,20 @@
+current directory: /Users/mhostert/Repos/website/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+/opt/homebrew/opt/ruby@3.1/bin/ruby extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /Users/mhostert/Repos/website/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20260322-41614-y3cw3q sitelibdir\=./.gem.20260322-41614-y3cw3q clean
+
+current directory: /Users/mhostert/Repos/website/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20260322-41614-y3cw3q sitelibdir\=./.gem.20260322-41614-y3cw3q
+compiling unf.cc
+linking shared-object unf_ext.bundle
+ld: warning: ignoring duplicate libraries: '-lc++', '-lruby.3.1'
+
+current directory: /Users/mhostert/Repos/website/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20260322-41614-y3cw3q sitelibdir\=./.gem.20260322-41614-y3cw3q install
+/usr/bin/install -c -m 0755 unf_ext.bundle ./.gem.20260322-41614-y3cw3q
+
+current directory: /Users/mhostert/Repos/website/vendor/bundle/ruby/3.1.0/gems/unf_ext-0.0.8.1/ext/unf_ext
+make DESTDIR\= sitearchdir\=./.gem.20260322-41614-y3cw3q sitelibdir\=./.gem.20260322-41614-y3cw3q clean
