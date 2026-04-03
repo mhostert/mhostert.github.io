@@ -1,6 +1,6 @@
 ---
 title: 'New Multi-messenger Probe of Dark Matter-Nucleon Interactions from Ultra-high Energy Cosmic Ray Acceleration'
-pub_number: 2
+pub_number: 3
 authors:  Stephan A. Meighen-Berger,  P.S. Bhupal Dev,  Matheus Hostert
 collection: publication
 permalink: /publication/2025-12-19-NewMulti-messengerProbeofDarkMatter-NucleonInteractionsfromUltra-highEnergyCosmicRayAcceleration

@@ -1,6 +1,6 @@
 ---
 title: 'Kaon decay constraints on vector bosons coupled to non-conserved currents'
-pub_number: 1
+pub_number: 2
 authors:  Matheus Hostert,  Maxim Pospelov,  Adrian Thompson
 collection: publication
 permalink: /publication/2026-2-23-Kaondecayconstraintsonvectorbosonscoupledtonon-conservedcurrents

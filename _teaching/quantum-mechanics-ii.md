@@ -26,7 +26,9 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_time_dependent_perturbation_theory.pdf"> Time-Dependent Perturbation Theory</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_interaction_dyson.pdf"> Interaction Picture and Dyson Series</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_rabi_oscillations.pdf"> Rabi Oscillations</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_theory.pdf"> Scattering Theory</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_theory_v2.pdf"> Intro to Scattering Theory</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_calculations.pdf"> Simple Scattering Calculations</a>
+*  Scattering Formalism
 
 **Problem Sets:**
 
@@ -42,8 +44,8 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4: Relativistic correction to hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_4_solved_v2.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: Hyperfine splitting including orbital angular and Zeeman effects</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_6.pdf">HW 6: Rabi oscillations and the rotating wave approximation</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_6_solved.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_v2.pdf">HW 7: Preliminary to Scattering Theory</a>  
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_v2.pdf">HW 7: Breit-Wigner Resonance</a>  
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_v2.pdf">HW 7: Preliminary to Scattering Theory</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_solved.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_8.pdf">HW 8: Breit-Wigner Resonance</a>  
 
 **Exams**
 

@@ -1,6 +1,6 @@
 ---
 title: 'Long-Lived Particles from Meson and Muon Decays at Rest at Spallation Sources'
-pub_number: 3
+pub_number: 4
 authors:  Matheus Hostert,  Salvador Urrea
 collection: publication
 permalink: /publication/2025-9-17-Long-LivedParticlesfromMesonandMuonDecaysatRestatSpallationSources
