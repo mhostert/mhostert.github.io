@@ -28,6 +28,8 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/2_rabi_oscillations.pdf"> Rabi Oscillations</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_theory_v2.pdf"> Intro to Scattering Theory</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_calculations.pdf"> Simple Scattering Calculations</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_formalism.pdf"> Scattering Formalism and Born Series</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_II/3_complex_analysis.pdf"> (Complex Integration Refresher)</a>
 *  Scattering Formalism
 
 **Problem Sets:**
@@ -46,6 +48,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_6.pdf">HW 6: Rabi oscillations and the rotating wave approximation</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_6_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_v2.pdf">HW 7: Preliminary to Scattering Theory</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_8.pdf">HW 8: Breit-Wigner Resonance</a>  
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_9Z.pdf">HW 9: Scattering and Identical Particles</a>  
 
 **Exams**
 
