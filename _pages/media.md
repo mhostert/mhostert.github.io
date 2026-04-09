@@ -5,7 +5,15 @@ permalink: /media/
 author_profile: true
 ---
 
+---
+
 # In the News
+
+
+
+### [Experiments Ring the ‘Death Knell’ for Sterile Neutrinos](https://www.quantamagazine.org/experiments-ring-the-death-knell-for-sterile-neutrinos-20260408/)
+
+*Quanta Magazine*, Charlie Wood, April 2026
 
 ---
 
@@ -35,7 +43,6 @@ author_profile: true
 
 # Outreach
 
----
 
 ### IceCube Masterclass 2024
 

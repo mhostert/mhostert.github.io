@@ -1,32 +1,29 @@
 #!/usr/bin/env python3
 """
-update_pubs.py - Download Fig. 1 and abstract from each arXiv publication.
+update_pubs.py - Generate and enrich publication pages for the academic website.
 
-For each publication in _publications/:
-  1. Downloads the arXiv TeX source tarball.
-  2. Finds the main .tex file (the one with \\documentclass).
-  3. Expands \\input{} / \\include{} references inline.
-  4. Extracts abstract from \\begin{abstract}...\\end{abstract}, stripping TeX
-     markup to produce clean plain text. Falls back to the arXiv Atom API.
-  5. Finds the first figure environment and extracts the \\includegraphics
-     filename from it. Locates that file in the tarball and converts to PNG:
-       - .pdf figures rendered via PyMuPDF
-       - .eps figures converted via Ghostscript (if installed)
-       - .png / .jpg used directly
-  6. Saves to files/pub_figs/{eprint}.png and writes `fig1` / `abstract`
-     fields into the publication's YAML frontmatter so Jekyll can render them.
+Step 1 — Generate markdown files from INSPIRE-HEP (replaces pubs_generator.py):
+  - Queries INSPIRE for the author's publications via inspyhep.
+  - Applies max_nauthors=9 by default, then force-includes specific papers
+    listed in FORCE_INCLUDE_KEYS regardless of author count.
 
-Skips fields that are already present in frontmatter.
+Step 2 — Enrich each publication with abstract and figure:
+  - Downloads arXiv TeX source, extracts abstract and first figure.
+  - Falls back to arXiv Atom API for abstracts.
+  - Saves figures to files/pub_figs/ and updates YAML frontmatter.
 
 Usage:
-    python update_pubs.py
+    python update_pubs.py              # run both steps
+    python update_pubs.py --generate   # step 1 only (generate markdown)
+    python update_pubs.py --enrich     # step 2 only (abstracts & figures)
 
 Requirements:
-    pip install requests PyMuPDF PyYAML
+    pip install inspyhep requests PyMuPDF PyYAML
 Optional (for EPS figures):
     brew install ghostscript   # or: sudo apt install ghostscript
 """
 
+import argparse
 import glob
 import gzip
 import io
@@ -45,10 +42,93 @@ import yaml
 # Config
 # ---------------------------------------------------------------------------
 
+INSPIRE_AUTHOR = "Matheus.Hostert.1"
+MAX_NAUTHORS = 9
+
+# Papers to force-include that are not in the INSPIRE author profile
+# (e.g. large-collaboration papers, or papers under a different author ID).
+# Each entry is a dict with the same fields as the Jekyll frontmatter.
+FORCE_INCLUDE = [
+    {
+        "title": "First Search for Dark Sector $e^+e^-$ Explanations of the MiniBooNE Anomaly at MicroBooNE",
+        "authors": "MicroBooNE Collaboration",
+        "date": "2026-3-27",
+        "venue": "Phys.Rev.Lett. 136 (2026) 12 121804",
+        "eprint": "2502.10900",
+        "paperurl": "https://arxiv.org/abs/2502.10900",
+        "citation": (
+            "First Search for Dark Sector e+e- Explanations of the"
+            " MiniBooNE Anomaly at MicroBooNE, MicroBooNE Collaboration,"
+            " Phys.Rev.Lett. 136 (2026) 12 121804"
+        ),
+        "citation_notitle": "MicroBooNE Collaboration, Phys.Rev.Lett. 136 (2026) 12 121804",
+    },
+    {
+        "title": "From oversimplified to overlooked: the case for exploring Rich Dark Sectors",
+        "authors": "Asli Abdullahi, Francesco Costa, Andrea Giovanni De Marchi, Alessandro Granelli, Jaime Hoefken-Zink, Matheus Hostert, Michele Lucente, Elina Merkel, Jacopo Nava, Silvia Pascoli, Salvador Rosauro-Alcaraz, Filippo Sala",
+        "date": "2025-5-8",
+        "venue": "Nucl.Phys.B 1020 (2025) 117148",
+        "eprint": "2505.05663",
+        "paperurl": "https://arxiv.org/abs/2505.05663",
+        "citation": "From oversimplified to overlooked: the case for exploring Rich Dark Sectors, Asli Abdullahi et al., Nucl.Phys.B 1020 (2025) 117148",
+        "citation_notitle": "Asli Abdullahi et al., Nucl.Phys.B 1020 (2025) 117148",
+    },
+]
+
 PUBS_DIR = "_publications"
 FIGS_DIR = "files/pub_figs"
 HEADERS = {"User-Agent": "Mozilla/5.0 (academic-website/update_pubs.py)"}
 SLEEP_BETWEEN = 3   # seconds between papers — be polite to arXiv
+
+
+# ---------------------------------------------------------------------------
+# Step 1: Generate publication markdown from INSPIRE-HEP
+# ---------------------------------------------------------------------------
+
+def generate_publications() -> None:
+    """Query INSPIRE-HEP and write markdown files into _publications/."""
+    from inspyhep import Author
+
+    # Remove old publication files
+    for f in glob.glob(f"{PUBS_DIR}/*.md"):
+        os.remove(f)
+
+    mh = Author(INSPIRE_AUTHOR)
+
+    # Regular papers (≤ MAX_NAUTHORS authors)
+    mh.get_markdown_descriptor(max_nauthors=MAX_NAUTHORS, path=PUBS_DIR)
+
+    # Force-include papers not in the INSPIRE author profile
+    for pub in FORCE_INCLUDE:
+        slug = re.sub(r"\[.*\]|[^a-zA-Z0-9_-]", "", pub["title"]).replace("--", "-")
+        md_filename = f"{pub['date']}-{slug}.md"
+        filepath = os.path.join(PUBS_DIR, md_filename)
+        if os.path.exists(filepath):
+            continue
+        lines = [
+            "---",
+            f"title: '{pub['title']}'",
+            f"authors: {pub['authors']}",
+            "collection: publication",
+            f"permalink: /publication/{pub['date']}-{slug}",
+            f"date: {pub['date']}",
+            f"venue: {pub['venue']}",
+            f"paperurl: '{pub['paperurl']}'",
+            f"citation_notitle: '{pub['citation_notitle']}'",
+            f"citation: '{pub['citation']}'",
+            f"eprint: '{pub['eprint']}'",
+            "---",
+        ]
+        Path(filepath).write_text("\n".join(lines) + "\n", encoding="utf-8")
+        print(f"FORCE-INCLUDED {pub['title'][:65]}")
+
+    n = len(glob.glob(f"{PUBS_DIR}/*.md"))
+    print(f"\nGenerated {n} publication files.\n")
+
+
+# ---------------------------------------------------------------------------
+# Step 2: Enrich publications with abstracts & figures
+# ---------------------------------------------------------------------------
 
 
 # ---------------------------------------------------------------------------
@@ -493,7 +573,8 @@ def fetch_abstract_api(eprint: str) -> str | None:
 # main
 # ---------------------------------------------------------------------------
 
-def main() -> None:
+def enrich_publications() -> None:
+    """Download abstracts and figures for all publications in _publications/."""
     os.makedirs(FIGS_DIR, exist_ok=True)
 
     pub_files = sorted(glob.glob(f"{PUBS_DIR}/*.md"))
@@ -627,6 +708,29 @@ def main() -> None:
 
     print(f"\nAbstracts: {abs_ok} fetched, {abs_skip} skipped, {abs_fail} failed")
     print(f"Figures:   {fig_ok} downloaded, {fig_skip} skipped, {fig_fail} failed")
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser(
+        description="Generate and enrich academic publication pages."
+    )
+    parser.add_argument(
+        "--generate", action="store_true",
+        help="Only regenerate markdown from INSPIRE-HEP (step 1).",
+    )
+    parser.add_argument(
+        "--enrich", action="store_true",
+        help="Only enrich existing markdown with abstracts & figures (step 2).",
+    )
+    args = parser.parse_args()
+
+    run_all = not args.generate and not args.enrich
+
+    if run_all or args.generate:
+        generate_publications()
+
+    if run_all or args.enrich:
+        enrich_publications()
 
 
 if __name__ == "__main__":

@@ -6,7 +6,20 @@
       "WebFetch(domain:www.symmetrymagazine.org)",
       "WebFetch(domain:insidetheperimeter.ca)",
       "WebFetch(domain:perimeterinstitute.ca)",
-      "WebFetch(domain:physics.uiowa.edu)"
+      "WebFetch(domain:physics.uiowa.edu)",
+      "Bash(ls -t /Users/mhostert/Repos/website/_publications/*.md)",
+      "Bash(xargs -I {} bash -c 'echo \"=== {} ===\" && head -30 {}')",
+      "WebFetch(domain:journals.aps.org)",
+      "WebFetch(domain:arxiv.org)",
+      "Bash(pip show:*)",
+      "Bash(python3 -c \"import inspyhep; help\\(inspyhep.Author.get_markdown_descriptor\\)\")",
+      "Bash(python3 -c \"import inspyhep; import inspect; print\\(inspect.getsource\\(inspyhep.Author.get_markdown_descriptor\\)\\)\")",
+      "Bash(python3 -c \"import inspyhep; import inspect; print\\(inspect.getsource\\(inspyhep.Author.valid_record\\)\\)\")",
+      "WebFetch(domain:inspirehep.net)",
+      "Bash(curl -s \"https://inspirehep.net/api/literature?q=texkey%20MicroBooNE:2025khi&fields=arxiv_eprints\")",
+      "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d['hits']['hits'][0]['metadata'].get\\('arxiv_eprints','none'\\), indent=2\\)\\)\")",
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('update_pubs.py'\\).read\\(\\)\\); print\\('Syntax OK'\\)\")",
+      "Bash(python3 update_pubs.py --generate)"
     ]
   }
 }
