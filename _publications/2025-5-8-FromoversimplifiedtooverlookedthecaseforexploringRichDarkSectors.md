@@ -9,4 +9,5 @@ paperurl: 'https://arxiv.org/abs/2505.05663'
 citation_notitle: 'Asli Abdullahi et al., Nucl.Phys.B 1020 (2025) 117148'
 citation: 'From oversimplified to overlooked: the case for exploring Rich Dark Sectors, Asli Abdullahi et al., Nucl.Phys.B 1020 (2025) 117148'
 eprint: '2505.05663'
+pub_number: 6
 ---

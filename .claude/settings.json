@@ -19,7 +19,12 @@
       "Bash(curl -s \"https://inspirehep.net/api/literature?q=texkey%20MicroBooNE:2025khi&fields=arxiv_eprints\")",
       "Bash(python3 -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d['hits']['hits'][0]['metadata'].get\\('arxiv_eprints','none'\\), indent=2\\)\\)\")",
       "Bash(python3 -c \"import ast; ast.parse\\(open\\('update_pubs.py'\\).read\\(\\)\\); print\\('Syntax OK'\\)\")",
-      "Bash(python3 update_pubs.py --generate)"
+      "Bash(python3 update_pubs.py --generate)",
+      "Bash(grep -l \"pub_number\" /Users/mhostert/Repos/website/_publications/*MicroBooNE*2026* /Users/mhostert/Repos/website/_publications/*oversimplified*)",
+      "Bash(head -5 /Users/mhostert/Repos/website/_publications/2026-3-27-*.md /Users/mhostert/Repos/website/_publications/2025-5-8-*.md)",
+      "Bash(grep \"pub_number\" /Users/mhostert/Repos/website/_publications/2026-3-27-*.md /Users/mhostert/Repos/website/_publications/2025-5-8-*.md)",
+      "Bash(git checkout:*)",
+      "Bash(grep -l \"abstract:\" /Users/mhostert/Repos/website/_publications/*.md)"
     ]
   }
 }

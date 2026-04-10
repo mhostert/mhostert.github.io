@@ -56,11 +56,7 @@ FORCE_INCLUDE = [
         "venue": "Phys.Rev.Lett. 136 (2026) 12 121804",
         "eprint": "2502.10900",
         "paperurl": "https://arxiv.org/abs/2502.10900",
-        "citation": (
-            "First Search for Dark Sector e+e- Explanations of the"
-            " MiniBooNE Anomaly at MicroBooNE, MicroBooNE Collaboration,"
-            " Phys.Rev.Lett. 136 (2026) 12 121804"
-        ),
+        "citation": "First Search for Dark Sector e+e- Explanations of the MiniBooNE Anomaly at MicroBooNE, MicroBooNE Collaboration, Phys.Rev.Lett. 136 (2026) 12 121804",
         "citation_notitle": "MicroBooNE Collaboration, Phys.Rev.Lett. 136 (2026) 12 121804",
     },
     {
@@ -78,16 +74,32 @@ FORCE_INCLUDE = [
 PUBS_DIR = "_publications"
 FIGS_DIR = "files/pub_figs"
 HEADERS = {"User-Agent": "Mozilla/5.0 (academic-website/update_pubs.py)"}
-SLEEP_BETWEEN = 3   # seconds between papers — be polite to arXiv
+SLEEP_BETWEEN = 3  # seconds between papers — be polite to arXiv
 
 
 # ---------------------------------------------------------------------------
 # Step 1: Generate publication markdown from INSPIRE-HEP
 # ---------------------------------------------------------------------------
 
+
 def generate_publications() -> None:
     """Query INSPIRE-HEP and write markdown files into _publications/."""
     from inspyhep import Author
+
+    # Save enrichment data (abstract, fig1) from existing files before
+    # regenerating, so we can restore them afterwards.
+    preserved: dict[str, dict] = {}
+    for fp in glob.glob(f"{PUBS_DIR}/*.md"):
+        fm = read_frontmatter(fp)
+        eprint = str(fm.get("eprint", "")).strip("'\"")
+        if eprint:
+            data = {}
+            if fm.get("abstract"):
+                data["abstract"] = fm["abstract"]
+            if fm.get("fig1"):
+                data["fig1"] = fm["fig1"]
+            if data:
+                preserved[eprint] = data
 
     # Remove old publication files
     for f in glob.glob(f"{PUBS_DIR}/*.md"):
@@ -122,8 +134,29 @@ def generate_publications() -> None:
         Path(filepath).write_text("\n".join(lines) + "\n", encoding="utf-8")
         print(f"FORCE-INCLUDED {pub['title'][:65]}")
 
-    n = len(glob.glob(f"{PUBS_DIR}/*.md"))
-    print(f"\nGenerated {n} publication files.\n")
+    # Restore preserved abstract/fig1 data
+    if preserved:
+        for fp in glob.glob(f"{PUBS_DIR}/*.md"):
+            fm = read_frontmatter(fp)
+            eprint = str(fm.get("eprint", "")).strip("'\"")
+            if eprint in preserved:
+                for key, val in preserved[eprint].items():
+                    if not fm.get(key):
+                        if key == "abstract":
+                            write_frontmatter_quoted(fp, key, val)
+                        else:
+                            write_frontmatter_field(fp, key, val)
+        print(f"Restored abstract/fig1 for {len(preserved)} publications.")
+
+    # Renumber all publications by date (most recent = 1) so that
+    # force-included entries get correct pub_number values.
+    all_pubs = sorted(glob.glob(f"{PUBS_DIR}/*.md"), reverse=True)
+    for i, fp in enumerate(all_pubs, start=1):
+        fm = read_frontmatter(fp)
+        if fm.get("pub_number") != i:
+            write_frontmatter_field(fp, "pub_number", str(i))
+
+    print(f"\nGenerated {len(all_pubs)} publication files.\n")
 
 
 # ---------------------------------------------------------------------------
@@ -134,6 +167,7 @@ def generate_publications() -> None:
 # ---------------------------------------------------------------------------
 # Frontmatter helpers
 # ---------------------------------------------------------------------------
+
 
 def read_frontmatter(filepath: str) -> dict:
     """Return the YAML frontmatter dict from a Jekyll markdown file."""
@@ -169,6 +203,7 @@ def write_frontmatter_quoted(filepath: str, key: str, value: str) -> None:
 # ---------------------------------------------------------------------------
 # arXiv source download & extraction
 # ---------------------------------------------------------------------------
+
 
 def download_source(eprint: str) -> bytes | None:
     """Download arXiv TeX source. Returns raw bytes or None."""
@@ -220,6 +255,7 @@ def extract_source(raw: bytes) -> dict[str, bytes]:
 # ---------------------------------------------------------------------------
 # TeX parsing helpers
 # ---------------------------------------------------------------------------
+
 
 def strip_tex_comments(tex: str) -> str:
     """Remove TeX line comments (% … EOL), respecting escaped \\%."""
@@ -296,7 +332,8 @@ def find_main_tex(files: dict[str, bytes]) -> tuple[str, str] | tuple[None, None
 
     # 3. Fallback: largest non-appendix .tex file
     tex_files = [
-        (k, v) for k, v in files.items()
+        (k, v)
+        for k, v in files.items()
         if k.lower().endswith(".tex") and not _is_appendix(k)
     ]
     if tex_files:
@@ -329,9 +366,7 @@ def find_first_figure_file(tex: str) -> str | None:
     """
     tex = strip_tex_comments(tex)
 
-    incl_re = re.compile(
-        r"\\includegraphics\s*(?:\[[^\]]*\])?\s*\{([^}]+)\}"
-    )
+    incl_re = re.compile(r"\\includegraphics\s*(?:\[[^\]]*\])?\s*\{([^}]+)\}")
     fig_re = re.compile(
         r"\\begin\{figure\*?\}(.*?)\\end\{figure\*?\}",
         re.DOTALL,
@@ -376,8 +411,16 @@ def extract_abstract_from_tex(full_tex: str) -> str | None:
 
     # Text-formatting commands: strip command, keep argument
     for cmd in (
-        "emph", "textbf", "textit", "text",
-        "textrm", "textsf", "texttt", "underline", "mbox", "hbox",
+        "emph",
+        "textbf",
+        "textit",
+        "text",
+        "textrm",
+        "textsf",
+        "texttt",
+        "underline",
+        "mbox",
+        "hbox",
     ):
         raw = re.sub(rf"\\{cmd}\{{([^{{}}]*)\}}", r"\1", raw)
 
@@ -409,11 +452,17 @@ def extract_abstract_from_tex(full_tex: str) -> str | None:
 
 # Extensions to probe when the \\includegraphics path has no extension.
 FIGURE_EXTS = [
-    "", ".pdf", ".PDF",
-    ".eps", ".EPS",
-    ".png", ".PNG",
-    ".jpg", ".JPG",
-    ".jpeg", ".JPEG",
+    "",
+    ".pdf",
+    ".PDF",
+    ".eps",
+    ".EPS",
+    ".png",
+    ".PNG",
+    ".jpg",
+    ".JPG",
+    ".jpeg",
+    ".JPEG",
 ]
 
 
@@ -436,9 +485,7 @@ def locate_file(
     for ext in FIGURE_EXTS:
         candidates.append(basename + ext)
 
-    norm_to_orig: dict[str, str] = {
-        k.replace("\\", "/").lstrip("./"): k for k in files
-    }
+    norm_to_orig: dict[str, str] = {k.replace("\\", "/").lstrip("./"): k for k in files}
 
     for cand in candidates:
         cand_norm = cand.replace("\\", "/").lstrip("./")
@@ -458,6 +505,7 @@ def locate_file(
 # Image conversion
 # ---------------------------------------------------------------------------
 
+
 def pdf_to_png(pdf_bytes: bytes) -> tuple[bytes, str]:
     """Render the first page of a PDF to PNG using PyMuPDF."""
     import fitz  # PyMuPDF
@@ -473,9 +521,14 @@ def eps_to_png(eps_bytes: bytes) -> tuple[bytes, str] | None:
     try:
         result = subprocess.run(
             [
-                "gs", "-dNOPAUSE", "-dBATCH", "-dSAFER",
-                "-sDEVICE=pngalpha", "-r150",
-                "-sOutputFile=-", "-",
+                "gs",
+                "-dNOPAUSE",
+                "-dBATCH",
+                "-dSAFER",
+                "-sDEVICE=pngalpha",
+                "-r150",
+                "-sOutputFile=-",
+                "-",
             ],
             input=eps_bytes,
             capture_output=True,
@@ -516,6 +569,7 @@ def convert_to_png(data: bytes, ext: str) -> tuple[bytes, str] | None:
 # ---------------------------------------------------------------------------
 # Figure extraction from parsed TeX
 # ---------------------------------------------------------------------------
+
 
 def get_fig1_from_tex(
     full_tex: str, files: dict[str, bytes]
@@ -573,6 +627,7 @@ def fetch_abstract_api(eprint: str) -> str | None:
 # main
 # ---------------------------------------------------------------------------
 
+
 def enrich_publications() -> None:
     """Download abstracts and figures for all publications in _publications/."""
     os.makedirs(FIGS_DIR, exist_ok=True)
@@ -609,9 +664,9 @@ def enrich_publications() -> None:
         # Check if figure file already exists on disk (frontmatter not yet set)
         if need_figure and not fm.get("fig1"):
             existing = [
-                p for p in glob.glob(f"{FIGS_DIR}/{eprint}.*")
-                if p.rsplit(".", 1)[-1].lower() in
-                ("png", "jpg", "jpeg", "gif", "webp")
+                p
+                for p in glob.glob(f"{FIGS_DIR}/{eprint}.*")
+                if p.rsplit(".", 1)[-1].lower() in ("png", "jpg", "jpeg", "gif", "webp")
             ]
             if existing:
                 rel = "/" + existing[0].replace("\\", "/")
@@ -715,11 +770,13 @@ def main() -> None:
         description="Generate and enrich academic publication pages."
     )
     parser.add_argument(
-        "--generate", action="store_true",
+        "--generate",
+        action="store_true",
         help="Only regenerate markdown from INSPIRE-HEP (step 1).",
     )
     parser.add_argument(
-        "--enrich", action="store_true",
+        "--enrich",
+        action="store_true",
         help="Only enrich existing markdown with abstracts & figures (step 2).",
     )
     args = parser.parse_args()

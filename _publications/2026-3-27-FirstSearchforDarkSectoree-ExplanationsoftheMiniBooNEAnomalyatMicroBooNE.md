@@ -9,4 +9,5 @@ paperurl: 'https://arxiv.org/abs/2502.10900'
 citation_notitle: 'MicroBooNE Collaboration, Phys.Rev.Lett. 136 (2026) 12 121804'
 citation: 'First Search for Dark Sector e+e- Explanations of the MiniBooNE Anomaly at MicroBooNE, MicroBooNE Collaboration, Phys.Rev.Lett. 136 (2026) 12 121804'
 eprint: '2502.10900'
+pub_number: 2
 ---
