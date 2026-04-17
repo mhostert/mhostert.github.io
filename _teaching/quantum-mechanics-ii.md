@@ -30,7 +30,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_calculations.pdf"> Simple Scattering Calculations</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_formalism.pdf"> Scattering Formalism and Born Series</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_complex_analysis.pdf"> (Complex Integration Refresher)</a>
-*  Scattering Formalism
+*  <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_applications.pdf"> (Scattering Applications)</a>
 
 **Problem Sets:**
 
