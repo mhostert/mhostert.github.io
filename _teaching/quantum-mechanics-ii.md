@@ -30,13 +30,11 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_calculations.pdf"> Simple Scattering Calculations</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_formalism.pdf"> Scattering Formalism and Born Series</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_complex_analysis.pdf"> (Complex Integration Refresher)</a>
-*  <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_applications.pdf"> (Scattering Applications)</a>
-
-**Problem Sets:**
-
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger's equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Time evolution (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_2.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_3.pdf"> Problems 3</a>) Propagators (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_3.pdf">solutions</a>)
+*  <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_applications.pdf"> Scattering Applications</a>
+*  Identical Particles
+*  Second Quantization
+* Quantized Electromagnetic Field
+* Relativistic Quantum Mechanics
 
 **Homework Assignments:**
 
@@ -47,11 +45,19 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_v2.pdf">HW 5: Hyperfine splitting including orbital angular and Zeeman effects</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_5_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_6.pdf">HW 6: Rabi oscillations and the rotating wave approximation</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_6_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_v2.pdf">HW 7: Preliminary to Scattering Theory</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_7_solved.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_8.pdf">HW 8: Breit-Wigner Resonance</a>  
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_9.pdf">HW 9: Scattering and Identical Particles</a>  
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_8.pdf">HW 8: Breit-Wigner Resonance</a>   (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_8_solved.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_9.pdf">HW 9: Scattering and Identical Particles</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_9_solved_v2.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_10_solved.pdf">HW 10: Exchange Force </a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_10_solved.pdf">solutions</a>)
+
 
 **Exams**
 
 * <a href="https://mhostert.github.io/files/teaching/QM_II/exam_midterm_1.pdf"> Midterm 1</a> (solutions in class)
 * Midterm 2
 * Final exam
+
+**Review Problem Sets:**
+
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger's equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Time evolution (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_2.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_3.pdf"> Problems 3</a>) Propagators (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_3.pdf">solutions</a>)
