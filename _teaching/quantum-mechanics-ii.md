@@ -31,7 +31,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_formalism.pdf"> Scattering Formalism and Born Series</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_complex_analysis.pdf"> (Complex Integration Refresher)</a>
 *  <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_applications.pdf"> Scattering Applications</a>
-*  Identical Particles
+*  <a href="https://mhostert.github.io/files/teaching/QM_II/4_identical_particles.pdf"> Identical Particles</a>
 *  Second Quantization
 * Quantized Electromagnetic Field
 * Relativistic Quantum Mechanics
@@ -53,7 +53,7 @@ The most up to date information will be available on the UI ICON page.
 **Exams**
 
 * <a href="https://mhostert.github.io/files/teaching/QM_II/exam_midterm_1.pdf"> Midterm 1</a> (solutions in class)
-* Midterm 2
+* <a href="https://mhostert.github.io/files/teaching/QM_II/exam_midterm_2_v2.pdf"> Midterm 2</a> (solutions in class)
 * Final exam
 
 **Review Problem Sets:**
