@@ -32,9 +32,9 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/3_complex_analysis.pdf"> (Complex Integration Refresher)</a>
 *  <a href="https://mhostert.github.io/files/teaching/QM_II/3_scattering_applications.pdf"> Scattering Applications</a>
 *  <a href="https://mhostert.github.io/files/teaching/QM_II/4_identical_particles.pdf"> Identical Particles</a>
-*  Second Quantization
-* Quantized Electromagnetic Field
-* Relativistic Quantum Mechanics
+*  <a href="https://mhostert.github.io/files/teaching/QM_II/4_second_quantization.pdf"> Second Quantization</a>
+<!-- * Quantized Electromagnetic Field -->
+<!-- * Relativistic Quantum Mechanics -->
 
 **Homework Assignments:**
 
