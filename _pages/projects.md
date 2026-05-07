@@ -14,6 +14,14 @@ A Python-based event generator for beyond-the-Standard-Model processes in neutri
 
 ---
 
+## NEPTUNE
+
+DarkNews-based generator for neutrino-electron and neutrino trident scattering based on [this paper](https://arxiv.org/abs/1807.10973) (*preliminary*)
+
+[![NEPTUNE](https://img.shields.io/badge/Github-NEPTUNE-lightcyan.svg?logo=GitHub&logoColor=white)](https://github.com/mhostert/neptune)
+
+---
+
 ## Heavy Neutrino Limits
 
 A database of limits on heavy neutrinos. A complete description can be found on Github.

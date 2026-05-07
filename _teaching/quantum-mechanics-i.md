@@ -1,8 +1,8 @@
 ---
-title: "Quantum Mechanics II"
+title: "Quantum Mechanics I"
 collection: teaching
 type: "Graduate Course"
-permalink: /teaching/quantum-mechanics-ii/
+permalink: /teaching/quantum-mechanics-i/
 venue: "University of Iowa, Department of Physics and Astronomy"
 date: 2026-01-01
 location: "Iowa City, IA"
@@ -11,10 +11,13 @@ show_pagination: false
 
 The most up to date information will be available on the UI ICON page.
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/Syllabus.pdf">Syllabus</a> / <a href="https://mhostert.github.io/files/teaching/QM_II/0_Reading_List.pdf"> Reading List</a> / <a href="https://mhostert.github.io/files/teaching/QM_II/0_Course_Introduction.pdf"> Course Introduction </a>
+**Under Construction for Fall 2026**
+
+* <a href="https://mhostert.github.io/files/teaching/QM_I/Syllabus.pdf">Syllabus</a>
+ <!-- / <a href="https://mhostert.github.io/files/teaching/QM_II/0_Reading_List.pdf"> Reading List</a> / <a href="https://mhostert.github.io/files/teaching/QM_I/0_Course_Introduction.pdf"> Course Introduction </a> -->
 
 **Notes:**
-
+<!-- 
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_review_notes.pdf"> Review Notes</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_time_evolution_v3.pdf"> Time Evolution</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_II/1_greens_functions.pdf"> Green's Functions</a>
@@ -35,11 +38,11 @@ The most up to date information will be available on the UI ICON page.
 *  <a href="https://mhostert.github.io/files/teaching/QM_II/4_second_quantization.pdf"> Second Quantization</a>
 *  <a href="https://mhostert.github.io/files/teaching/QM_II/4_fermi_gas.pdf"> Fermi Gas</a>
 *  <a href="https://mhostert.github.io/files/teaching/QM_II/4_relativistic_fields.pdf"> Relativistic Quantum Fields</a>
-*  <a href="https://mhostert.github.io/files/teaching/QM_II/4_dirac_equation.pdf"> Dirac Equation</a>
+*  <a href="https://mhostert.github.io/files/teaching/QM_II/4_dirac_equation.pdf"> Dirac Equation</a> -->
 
 **Homework Assignments:**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/HW_1.pdf">HW 1: Probability densities and currents</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_1_solved_v2.pdf">solutions</a>)
+<!-- * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_1.pdf">HW 1: Probability densities and currents</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_1_solved_v2.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_v2.pdf">HW 2: Variational method for anionic hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_2_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_v3.pdf">HW 3: WKB quantization conditions</a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_3_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_4.pdf">HW 4: Relativistic correction to hydrogen</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_4_solved_v2.pdf">solutions</a>)
@@ -50,16 +53,16 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_9.pdf">HW 9: Scattering and Identical Particles</a>  (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_9_solved_v2.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_10_solved.pdf">HW 10: Exchange Force </a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_10_solved.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/HW_11.pdf">HW 11: Scalar Field </a> (<a href="https://mhostert.github.io/files/teaching/QM_II/HW_11_solved.pdf">solutions</a>)
-
+ -->
 
 **Exams**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/exam_midterm_1.pdf"> Midterm 1</a> (solutions in class)
+<!-- * <a href="https://mhostert.github.io/files/teaching/QM_II/exam_midterm_1.pdf"> Midterm 1</a> (solutions in class)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/exam_midterm_2_v2.pdf"> Midterm 2</a> (solutions in class)
-* Final exam 1
+* Final exam 1 -->
 
 **Review Problem Sets:**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger's equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>)
+<!-- * <a href="https://mhostert.github.io/files/teaching/QM_II/problems_1.pdf"> Problems 1</a>) Schrödinger's equation in different bases (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_1.pdf">solutions</a>)
 * <a href="https://mhostert.github.io/files/teaching/QM_II/problems_2.pdf"> Problems 2</a>) Time evolution (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_2.pdf">solutions</a>)
-* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_3.pdf"> Problems 3</a>) Propagators (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_3.pdf">solutions</a>)
+* <a href="https://mhostert.github.io/files/teaching/QM_II/problems_3.pdf"> Problems 3</a>) Propagators (<a href="https://mhostert.github.io/files/teaching/QM_II/solved_problems_3.pdf">solutions</a>) -->

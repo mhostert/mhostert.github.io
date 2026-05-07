@@ -6,6 +6,13 @@ author_profile: true
 ---
 
 
+### [Quantum Mechanics I](/teaching/quantum-mechanics-i/)
+
+Graduate course in advanced quantum mechanics.
+
+**Fall 2026** - PHYS:5741
+
+---
 ### [Quantum Mechanics II](/teaching/quantum-mechanics-ii/)
 
 Graduate course in advanced quantum mechanics.
