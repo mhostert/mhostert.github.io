@@ -3,9 +3,13 @@ collection: talks
 talk_number: "109"
 id_for_sorting: "0109"
 permalink: /talks/0109
-title: "Theory and Phenomenology of Sterile Neutrinos" 
+title: "Sterile Neutrino Theory " 
 type: "plenary talk"
 venue: "Neutrino 2026 (upcoming)"
 date: "06/2026"
 location: "USA"
+link: True 
+talk_url: https://indico.global/event/15740/ 
 ---
+
+[More information here](https://indico.global/event/15740/)

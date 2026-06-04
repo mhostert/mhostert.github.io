@@ -21,7 +21,7 @@ For more, see our [group members](/group/) and our [neutrino journal club](https
 ---
 ### Teaching 
 
-Currently: [Quantum Mechanics II — Spring 2026](/teaching/quantum-mechanics-ii/)
+Currently: [Quantum Mechanics I — Fall 2026](/teaching/quantum-mechanics-i/)
 
 ---
 ### Opportunities for Students

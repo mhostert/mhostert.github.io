@@ -8,4 +8,8 @@ type: "lectures"
 venue: "International Neutrino Summer School 2026 (upcoming)"
 date: "06/2026"
 location: "USA"
+link: True 
+talk_url: https://indico.global/event/16507/ 
 ---
+
+[More information here](https://indico.global/event/16507/)

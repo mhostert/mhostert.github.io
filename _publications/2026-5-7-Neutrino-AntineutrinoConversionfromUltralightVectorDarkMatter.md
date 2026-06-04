@@ -1,7 +1,7 @@
 ---
 title: 'Neutrino-Antineutrino Conversion from Ultralight Vector Dark Matter'
 pub_number: 1
-authors: Asher Berlin, Rodolfo Capdevilla, Ting Cheng, Matheus Hostert, Pedro A.N. Machado
+authors:  Asher Berlin,  Rodolfo Capdevilla,  Ting Cheng,  Matheus Hostert,  Pedro A.N. Machado
 collection: publication
 permalink: /publication/2026-5-7-Neutrino-AntineutrinoConversionfromUltralightVectorDarkMatter
 date: 2026-5-7
