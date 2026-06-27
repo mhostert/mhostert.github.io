@@ -160,7 +160,16 @@ def generate_publications() -> None:
 
     # Renumber all publications by date (most recent = 1) so that
     # force-included entries get correct pub_number values.
-    all_pubs = sorted(glob.glob(f"{PUBS_DIR}/*.md"), reverse=True)
+    #
+    # The numbers must match the order the page actually displays
+    # (_pages/publications.md does `site.publications | reverse`). Jekyll
+    # orders a collection by (date, path) ascending, and the page reverses
+    # that, so replicate it here: sort by (parsed date, filename) ascending
+    # then reverse. A plain string sort of the filenames is WRONG because the
+    # dates aren't zero-padded ("2025-9-17" sorts after "2025-12-19" as text).
+    all_pubs = glob.glob(f"{PUBS_DIR}/*.md")
+    all_pubs.sort(key=lambda fp: (pub_date_key(fp), fp))
+    all_pubs.reverse()
     for i, fp in enumerate(all_pubs, start=1):
         fm = read_frontmatter(fp)
         if fm.get("pub_number") != i:
@@ -177,6 +186,23 @@ def generate_publications() -> None:
 # ---------------------------------------------------------------------------
 # Frontmatter helpers
 # ---------------------------------------------------------------------------
+
+
+def pub_date_key(filepath: str) -> tuple[int, int, int]:
+    """Return a (year, month, day) sort key from a publication's `date` field.
+
+    Used to order publications by real calendar date (not by the unpadded
+    date string in the filename). Unparseable dates sort last.
+    """
+    fm = read_frontmatter(filepath)
+    raw = str(fm.get("date", "")).strip("'\"")
+    try:
+        parts = [int(p) for p in raw.split("-")[:3]]
+    except ValueError:
+        return (0, 0, 0)
+    while len(parts) < 3:
+        parts.append(0)
+    return (parts[0], parts[1], parts[2])
 
 
 def read_frontmatter(filepath: str) -> dict:
