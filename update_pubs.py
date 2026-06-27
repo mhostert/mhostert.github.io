@@ -50,6 +50,16 @@ MAX_NAUTHORS = 9
 # Each entry is a dict with the same fields as the Jekyll frontmatter.
 FORCE_INCLUDE = [
     {
+        "title": "Probing Long-Lived Particle Production in Muon Decays at the SNS with a Highly Capable Hydrocarbon Detector",
+        "authors": "PROSPECT Collaboration",
+        "date": "2026-6-17",
+        "venue": "preprint",
+        "eprint": "2606.19299",
+        "paperurl": "https://arxiv.org/abs/2606.19299",
+        "citation": "Probing Long-Lived Particle Production in Muon Decays at the SNS with a Highly Capable Hydrocarbon Detector, PROSPECT Collaboration, arXiv:2606.19299",
+        "citation_notitle": "PROSPECT Collaboration, ",
+    },
+    {
         "title": "First Search for Dark Sector $e^+e^-$ Explanations of the MiniBooNE Anomaly at MicroBooNE",
         "authors": "MicroBooNE Collaboration",
         "date": "2026-3-27",

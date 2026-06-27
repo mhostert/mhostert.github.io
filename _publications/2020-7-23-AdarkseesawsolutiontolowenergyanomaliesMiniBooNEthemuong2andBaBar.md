@@ -11,5 +11,5 @@ citation: 'A dark seesaw solution to low energy anomalies: MiniBooNE, the muon (
 eprint: '2007.11813'
 abstract: "A recent update from MiniBooNE has strengthened the observed $4.8\\sigma$ excess of $e$-like events. Motivated by this and other notable deviations from standard model predictions, such as the muon $(g-2)$, we propose a solution to low energy anomalies through a dark neutrino sector. The model is renormalizable and can also explain light neutrino masses with an anomaly-free and dark $U(1)^\\prime$ gauge symmetry broken at the GeV scale. Large kinetic mixing leads to s-channel production of heavy neutral leptons at $e^+e^-$ colliders, where we point out and explain a $\\gtrsim 2\\sigma$ excess observed in the BaBar monophoton data. Our model is also compatible with anomalous $e$-like events seen at old accelerator experiments, as well as with an excess of double vertex signatures observed at CCFR."
 fig1: /files/pub_figs/2007.11813.png
-pub_number: 31
+pub_number: 32
 ---
