@@ -7,7 +7,7 @@
     <p class="pub-entry__authors">{{ post.authors }}</p>
     {% endif %}
     <p class="page__meta">
-      {% if post.paperurl %}<a href="{{ post.paperurl }}">arXiv:{{ post.eprint }}</a>{% endif %}{% assign venue_str = post.venue | strip %}{% if venue_str != "" %} | {% assign pub_parts = post.citation_notitle | split: venue_str %}{{ venue_str }}{{ pub_parts.last }}{% endif %}
+      {% if post.paperurl %}<a href="{{ post.paperurl }}">arXiv:{{ post.eprint }}</a>{% endif %}{% assign venue_str = post.venue | strip %}{% if venue_str != "" %} | {% assign pub_parts = post.citation_notitle | split: venue_str %}{{ venue_str }}{% if pub_parts.size > 1 %}{{ pub_parts.last }}{% endif %}{% endif %}
     </p>
   </div>
 
