@@ -16,12 +16,12 @@ These are materials for lectures at the International Neutrino Summer School 202
 I have ported a lot of material from a course I taught in Iowa. Note this is all very much a work in progress...
 
 
-#### Student Projects
+### Student Projects
 
 * <a href="https://mhostert.github.io/files/teaching/INSS2026/BSM_open_ended.pdf">Open ended projects</a> (two different project ideas)
 * <a href="https://mhostert.github.io/files/teaching/INSS2026/BSM_calculations_MH.pdf">Calculation projects</a> (problems on low-scale heavy neutral lepton models and phenomenology)
 
-#### Notes
+### Notes
 
 * <a href="https://mhostert.github.io/files/teaching/INSS2026/natural_units.pdf">Natural Units</a>
 * <a href="https://mhostert.github.io/files/teaching/INSS2026/INSS26_basics.pdf">Basics and the Standard Model</a>

@@ -1,11 +1,7 @@
-from inspyhep import Author
-import os
-import glob
-
-files = glob.glob("../_publications/*.md")
-
-for f in files:
-    os.remove(f)
-
-mh = Author("Matheus.Hostert.1")
-mh.get_markdown_descriptor(max_nauthors=9, path="../_publications/")
+# This script has been merged into update_pubs.py in the project root.
+# Run: python update_pubs.py --generate   (to regenerate publications)
+# Run: python update_pubs.py              (to regenerate + enrich with abstracts/figures)
+raise SystemExit(
+    "pubs_generator.py has been merged into update_pubs.py.\n"
+    "Run: python update_pubs.py --generate"
+)
