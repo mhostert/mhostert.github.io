@@ -13,6 +13,14 @@ Graduate course in advanced quantum mechanics.
 **Fall 2026** - PHYS:5741
 
 ---
+
+### [Internation Neutrino Summer School](/teaching/INSS2026/)
+
+Summer school at UC Santa Barbara.
+
+**Summer 2026** - [INSS 2026](https://indico.global/event/16507/overview)
+
+---
 ### [Quantum Mechanics II](/teaching/quantum-mechanics-ii/)
 
 Graduate course in advanced quantum mechanics.

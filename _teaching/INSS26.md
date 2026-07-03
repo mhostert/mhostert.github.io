@@ -1,0 +1,32 @@
+---
+title: "INSS 2026"
+collection: teaching
+type: "Summer School"
+permalink: /teaching/inss2026/
+venue: "International Neutrino Summer School 2026"
+date: 2026-01-01
+location: "Iowa City, IA"
+show_pagination: false
+---
+
+## Beyond the Standard Model and Dark Sectors
+
+These are materials for lectures at the International Neutrino Summer School 2026: https://indico.global/event/16507/.
+
+I have ported a lot of material from a course I taught in Iowa. Note this is all very much a work in progress...
+
+
+#### Student Projects
+
+* <a href="https://mhostert.github.io/files/teaching/INSS2026/BSM_open_ended.pdf">Open ended projects</a> (two different project ideas)
+* <a href="https://mhostert.github.io/files/teaching/INSS2026/BSM_calculations_MH.pdf">Calculation projects</a> (problems on low-scale heavy neutral lepton models and phenomenology)
+
+#### Notes
+
+* <a href="https://mhostert.github.io/files/teaching/INSS2026/natural_units.pdf">Natural Units</a>
+* <a href="https://mhostert.github.io/files/teaching/INSS2026/INSS26_basics.pdf">Basics and the Standard Model</a>
+* <a href="https://mhostert.github.io/files/teaching/INSS2026/INSS26_numasses.pdf">Neutrino Mass Models</a>
+* <a href="https://mhostert.github.io/files/teaching/INSS2026/INSS26_darksectors.pdf">Dark Sectors</a>
+
+A solved problem to understand chirality and helicity using the cosmic neutrino background (C$\nu$B):
+* <a href="https://mhostert.github.io/files/teaching/INSS2026/INSS26_CnuB.pdf">CnuB</a>
