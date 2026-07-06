@@ -14,7 +14,7 @@ Graduate course in advanced quantum mechanics.
 
 ---
 
-### [Internation Neutrino Summer School](/teaching/INSS2026/)
+### [Internation Neutrino Summer School](/teaching/inss2026/)
 
 Summer school at UC Santa Barbara.
 

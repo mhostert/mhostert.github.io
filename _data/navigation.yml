@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "Group"
+    url: /group/
+
   - title: "CV"
     url: /cv/
 
@@ -11,9 +14,6 @@ main:
 
   - title: "Talks"
     url: /talks/
-
-  - title: "Group"
-    url: /group/
 
   - title: "Projects"
     url: /projects/
