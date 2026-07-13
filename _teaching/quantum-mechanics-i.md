@@ -13,4 +13,4 @@ The most up to date information will be available on the UI ICON page.
 
 **Under Construction for Fall 2026**
 
-* <a href="https://mhostert.github.io/files/teaching/QM_I/Syllabus.pdf">Syllabus</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/CLAS-Syllabus-Fall-2026-QM-I.pdf">Tentative syllabus</a>
