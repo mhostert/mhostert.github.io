@@ -14,6 +14,15 @@ A Python-based event generator for beyond-the-Standard-Model processes in neutri
 
 ---
 
+## MINT
+
+A Python-based event generator for muon decay neutrinos at muon storage rings and muon colliders. See the accompanying paper on [arXiv](https://arxiv.org/abs/2608.02718).
+
+[![MINT](https://img.shields.io/badge/Github-MINT-lightcyan.svg?logo=GitHub&logoColor=white)](https://github.com/jchoi55/MINT)
+[![DarkNews-generator](https://img.shields.io/badge/PyPI-MINT-pink.svg?logo=PyPI&logoColor=white)](https://pypi.org/project/mint-muc)
+
+---
+
 ## NEPTUNE
 
 DarkNews-based generator for neutrino-electron and neutrino trident scattering based on [this paper](https://arxiv.org/abs/1807.10973) (*preliminary*)
