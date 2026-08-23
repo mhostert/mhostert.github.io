@@ -147,8 +147,8 @@
 
 .group-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 1.8em 1.2em;
+  grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
+  gap: 2em 1.4em;
   margin-bottom: 2.5em;
 }
 
@@ -159,8 +159,8 @@
   text-align: center;
 
   .group-member__photo {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid $border-color;
@@ -188,11 +188,11 @@
   .group-member__info {
     h3 {
       margin: 0 0 0.15em;
-      font-size: $type-size-6;
+      font-size: $type-size-5;
     }
     p {
       margin: 0;
-      font-size: $type-size-7;
+      font-size: $type-size-6;
       color: mix(#000, $gray, 30%);
     }
   }

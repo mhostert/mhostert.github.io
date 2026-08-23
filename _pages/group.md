@@ -21,7 +21,7 @@ author_profile: true
   </div>
 </div> -->
 
-<!-- --- -->
+---
 
 ## Postdoctoral Researchers
 
@@ -29,7 +29,7 @@ author_profile: true
   <div class="group-member">
     <div class="group-member__photo">
       <a href="https://physics.uiowa.edu/people/stephan-meighen-berger">
-        <img src="https://physics.uiowa.edu/sites/physics.uiowa.edu/files/styles/square__1024_x_1024/public/externals/3/e/3eabd63632540e6ba214d7e040ea0c45.png?itok=mqT_scgP" alt="Stephan Meighen-Berger">
+        <img src="/images/SMB_profile.png" alt="Stephan Meighen-Berger">
       </a>
     </div>
     <div class="group-member__info">
@@ -39,15 +39,17 @@ author_profile: true
   </div>
 
   <div class="group-member">
-    <div class="group-member__photo group-member__photo--placeholder">AK</div>
+    <div class="group-member__photo">
+      <img src="/images/AK_profile.png" alt="Aparajitha Karthikeyan">
+    </div>
     <div class="group-member__info">
       <h3>Aparajitha Karthikeyan</h3>
-      <p>Neutrino Theory Network Fellow (starting Fall 2026)</p>
+      <p>Neutrino Theory Network Fellow</p>
     </div>
   </div>
 </div>
 
----
+  ---
 
 ## Ph.D. Students
 
@@ -77,10 +79,20 @@ author_profile: true
   </div>
 </div>
 
----
-<!-- 
-## Neutrino Friends at Iowa
+<!-- --- -->
 
+<p style="margin: 1.5rem 0; padding: 0.9rem 1rem; border-left: 4px solid #0791db; background: #d9f5ff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); font-weight: 700; letter-spacing: 0.02em; border-radius: 0.5rem;">
+  <!-- <span style="display: inline-block; margin-right: 0.5rem; padding: 0.2rem 0.55rem; background: #d97706; color: #fff; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; border-radius: 0.3rem;">Internal</span> -->
+  For group documents and resources, see the <a href="https://iowa.sharepoint.com/sites/NeutrinosIowa/">internal group page</a>.
+</p>
+
+
+See also the University of Iowa High-Energy Theory groups led by Profs. <a href="https://reno.sites.uiowa.edu/">Mary Hall (Hallsie) Reno</a>, <a href="https://meurice.sites.uiowa.edu/">Yannick Meurice</a>, <a href="https://physics.uiowa.edu/people/vincent-rodgers">Vincent Rodgers</a>, and High-Energy Experiment groups led by Profs. <a href="https://physics.uiowa.edu/people/yasar-onel">Yasar Onel</a> and <a href="https://physics.uiowa.edu/people/jane-m-nachtman">Jane Nachtman</a>.
+
+
+
+<!-- ## Neutrino Friends at Iowa -->
+<!-- 
 <div class="group-grid">
   <div class="group-member">
     <div class="group-member__photo">
@@ -141,4 +153,4 @@ author_profile: true
       <p>Ph.D. Student</p>
     </div>
   </div>
-</div> -->
+</div>  -->
