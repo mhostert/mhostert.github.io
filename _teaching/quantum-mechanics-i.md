@@ -25,7 +25,12 @@ The most up to date information will be available on the UI ICON page.
 
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_natural_units.pdf">Natural Units</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_dirac_notation.pdf">Dirac notation</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_I/1_time_evolution.pdf">Time evolution</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/1_two_level_v2.pdf">Two-level system</a>
+
+<!-- * <a href="https://mhostert.githu`b.io/files/teaching/QM_I/1_time_evolution.pdf">Time evolut`ion</a> -->
 
 
 
+**Homeworks:**
+* <a href="https://mhostert.github.io/files/teaching/QM_I/HW_1.pdf">HW 1</a> (Compatible, incompatible observables, and Schrõdinger's equation in different bases)
+* <a href="https://mhostert.github.io/files/teaching/QM_I/HW_2.pdf">HW 2</a> (Three-level systems)
