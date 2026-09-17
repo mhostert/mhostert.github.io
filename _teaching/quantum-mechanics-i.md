@@ -35,5 +35,5 @@ The most up to date information will be available on the UI ICON page.
 
 **Homeworks:**
 * <a href="https://mhostert.github.io/files/teaching/QM_I/HW_1.pdf">HW 1</a> (Compatible, incompatible observables, and Schrõdinger's equation in different bases), <a href="https://mhostert.github.io/files/teaching/QM_I/HW_1_solutions.pdf">solutions</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_I/HW_2.pdf">HW 2</a> (Three-level systems)
+* <a href="https://mhostert.github.io/files/teaching/QM_I/HW_2.pdf">HW 2</a> (Three-level systems),  <a href="https://mhostert.github.io/files/teaching/QM_I/HW_2_solutions.pdf">solutions</
 * <a href="https://mhostert.github.io/files/teaching/QM_I/HW_3.pdf">HW 3</a> (Stern-Gerlach)
