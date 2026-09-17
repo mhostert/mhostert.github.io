@@ -27,6 +27,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_dirac_notation.pdf">Dirac notation</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_two_level_v2.pdf">Two-level system</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_stern_gerlach.pdf">Stern-Gerlach</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/1_momentum_generator.pdf">Translations</a>
 
 <!-- * <a href="https://mhostert.githu`b.io/files/teaching/QM_I/1_time_evolution.pdf">Time evolut`ion</a> -->
 
