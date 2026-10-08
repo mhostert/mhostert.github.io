@@ -28,6 +28,9 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_two_level_v2.pdf">Two-level system</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_stern_gerlach.pdf">Stern-Gerlach</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/1_momentum_generator.pdf">Translations</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/2_time_evolution.pdf">Time Evolution</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/2_ehrenfest_theorem.pdf">Ehrenfast Theorem</a> (Read S&N Sec. 2.2.4)
+* <a href="https://mhostert.github.io/files/teaching/QM_I/2_time_ordering.pdf">Time Ordered Evolution</a>
 
 <!-- * <a href="https://mhostert.githu`b.io/files/teaching/QM_I/1_time_evolution.pdf">Time evolut`ion</a> -->
 
@@ -38,4 +41,5 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_I/HW_2.pdf">HW 2</a> (Three-level systems), <a href="https://mhostert.github.io/files/teaching/QM_I/HW_2_solutions.pdf">solutions</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/HW_3.pdf">HW 3</a> (Stern-Gerlach), <a href="https://mhostert.github.io/files/teaching/QM_I/HW_3_solutions.pdf">solutions</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/HW_4.pdf">HW 4</a> (Unitary Operators and Complex Momentum), <a href="https://mhostert.github.io/files/teaching/QM_I/HW_4_solutions.pdf">solutions</a>
-* <a href="https://mhostert.github.io/files/teaching/QM_I/HW_5.pdf">HW 5</a> (Neutrino oscillations)
+* <a href="https://mhostert.github.io/files/teaching/QM_I/HW_5.pdf">HW 5</a> (Neutrino oscillations), <a href="https://mhostert.github.io/files/teaching/QM_I/HW_5_solutions.pdf">solutions</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/HW_6.pdf">HW 6</a> (Harmonic Oscillator)

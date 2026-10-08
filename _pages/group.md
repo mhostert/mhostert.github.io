@@ -79,6 +79,20 @@ author_profile: true
   </div>
 </div>
 
+
+<div class="group-grid">
+  <div class="group-member">
+    <div class="group-member__photo">
+      <a href="https://physics.uiowa.edu/people/sean-chisholm">
+        <img src="https://physics.uiowa.edu/sites/physics.uiowa.edu/files/styles/square__1920_x_1920/public/2026-09/2026_09_18_Sean_Chisholm_003_0.jpg?h=6fb97547&itok=sOBPl6p5" alt="Sean Chisolm">
+      </a>
+    </div>
+    <div class="group-member__info">
+      <h3><a href="https://physics.uiowa.edu/people/sean-chisholm">Sean Chisolm</a></h3>
+      <p>Ph.D. Student</p>
+    </div>
+  </div>
+
 <!-- --- -->
 
 <p style="margin: 1.5rem 0; padding: 0.9rem 1rem; border-left: 4px solid #0791db; background: #d9f5ff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); font-weight: 700; letter-spacing: 0.02em; border-radius: 0.5rem;">
