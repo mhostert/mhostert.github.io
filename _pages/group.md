@@ -79,7 +79,6 @@ author_profile: true
   </div>
 </div>
 
-
 <div class="group-grid">
   <div class="group-member">
     <div class="group-member__photo">
@@ -92,6 +91,7 @@ author_profile: true
       <p>Ph.D. Student</p>
     </div>
   </div>
+</div>
 
 <!-- --- -->
 
