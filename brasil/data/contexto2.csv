@@ -1,0 +1,25 @@
+chave,valor,unidade,fonte
+selic_atual_2026,13.75,% ao ano (meta vigente desde 16/09/2026),Banco Central - Copom
+deficit_primario_2023_bi,249.1,R$ bilhões (setor público consolidado em 2023),Banco Central - Estatísticas Fiscais
+deficit_primario_2025_bi,55,R$ bilhões (setor público consolidado em 2025),Banco Central - Estatísticas Fiscais
+deficit_nominal_2024_pct,8.45,% do PIB (déficit nominal em 2024),Banco Central - Estatísticas Fiscais
+juros_pct_pib_2s2025,8.9,% do PIB (despesa com juros no 2º semestre de 2025),IFI - Relatório de Acompanhamento Fiscal
+inadimplentes_pct_adultos_2025,49.7,% da população adulta (dez/2025),Serasa - Mapa da Inadimplência
+endividamento_familias_2025,49.8,% da renda acumulada em 12 meses (dez/2025),Banco Central - Estatísticas de crédito
+fem_share_2025,44.4,% das mulheres assassinadas em 2025 mortas por razão de gênero,FBSP - Anuário 2026
+estupros_2024,87545,ocorrências de estupro e estupro de vulnerável (recorde),FBSP - Anuário 2025
+estupros_2025,84388,ocorrências de estupro e estupro de vulnerável,FBSP - Anuário 2026
+operacao_contencao_mortes,120,mortes em dois dias na Operação Contenção (RJ out/2025),FBSP - Anuário 2026
+mdip_sp_var_2024,61,% de alta das mortes por policiais em SP em 2024,FBSP - Anuário 2025
+estelionato_por_hora_2025,258,ocorrências por hora,FBSP - Anuário 2026
+estelionato_processos_2025,63771,processos penais instaurados,FBSP - Anuário 2026
+estelionato_presos_2025,4819,pessoas presas,FBSP - Anuário 2026
+emissoes_fogo_2024,241,MtCO2e emitidas por fogo em 2024 (recorde da série),SEEG 13 - Observatório do Clima
+amazonia_area_queimada_2024,15.8,milhões de hectares queimados na Amazônia em 2024 (recorde),MapBiomas - RAF 2026
+amazonia_area_queimada_2025,3.1,milhões de hectares queimados na Amazônia em 2025 (menor da série),MapBiomas - RAF 2026
+pisa_mat_2012,389,pontos do Brasil em matemática no PISA 2012,OCDE - PISA
+pisa_mat_nivel2_2025,28,% dos estudantes no nível 2 ou acima em matemática,OCDE - PISA 2025
+pisa_faltas_2025,55,% que faltaram ao menos um dia nas duas semanas anteriores à prova,OCDE - PISA 2025
+pisa_leitura_nivel5_2025,1,% no nível 5 ou acima em leitura,OCDE - PISA 2025
+poprua_sp_2025,150958,pessoas em situação de rua no estado de São Paulo (2025),OBPopRua/UFMG
+dengue_vacinas_aplicadas,7.8,milhões de doses da vacina da dengue aplicadas em 2024-2025,Ministério da Saúde

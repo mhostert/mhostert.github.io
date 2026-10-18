@@ -1,0 +1,1479 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Brasil 2018–2026: o que melhorou (e o que não)</title>
+<meta name="description" content="Painel com indicadores públicos do Brasil (IBGE, INPE, Inep, Ministério da Saúde, FBSP, Banco Central, INSS): o que melhorou, o que piorou, professores e pensionistas, com cada número rastreável até a fonte.">
+<meta property="og:title" content="Brasil 2018–2026: o que melhorou (e o que não)">
+<meta property="og:description" content="Indicadores oficiais, cada número clicável até a fonte, com o lado oposto escrito junto.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%A7%F0%9F%87%B7%3C/text%3E%3C/svg%3E">
+<style>
+:root {
+  color-scheme: light dark;
+  --font-anthropic-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-anthropic-serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+  --cds-font-size-caption: 0.8125rem; --cds-font-size-body: 0.9375rem; --cds-font-size-heading: 1.0625rem; --cds-font-size-title: 1.75rem;
+  --cds-font-weight-medium: 600;
+  --cds-gap-xs: .375rem; --cds-gap-sm: .625rem; --cds-gap-md: 1rem; --cds-gap-lg: 1.5rem; --cds-gap-xl: 2.5rem;
+  --cds-pad-xs: .375rem; --cds-pad-sm: .625rem; --cds-pad-md: .875rem; --cds-pad-lg: 1.25rem;
+  --cds-radius: .625rem; --cds-dur-slow: .3s; --cds-ease-out: ease-out;
+  --color-bg: #f6f5f1; --color-panel: #ffffff; --color-fg: #1b1b1b; --color-fg-muted: #66635c; --color-border-line: #e1dfd8;
+  --color-ok: #1f7a4d; --color-warn: #a86a12; --color-bad: #b3261e;
+  --cds-chart-grid: #ebe9e4; --cds-chart-axis: #c9c6bf; --cds-chart-reference: #8f8c84; --cds-chart-muted: #c9c6bf; --cds-chart-status-critical: #b3261e;
+  --cds-surface-popover: #ffffff; --cds-border: #d6d3cb; --cds-shadow-popover: 0 6px 20px rgba(0,0,0,.14); --cds-text-secondary: #66635c;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --color-bg: #151515; --color-panel: #1f1f1f; --color-fg: #ededed; --color-fg-muted: #a3a09a; --color-border-line: #333;
+    --color-ok: #4fc08a; --color-warn: #e0a84a; --color-bad: #f0665c;
+    --cds-chart-grid: #2a2a2a; --cds-chart-axis: #4a4a4a; --cds-chart-reference: #8a8a8a; --cds-chart-muted: #4a4a4a; --cds-chart-status-critical: #f0665c;
+    --cds-surface-popover: #262626; --cds-border: #3d3d3d; --cds-shadow-popover: 0 6px 20px rgba(0,0,0,.5); --cds-text-secondary: #a3a09a;
+  }
+}
+html, body { margin: 0; background: var(--color-bg); color: var(--color-fg); font-family: var(--font-anthropic-sans); -webkit-text-size-adjust: 100%; }
+#dash-root { padding: 1rem clamp(.75rem, 3vw, 2rem) 3rem; }
+.site-bar { max-width: 74rem; margin: 0 auto .75rem; display: flex; justify-content: space-between; align-items: center; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.site-bar a { color: var(--color-fg); text-decoration: none; }
+.site-bar a:hover { text-decoration: underline; }
+.dash-skeleton { position: relative; min-height: 1em; background: linear-gradient(90deg, var(--color-border-line), var(--color-bg), var(--color-border-line)); background-size: 200% 100%; animation: shimmer 1.4s infinite; border-radius: 4px; color: transparent !important; }
+@keyframes shimmer { 0% { background-position: 200% 0; } 100% { background-position: -200% 0; } }
+[data-source] { cursor: help; text-decoration: underline dotted; text-decoration-color: var(--cds-chart-reference); text-underline-offset: 3px; }
+.br-chart[data-source], .br-tile .br-label span[data-source] { text-decoration: none; }
+.br-chart[data-source] { cursor: default; }
+.src-pop { position: fixed; z-index: 50; max-width: min(26rem, calc(100vw - 2rem)); background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-md); font-size: var(--cds-font-size-caption); color: var(--color-fg); display: none; }
+.src-pop.on { display: block; }
+.src-pop h4 { margin: 0 0 .35rem; font-size: var(--cds-font-size-body); font-weight: 600; }
+.src-pop p { margin: 0 0 .5rem; color: var(--cds-text-secondary); }
+.src-pop .src-row { margin: 0 0 .5rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .75rem; white-space: pre-wrap; word-break: break-word; }
+.src-pop pre { margin: .25rem 0 .5rem; max-height: 14rem; overflow: auto; font-size: .7rem; background: var(--color-bg); padding: .5rem; border-radius: 6px; }
+.src-pop a { color: var(--color-fg); }
+.src-pop .src-close { position: absolute; top: .4rem; right: .6rem; border: 0; background: none; font-size: 1rem; cursor: pointer; color: var(--color-fg-muted); }
+.site-foot { max-width: 74rem; margin: 2rem auto 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.site-foot a { color: var(--color-fg); }
+</style>
+<body>
+<main id="dash-root">
+<div class="site-bar"><a href="/">← mhostert.com</a><span>Painel estático · dados em CSV na pasta <a href="data/">data/</a></span></div>
+<style>
+.br-page { max-width: 74rem; margin-inline: auto; font-family: var(--font-anthropic-sans); color: var(--color-fg); font-variant-numeric: tabular-nums; }
+.br-page b { font-weight: 600; }
+.br-header h1 { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); margin: 0 0 var(--cds-gap-xs); line-height: 1.2; }
+.br-header .br-take { margin: 0; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); max-width: 60rem; }
+.br-nav { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); margin: var(--cds-gap-md) 0 var(--cds-gap-lg); }
+.br-nav a { font-size: var(--cds-font-size-caption); color: var(--color-fg); text-decoration: none; border: 1px solid var(--color-border-line); border-radius: 999px; padding: var(--cds-pad-xs) var(--cds-pad-sm); background: var(--color-panel); }
+.br-nav a:hover { border-color: var(--color-fg-muted); }
+.br-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr)); gap: var(--cds-gap-md); margin-bottom: var(--cds-gap-xl); }
+.br-tile { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-xs); }
+.br-tile .br-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.br-tile .br-num { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.1; }
+.br-tile .br-delta { font-size: var(--cds-font-size-caption); }
+.br-tile .br-delta.good { color: var(--color-ok); }
+.br-tile .br-delta.bad { color: var(--color-bad); }
+.br-section { margin-bottom: var(--cds-gap-xl); }
+.br-section h2 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0 0 var(--cds-gap-xs); padding-top: var(--cds-gap-sm); }
+.br-section .br-lead { margin: 0 0 var(--cds-gap-md); color: var(--color-fg-muted); font-size: var(--cds-font-size-body); max-width: 60rem; }
+.br-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+.br-card { background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); display: flex; flex-direction: column; gap: var(--cds-gap-sm); }
+.br-card h3 { font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); margin: 0; }
+.br-card .br-note { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; }
+.br-card .br-text { font-size: var(--cds-font-size-body); margin: 0; }
+.br-chart { position: relative; min-height: 260px; width: 100%; }
+.br-chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.br-tip { position: absolute; display: none; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); pointer-events: none; z-index: 2; white-space: nowrap; }
+.br-tip .br-tip-x { color: var(--cds-text-secondary); margin-bottom: 2px; }
+.br-tip .br-tip-row { display: flex; align-items: center; gap: 6px; }
+.br-tip .br-sw { width: 8px; height: 8px; border-radius: 2px; display: inline-block; }
+.br-seg { display: inline-flex; flex-wrap: wrap; gap: 2px; border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: 2px; align-self: flex-start; }
+.br-seg button { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg); background: transparent; border: 0; border-radius: calc(var(--cds-radius) - 2px); padding: 2px 8px; cursor: pointer; }
+.br-seg button[aria-pressed="true"] { background: var(--color-bg); border: 1px solid var(--color-border-line); }
+.br-contra { border-left: 3px solid var(--color-warn); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg); margin: 0; background: var(--color-bg); border-radius: 0 var(--cds-radius) var(--cds-radius) 0; }
+.br-contra b { color: var(--color-warn); }
+.br-list { margin: 0; padding-left: 1.2rem; font-size: var(--cds-font-size-body); }
+.br-list li { margin-bottom: var(--cds-gap-xs); }
+.br-sources { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: 0; padding-left: 1.2rem; }
+.br-sources li { margin-bottom: 4px; }
+.br-sources a { color: var(--color-fg); }
+.br-fail { display: flex; align-items: center; justify-content: center; gap: 6px; min-height: 260px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+.br-fail::before { content: ""; width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+.br-foot { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); margin: var(--cds-gap-lg) 0 0; }
+
+.br-tabs { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs); border-bottom: 1px solid var(--color-border-line); margin: var(--cds-gap-md) 0 var(--cds-gap-lg); }
+.br-tabs button { font: inherit; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); color: var(--color-fg-muted); background: transparent; border: 0; border-bottom: 3px solid transparent; padding: var(--cds-pad-sm) var(--cds-pad-md); cursor: pointer; margin-bottom: -1px; }
+.br-tabs button[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); }
+.br-tabs button.br-tab-bad[aria-selected="true"] { border-bottom-color: var(--color-bad); }
+.br-tabs button.br-tab-good[aria-selected="true"] { border-bottom-color: var(--color-ok); }
+.br-tab[hidden] { display: none; }
+.br-tab-lead { margin: 0 0 var(--cds-gap-md); color: var(--color-fg-muted); font-size: var(--cds-font-size-body); max-width: 60rem; }
+.br-atenua { border-left: 3px solid var(--color-ok); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); color: var(--color-fg); margin: 0; background: var(--color-bg); border-radius: 0 var(--cds-radius) var(--cds-radius) 0; }
+.br-atenua b { color: var(--color-ok); }
+
+.br-period { display: flex; flex-wrap: wrap; align-items: center; gap: var(--cds-gap-sm); margin: 0 0 var(--cds-gap-sm); }
+.br-period-label { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+.br-period-note { margin: 0 0 var(--cds-gap-lg); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); max-width: 60rem; }
+.br-period-note span { display: none; }
+.br-period-note span.on { display: inline; }
+.br-auto { margin: 0; font-size: var(--cds-font-size-body); font-family: var(--font-anthropic-sans); }
+.br-auto b { font-variant-numeric: tabular-nums; }
+.br-page[data-periodo="2018-2022"] .br-text, .br-page[data-periodo="2018-2022"] .br-contra, .br-page[data-periodo="2018-2022"] .br-atenua { display: none; }
+.br-page[data-periodo="2022-2026"] .br-auto { display: none; }
+.br-nodata { display: flex; align-items: center; justify-content: center; min-height: 260px; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); text-align: center; padding: 0 var(--cds-pad-md); }
+</style>
+<div class="br-page" data-periodo="2022-2026">
+  <header class="br-header" id="topo">
+    <h1>Brasil 2022–2026: o que melhorou (e o que não)</h1>
+    <p class="br-take">Duas abas, mesmo critério: indicadores de órgãos públicos, cada número clicável até a fonte, e em cada tema o lado oposto — o contraponto do que melhorou e o atenuante do que piorou.</p>
+    <div class="br-tabs" role="tablist" aria-label="Abas">
+      <button type="button" role="tab" id="tabbtn-melhorou" class="br-tab-good" aria-selected="true" aria-controls="tab-melhorou">O que melhorou</button>
+      <button type="button" role="tab" id="tabbtn-piorou" class="br-tab-bad" aria-selected="false" aria-controls="tab-piorou">O que piorou</button>
+      <button type="button" role="tab" id="tabbtn-professores" aria-selected="false" aria-controls="tab-professores">Professores</button>
+      <button type="button" role="tab" id="tabbtn-pensionistas" aria-selected="false" aria-controls="tab-pensionistas">Pensionistas</button>
+    </div>
+    <div class="br-period" role="group" aria-label="Período">
+      <span class="br-period-label">Período:</span>
+      <div class="br-seg" id="seg-periodo">
+        <button type="button" data-v="2018-2022" aria-pressed="false">2018–2022</button>
+        <button type="button" data-v="2022-2026" aria-pressed="true">2022–2026</button>
+        <button type="button" data-v="2018-2026" aria-pressed="false">Série completa</button>
+      </div>
+    </div>
+    <p class="br-period-note" id="period-note">
+      <span data-p="2018-2022">Janela anterior: 2018 é o ano-base e 2019–2022 corresponde ao governo anterior. Inclui a pandemia, que distorce desemprego, PIB, pobreza, expectativa de vida e vacinação em 2020–2021. Os textos e contrapontos do painel descrevem 2022–2026; aqui cada cartão mostra apenas o início → fim do período. Séries sem dado comparável antes de 2022 (roubos de celular, crianças zero dose, área queimada, estupros) aparecem incompletas. Para o Ideb, bienal, o período começa em 2017.</span>
+      <span data-p="2022-2026" class="on">Janela atual: 2022 é o ano-base (último ano da gestão anterior) e o fim é o último dado disponível, de 2025 ou 2026.</span>
+      <span data-p="2018-2026">Série completa, 2018 a 2026. A linha tracejada marca a passagem de 2022 para 2023. Os textos e contrapontos descrevem 2022–2026; a linha “início → fim” de cada cartão cobre todo o período.</span>
+    </p>
+
+  </header>
+
+  <div class="br-tab" id="tab-melhorou" role="tabpanel" aria-labelledby="tabbtn-melhorou">
+    <p class="br-tab-lead">Dez indicadores em cinco áreas que melhoraram entre 2022 e 2025/2026, cada um com o seu contraponto.</p>
+    <nav class="br-nav" aria-label="Seções">
+      <a href="#economia">Economia</a><a href="#seguranca">Segurança pública</a><a href="#ambiente">Meio ambiente</a><a href="#educacao">Educação</a><a href="#saude">Saúde</a><a href="#fontes">Fontes e método</a>
+    </nav>
+  <section class="br-tiles" id="resumo" aria-label="Resumo">
+    <div class="br-tile" id="tile-desemprego" data-src="desemprego" data-field-val="taxa_pct" data-calc="c_desemprego" data-dfield="delta_pp" data-better="down">
+      <span class="br-label">Desemprego, média anual (<span class="br-anofim" data-source="c_desemprego" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="desemprego" data-field="taxa_pct" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_desemprego" data-field="delta_pp" data-where="periodo=2022-2026">—</span> p.p. vs <span data-source="c_desemprego" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-pobreza" data-src="pobreza" data-field-val="pobreza_pct" data-calc="c_pobreza" data-dfield="delta_pobreza_pp" data-better="down">
+      <span class="br-label">Pobreza (<span class="br-anofim" data-source="c_pobreza" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="pobreza" data-field="pobreza_pct" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_pobreza" data-field="delta_pobreza_pp" data-where="periodo=2022-2026">—</span> p.p. vs <span data-source="c_pobreza" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-mvi" data-src="mvi" data-field-val="taxa_100k" data-calc="c_mvi" data-dfield="var_taxa_pct" data-better="down">
+      <span class="br-label">Mortes violentas por 100 mil (<span class="br-anofim" data-source="c_mvi" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="mvi" data-field="taxa_100k" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_mvi" data-field="var_taxa_pct" data-where="periodo=2022-2026">—</span>% vs <span data-source="c_mvi" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-amazonia" data-src="prodes" data-field-val="amazonia_km2" data-calc="c_prodes" data-dfield="amazonia_var_pct" data-better="down">
+      <span class="br-label">Desmatamento Amazônia, km² (<span class="br-anofim" data-source="c_prodes" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="prodes" data-field="amazonia_km2" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_prodes" data-field="amazonia_var_pct" data-where="periodo=2022-2026">—</span>% vs <span data-source="c_prodes" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-analf" data-src="analfabetismo" data-field-val="taxa_pct" data-calc="c_analf" data-dfield="delta_pp" data-better="down">
+      <span class="br-label">Analfabetismo 15+ (<span class="br-anofim" data-source="c_analf" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="analfabetismo" data-field="taxa_pct" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_analf" data-field="delta_pp" data-where="periodo=2022-2026">—</span> p.p. vs <span data-source="c_analf" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-vida" data-src="expectativa" data-field-val="expectativa_vida_anos" data-calc="c_expect" data-dfield="delta" data-better="up">
+      <span class="br-label">Expectativa de vida, anos (<span class="br-anofim" data-source="c_expect" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="expectativa" data-field="expectativa_vida_anos" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_expect" data-field="delta" data-where="periodo=2022-2026">—</span> anos vs <span data-source="c_expect" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+  </section>
+
+  <!-- ECONOMIA -->
+  <section class="br-section" id="economia">
+    <h2>Economia</h2>
+    <p class="br-lead">Mercado de trabalho e renda melhoraram de forma consistente; o crescimento do PIB, não — desacelerou em 2025 sob juros altos.</p>
+    <div class="br-grid">
+      <div class="br-card" id="card-desemprego">
+        <h3>1. Taxa de desemprego (média anual)</h3>
+        <p class="br-note">PNAD Contínua/IBGE. Proporção da força de trabalho desocupada, média dos quatro trimestres. Série reponderada pelo Censo 2022.</p>
+        <div class="br-chart dash-skeleton" id="ch-desemprego" data-source="desemprego"></div>
+        <p class="br-auto" data-auto="ch-desemprego"><span class="br-auto-main"><b>Taxa de desemprego</b>, <span data-source="c_desemprego" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_desemprego" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_desemprego" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_desemprego" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_desemprego" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">De <b><span data-source="desemprego" data-field="taxa_pct" data-where="ano=2022">—</span>%</b> em 2022 para <b><span data-source="desemprego" data-field="taxa_pct" data-where="ano=2025">—</span>%</b> em 2025, a menor média anual da série iniciada em 2012; ocupação e massa de rendimento também bateram recordes.</p>
+        <p class="br-contra"><b>Contraponto.</b> A queda convive com informalidade ainda alta (<span data-source="contexto" data-field="valor" data-where="chave=informalidade_2025">—</span>% dos ocupados em 2025) e com subutilização elevada no Norte e Nordeste, segundo o próprio IBGE.</p>
+      </div>
+      <div class="br-card" id="card-pobreza">
+        <h3>2. Pobreza, extrema pobreza e desigualdade</h3>
+        <p class="br-note">Síntese de Indicadores Sociais/IBGE. Linhas do Banco Mundial: US$ 6,85/dia (pobreza) e US$ 2,15/dia (extrema pobreza), em paridade de poder de compra.</p>
+        <div class="br-seg" role="group" aria-label="Série" id="seg-pobreza">
+          <button type="button" data-v="taxas" aria-pressed="true">Pobreza e extrema pobreza</button>
+          <button type="button" data-v="gini" aria-pressed="false">Índice de Gini</button>
+        </div>
+        <div class="br-chart dash-skeleton" id="ch-pobreza" data-source="pobreza"></div>
+        <p class="br-auto" data-auto="ch-pobreza"><span class="br-auto-main"><b>Pobreza</b>, <span data-source="c_pobreza" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_pobreza" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_pobreza" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_pobreza" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_pobreza" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">Pobreza caiu <b><span data-source="c_pobreza" data-field="delta_pobreza_pp" data-row="0" data-abs="1">—</span> p.p.</b> e extrema pobreza <b><span data-source="c_pobreza" data-field="delta_extrema_pp" data-row="0" data-abs="1">—</span> p.p.</b> entre 2022 e 2024; o Gini de 2024 é o menor da série. Em 2025 a FAO retirou o Brasil do Mapa da Fome (subalimentação abaixo de 2,5% no triênio 2022–2024).</p>
+        <p class="br-contra"><b>Contraponto.</b> O IBGE atribui a queda tanto ao emprego quanto aos benefícios: sem transferências, a extrema pobreza de 2023 teria sido <span data-source="contexto" data-field="valor" data-where="chave=extrema_pobreza_sem_beneficios_2023">—</span>%. A dependência de programas sociais é alta.</p>
+      </div>
+      <div class="br-card" id="card-pib">
+        <h3>Contexto: crescimento do PIB</h3>
+        <p class="br-note">Contas Nacionais/IBGE, variação real anual. Incluído para não deixar a economia parecer melhor do que está.</p>
+        <div class="br-chart dash-skeleton" id="ch-pib" data-source="pib"></div>
+        <p class="br-auto" data-auto="ch-pib"><span class="br-auto-main"><b>Crescimento médio anual do PIB no período</b>, <span data-source="c_pib" data-field="ano_inicio" data-where="periodo=2022-2026">—</span>–<span data-source="c_pib" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_pib" data-field="media" data-where="periodo=2022-2026">—</span>%</b> ao ano.</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-contra"><b>Contraponto.</b> Cinco anos seguidos de alta, mas 2025 (<b><span data-source="pib" data-field="variacao_pct" data-where="ano=2025">—</span>%</b>) foi o pior desde 2020, puxado pela agropecuária e com o 4º trimestre praticamente estagnado. Juros elevados e a situação fiscal são os riscos citados pelo próprio IBGE e por analistas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEGURANÇA -->
+  <section class="br-section" id="seguranca">
+    <h2>Segurança pública</h2>
+    <p class="br-lead">Mortes violentas e roubos caíram; feminicídios, letalidade policial e estelionatos subiram. Os dois lados aparecem abaixo.</p>
+    <div class="br-grid">
+      <div class="br-card" id="card-mvi">
+        <h3>3. Mortes violentas intencionais (MVI)</h3>
+        <p class="br-note">Anuário Brasileiro de Segurança Pública/FBSP (edições 2023–2026). MVI = homicídio doloso + feminicídio + latrocínio + lesão corporal seguida de morte + mortes por intervenção policial. Taxas usam a população de cada edição.</p>
+        <div class="br-seg" role="group" aria-label="Medida" id="seg-mvi">
+          <button type="button" data-v="taxa" aria-pressed="true">Taxa por 100 mil</button>
+          <button type="button" data-v="abs" aria-pressed="false">Número absoluto</button>
+          <button type="button" data-v="fem" aria-pressed="false">Feminicídios</button>
+        </div>
+        <div class="br-chart dash-skeleton" id="ch-mvi" data-source="mvi"></div>
+        <p class="br-auto" data-auto="ch-mvi"><span class="br-auto-main"><b>Mortes violentas (número absoluto)</b>, <span data-source="c_mvi" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_mvi" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_mvi" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_mvi" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_mvi" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">Em 2025 o país ficou pela primeira vez abaixo de 20 mortes por 100 mil (<b><span data-source="mvi" data-field="taxa_100k" data-where="ano=2025">—</span></b>), com <b><span data-source="mvi" data-field="mvi" data-where="ano=2025">—</span></b> vítimas, o menor número desde 2012. A meta nacional de homicídios para 2027 foi atingida dois anos antes.</p>
+        <p class="br-contra"><b>Contraponto.</b> Feminicídios subiram para <b><span data-source="mvi" data-field="feminicidios" data-where="ano=2025">—</span></b> em 2025 (+<span data-source="c_mvi" data-field="var_fem_pct" data-row="0">—</span>% vs 2022), maior número desde a tipificação em 2015; mortes por intervenção policial cresceram <span data-source="contexto" data-field="valor" data-where="chave=mdip_var_2025">—</span>% e chegaram a <span data-source="contexto" data-field="valor" data-where="chave=mdip_share_2025">—</span>% de todas as MVI; <span data-source="contexto" data-field="valor" data-where="chave=ufs_alta_mvi_2025">—</span> unidades da federação tiveram alta.</p>
+      </div>
+      <div class="br-card" id="card-roubos">
+        <h3>4. Roubos de celular</h3>
+        <p class="br-note">Anuário/FBSP, registros policiais. Roubo = com violência ou ameaça. O valor de 2022 é derivado da variação de −10,1% publicada na edição 2024 (coluna “estimado”).</p>
+        <div class="br-chart dash-skeleton" id="ch-roubos" data-source="roubos"></div>
+        <p class="br-auto" data-auto="ch-roubos"><span class="br-auto-main"><b>Roubos de celular</b>, <span data-source="c_roubos" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_roubos" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_roubos" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_roubos" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_roubos" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">Queda de <b><span data-source="c_roubos" data-field="var_pct" data-row="0" data-abs="1">—</span>%</b> entre 2022 e 2025 (<span data-source="c_roubos" data-field="var_2025_pct" data-row="0" data-abs="1">—</span>% só em 2025). Em 2025 todos os indicadores de roubo caíram: total <span data-source="contexto" data-field="valor" data-where="chave=roubos_total_var_2025">—</span>%, roubo de veículos <span data-source="contexto" data-field="valor" data-where="chave=roubo_veiculos_taxa_var_2025">—</span>% na taxa por 100 mil veículos. O Anuário cita câmeras, policiamento focado e o programa Celular Seguro como hipóteses.</p>
+        <p class="br-contra"><b>Contraponto.</b> Furtos caíram bem menos que roubos, e os estelionatos (golpes digitais) continuaram crescendo e são hoje o principal crime patrimonial do país. Parte do crime migrou, não desapareceu.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEIO AMBIENTE -->
+  <section class="br-section" id="ambiente">
+    <h2>Meio ambiente</h2>
+    <p class="br-lead">Desmatamento caiu pelo quarto ano seguido na Amazônia e por dois no Cerrado; 2024, porém, foi o pior ano de queimadas desde 2010.</p>
+    <div class="br-grid">
+      <div class="br-card" id="card-prodes">
+        <h3>5–6. Desmatamento anual (PRODES)</h3>
+        <p class="br-note">INPE/PRODES, corte raso em km² no ano-PRODES (agosto a julho). Amazônia Legal e Cerrado. 2025 é a estimativa oficial de outubro/2025; os demais são taxas consolidadas.</p>
+        <div class="br-seg" role="group" aria-label="Bioma" id="seg-prodes">
+          <button type="button" data-v="ambos" aria-pressed="true">Ambos</button>
+          <button type="button" data-v="amazonia" aria-pressed="false">Amazônia</button>
+          <button type="button" data-v="cerrado" aria-pressed="false">Cerrado</button>
+        </div>
+        <div class="br-chart dash-skeleton" id="ch-prodes" data-source="prodes"></div>
+        <p class="br-auto" data-auto="ch-prodes"><span class="br-auto-main"><b>Desmatamento na Amazônia (km²)</b>, <span data-source="c_prodes" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_prodes" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_prodes" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_prodes" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_prodes" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">Amazônia: <b><span data-source="c_prodes" data-field="amazonia_var_pct" data-row="0">—</span>%</b> entre 2022 e 2025, menor patamar em uma década. Cerrado: subiu em 2023 e depois caiu <b><span data-source="c_prodes" data-field="cerrado_var_desde_pico_pct" data-row="0" data-abs="1">—</span>%</b> até 2025. Os alertas DETER de agosto/2025 a julho/2026 indicam nova queda na Amazônia: <span data-source="contexto" data-field="valor" data-where="chave=deter_amazonia_2026">—</span> km² sob alerta (<span data-source="contexto" data-field="valor" data-where="chave=deter_amazonia_var_2026">—</span>%), menor valor da série do DETER, iniciada em 2016.</p>
+        <p class="br-contra"><b>Contraponto.</b> O Cerrado ainda perde mais área que a Amazônia, e a maior parte é em propriedade privada, onde parte da supressão é legal. A meta oficial (desmatamento zero em 2030) exige quedas bem maiores que as de 2025.</p>
+      </div>
+      <div class="br-card" id="card-queimadas">
+        <h3>Contexto: focos de queimadas</h3>
+        <p class="br-note">INPE/Programa Queimadas, satélite de referência. 2025 vai até 23/dez; 2023 é derivado da variação de −29,4% publicada pelo Poder360 (coluna “estimado”).</p>
+        <div class="br-chart dash-skeleton" id="ch-queimadas" data-source="queimadas"></div>
+        <p class="br-auto" data-auto="ch-queimadas"><span class="br-auto-main"><b>Focos de queimadas</b>, <span data-source="c_queimadas" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_queimadas" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_queimadas" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_queimadas" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_queimadas" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-contra"><b>Contraponto.</b> 2024 teve <b><span data-source="queimadas" data-field="focos" data-where="ano=2024">—</span></b> focos, o pior ano desde 2010, em meio à seca histórica. Em 2025 os focos caíram <b><span data-source="c_queimadas" data-field="var_2025_pct" data-row="0" data-abs="1">—</span>%</b> (agosto foi o menor da série desde 1998), mas clima e manejo do fogo pesam tanto quanto política — leia a queda com cautela.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCAÇÃO -->
+  <section class="br-section" id="educacao">
+    <h2>Educação</h2>
+    <p class="br-lead">Analfabetismo no menor nível já medido e Ideb recorde nas três etapas — mas as metas dos anos finais e do ensino médio seguem distantes.</p>
+    <div class="br-grid">
+      <div class="br-card" id="card-analf">
+        <h3>7. Taxa de analfabetismo (15 anos ou mais)</h3>
+        <p class="br-note">PNAD Contínua Educação/IBGE, 2º trimestre de cada ano. Pessoas que não sabem ler e escrever um bilhete simples.</p>
+        <div class="br-chart dash-skeleton" id="ch-analf" data-source="analfabetismo"></div>
+        <p class="br-auto" data-auto="ch-analf"><span class="br-auto-main"><b>Analfabetismo</b>, <span data-source="c_analf" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_analf" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_analf" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_analf" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_analf" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">De <b><span data-source="analfabetismo" data-field="analfabetos_milhoes" data-where="ano=2022">—</span> milhões</b> de pessoas em 2022 para <b><span data-source="analfabetismo" data-field="analfabetos_milhoes" data-where="ano=2025">—</span> milhões</b> em 2025, quando a taxa ficou abaixo de 5% pela primeira vez. Entre 15 e 59 anos ela é de <span data-source="contexto" data-field="valor" data-where="chave=analf_15_59_2025">—</span>%.</p>
+        <p class="br-contra"><b>Contraponto.</b> A queda é sobretudo geracional (<span data-source="contexto" data-field="valor" data-where="chave=analf_60mais_share_2025">—</span>% dos analfabetos têm 60 anos ou mais), não resultado de alfabetização de adultos; a meta do PNE de erradicar o analfabetismo até 2024 não foi cumprida, e a taxa no Nordeste (<span data-source="contexto" data-field="valor" data-where="chave=analf_nordeste_2025">—</span>%) é mais que o dobro da nacional.</p>
+      </div>
+      <div class="br-card" id="card-ideb">
+        <h3>8. Ideb (Índice de Desenvolvimento da Educação Básica)</h3>
+        <p class="br-note">Inep/MEC, redes pública e privada, escala 0–10, bienal. Combina desempenho no Saeb com taxa de aprovação. Linhas tracejadas = metas nacionais de 2021 (6,0 / 5,5 / 5,2).</p>
+        <div class="br-seg" role="group" aria-label="Etapa" id="seg-ideb">
+          <button type="button" data-v="todas" aria-pressed="true">Três etapas</button>
+          <button type="button" data-v="ai" aria-pressed="false">Anos iniciais</button>
+          <button type="button" data-v="af" aria-pressed="false">Anos finais</button>
+          <button type="button" data-v="em" aria-pressed="false">Ensino médio</button>
+        </div>
+        <div class="br-chart dash-skeleton" id="ch-ideb" data-source="ideb"></div>
+        <p class="br-auto" data-auto="ch-ideb"><span class="br-auto-main"><b>Ideb anos iniciais</b>, <span data-source="c_ideb" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_ideb" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_ideb" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_ideb" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_ideb" data-field="delta" data-where="periodo=2022-2026">—</span></b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">Em 2025 as três etapas atingiram o maior valor da série (desde 2005): anos iniciais <b><span data-source="ideb" data-field="anos_iniciais" data-where="ano=2025">—</span></b>, anos finais <b><span data-source="ideb" data-field="anos_finais" data-where="ano=2025">—</span></b>, ensino médio <b><span data-source="ideb" data-field="ensino_medio" data-where="ano=2025">—</span></b>. Só os anos iniciais bateram a meta.</p>
+        <p class="br-contra"><b>Contraponto.</b> Os anos finais ainda ficam <b><span data-source="c_ideb" data-field="gap_af" data-row="0">—</span></b> abaixo da meta e o ensino médio <b><span data-source="c_ideb" data-field="gap_em" data-row="0">—</span></b>; o avanço no médio em dois anos foi de apenas <span data-source="c_ideb" data-field="delta_em" data-row="0">—</span> ponto. O Ideb também sobe quando a aprovação aumenta, o que não é o mesmo que aprendizagem.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SAÚDE -->
+  <section class="br-section" id="saude">
+    <h2>Saúde</h2>
+    <p class="br-lead">Recuperação da vacinação infantil e expectativa de vida recorde; a maioria das vacinas ainda não chega à meta de 95%.</p>
+    <div class="br-grid">
+      <div class="br-card" id="card-vacinas">
+        <h3>9. Cobertura vacinal infantil</h3>
+        <p class="br-note">Ministério da Saúde/PNI (painel de cobertura por residência). Percentual da população-alvo vacinada; meta do PNI = 95% (linha tracejada). Série anual disponível até 2024.</p>
+        <div class="br-seg" role="group" aria-label="Vacina" id="seg-vacinas">
+          <button type="button" data-v="todas" aria-pressed="true">Três vacinas</button>
+          <button type="button" data-v="tv" aria-pressed="false">Tríplice viral (1ª dose)</button>
+          <button type="button" data-v="polio" aria-pressed="false">Poliomielite (3ª dose)</button>
+          <button type="button" data-v="penta" aria-pressed="false">Pentavalente (3ª dose)</button>
+        </div>
+        <div class="br-chart dash-skeleton" id="ch-vacinas" data-source="vacinas"></div>
+        <p class="br-auto" data-auto="ch-vacinas"><span class="br-auto-main"><b>Tríplice viral 1ª dose</b>, <span data-source="c_vacinas" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_vacinas" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_vacinas" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_vacinas" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_vacinas" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">A tríplice viral subiu <b><span data-source="c_vacinas" data-field="delta_tv" data-row="0">—</span> p.p.</b> entre 2022 e 2024 e voltou à meta pela primeira vez desde 2015–2016. Pela estimativa OMS/Unicef (WUENIC), as crianças “zero dose” caíram de <b><span data-source="zerodose" data-field="criancas_zero_dose" data-where="ano=2023">—</span></b> em 2023 para <b><span data-source="zerodose" data-field="criancas_zero_dose" data-where="ano=2025">—</span></b> em 2025, e o Brasil saiu da lista dos 20 países com mais crianças sem vacina.</p>
+        <p class="br-contra"><b>Contraponto.</b> Em 2025 apenas <span data-source="contexto" data-field="valor" data-where="chave=vacinas_na_meta_2025">—</span> vacinas do calendário (BCG e hepatite B ao nascer) alcançaram a meta de 95%; a 2ª dose da tríplice viral tem evasão acima de 50% em <span data-source="contexto" data-field="valor" data-where="chave=evasao_tv_d2_ufs_2023">—</span> estados e houve surtos de coqueluche. A recuperação é real, mas frágil e desigual entre regiões.</p>
+      </div>
+      <div class="br-card" id="card-vida">
+        <h3>10. Expectativa de vida e mortalidade infantil</h3>
+        <p class="br-note">Tábuas de Mortalidade/IBGE (Projeções 2024, reponderadas pelo Censo 2022). Expectativa de vida ao nascer, em anos; mortalidade infantil por mil nascidos vivos.</p>
+        <div class="br-seg" role="group" aria-label="Indicador" id="seg-vida">
+          <button type="button" data-v="ev" aria-pressed="true">Expectativa de vida</button>
+          <button type="button" data-v="mi" aria-pressed="false">Mortalidade infantil</button>
+        </div>
+        <div class="br-chart dash-skeleton" id="ch-vida" data-source="expectativa"></div>
+        <p class="br-auto" data-auto="ch-vida"><span class="br-auto-main"><b>Expectativa de vida (anos)</b>, <span data-source="c_expect" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_expect" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_expect" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_expect" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_expect" data-field="delta" data-where="periodo=2022-2026">—</span> anos</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+        <p class="br-text">A expectativa de vida chegou a <b><span data-source="expectativa" data-field="expectativa_vida_anos" data-where="ano=2024">—</span> anos</b> em 2024, recorde da série, <span data-source="c_expect" data-field="delta_vs_2019" data-row="0">—</span> ano acima do nível pré-pandemia (2019). A mortalidade infantil recuou de <span data-source="expectativa" data-field="mortalidade_infantil_por_mil" data-where="ano=2023">—</span> para <b><span data-source="expectativa" data-field="mortalidade_infantil_por_mil" data-where="ano=2024">—</span></b> por mil.</p>
+        <p class="br-contra"><b>Contraponto.</b> A maior parte do salto de 2021 para 2023 é o fim do excesso de mortes da pandemia, não política pública; o ganho genuíno é o excedente sobre 2019. E 2024 teve a pior epidemia de dengue da história do país, não capturada por estes indicadores anuais.</p>
+      </div>
+    </div>
+  </section>
+
+  </div>
+
+  <div class="br-tab" id="tab-piorou" role="tabpanel" aria-labelledby="tabbtn-piorou" hidden>
+    <p class="br-tab-lead">Dez indicadores que pioraram ou não saíram do lugar no mesmo período. Em meio ambiente e educação as séries nacionais, em geral, melhoraram: aqui entram o pior ano de fogo da década e a aprendizagem estagnada. Cada tema traz o atenuante — o que o número não diz sozinho.</p>
+    <nav class="br-nav" aria-label="Seções">
+      <a href="#p-economia">Economia</a><a href="#p-seguranca">Segurança pública</a><a href="#p-ambiente">Meio ambiente</a><a href="#p-educacao">Educação</a><a href="#p-saude">Saúde</a><a href="#fontes">Fontes e método</a>
+    </nav>
+
+    <section class="br-tiles" id="p-resumo" aria-label="Resumo do que piorou">
+    <div class="br-tile" id="tile-divida" data-src="fiscal" data-field-val="dbgg_pct_pib" data-calc="c_fiscal" data-dfield="delta_dbgg_pp" data-better="down">
+      <span class="br-label">Dívida bruta,% do PIB (<span class="br-anofim" data-source="c_fiscal" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="fiscal" data-field="dbgg_pct_pib" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_fiscal" data-field="delta_dbgg_pp" data-where="periodo=2022-2026">—</span> p.p. vs <span data-source="c_fiscal" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-serasa" data-src="serasa" data-field-val="inadimplentes_milhoes" data-calc="c_serasa" data-dfield="var_pct" data-better="down">
+      <span class="br-label">Inadimplentes, milhões (<span class="br-anofim" data-source="c_serasa" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="serasa" data-field="inadimplentes_milhoes" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_serasa" data-field="var_pct" data-where="periodo=2022-2026">—</span>% vs <span data-source="c_serasa" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-fem" data-src="mvi" data-field-val="feminicidios" data-calc="c_mvi" data-dfield="var_fem_pct" data-better="down">
+      <span class="br-label">Feminicídios (<span class="br-anofim" data-source="c_mvi" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="mvi" data-field="feminicidios" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_mvi" data-field="var_fem_pct" data-where="periodo=2022-2026">—</span>% vs <span data-source="c_mvi" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-mdip" data-src="letalidade" data-field-val="mdip" data-calc="c_letalidade" data-dfield="var_pct" data-better="down">
+      <span class="br-label">Mortes por policiais (<span class="br-anofim" data-source="c_letalidade" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="letalidade" data-field="mdip" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_letalidade" data-field="var_pct" data-where="periodo=2022-2026">—</span>% vs <span data-source="c_letalidade" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    <div class="br-tile" id="tile-dengue" data-src="dengue" data-field-val="obitos" data-calc="c_dengue" data-dfield="" data-better="none" data-pico="1">
+      <span class="br-label">Mortes por dengue, pior ano (<span class="br-anofim" data-source="c_dengue" data-field="ano_pico" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="dengue" data-field="obitos" data-where="ano=2024">—</span>
+      <span class="br-delta bad"><span data-source="c_dengue" data-field="pico_razao" data-where="periodo=2022-2026">—</span>× o ano anterior ao pico</span>
+    </div>
+    <div class="br-tile" id="tile-rua" data-src="poprua" data-field-val="pessoas" data-calc="c_rua" data-dfield="var_pct" data-better="down">
+      <span class="br-label">Pessoas em situação de rua (<span class="br-anofim" data-source="c_rua" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+      <span class="br-num dash-skeleton" data-source="poprua" data-field="pessoas" data-where="ano=2025">—</span>
+      <span class="br-delta"><span class="br-dsign"></span><span data-source="c_rua" data-field="var_pct" data-where="periodo=2022-2026">—</span>% vs <span data-source="c_rua" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+    </div>
+    </section>
+
+    <!-- P-ECONOMIA -->
+    <section class="br-section" id="p-economia">
+      <h2>Economia</h2>
+      <p class="br-lead">O mercado de trabalho melhorou, mas as contas públicas, o custo do dinheiro e o balanço das famílias pioraram.</p>
+      <div class="br-grid">
+        <div class="br-card" id="card-fiscal">
+          <h3>1. Dívida pública e juros</h3>
+          <p class="br-note">Banco Central. Dívida Bruta do Governo Geral em% do PIB (dezembro de cada ano, como publicado na época; o BC revisa a série quando o IBGE revisa o PIB) e meta da Selic no fim de cada ano.</p>
+          <div class="br-seg" role="group" aria-label="Série" id="seg-fiscal">
+            <button type="button" data-v="dbgg" aria-pressed="true">Dívida bruta (% do PIB)</button>
+            <button type="button" data-v="selic" aria-pressed="false">Selic (% a.a.)</button>
+          </div>
+          <div class="br-chart dash-skeleton" id="ch-fiscal" data-source="fiscal"></div>
+        <p class="br-auto" data-auto="ch-fiscal"><span class="br-auto-main"><b>Dívida bruta (% do PIB)</b>, <span data-source="c_fiscal" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_fiscal" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_fiscal" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_fiscal" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_fiscal" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">A dívida bruta subiu de <b><span data-source="fiscal" data-field="dbgg_pct_pib" data-where="ano=2022">—</span>%</b> para <b><span data-source="fiscal" data-field="dbgg_pct_pib" data-where="ano=2025">—</span>%</b> do PIB. A Selic chegou a <b><span data-source="fiscal" data-field="selic_fim_ano_pct" data-where="ano=2025">—</span>%</b> em junho de 2025, maior nível em quase 20 anos, e só começou a cair em março de 2026 (hoje <span data-source="contexto2" data-field="valor" data-where="chave=selic_atual_2026">—</span>%). A despesa com juros chegou a <span data-source="contexto2" data-field="valor" data-where="chave=juros_pct_pib_2s2025">—</span>% do PIB e o déficit nominal de 2024 foi de <span data-source="contexto2" data-field="valor" data-where="chave=deficit_nominal_2024_pct">—</span>% do PIB.</p>
+          <p class="br-atenua"><b>Atenuante.</b> O déficit primário do setor público caiu de R$ <span data-source="contexto2" data-field="valor" data-where="chave=deficit_primario_2023_bi">—</span> bilhões em 2023 para R$ <span data-source="contexto2" data-field="valor" data-where="chave=deficit_primario_2025_bi">—</span> bilhões em 2025, e o governo central cumpriu a meta do arcabouço em 2025 (com despesas excluídas do cálculo). A dívida sobe sobretudo pelos juros, que o Banco Central define para conter a inflação.</p>
+        </div>
+        <div class="br-card" id="card-serasa">
+          <h3>2. Inadimplência e endividamento das famílias</h3>
+          <p class="br-note">Serasa, Mapa da Inadimplência (CPFs com dívida em atraso há 90 dias ou mais, dezembro de cada ano). O valor de 2023 é aproximado a partir da divulgação de janeiro de 2024 (coluna “estimado”).</p>
+          <div class="br-chart dash-skeleton" id="ch-serasa" data-source="serasa"></div>
+        <p class="br-auto" data-auto="ch-serasa"><span class="br-auto-main"><b>Inadimplentes (milhões)</b>, <span data-source="c_serasa" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_serasa" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_serasa" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_serasa" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_serasa" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">De <b><span data-source="serasa" data-field="inadimplentes_milhoes" data-where="ano=2022">—</span> milhões</b> para <b><span data-source="serasa" data-field="inadimplentes_milhoes" data-where="ano=2025">—</span> milhões</b> de pessoas negativadas (<span data-source="contexto2" data-field="valor" data-where="chave=inadimplentes_pct_adultos_2025">—</span>% da população adulta), com recordes sucessivos ao longo de 2025. Pelo Banco Central, as dívidas das famílias equivalem a <span data-source="contexto2" data-field="valor" data-where="chave=endividamento_familias_2025">—</span>% da renda anual.</p>
+          <p class="br-atenua"><b>Atenuante.</b> Inadimplência cresce com crédito mais caro (Selic a 15%) e também com mais gente tendo acesso a crédito; renda e emprego melhoraram no mesmo período, e programas de renegociação (Desenrola, feirões) tiraram milhões de pessoas do cadastro em cada fim de ano.</p>
+        </div>
+        <div class="br-card" id="card-rua">
+          <h3>3. População em situação de rua</h3>
+          <p class="br-note">OBPopRua/UFMG a partir do Cadastro Único (MDS), registros em dezembro. O valor de 2023 é derivado da alta de cerca de 25% em 2024 informada pelo Observatório (coluna “estimado”).</p>
+          <div class="br-chart dash-skeleton" id="ch-rua" data-source="poprua"></div>
+        <p class="br-auto" data-auto="ch-rua"><span class="br-auto-main"><b>Pessoas em situação de rua</b>, <span data-source="c_rua" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_rua" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_rua" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_rua" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_rua" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">De <b><span data-source="poprua" data-field="pessoas" data-where="ano=2024">—</span></b> para <b><span data-source="poprua" data-field="pessoas" data-where="ano=2025">—</span></b> pessoas registradas em um ano (+<span data-source="c_rua" data-field="var_2025_pct" data-row="0">—</span>%); o estado de São Paulo sozinho tem <span data-source="contexto2" data-field="valor" data-where="chave=poprua_sp_2025">—</span>.</p>
+          <p class="br-atenua"><b>Atenuante.</b> A própria UFMG explica que parte da alta é o CadÚnico virando a porta de entrada para benefícios, o que amplia o registro; o número não é um censo de rua. A falta de políticas de moradia e trabalho, porém, é apontada pelos pesquisadores como causa real.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- P-SEGURANÇA -->
+    <section class="br-section" id="p-seguranca">
+      <h2>Segurança pública</h2>
+      <p class="br-lead">Enquanto homicídios e roubos caíram, três séries subiram: violência contra a mulher, mortes causadas pela polícia e golpes.</p>
+      <div class="br-grid">
+        <div class="br-card" id="card-fem">
+          <h3>4. Feminicídios</h3>
+          <p class="br-note">Anuário Brasileiro de Segurança Pública/FBSP, edições 2023 a 2026 (valores de cada ano como publicados na edição correspondente; o FBSP revisa séries).</p>
+          <div class="br-chart dash-skeleton" id="ch-fem" data-source="mvi"></div>
+        <p class="br-auto" data-auto="ch-fem"><span class="br-auto-main"><b>Feminicídios</b>, <span data-source="c_mvi" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_mvi" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_mvi" data-field="fem_inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_mvi" data-field="fem_fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_mvi" data-field="fem_delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">De <b><span data-source="mvi" data-field="feminicidios" data-where="ano=2022">—</span></b> para <b><span data-source="mvi" data-field="feminicidios" data-where="ano=2025">—</span></b> vítimas (+<span data-source="c_mvi" data-field="var_fem_pct" data-row="0">—</span>%), recorde desde a tipificação em 2015; <span data-source="contexto2" data-field="valor" data-where="chave=fem_share_2025">—</span>% das mulheres assassinadas em 2025 foram mortas por razão de gênero, a maior proporção já registrada. Estupros bateram recorde em 2024 (<span data-source="contexto2" data-field="valor" data-where="chave=estupros_2024">—</span>) e tiveram a primeira queda em 2025 (<span data-source="contexto2" data-field="valor" data-where="chave=estupros_2025">—</span>).</p>
+          <p class="br-atenua"><b>Atenuante.</b> Parte da alta é melhor classificação dos casos (estados que passaram a registrar todo homicídio de mulher como feminicídio até prova em contrário); o total de mortes violentas de mulheres não acompanha a mesma alta. Nenhum desses fatores, porém, reverte a tendência.</p>
+        </div>
+        <div class="br-card" id="card-mdip">
+          <h3>5. Mortes decorrentes de intervenção policial</h3>
+          <p class="br-note">Anuário/FBSP, edições 2023 a 2026 (como publicado em cada edição). Policiais civis e militares, em serviço e fora dele.</p>
+          <div class="br-chart dash-skeleton" id="ch-mdip" data-source="letalidade"></div>
+        <p class="br-auto" data-auto="ch-mdip"><span class="br-auto-main"><b>Mortes por intervenção policial</b>, <span data-source="c_letalidade" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_letalidade" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_letalidade" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_letalidade" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_letalidade" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text"><b><span data-source="letalidade" data-field="mdip" data-where="ano=2025">—</span></b> mortes em 2025, o maior número da série do Anuário e <span data-source="contexto" data-field="valor" data-where="chave=mdip_share_2025">—</span>% de todas as mortes violentas do país; a Operação Contenção, no Rio, somou mais de <span data-source="contexto2" data-field="valor" data-where="chave=operacao_contencao_mortes">—</span> mortes em dois dias. Em 2024, São Paulo já havia registrado alta de <span data-source="contexto2" data-field="valor" data-where="chave=mdip_sp_var_2024">—</span>%.</p>
+          <p class="br-atenua"><b>Atenuante.</b> A série caiu entre 2022 e 2024 antes de subir em 2025, e o fenômeno é concentrado em poucos estados (Amapá, Bahia, Pará, São Paulo, Rio). A política de segurança é majoritariamente estadual; o governo federal responde por menos de 0,4% do gasto na área.</p>
+        </div>
+        <div class="br-card" id="card-estelionato">
+          <h3>6. Estelionatos (golpes)</h3>
+          <p class="br-note">Anuário/FBSP, registros policiais de estelionato, inclusive fraude eletrônica. 2022 e 2024 são derivados das variações publicadas (+8,2% em 2023 e +3,1% em 2025; coluna “estimado”).</p>
+          <div class="br-chart dash-skeleton" id="ch-estelionato" data-source="estelionatos"></div>
+        <p class="br-auto" data-auto="ch-estelionato"><span class="br-auto-main"><b>Estelionatos</b>, <span data-source="c_estelionato" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_estelionato" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_estelionato" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_estelionato" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_estelionato" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text"><b><span data-source="estelionatos" data-field="ocorrencias" data-where="ano=2025">—</span></b> ocorrências em 2025, <span data-source="contexto2" data-field="valor" data-where="chave=estelionato_por_hora_2025">—</span> por hora: +<span data-source="c_estelionato" data-field="var_2018_pct" data-row="0">—</span>% desde 2018 e hoje o principal crime patrimonial do país. Para esse volume houve <span data-source="contexto2" data-field="valor" data-where="chave=estelionato_processos_2025">—</span> processos e <span data-source="contexto2" data-field="valor" data-where="chave=estelionato_presos_2025">—</span> presos.</p>
+          <p class="br-atenua"><b>Atenuante.</b> O crescimento em 2025 foi o menor da série (+<span data-source="c_estelionato" data-field="var_2025_pct" data-row="0">—</span>%), e parte do aumento é migração do roubo para a fraude digital e maior disposição de registrar; roubos de celular caíram 37% no mesmo período.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- P-AMBIENTE -->
+    <section class="br-section" id="p-ambiente">
+      <h2>Meio ambiente</h2>
+      <p class="br-lead">O desmatamento caiu e as emissões também, mas 2024 foi o pior ano de fogo da década.</p>
+      <div class="br-grid">
+        <div class="br-card" id="card-fogo">
+          <h3>7. Fogo em 2024</h3>
+          <p class="br-note">INPE/Programa Queimadas (focos de calor, satélite de referência) e MapBiomas/Monitor do Fogo (área queimada em milhões de hectares). 2023 em ambas as séries é derivado das variações publicadas (coluna “estimado”).</p>
+          <div class="br-seg" role="group" aria-label="Medida" id="seg-fogo">
+            <button type="button" data-v="area" aria-pressed="true">Área queimada (Mha)</button>
+            <button type="button" data-v="focos" aria-pressed="false">Focos de calor</button>
+          </div>
+          <div class="br-chart dash-skeleton" id="ch-fogo" data-source="area_queimada queimadas"></div>
+        <p class="br-auto" data-auto="ch-fogo"><span class="br-auto-main"><b>Focos de queimadas</b>, <span data-source="c_queimadas" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_queimadas" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_queimadas" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_queimadas" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_queimadas" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">Em 2024 queimaram <b><span data-source="area_queimada" data-field="milhoes_ha" data-where="ano=2024">—</span> milhões de hectares</b> (+<span data-source="c_fogo" data-field="area_var_2024_pct" data-row="0">—</span>% sobre 2023), área maior que a Itália; a Amazônia teve <span data-source="contexto2" data-field="valor" data-where="chave=amazonia_area_queimada_2024">—</span> milhões de hectares queimados, recorde da série, e as emissões por fogo chegaram a <span data-source="contexto2" data-field="valor" data-where="chave=emissoes_fogo_2024">—</span> MtCO₂e, também recorde. Foram <span data-source="queimadas" data-field="focos" data-where="ano=2024">—</span> focos de calor, o pior ano desde 2010.</p>
+          <p class="br-atenua"><b>Atenuante.</b> A seca histórica do El Niño 2023–2024 explica boa parte do salto; em 2025 a área queimada caiu <span data-source="c_fogo" data-field="area_var_2025_pct" data-row="0" data-abs="1">—</span>% e a Amazônia teve a menor área queimada em 41 anos (<span data-source="contexto2" data-field="valor" data-where="chave=amazonia_area_queimada_2025">—</span> Mha). O fogo, ao contrário do desmatamento, só entrou numa política nacional em julho de 2024.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- P-EDUCAÇÃO -->
+    <section class="br-section" id="p-educacao">
+      <h2>Educação</h2>
+      <p class="br-lead">Fluxo e permanência melhoraram; a aprendizagem medida internacionalmente não.</p>
+      <div class="br-grid">
+        <div class="br-card" id="card-pisa">
+          <h3>8. Aprendizagem estagnada (PISA)</h3>
+          <p class="br-note">OCDE/PISA, pontuação média do Brasil aos 15 anos em leitura, matemática e ciências (2015 a 2025). As médias de 2025 dos 23 países da OCDE comparáveis são <span data-source="pisa" data-field="ocde_leitura" data-where="ano=2025">—</span>, <span data-source="pisa" data-field="ocde_matematica" data-where="ano=2025">—</span> e <span data-source="pisa" data-field="ocde_ciencias" data-where="ano=2025">—</span>; cerca de 20 pontos equivalem a um ano escolar.</p>
+          <div class="br-chart dash-skeleton" id="ch-pisa" data-source="pisa"></div>
+        <p class="br-auto" data-auto="ch-pisa"><span class="br-auto-main"><b>PISA matemática (pontos)</b>, <span data-source="c_pisa" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_pisa" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_pisa" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_pisa" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_pisa" data-field="delta" data-where="periodo=2022-2026">—</span> pontos</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">Em matemática o Brasil fez <b><span data-source="pisa" data-field="matematica" data-where="ano=2025">—</span></b> pontos em 2025, abaixo dos <span data-source="contexto2" data-field="valor" data-where="chave=pisa_mat_2012">—</span> de 2012 e <span data-source="c_pisa" data-field="gap_mat" data-row="0">—</span> pontos (mais de quatro anos escolares) atrás da OCDE; só <span data-source="contexto2" data-field="valor" data-where="chave=pisa_mat_nivel2_2025">—</span>% dos alunos alcançam o nível básico, a distância entre os 10% melhores e os 10% piores aumentou desde 2022, e <span data-source="contexto2" data-field="valor" data-where="chave=pisa_faltas_2025">—</span>% disseram ter faltado à aula nas duas semanas anteriores à prova.</p>
+          <p class="br-atenua"><b>Atenuante.</b> Estagnação não é queda: as três notas são estatisticamente iguais às de 2022, o Brasil recuperou-se da pandemia melhor que a média da OCDE e, desde 2006, reduziu a distância para os países ricos — em parte porque a média deles caiu. O Ideb e o Saeb de 2025 subiram.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- P-SAÚDE -->
+    <section class="br-section" id="p-saude">
+      <h2>Saúde</h2>
+      <p class="br-lead">A maior epidemia de dengue da história e uma curva de obesidade que não para de subir.</p>
+      <div class="br-grid">
+        <div class="br-card" id="card-dengue">
+          <h3>9. Dengue em 2024</h3>
+          <p class="br-note">Ministério da Saúde, painel de arboviroses: casos prováveis e óbitos confirmados por ano. Os óbitos de 2025 são derivados da queda de 72% informada pelo ministério (coluna “estimado”).</p>
+          <div class="br-seg" role="group" aria-label="Medida" id="seg-dengue">
+            <button type="button" data-v="casos" aria-pressed="true">Casos prováveis</button>
+            <button type="button" data-v="obitos" aria-pressed="false">Óbitos</button>
+          </div>
+          <div class="br-chart dash-skeleton" id="ch-dengue" data-source="dengue"></div>
+        <p class="br-auto" data-auto="ch-dengue"><span class="br-auto-main"><b>Casos prováveis de dengue</b>, <span data-source="c_dengue" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_dengue" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_dengue" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_dengue" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_dengue" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">Em 2024 foram <b><span data-source="dengue" data-field="casos_provaveis" data-where="ano=2024">—</span></b> casos prováveis (<span data-source="c_dengue" data-field="casos_razao_2024" data-row="0">—</span>× o ano anterior) e <b><span data-source="dengue" data-field="obitos" data-where="ano=2024">—</span></b> mortes, a pior epidemia da série histórica iniciada em 2000; o Brasil concentrou a maior parte dos casos do mundo naquele ano.</p>
+          <p class="br-atenua"><b>Atenuante.</b> Foi uma epidemia continental, ligada ao calor e à chuva do El Niño e à circulação simultânea de sorotipos; em 2025 os casos caíram <span data-source="c_dengue" data-field="casos_var_2025_pct" data-row="0" data-abs="1">—</span>%, para o patamar de 2022–2023, e o SUS passou a vacinar (<span data-source="contexto2" data-field="valor" data-where="chave=dengue_vacinas_aplicadas">—</span> milhões de doses em 2024–2025) e contratou a vacina de dose única do Butantan.</p>
+        </div>
+        <div class="br-card" id="card-obesidade">
+          <h3>10. Obesidade e diabetes</h3>
+          <p class="br-note">Ministério da Saúde/Vigitel, adultos nas capitais e no DF: prevalência de obesidade (IMC ≥ 30) e de diagnóstico de diabetes, em%. Anos disponíveis nas divulgações citadas.</p>
+          <div class="br-chart dash-skeleton" id="ch-obesidade" data-source="obesidade"></div>
+        <p class="br-auto" data-auto="ch-obesidade"><span class="br-auto-main"><b>Obesidade em adultos</b>, <span data-source="c_obesidade" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_obesidade" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_obesidade" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_obesidade" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_obesidade" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">Obesidade em <b><span data-source="obesidade" data-field="obesidade_pct" data-where="ano=2024">—</span>%</b> dos adultos em 2024, +<span data-source="c_obesidade" data-field="delta_2019_pp" data-row="0">—</span> p.p. sobre 2019 e mais que o dobro de 2006; a meta oficial de segurar a prevalência em <span data-source="obesidade" data-field="obesidade_pct" data-where="ano=2019">—</span>% até 2030 já foi perdida. Diabetes diagnosticado passou de <span data-source="obesidade" data-field="diabetes_pct" data-where="ano=2006">—</span>% para <span data-source="obesidade" data-field="diabetes_pct" data-where="ano=2024">—</span>%.</p>
+          <p class="br-atenua"><b>Atenuante.</b> É uma tendência de duas décadas, não específica dos últimos quatro anos, e parte da alta do diabetes é mais diagnóstico; o consumo de refrigerantes caiu pela metade desde 2007. Mas a aceleração recente entre adultos de 25 a 34 anos é a maior da série.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="br-tab" id="tab-professores" role="tabpanel" aria-labelledby="tabbtn-professores" hidden>
+    <p class="br-tab-lead">Professores da educação básica pública: quanto ganham, com que vínculo trabalham e como se formam. Mesma regra das outras abas: número clicável até a fonte e o lado oposto escrito junto. Salários em reais correntes; onde há “real”, a correção é pelo INPC do IBGE.</p>
+    <nav class="br-nav" aria-label="Seções">
+      <a href="#card-piso">Piso salarial</a><a href="#card-vinculo">Vínculo</a><a href="#card-remun">Remuneração relativa</a><a href="#card-formacao">Formação e atratividade</a><a href="#fontes">Fontes e método</a>
+    </nav>
+    <section class="br-tiles" id="prof-resumo" aria-label="Resumo professores">
+      <div class="br-tile" id="tile-piso" data-src="piso" data-field-val="piso_reais" data-calc="c_piso" data-dfield="delta" data-better="up">
+        <span class="br-label">Piso do magistério, R$ (40 h) (<span class="br-anofim" data-source="c_piso" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+        <span class="br-num dash-skeleton" data-source="piso" data-field="piso_reais" data-where="ano=2025">—</span>
+        <span class="br-delta"><span class="br-dsign"></span><span data-source="c_piso" data-field="delta" data-where="periodo=2022-2026">—</span>% nominal vs <span data-source="c_piso" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+      </div>
+      <div class="br-tile" id="tile-vinculo" data-src="vinculo" data-field-val="efetivos_estaduais_pct" data-calc="c_vinculo" data-dfield="delta" data-better="up">
+        <span class="br-label">Efetivos nas redes estaduais, % (<span class="br-anofim" data-source="c_vinculo" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+        <span class="br-num dash-skeleton" data-source="vinculo" data-field="efetivos_estaduais_pct" data-where="ano=2025">—</span>
+        <span class="br-delta"><span class="br-dsign"></span><span data-source="c_vinculo" data-field="delta" data-where="periodo=2022-2026">—</span> p.p. vs <span data-source="c_vinculo" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+      </div>
+      <div class="br-tile" id="tile-remun" data-src="remuneracao" data-field-val="indicador_17a_pct" data-calc="c_remun" data-dfield="delta" data-better="up">
+        <span class="br-label">Salário docente / outros c. superior, % (<span class="br-anofim" data-source="c_remun" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+        <span class="br-num dash-skeleton" data-source="remuneracao" data-field="indicador_17a_pct" data-where="ano=2025">—</span>
+        <span class="br-delta"><span class="br-dsign"></span><span data-source="c_remun" data-field="delta" data-where="periodo=2022-2026">—</span> p.p. vs <span data-source="c_remun" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+      </div>
+    </section>
+    <section class="br-section" id="prof-secao">
+      <div class="br-grid">
+        <div class="br-card" id="card-piso">
+          <h3>1. Piso salarial nacional do magistério</h3>
+          <p class="br-note">MEC/CNTE, Lei 11.738/2008: valor mínimo para 40 h semanais vigente em janeiro de cada ano. “Real” corrige pelo INPC/IBGE para reais de janeiro de 2026; o reajuste de cada ano é comparado com o INPC do ano anterior. O índice de preços e os valores reais estão no arquivo.</p>
+          <div class="br-seg" role="group" aria-label="Medida" id="seg-piso">
+            <button type="button" data-v="nominal" aria-pressed="true">Nominal (R$)</button>
+            <button type="button" data-v="real" aria-pressed="false">Real (R$ de jan/2026)</button>
+            <button type="button" data-v="reajuste" aria-pressed="false">Reajuste × INPC</button>
+          </div>
+          <div class="br-chart dash-skeleton" id="ch-piso" data-source="piso"></div>
+          <p class="br-auto" data-auto="ch-piso"><span class="br-auto-main"><b>Piso nominal</b>, <span data-source="c_piso" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_piso" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_piso" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_piso" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_piso" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>; em termos reais, acima do INPC, <b><span data-source="c_piso" data-field="real_var_pct" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">De R$ <b><span data-source="piso" data-field="piso_reais" data-where="ano=2022">—</span></b> em 2022 para R$ <b><span data-source="piso" data-field="piso_reais" data-where="ano=2026">—</span></b> em 2026: +<span data-source="c_piso" data-field="delta" data-row="0">—</span>% nominal e <b>+<span data-source="c_piso" data-field="real_var_pct" data-row="0">—</span>%</b> acima do INPC. O reajuste de 2026 (+<span data-source="piso" data-field="reajuste_pct" data-where="ano=2026">—</span>%) foi o primeiro pela nova fórmula da MP 1.334/2026, com <span data-source="contexto3" data-field="valor" data-where="chave=piso_2026_ganho_real">—</span>% de ganho real.</p>
+          <p class="br-contra"><b>Contraponto.</b> O maior reajuste da série (+<span data-source="piso" data-field="reajuste_pct" data-where="ano=2022">—</span>%, em 2022) veio do novo Fundeb aprovado em 2020, no governo anterior; em 2021 o piso foi congelado e em 2024 o reajuste (+<span data-source="piso" data-field="reajuste_pct" data-where="ano=2024">—</span>%) ficou abaixo do INPC (<span data-source="piso" data-field="inpc_ano_anterior_pct" data-where="ano=2024">—</span>%). Em 2023, só <span data-source="contexto3" data-field="valor" data-where="chave=municipios_pagam_piso_2023">—</span>% dos municípios pagavam o piso.</p>
+        </div>
+        <div class="br-card" id="card-vinculo">
+          <h3>2. Vínculo: professores efetivos nas redes públicas</h3>
+          <p class="br-note">Inep/Censo Escolar 2021–2025 (microdados tabulados por CNTE e Sindipema). Percentual de vínculos docentes efetivos (concursados) nas redes estaduais e municipais; o restante é temporário, terceirizado ou CLT. Não localizei a série nacional comparável para 2018–2020 e 2022.</p>
+          <div class="br-chart dash-skeleton" id="ch-vinculo" data-source="vinculo"></div>
+          <p class="br-auto" data-auto="ch-vinculo"><span class="br-auto-main"><b>Efetivos nas redes estaduais</b>, <span data-source="c_vinculo" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_vinculo" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_vinculo" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_vinculo" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_vinculo" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">Nas redes estaduais os efetivos caíram de <b><span data-source="vinculo" data-field="efetivos_estaduais_pct" data-where="ano=2021">—</span>%</b> para <b><span data-source="vinculo" data-field="efetivos_estaduais_pct" data-where="ano=2025">—</span>%</b>, abaixo de 50% pela primeira vez; nas municipais, de <span data-source="vinculo" data-field="efetivos_municipais_pct" data-where="ano=2021">—</span>% para <span data-source="vinculo" data-field="efetivos_municipais_pct" data-where="ano=2025">—</span>%. Em 2025, São Paulo tinha <span data-source="contexto3" data-field="valor" data-where="chave=sp_efetivos_2025">—</span>% de efetivos e o Acre <span data-source="contexto3" data-field="valor" data-where="chave=acre_efetivos_2025">—</span>%; <span data-source="contexto3" data-field="valor" data-where="chave=municipios_abaixo_70_2025">—</span>% das redes municipais estão abaixo da meta de 70% do novo PNE.</p>
+          <p class="br-contra"><b>Contraponto.</b> É uma tendência de uma década (as redes estaduais tinham <span data-source="contexto3" data-field="valor" data-where="chave=estaduais_efetivos_2013">—</span>% de efetivos em 2013) e depende de concursos estaduais e municipais, não federais; a variação entre redes é enorme (Bahia com <span data-source="contexto3" data-field="valor" data-where="chave=bahia_efetivos_2025">—</span>%). O novo PNE (Lei 15.388/2026) rebaixou a meta de 90% para 70% de efetivos.</p>
+        </div>
+        <div class="br-card" id="card-remun">
+          <h3>3. Remuneração relativa (Indicador 17A do PNE)</h3>
+          <p class="br-note">Inep, com base na PNAD Contínua/IBGE: rendimento bruto médio dos professores da rede pública com nível superior dividido pelo dos demais assalariados com nível superior, em %. Meta do PNE 2014–2024: 100% até 2020. Anos disponíveis nas divulgações citadas.</p>
+          <div class="br-chart dash-skeleton" id="ch-remun" data-source="remuneracao"></div>
+          <p class="br-auto" data-auto="ch-remun"><span class="br-auto-main"><b>Indicador 17A</b>, <span data-source="c_remun" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_remun" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_remun" data-field="inicio" data-where="periodo=2022-2026">—</span>%</b> → <b><span data-source="c_remun" data-field="fim" data-where="periodo=2022-2026">—</span>%</b> (variação <b><span data-source="c_remun" data-field="delta" data-where="periodo=2022-2026">—</span> p.p.</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text"><b><span data-source="remuneracao" data-field="indicador_17a_pct" data-where="ano=2024">—</span>%</b> em 2024: R$ <span data-source="contexto3" data-field="valor" data-where="chave=docente_reais_2024">—</span> contra R$ <span data-source="contexto3" data-field="valor" data-where="chave=outros_reais_2024">—</span> dos demais profissionais. Em 2014 eram <span data-source="remuneracao" data-field="indicador_17a_pct" data-where="ano=2014">—</span>%; <span data-source="contexto3" data-field="valor" data-where="chave=ufs_meta_17a_2024">—</span> estados já atingiram a equiparação.</p>
+          <p class="br-contra"><b>Contraponto.</b> A meta de 100% em 2020 não foi cumprida e o indicador recuou de <span data-source="remuneracao" data-field="indicador_17a_pct" data-where="ano=2023">—</span>% para <span data-source="remuneracao" data-field="indicador_17a_pct" data-where="ano=2024">—</span>% no último ano. Em ciclos anteriores o próprio Inep observou que parte da aproximação veio da queda real do rendimento dos demais profissionais, não só da alta do docente.</p>
+        </div>
+        <div class="br-card" id="card-formacao">
+          <h3>4. Formação e atratividade da carreira</h3>
+          <p class="br-note">Inep: Censo Escolar (adequação da formação docente), Censo da Educação Superior 2023 e 2024. Sem série anual comparável; este cartão não muda com o período.</p>
+          <ul class="br-list">
+            <li>Sem formação adequada à etapa ou disciplina em 2024: <b><span data-source="contexto3" data-field="valor" data-where="chave=sem_formacao_adequada_infantil_2024">—</span>%</b> na educação infantil, <b><span data-source="contexto3" data-field="valor" data-where="chave=sem_formacao_adequada_fundamental_2024">—</span>%</b> no fundamental e <b><span data-source="contexto3" data-field="valor" data-where="chave=sem_formacao_adequada_medio_2024">—</span>%</b> no médio.</li>
+            <li>Formação à distância: <b><span data-source="contexto3" data-field="valor" data-where="chave=licenciatura_ead_ingressantes_2023">—</span>%</b> dos ingressantes em licenciaturas em 2023 entraram em cursos EaD; em 2024, <span data-source="contexto3" data-field="valor" data-where="chave=licenciatura_ead_privada_2024">—</span>% dos ingressantes em licenciaturas EaD estavam em instituições privadas.</li>
+            <li>Tamanho da categoria: <span data-source="contexto3" data-field="valor" data-where="chave=docentes_2015">—</span> docentes em 2015 e <span data-source="contexto3" data-field="valor" data-where="chave=docentes_2025">—</span> em 2025, enquanto as matrículas caíram.</li>
+            <li>Novidades do período: Prova Nacional Docente (2025), Pé-de-Meia Licenciaturas (bolsa para estudantes de licenciatura, 2025) e nova regulação da EaD (2024–2025); cedo para medir efeito.</li>
+          </ul>
+          <p class="br-contra"><b>Contraponto.</b> Um terço dos professores sem formação adequada é um problema de décadas, não do período; e o avanço da EaD nas licenciaturas aconteceu sob os dois governos.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="br-tab" id="tab-pensionistas" role="tabpanel" aria-labelledby="tabbtn-pensionistas" hidden>
+    <p class="br-tab-lead">Aposentados e pensionistas do INSS: o que o benefício compra, quanto tempo leva para sair e o que foi tirado deles. Valores em reais correntes; onde há “real”, a correção é pelo INPC do IBGE.</p>
+    <nav class="br-nav" aria-label="Seções">
+      <a href="#card-sm">Reajustes</a><a href="#card-fila">Fila do INSS</a><a href="#card-fraude">Fraude dos descontos</a><a href="#fontes">Fontes e método</a>
+    </nav>
+    <section class="br-tiles" id="pens-resumo" aria-label="Resumo pensionistas">
+      <div class="br-tile" id="tile-sm" data-src="inss_reajustes" data-field-val="salario_minimo_reais" data-calc="c_sm" data-dfield="delta" data-better="up">
+        <span class="br-label">Piso do INSS = salário mínimo, R$ (<span class="br-anofim" data-source="c_sm" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+        <span class="br-num dash-skeleton" data-source="inss_reajustes" data-field="salario_minimo_reais" data-where="ano=2025">—</span>
+        <span class="br-delta"><span class="br-dsign"></span><span data-source="c_sm" data-field="delta" data-where="periodo=2022-2026">—</span>% nominal vs <span data-source="c_sm" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+      </div>
+      <div class="br-tile" id="tile-fila" data-src="fila_inss" data-field-val="requerimentos_milhoes" data-calc="c_fila" data-dfield="delta" data-better="down">
+        <span class="br-label">Fila do INSS, milhões de pedidos (<span class="br-anofim" data-source="c_fila" data-field="ano_fim" data-where="periodo=2022-2026">—</span>)</span>
+        <span class="br-num dash-skeleton" data-source="fila_inss" data-field="requerimentos_milhoes" data-where="ano=2025">—</span>
+        <span class="br-delta"><span class="br-dsign"></span><span data-source="c_fila" data-field="delta" data-where="periodo=2022-2026">—</span>% vs <span data-source="c_fila" data-field="ano_inicio" data-where="periodo=2022-2026">—</span></span>
+      </div>
+      <div class="br-tile" id="tile-fraude">
+        <span class="br-label">Fraude dos descontos: devolvido, R$ bi (abr/2026)</span>
+        <span class="br-num dash-skeleton" data-source="contexto4" data-field="valor" data-where="chave=fraude_devolvido_bi">—</span>
+        <span class="br-delta bad"><span data-source="c_fraude" data-field="pct_devolvido" data-row="0">—</span>% dos R$ <span data-source="contexto4" data-field="valor" data-where="chave=fraude_desviado_bi">—</span> bi desviados</span>
+      </div>
+    </section>
+    <section class="br-section" id="pens-secao">
+      <div class="br-grid">
+        <div class="br-card" id="card-sm">
+          <h3>1. Reajuste dos benefícios: piso (salário mínimo) × acima do mínimo (INPC)</h3>
+          <p class="br-note">Ministério da Previdência/INSS e IBGE. Quem recebe 1 salário mínimo acompanha o reajuste do mínimo; quem recebe acima é corrigido só pelo INPC do ano anterior. Valores de janeiro de cada ano (2023: valor de maio). “Real” corrige pelo INPC para reais de janeiro de 2026.</p>
+          <div class="br-seg" role="group" aria-label="Medida" id="seg-sm">
+            <button type="button" data-v="reajuste" aria-pressed="true">Reajuste × INPC</button>
+            <button type="button" data-v="sm" aria-pressed="false">Salário mínimo (R$)</button>
+            <button type="button" data-v="teto" aria-pressed="false">Teto do INSS (R$)</button>
+          </div>
+          <div class="br-chart dash-skeleton" id="ch-sm" data-source="inss_reajustes"></div>
+          <p class="br-auto" data-auto="ch-sm"><span class="br-auto-main"><b>Salário mínimo nominal</b>, <span data-source="c_sm" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_sm" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_sm" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_sm" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_sm" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>; em termos reais, acima do INPC, <b><span data-source="c_sm" data-field="real_var_pct" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">O piso previdenciário foi de R$ <b><span data-source="inss_reajustes" data-field="salario_minimo_reais" data-where="ano=2022">—</span></b> para R$ <b><span data-source="inss_reajustes" data-field="salario_minimo_reais" data-where="ano=2026">—</span></b>: +<span data-source="c_sm" data-field="delta" data-row="0">—</span>% nominal e <b>+<span data-source="c_sm" data-field="real_var_pct" data-row="0">—</span>%</b> acima do INPC, com a volta da regra de ganho real (INPC + crescimento do PIB) em 2023. <span data-source="contexto4" data-field="valor" data-where="chave=beneficiarios_sm_milhoes">—</span> milhões de pessoas (<span data-source="contexto4" data-field="valor" data-where="chave=beneficiarios_sm_pct">—</span>% dos beneficiários) recebem exatamente esse valor.</p>
+          <p class="br-contra"><b>Contraponto.</b> Os <span data-source="contexto4" data-field="valor" data-where="chave=beneficiarios_acima_milhoes">—</span> milhões que recebem acima do mínimo não tiveram ganho real em nenhum ano, por lei; o teto foi de R$ <span data-source="inss_reajustes" data-field="teto_reais" data-where="ano=2022">—</span> a R$ <span data-source="inss_reajustes" data-field="teto_reais" data-where="ano=2026">—</span> só pela inflação. E o ganho real do piso é despesa permanente de uma Previdência que já paga <span data-source="contexto4" data-field="valor" data-where="chave=beneficios_pagos_ago2025_milhoes">—</span> milhões de benefícios, R$ <span data-source="contexto4" data-field="valor" data-where="chave=valor_pago_ago2025_bi">—</span> bilhões por mês.</p>
+        </div>
+        <div class="br-card" id="card-fila">
+          <h3>2. Fila do INSS</h3>
+          <p class="br-note">Ministério da Previdência (Transparência Previdenciária), INSS e Agência Brasil. Requerimentos aguardando análise, em milhões, e tempo médio de concessão, em dias; o mês de referência de cada ponto está no arquivo, e 2021, 2022 e 2024 são aproximados (coluna “estimado”). Um requerimento não equivale a uma pessoa.</p>
+          <div class="br-seg" role="group" aria-label="Medida" id="seg-fila">
+            <button type="button" data-v="req" aria-pressed="true">Requerimentos (milhões)</button>
+            <button type="button" data-v="tempo" aria-pressed="false">Tempo médio (dias)</button>
+          </div>
+          <div class="br-chart dash-skeleton" id="ch-fila" data-source="fila_inss"></div>
+          <p class="br-auto" data-auto="ch-fila"><span class="br-auto-main"><b>Requerimentos na fila (milhões)</b>, <span data-source="c_fila" data-field="ano_inicio" data-where="periodo=2022-2026">—</span> → <span data-source="c_fila" data-field="ano_fim" data-where="periodo=2022-2026">—</span>: <b><span data-source="c_fila" data-field="inicio" data-where="periodo=2022-2026">—</span></b> → <b><span data-source="c_fila" data-field="fim" data-where="periodo=2022-2026">—</span></b> (variação <b><span data-source="c_fila" data-field="delta" data-where="periodo=2022-2026">—</span>%</b>).</span><span class="br-auto-na" hidden>Sem dois pontos comparáveis neste período para esta série.</span></p>
+          <p class="br-text">A fila caiu para <b><span data-source="fila_inss" data-field="requerimentos_milhoes" data-where="ano=2023">—</span> milhões</b> no fim de 2023, voltou a subir até o recorde de <span data-source="contexto4" data-field="valor" data-where="chave=fila_pico_2026">—</span> milhões em fevereiro de 2026 e desabou para <b><span data-source="fila_inss" data-field="requerimentos_milhoes" data-where="ano=2026">—</span> milhões</b> em agosto de 2026, o menor valor da série; o tempo médio de concessão passou de <span data-source="fila_inss" data-field="tempo_medio_dias" data-where="ano=2022">—</span> dias (janeiro de 2023) para <span data-source="fila_inss" data-field="tempo_medio_dias" data-where="ano=2026">—</span>. Na perícia médica, a fila foi de <span data-source="contexto4" data-field="valor" data-where="chave=pericia_fila_nov2025">—</span> para <span data-source="contexto4" data-field="valor" data-where="chave=pericia_fila_ago2026">—</span> pessoas e a espera de <span data-source="contexto4" data-field="valor" data-where="chave=pericia_tempo_ago2023">—</span> para <span data-source="contexto4" data-field="valor" data-where="chave=pericia_tempo_ago2026">—</span> dias.</p>
+          <p class="br-contra"><b>Contraponto.</b> A promessa de campanha de 2022 era zerar a fila; ela dobrou entre o fim de 2023 e o fim de 2025 antes de cair, e a queda de 2026 veio com volume recorde de indeferimentos, em ano eleitoral. Em agosto ainda havia <span data-source="contexto4" data-field="valor" data-where="chave=fila_mais45dias_ago2026">—</span> requerimentos esperando há mais de 45 dias.</p>
+        </div>
+        <div class="br-card" id="card-fraude">
+          <h3>3. Fraude dos descontos associativos</h3>
+          <p class="br-note">Polícia Federal/CGU (Operação Sem Desconto, abril de 2025), INSS e Ministério da Previdência. R$ bilhões. Este cartão não muda com o período.</p>
+          <div class="br-chart dash-skeleton" id="ch-fraude" data-source="fraude"></div>
+          <p class="br-text">Entidades descontaram <b>R$ <span data-source="contexto4" data-field="valor" data-where="chave=fraude_desviado_bi">—</span> bilhões</b> de aposentados e pensionistas entre 2019 e 2024 (R$ <span data-source="contexto4" data-field="valor" data-where="chave=fraude_descontos_2024_bi">—</span> bilhões só em 2024); <span data-source="contexto4" data-field="valor" data-where="chave=fraude_nao_reconheceram">—</span> pessoas (<span data-source="contexto4" data-field="valor" data-where="chave=fraude_nao_reconheceram_pct">—</span>%) não reconheceram os descontos quando consultadas. Até abril de 2026 a União havia devolvido <b>R$ <span data-source="contexto4" data-field="valor" data-where="chave=fraude_devolvido_bi">—</span> bilhões</b> (<span data-source="c_fraude" data-field="pct_devolvido" data-row="0">—</span>% do estimado) a <span data-source="contexto4" data-field="valor" data-where="chave=fraude_ressarcidos_milhoes">—</span> milhões de pessoas.</p>
+          <p class="br-contra"><b>Contraponto.</b> A fraude atravessou dois governos (2019–2024) e só foi interrompida em 2025; auditorias internas já apontavam o problema desde 2023. A resposta (suspensão dos descontos, ressarcimento pelo Tesouro e <span data-source="contexto4" data-field="valor" data-where="chave=fraude_processos">—</span> processos de responsabilização) existe, mas <span data-source="contexto4" data-field="valor" data-where="chave=fraude_nao_manifestados_milhoes">—</span> milhões de pessoas ainda não se manifestaram e menos da metade do valor voltou.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FONTES -->
+  <section class="br-section" id="fontes">
+    <h2>Fontes e método</h2>
+    <p class="br-lead">Todos os dados são de órgãos públicos ou de organismos multilaterais. Clique em qualquer número do painel para ver o arquivo e a linha de origem; em “Fontes” é possível baixar cada série em CSV. As duas abas usam o mesmo critério de seleção: série oficial, nacional, com pelo menos dois pontos no período, e o lado oposto escrito junto.</p>
+    <div class="br-card">
+      <ul class="br-sources">
+        <li>Desemprego, PIB, pobreza, Gini, analfabetismo, expectativa de vida: <a href="https://www.ibge.gov.br" target="_blank" rel="noopener">IBGE</a> — PNAD Contínua (anual e módulo Educação), Contas Nacionais Trimestrais, Síntese de Indicadores Sociais 2024 e 2025, Tábuas Completas de Mortalidade 2023 e 2024.</li>
+        <li>Mortes violentas, feminicídios, roubos: <a href="https://forumseguranca.org.br" target="_blank" rel="noopener">Fórum Brasileiro de Segurança Pública</a> — Anuário Brasileiro de Segurança Pública, edições 2023, 2024, 2025 e 2026 (dados de 2022 a 2025). Os valores de cada ano são os publicados na edição correspondente; o FBSP revisa séries entre edições.</li>
+        <li>Desmatamento e queimadas: <a href="https://www.gov.br/inpe" target="_blank" rel="noopener">INPE</a> — PRODES Amazônia e Cerrado (taxas consolidadas até 2024, estimativa 2025), DETER e Programa Queimadas (BDQueimadas).</li>
+        <li>Ideb: <a href="https://www.gov.br/inep" target="_blank" rel="noopener">Inep/MEC</a> — resultados 2019, 2021, 2023 e 2025 (divulgados em agosto de 2026).</li>
+        <li>Cobertura vacinal: <a href="https://www.gov.br/saude" target="_blank" rel="noopener">Ministério da Saúde/PNI</a>, painel de cobertura vacinal por residência (2022–2024); crianças zero dose: estimativas OMS/Unicef (WUENIC) 2025.</li>
+        <li>Contas públicas e juros: <a href="https://www.bcb.gov.br" target="_blank" rel="noopener">Banco Central</a> (Estatísticas Fiscais; decisões do Copom) e Instituição Fiscal Independente (RAF). Inadimplência: Serasa, Mapa da Inadimplência. População em situação de rua: OBPopRua/UFMG a partir do CadÚnico (MDS).</li>
+        <li>Fogo: MapBiomas (Monitor do Fogo e Relatório Anual do Fogo 2026) e INPE; emissões por fogo: SEEG 13/Observatório do Clima. Dengue: Ministério da Saúde, painel de arboviroses. Obesidade e diabetes: Ministério da Saúde, Vigitel 2024. PISA: OCDE, Resultados do PISA 2025 (setembro de 2026).</li>
+        <li>Professores: MEC e CNTE (piso do magistério 2008–2026); Inep/Censo Escolar 2021–2025 (vínculo, via CNTE e Sindipema; docentes), Inep/Indicador 17A do PNE com PNAD Contínua (remuneração relativa; Todos pela Educação, Anuário 2025), Inep/Censo da Educação Superior 2023 e 2024 (licenciaturas EaD). Pensionistas: Ministério da Previdência Social e INSS (reajustes, teto, fila, perícia, ressarcimento), IBGE (INPC), PF/CGU (Operação Sem Desconto).</li>
+        <li>Números de contexto citados nos textos (informalidade, letalidade policial, DETER, evasão vacinal etc.): arquivo “Contexto” anexado ao painel, com a fonte de cada linha.</li>
+        <li>Mapa da Fome: FAO, <em>The State of Food Security and Nutrition in the World 2025</em> (SOFI 2025).</li>
+      </ul>
+      <p class="br-foot">Janela principal: outubro de 2022 a outubro de 2026, com o último dado anual disponível por série (2024 ou 2025). O seletor de período acrescenta 2018–2021 com os valores publicados na época por cada órgão (PNAD antes da reponderação pelo Censo 2022; Anuário/FBSP conforme a edição de cada ano; dívida bruta na série do Banco Central vigente no início de 2024; tríplice viral 2018–2021 do Tabnet/DataSUS). Não foram localizadas séries comparáveis anteriores a 2022 para roubos de celular, crianças zero dose e área queimada; focos de queimadas não tem o total de 2022. Nos painéis de professores e pensionistas, os valores reais usam o INPC de dezembro a dezembro do IBGE (2017 a 2025), acumulado em um índice com base em janeiro de 2018 que está dentro dos arquivos; a consistência do índice foi verificada contra a série oficial do teto do INSS. Alguns valores são derivados de variações percentuais publicadas, não de tabelas diretas, e estão marcados como “estimado” nos arquivos (barras mais claras): roubos de celular 2022, focos de queimadas e área queimada 2023, inadimplentes 2023, estelionatos 2022 e 2024, população de rua 2023 e óbitos por dengue 2025. Variações percentuais e diferenças em pontos percentuais são calculadas na página a partir dos arquivos anexados; clique nelas para ver a fórmula.</p>
+    </div>
+  </section>
+</div>
+
+
+<div class="site-foot">Página gerada a partir de um painel interativo feito com Claude (Anthropic) em outubro de 2026; gráficos com d3 v7. Clique em qualquer número para ver o arquivo, a linha e, nas variações, a fórmula. Correções e fontes adicionais são bem-vindas via <a href="https://github.com/mhostert/mhostert.github.io">GitHub</a>.</div>
+</main>
+<script src="d3.v7.min.js"></script>
+<script>
+/* Shim do runtime "dash" do painel original: lê os CSVs de ./data e expõe data/calc/onData/colors/setLink. */
+window.dash = (function () {
+  const FILES = {"desemprego": "data/desemprego.csv", "pib": "data/pib.csv", "pobreza": "data/pobreza.csv", "mvi": "data/mvi.csv", "roubos": "data/roubos.csv", "prodes": "data/prodes.csv", "queimadas": "data/queimadas.csv", "analfabetismo": "data/analfabetismo.csv", "ideb": "data/ideb.csv", "vacinas": "data/vacinas.csv", "zerodose": "data/zerodose.csv", "expectativa": "data/expectativa.csv", "contexto": "data/contexto.csv", "fiscal": "data/fiscal.csv", "serasa": "data/serasa.csv", "letalidade": "data/letalidade.csv", "estelionatos": "data/estelionatos.csv", "area_queimada": "data/area_queimada.csv", "dengue": "data/dengue.csv", "obesidade": "data/obesidade.csv", "poprua": "data/poprua.csv", "pisa": "data/pisa.csv", "contexto2": "data/contexto2.csv", "piso": "data/piso.csv", "vinculo": "data/vinculo.csv", "remuneracao": "data/remuneracao.csv", "inss_reajustes": "data/inss_reajustes.csv", "fila_inss": "data/fila_inss.csv", "fraude": "data/fraude.csv", "contexto3": "data/contexto3.csv", "contexto4": "data/contexto4.csv"};
+  const store = {}, calcs = {}, cbs = [];
+  let loaded = false, meta = {};
+  function parseCsv(text) { return d3.csvParse(text); }
+  async function load() {
+    try { meta = await fetch('data/datasets.json').then(r => r.json()); } catch (e) { meta = {}; }
+    await Promise.all(Object.entries(FILES).map(async ([id, f]) => {
+      try { const r = await fetch(f); if (!r.ok) throw new Error('HTTP ' + r.status); store[id] = { status: 'ok', data: parseCsv(await r.text()) }; }
+      catch (e) { store[id] = { status: 'error', message: String(e), data: [] }; }
+    }));
+    loaded = true; cbs.forEach(fn => { try { fn(); } catch (e) { console.error(e); } });
+  }
+  let t; window.addEventListener('resize', () => { clearTimeout(t); t = setTimeout(() => { if (loaded) cbs.forEach(fn => fn()); }, 150); });
+  const api = {
+    colors: ['#2f6fed', '#e8702a', '#2a9d5c', '#d33a3a', '#7b5cd6', '#b5651d', '#d64f9a', '#7a7a7a'],
+    data(id) {
+      if (store[id]) return store[id];
+      if (calcs[id]) {
+        const inputs = calcs[id].inputs.map(i => (store[i] || {}).data);
+        if (!loaded || inputs.some(x => !x)) return { status: 'loading', data: [] };
+        try { return { status: 'ok', data: calcs[id].fn(...inputs) }; } catch (e) { return { status: 'error', message: String(e), data: [] }; }
+      }
+      return { status: loaded ? 'missing' : 'loading', data: [] };
+    },
+    calc(id, spec) { calcs[id] = spec; },
+    onData(fn) { cbs.push(fn); if (loaded) fn(); },
+    setLink(id) { try { history.replaceState(null, '', '#' + id); } catch (e) {} },
+    params() { return {}; }, setParams() {}, resetParams() {}, refresh() {},
+    meta() { return meta; }, files() { return FILES; }, calcs() { return calcs; }
+  };
+  document.addEventListener('DOMContentLoaded', load);
+  return api;
+})();
+</script>
+<script>
+
+/* ---------- helpers ---------- */
+const brNum = (v, d) => new Intl.NumberFormat('pt-BR', { minimumFractionDigits: d, maximumFractionDigits: d }).format(v);
+const brInt = v => new Intl.NumberFormat('pt-BR', { maximumFractionDigits: 0 }).format(v);
+const num = v => (v === '' || v == null) ? NaN : Number(v);
+const r1 = v => Math.round(v * 10) / 10;
+const r2 = v => Math.round(v * 100) / 100;
+const pctChange = (a, b) => r1((b - a) / a * 100);
+const rowsOf = id => (dash.data(id).data || []).map(r => { const o = {}; for (const k in r) o[k] = (k === 'estimado') ? r[k] : num(r[k]); return o; });
+const byYear = (rows, y) => rows.find(r => r.ano === y) || {};
+
+/* ---------- calculations (readers can open these) ----------
+   Cada cálculo devolve três linhas, uma por período (2022-2026, 2018-2022 e 2018-2026):
+   início e fim são o primeiro e o último ano com dado dentro do período. */
+const JANELAS = [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]];
+dash.calc('c_desemprego', {
+  title: 'Desemprego por período',
+  description: 'Taxa no primeiro e no último ano de cada período e diferença em pontos percentuais.',
+  inputs: ['desemprego'],
+  fn: (desemprego) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = desemprego.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.taxa_pct === '' ? NaN : Number(r.taxa_pct)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) * 10) / 10 : null;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, delta_pp: d };
+  })
+});
+dash.calc('c_pib', {
+  title: 'PIB: crescimento médio por período',
+  description: 'Média aritmética das variações anuais do PIB dentro de cada período (anos com dado).',
+  inputs: ['pib'],
+  fn: (pib) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = pib.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.variacao_pct === '' ? NaN : Number(r.variacao_pct)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const m = w.length ? Math.round(w.reduce((t, r) => t + r.v, 0) / w.length * 100) / 100 : null;
+    return { periodo: p, ano_inicio: w.length ? w[0].a : null, ano_fim: w.length ? w[w.length - 1].a : null, media: m, anos: w.length };
+  })
+});
+dash.calc('c_pobreza', {
+  title: 'Pobreza por período',
+  description: 'Pobreza, extrema pobreza e Gini no primeiro e no último ano com dado de cada período, e as diferenças (pontos percentuais; Gini em pontos do índice).',
+  inputs: ['pobreza'],
+  fn: (pobreza) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => pobreza.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = (w, dec) => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) * dec) / dec } : { f, l, d: null }; };
+    const po = span(pick('pobreza_pct'), 10), ex = span(pick('extrema_pobreza_pct'), 10), gi = span(pick('gini'), 1000);
+    return { periodo: p, ano_inicio: po.f ? po.f.a : null, ano_fim: po.l ? po.l.a : null, inicio: po.f ? po.f.v : null, fim: po.l ? po.l.v : null, delta: po.d,
+      delta_pobreza_pp: po.d, delta_extrema_pp: ex.d, extrema_ano_inicio: ex.f ? ex.f.a : null, delta_gini: gi.d, gini_ano_inicio: gi.f ? gi.f.a : null };
+  })
+});
+dash.calc('c_mvi', {
+  title: 'Mortes violentas por período',
+  description: 'Número absoluto, taxa por 100 mil e feminicídios no primeiro e no último ano de cada período, com variações percentuais. A taxa de 2022 em diante usa a população do Censo 2022; a de 2018–2021, as projeções da época.',
+  inputs: ['mvi'],
+  fn: (mvi) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => mvi.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) / f.v * 1000) / 10 } : { f, l, d: null }; };
+    const ab = span(pick('mvi')), tx = span(pick('taxa_100k')), fe = span(pick('feminicidios'));
+    return { periodo: p, ano_inicio: ab.f ? ab.f.a : null, ano_fim: ab.l ? ab.l.a : null, inicio: ab.f ? ab.f.v : null, fim: ab.l ? ab.l.v : null, delta: ab.d,
+      var_abs_pct: ab.d, var_taxa_pct: tx.d, taxa_inicio: tx.f ? tx.f.v : null, taxa_fim: tx.l ? tx.l.v : null,
+      fem_inicio: fe.f ? fe.f.v : null, fem_fim: fe.l ? fe.l.v : null, fem_delta: fe.d, var_fem_pct: fe.d };
+  })
+});
+dash.calc('c_roubos', {
+  title: 'Roubos de celular por período',
+  description: 'Ocorrências no primeiro e no último ano de cada período e variação percentual; também a variação de 2025 sobre 2024.',
+  inputs: ['roubos'],
+  fn: (roubos) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = roubos.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.roubos_celular === '' ? NaN : Number(r.roubos_celular)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) / f.v * 1000) / 10 : null;
+    const g = a => Number((roubos.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).roubos_celular);
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, var_pct: d, var_2025_pct: Math.round((g(2025) - g(2024)) / g(2024) * 1000) / 10 };
+  })
+});
+dash.calc('c_prodes', {
+  title: 'Desmatamento por período',
+  description: 'Amazônia e Cerrado (km²) no primeiro e no último ano de cada período, com variações percentuais; também Cerrado 2025 vs o pico de 2023 e vs 2024.',
+  inputs: ['prodes'],
+  fn: (prodes) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => prodes.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) / f.v * 1000) / 10 } : { f, l, d: null }; };
+    const am = span(pick('amazonia_km2')), ce = span(pick('cerrado_km2'));
+    const g = (a, k) => Number((prodes.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {})[k]);
+    const pc = (a, b) => Math.round((b - a) / a * 1000) / 10;
+    return { periodo: p, ano_inicio: am.f ? am.f.a : null, ano_fim: am.l ? am.l.a : null, inicio: am.f ? am.f.v : null, fim: am.l ? am.l.v : null, delta: am.d,
+      amazonia_var_pct: am.d, cerrado_var_pct: ce.d, cerrado_inicio: ce.f ? ce.f.v : null, cerrado_fim: ce.l ? ce.l.v : null,
+      cerrado_var_desde_pico_pct: pc(g(2023, 'cerrado_km2'), g(2025, 'cerrado_km2')), cerrado_var_2025_pct: pc(g(2024, 'cerrado_km2'), g(2025, 'cerrado_km2')) };
+  })
+});
+dash.calc('c_queimadas', {
+  title: 'Focos de queimadas por período',
+  description: 'Focos no primeiro e no último ano com dado de cada período e variação percentual; também 2025 vs 2024.',
+  inputs: ['queimadas'],
+  fn: (queimadas) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = queimadas.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.focos === '' ? NaN : Number(r.focos)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) / f.v * 1000) / 10 : null;
+    const g = a => Number((queimadas.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).focos);
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, var_2025_pct: Math.round((g(2025) - g(2024)) / g(2024) * 1000) / 10 };
+  })
+});
+dash.calc('c_analf', {
+  title: 'Analfabetismo por período',
+  description: 'Taxa no primeiro e no último ano com dado de cada período e diferenças (pontos percentuais e milhões de pessoas).',
+  inputs: ['analfabetismo'],
+  fn: (analfabetismo) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => analfabetismo.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) * 10) / 10 } : { f, l, d: null }; };
+    const t = span(pick('taxa_pct')), m = span(pick('analfabetos_milhoes'));
+    return { periodo: p, ano_inicio: t.f ? t.f.a : null, ano_fim: t.l ? t.l.a : null, inicio: t.f ? t.f.v : null, fim: t.l ? t.l.v : null, delta: t.d, delta_pp: t.d, delta_milhoes: m.d };
+  })
+});
+dash.calc('c_ideb', {
+  title: 'Ideb por período',
+  description: 'Anos iniciais, anos finais e ensino médio na primeira e na última edição de cada período, com as diferenças; e a distância das metas nacionais (6,0; 5,5; 5,2) em 2025.',
+  inputs: ['ideb'],
+  fn: (ideb) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => ideb.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) * 10) / 10 } : { f, l, d: null }; };
+    const ai = span(pick('anos_iniciais')), af = span(pick('anos_finais')), em = span(pick('ensino_medio'));
+    const g = k => Number((ideb.find(r => (r.ano === '' ? NaN : Number(r.ano)) === 2025) || {})[k]);
+    const r1 = v => Math.round(v * 10) / 10;
+    return { periodo: p, ano_inicio: ai.f ? ai.f.a : null, ano_fim: ai.l ? ai.l.a : null, inicio: ai.f ? ai.f.v : null, fim: ai.l ? ai.l.v : null, delta: ai.d,
+      delta_ai: ai.d, delta_af: af.d, delta_em: em.d, gap_ai: r1(6.0 - g('anos_iniciais')), gap_af: r1(5.5 - g('anos_finais')), gap_em: r1(5.2 - g('ensino_medio')) };
+  })
+});
+dash.calc('c_vacinas', {
+  title: 'Cobertura vacinal por período',
+  description: 'Cobertura no primeiro e no último ano com dado de cada período e diferença em pontos percentuais, por vacina. Antes de 2022 só a tríplice viral tem série anexada (Tabnet/DataSUS).',
+  inputs: ['vacinas'],
+  fn: (vacinas) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => vacinas.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) * 10) / 10 } : { f, l, d: null }; };
+    const tv = span(pick('triplice_viral_d1')), po = span(pick('polio_3dose')), pe = span(pick('pentavalente_3dose'));
+    return { periodo: p, ano_inicio: tv.f ? tv.f.a : null, ano_fim: tv.l ? tv.l.a : null, inicio: tv.f ? tv.f.v : null, fim: tv.l ? tv.l.v : null, delta: tv.d, delta_tv: tv.d, delta_polio: po.d, delta_penta: pe.d };
+  })
+});
+dash.calc('c_expect', {
+  title: 'Expectativa de vida por período',
+  description: 'Expectativa de vida ao nascer no primeiro e no último ano de cada período e diferença em anos; também 2024 vs 2022 e vs 2019.',
+  inputs: ['expectativa'],
+  fn: (expectativa) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = expectativa.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.expectativa_vida_anos === '' ? NaN : Number(r.expectativa_vida_anos)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) * 10) / 10 : null;
+    const g = a => Number((expectativa.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).expectativa_vida_anos);
+    const r1 = v => Math.round(v * 10) / 10;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, delta_vs_2022: r1(g(2024) - g(2022)), delta_vs_2019: r1(g(2024) - g(2019)) };
+  })
+});
+dash.calc('c_fiscal', {
+  title: 'Dívida e Selic por período',
+  description: 'Dívida bruta (% do PIB) e Selic de fim de ano no primeiro e no último ano de cada período, com diferenças em pontos percentuais.',
+  inputs: ['fiscal'],
+  fn: (fiscal) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => fiscal.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) * 100) / 100 } : { f, l, d: null }; };
+    const db = span(pick('dbgg_pct_pib')), se = span(pick('selic_fim_ano_pct'));
+    return { periodo: p, ano_inicio: db.f ? db.f.a : null, ano_fim: db.l ? db.l.a : null, inicio: db.f ? db.f.v : null, fim: db.l ? db.l.v : null, delta: db.d, delta_dbgg_pp: db.d, delta_selic_pp: se.d, selic_inicio: se.f ? se.f.v : null, selic_fim: se.l ? se.l.v : null };
+  })
+});
+dash.calc('c_serasa', {
+  title: 'Inadimplentes por período',
+  description: 'Milhões de pessoas negativadas no primeiro e no último ano com dado de cada período, variação percentual e diferença em milhões.',
+  inputs: ['serasa'],
+  fn: (serasa) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = serasa.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.inadimplentes_milhoes === '' ? NaN : Number(r.inadimplentes_milhoes)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const ok = f && l && f !== l;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: ok ? Math.round((l.v - f.v) / f.v * 1000) / 10 : null, var_pct: ok ? Math.round((l.v - f.v) / f.v * 1000) / 10 : null, delta_milhoes: ok ? Math.round((l.v - f.v) * 10) / 10 : null };
+  })
+});
+dash.calc('c_letalidade', {
+  title: 'Letalidade policial por período',
+  description: 'Mortes por intervenção policial no primeiro e no último ano de cada período e variação percentual; também 2025 vs 2024 e vs 2022.',
+  inputs: ['letalidade'],
+  fn: (letalidade) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = letalidade.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.mdip === '' ? NaN : Number(r.mdip)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) / f.v * 1000) / 10 : null;
+    const g = a => Number((letalidade.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).mdip);
+    const pc = (a, b) => Math.round((b - a) / a * 1000) / 10;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, var_pct: d, var_2025_pct: pc(g(2024), g(2025)), var_vs_2022_pct: pc(g(2022), g(2025)) };
+  })
+});
+dash.calc('c_estelionato', {
+  title: 'Estelionatos por período',
+  description: 'Ocorrências no primeiro e no último ano com dado de cada período e variação percentual; também 2025 vs 2018, vs 2022 e vs 2024.',
+  inputs: ['estelionatos'],
+  fn: (estelionatos) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = estelionatos.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.ocorrencias === '' ? NaN : Number(r.ocorrencias)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) / f.v * 1000) / 10 : null;
+    const g = a => Number((estelionatos.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).ocorrencias);
+    const pc = (a, b) => Math.round((b - a) / a * 1000) / 10;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, var_2018_pct: pc(g(2018), g(2025)), var_2022_pct: pc(g(2022), g(2025)), var_2025_pct: pc(g(2024), g(2025)) };
+  })
+});
+dash.calc('c_fogo', {
+  title: 'Área queimada: variações',
+  description: 'Variação percentual da área queimada: 2024 vs 2023 e 2025 vs 2024.',
+  inputs: ['area_queimada'],
+  fn: (area_queimada) => {
+    const g = a => Number((area_queimada.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).milhoes_ha);
+    const pc = (a, b) => Math.round((b - a) / a * 1000) / 10;
+    return [{ area_var_2024_pct: pc(g(2023), g(2024)), area_var_2025_pct: pc(g(2024), g(2025)) }];
+  }
+});
+dash.calc('c_dengue', {
+  title: 'Dengue por período',
+  description: 'Casos prováveis e óbitos no primeiro e no último ano de cada período, variações percentuais, e o pior ano do período (óbitos) com a razão sobre o ano anterior; também as razões de 2024 sobre 2023 e a variação de casos de 2025 vs 2024.',
+  inputs: ['dengue'],
+  fn: (dengue) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => dengue.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) / f.v * 1000) / 10 } : { f, l, d: null }; };
+    const ca = span(pick('casos_provaveis')), ob = span(pick('obitos'));
+    const obs = pick('obitos'); const pico = obs.reduce((m, r) => (r.v > m.v ? r : m), obs[0] || { a: null, v: null });
+    const prev = Number((dengue.find(r => (r.ano === '' ? NaN : Number(r.ano)) === pico.a - 1) || {}).obitos);
+    const g = (a, k) => Number((dengue.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {})[k]);
+    return { periodo: p, ano_inicio: ca.f ? ca.f.a : null, ano_fim: ca.l ? ca.l.a : null, inicio: ca.f ? ca.f.v : null, fim: ca.l ? ca.l.v : null, delta: ca.d,
+      obitos_var_pct: ob.d, ano_pico: pico.a, pico_obitos: pico.v, pico_razao: Number.isFinite(prev) ? Math.round(pico.v / prev * 10) / 10 : null,
+      casos_razao_2024: Math.round(g(2024, 'casos_provaveis') / g(2023, 'casos_provaveis') * 10) / 10,
+      obitos_razao_2024: Math.round(g(2024, 'obitos') / g(2023, 'obitos') * 10) / 10,
+      casos_var_2025_pct: Math.round((g(2025, 'casos_provaveis') - g(2024, 'casos_provaveis')) / g(2024, 'casos_provaveis') * 1000) / 10 };
+  })
+});
+dash.calc('c_obesidade', {
+  title: 'Obesidade por período',
+  description: 'Prevalência de obesidade no primeiro e no último ano com dado de cada período e diferença em pontos percentuais; também 2024 vs 2019 e vs 2006.',
+  inputs: ['obesidade'],
+  fn: (obesidade) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = obesidade.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.obesidade_pct === '' ? NaN : Number(r.obesidade_pct)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) * 10) / 10 : null;
+    const g = a => Number((obesidade.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).obesidade_pct);
+    const r1 = v => Math.round(v * 10) / 10;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, delta_2019_pp: r1(g(2024) - g(2019)), delta_2006_pp: r1(g(2024) - g(2006)) };
+  })
+});
+dash.calc('c_rua', {
+  title: 'População de rua por período',
+  description: 'Registros no primeiro e no último ano com dado oficial (não estimado) de cada período e variação percentual; também 2025 vs 2024.',
+  inputs: ['poprua'],
+  fn: (poprua) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = poprua.filter(r => r.estimado !== 'sim').map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r.pessoas === '' ? NaN : Number(r.pessoas)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1];
+    const d = (f && l && f !== l) ? Math.round((l.v - f.v) / f.v * 1000) / 10 : null;
+    const g = a => Number((poprua.find(r => (r.ano === '' ? NaN : Number(r.ano)) === a) || {}).pessoas);
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: d, var_pct: d, var_2025_pct: Math.round((g(2025) - g(2024)) / g(2024) * 1000) / 10 };
+  })
+});
+dash.calc('c_pisa', {
+  title: 'PISA por período',
+  description: 'Pontos em matemática na primeira e na última edição de cada período e diferenças por área; e a distância da média da OCDE em 2025 (OCDE menos Brasil).',
+  inputs: ['pisa'],
+  fn: (pisa) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => pisa.map(r => ({ a: (r.ano === '' ? NaN : Number(r.ano)), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: l.v - f.v } : { f, l, d: null }; };
+    const le = span(pick('leitura')), ma = span(pick('matematica')), ci = span(pick('ciencias'));
+    const g = k => Number((pisa.find(r => (r.ano === '' ? NaN : Number(r.ano)) === 2025) || {})[k]);
+    return { periodo: p, ano_inicio: ma.f ? ma.f.a : null, ano_fim: ma.l ? ma.l.a : null, inicio: ma.f ? ma.f.v : null, fim: ma.l ? ma.l.v : null, delta: ma.d,
+      delta_leitura: le.d, delta_matematica: ma.d, delta_ciencias: ci.d, gap_leitura: g('ocde_leitura') - g('leitura'), gap_mat: g('ocde_matematica') - g('matematica'), gap_ciencias: g('ocde_ciencias') - g('ciencias') };
+  })
+});
+
+dash.calc('c_piso', {
+  title: 'Piso do magistério por período',
+  description: 'Piso nominal no primeiro e no último ano de cada período, variação nominal (%) e variação real (%), esta última dividindo a razão nominal pela razão do índice de preços (INPC acumulado, base jan/2018) entre os dois anos.',
+  inputs: ['piso'],
+  fn: (piso) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = piso.map(r => ({ a: Number(r.ano), v: (r.piso_reais === '' ? NaN : Number(r.piso_reais)), i: (r.indice_precos_jan2018 === '' ? NaN : Number(r.indice_precos_jan2018)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1]; const ok = f && l && f !== l;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null,
+      delta: ok ? Math.round((l.v / f.v - 1) * 1000) / 10 : null,
+      real_var_pct: ok ? Math.round(((l.v / f.v) / (l.i / f.i) - 1) * 1000) / 10 : null };
+  })
+});
+dash.calc('c_vinculo', {
+  title: 'Efetivos por período',
+  description: 'Percentual de professores efetivos nas redes estaduais e municipais no primeiro e no último ano com dado de cada período, e diferenças em pontos percentuais.',
+  inputs: ['vinculo'],
+  fn: (vinculo) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const pick = k => vinculo.map(r => ({ a: Number(r.ano), v: (r[k] === '' ? NaN : Number(r[k])) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const span = w => { const f = w[0], l = w[w.length - 1]; return (f && l && f !== l) ? { f, l, d: Math.round((l.v - f.v) * 10) / 10 } : { f, l, d: null }; };
+    const e = span(pick('efetivos_estaduais_pct')), m = span(pick('efetivos_municipais_pct'));
+    return { periodo: p, ano_inicio: e.f ? e.f.a : null, ano_fim: e.l ? e.l.a : null, inicio: e.f ? e.f.v : null, fim: e.l ? e.l.v : null, delta: e.d, delta_municipais_pp: m.d };
+  })
+});
+dash.calc('c_remun', {
+  title: 'Indicador 17A por período',
+  description: 'Indicador 17A (salário docente como % do dos demais profissionais com nível superior) no primeiro e no último ano com dado de cada período, e diferença em pontos percentuais.',
+  inputs: ['remuneracao'],
+  fn: (remuneracao) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = remuneracao.map(r => ({ a: Number(r.ano), v: (r.indicador_17a_pct === '' ? NaN : Number(r.indicador_17a_pct)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1]; const ok = f && l && f !== l;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null, delta: ok ? Math.round((l.v - f.v) * 10) / 10 : null };
+  })
+});
+dash.calc('c_sm', {
+  title: 'Salário mínimo e teto por período',
+  description: 'Salário mínimo nominal no primeiro e no último ano de cada período, variação nominal (%) e variação real (%) pela razão do índice de preços (INPC acumulado, base jan/2018); também o teto do INSS nos mesmos anos.',
+  inputs: ['inss_reajustes'],
+  fn: (inss_reajustes) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = inss_reajustes.map(r => ({ a: Number(r.ano), v: (r.salario_minimo_reais === '' ? NaN : Number(r.salario_minimo_reais)), t: (r.teto_reais === '' ? NaN : Number(r.teto_reais)), i: (r.indice_precos_jan2018 === '' ? NaN : Number(r.indice_precos_jan2018)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1]; const ok = f && l && f !== l;
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null,
+      delta: ok ? Math.round((l.v / f.v - 1) * 1000) / 10 : null,
+      real_var_pct: ok ? Math.round(((l.v / f.v) / (l.i / f.i) - 1) * 1000) / 10 : null,
+      teto_inicio: f ? f.t : null, teto_fim: l ? l.t : null, teto_var_pct: ok ? Math.round((l.t / f.t - 1) * 1000) / 10 : null };
+  })
+});
+dash.calc('c_fila', {
+  title: 'Fila do INSS por período',
+  description: 'Requerimentos na fila (milhões) no primeiro e no último ponto de cada período, variação percentual, pico do período e tempo médio de concessão nos dois pontos.',
+  inputs: ['fila_inss'],
+  fn: (fila_inss) => [['2022-2026', 2022, 2026], ['2018-2022', 2017, 2022], ['2018-2026', 2017, 2026]].map(([p, lo, hi]) => {
+    const w = fila_inss.map(r => ({ a: Number(r.ano), v: (r.requerimentos_milhoes === '' ? NaN : Number(r.requerimentos_milhoes)), t: (r.tempo_medio_dias === '' ? NaN : Number(r.tempo_medio_dias)) })).filter(r => Number.isFinite(r.v) && r.a >= lo && r.a <= hi).sort((x, y) => x.a - y.a);
+    const f = w[0], l = w[w.length - 1]; const ok = f && l && f !== l;
+    const pico = w.reduce((m, r) => (r.v > m.v ? r : m), w[0] || { a: null, v: null });
+    return { periodo: p, ano_inicio: f ? f.a : null, ano_fim: l ? l.a : null, inicio: f ? f.v : null, fim: l ? l.v : null,
+      delta: ok ? Math.round((l.v / f.v - 1) * 1000) / 10 : null, ano_pico: pico.a, pico: pico.v, tempo_inicio: f ? f.t : null, tempo_fim: l ? l.t : null };
+  })
+});
+dash.calc('c_fraude', {
+  title: 'Fraude: parcela devolvida',
+  description: 'Valor devolvido dividido pelo valor descontado indevidamente, em %.',
+  inputs: ['fraude'],
+  fn: (fraude) => {
+    const g = pre => Number((fraude.find(r => String(r.item).startsWith(pre)) || {}).valor_bi_reais);
+    return [{ pct_devolvido: Math.round(g('Devolvido') / g('Descontado') * 1000) / 10 }];
+  }
+});
+
+/* ---------- generic chart ---------- */
+function drawChart(box, opts) {
+  // opts: rows, series:[{key,label,color}], type:'bar'|'line', fmt, yMin, yMax, refs:[{y,label}], unit
+  box.textContent = '';
+  const W = Math.max(280, box.clientWidth || 600);
+  const H = opts.height || 260;
+  const rows = opts.rows.filter(r => opts.series.some(s => Number.isFinite(r[s.key])));
+  if (!rows.length) { const nd = document.createElement('div'); nd.className = 'br-nodata'; nd.textContent = 'Sem dados comparáveis neste período'; box.appendChild(nd); return; }
+  const xs = rows.map(r => r.ano);
+  const svg = d3.select(box).append('svg').attr('viewBox', `0 0 ${W} ${H}`).attr('width', '100%').attr('height', H);
+  const tip = d3.select(box).append('div').attr('class', 'br-tip');
+  const fmt = opts.fmt || (v => brNum(v, 1));
+  let vals = [];
+  rows.forEach(r => opts.series.forEach(s => { if (Number.isFinite(r[s.key])) vals.push(r[s.key]); }));
+  (opts.refs || []).forEach(x => vals.push(x.y));
+  let yMin = opts.yMin != null ? opts.yMin : (opts.type === 'bar' ? Math.min(0, d3.min(vals)) : d3.min(vals));
+  let yMax = opts.yMax != null ? opts.yMax : d3.max(vals);
+  if (opts.type !== 'bar' && opts.yMin == null) { const pad = (yMax - yMin) * 0.25 || 1; yMin = yMin - pad; }
+  if (opts.yMax == null) { const pad = (yMax - yMin) * 0.12 || 1; yMax = yMax + pad; }
+  const y = d3.scaleLinear([yMin, yMax], [H - 34, 14]);
+  // measure tick width for the left margin
+  const ticks = y.ticks(5);
+  const tfmt = v => Number.isInteger(v) ? fmt(v).replace(/,0+(?=[^\d]|$)/, '') : fmt(v);
+  const probe = svg.append('g').attr('class', 'probe');
+  let maxW = 0;
+  ticks.forEach(t => { const tx = probe.append('text').attr('font-size', 11).text(tfmt(t)); maxW = Math.max(maxW, tx.node().getComputedTextLength()); });
+  probe.remove();
+  const mL = Math.ceil(maxW) + 12, mR = 12;
+  const x = d3.scaleBand(xs, [mL, W - mR]).paddingInner(0.3).paddingOuter(0.15);
+  // grid + axes
+  svg.append('g').selectAll('line').data(ticks).join('line')
+    .attr('x1', mL).attr('x2', W - mR).attr('y1', d => y(d)).attr('y2', d => y(d))
+    .attr('stroke', 'var(--cds-chart-grid)').attr('stroke-width', 1);
+  svg.append('g').selectAll('text').data(ticks).join('text')
+    .attr('x', mL - 6).attr('y', d => y(d)).attr('dy', '0.32em').attr('text-anchor', 'end')
+    .attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text(d => tfmt(d));
+  const gx = svg.append('g').attr('transform', `translate(0,${H - 34})`).call(d3.axisBottom(x).tickSize(0).tickPadding(8));
+  gx.attr('font-size', null).attr('font-family', null);
+  gx.select('.domain').attr('stroke', 'var(--cds-chart-axis)');
+  gx.selectAll('text').attr('font-size', 11).attr('fill', 'var(--color-fg-muted)');
+  // divider between 2022 and 2023 in the full series
+  if (state.periodo === '2018-2026') {
+    const before = xs.filter(y => y <= 2022).pop(), after = xs.find(y => y > 2022);
+    if (before != null && after != null) {
+      const dx = (x(before) + x.bandwidth() + x(after)) / 2;
+      svg.append('line').attr('x1', dx).attr('x2', dx).attr('y1', 14).attr('y2', H - 34).attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '3 3').attr('stroke-width', 1);
+      svg.append('text').attr('x', dx + 4).attr('y', 22).attr('font-size', 10).attr('fill', 'var(--color-fg-muted)').text('2023');
+    }
+  }
+  // reference lines
+  (opts.refs || []).forEach(ref => {
+    svg.append('line').attr('x1', mL).attr('x2', W - mR).attr('y1', y(ref.y)).attr('y2', y(ref.y))
+      .attr('stroke', 'var(--cds-chart-reference)').attr('stroke-dasharray', '4 4').attr('stroke-width', 1);
+    svg.append('text').attr('x', W - mR).attr('y', y(ref.y) - 4).attr('text-anchor', 'end')
+      .attr('font-size', 10).attr('fill', 'var(--color-fg-muted)').text(ref.label);
+  });
+  const n = opts.series.length;
+  const showLabels = opts.labels !== false && rows.length * n <= 15;
+  if (opts.type === 'bar') {
+    const xi = d3.scaleBand(opts.series.map(s => s.key), [0, x.bandwidth()]).paddingInner(n > 1 ? 0.12 : 0);
+    const bw = Math.min(xi.bandwidth(), 40);
+    const g = svg.append('g');
+    rows.forEach(r => opts.series.forEach(s => {
+      const v = r[s.key]; if (!Number.isFinite(v)) return;
+      const bx = x(r.ano) + xi(s.key) + (xi.bandwidth() - bw) / 2;
+      const y0 = y(Math.max(0, v)), y1 = y(Math.min(0, v));
+      g.append('rect').attr('class', 'br-bar').attr('data-ano', r.ano).attr('x', bx).attr('y', y0)
+        .attr('width', bw).attr('height', Math.max(1, y1 - y0)).attr('rx', 4)
+        .attr('fill', s.color).attr('fill-opacity', r.estimado === 'sim' ? 0.45 : 1);
+      if (showLabels) g.append('text').attr('x', bx + bw / 2).attr('y', (v >= 0 ? y0 - 5 : y1 + 12)).attr('text-anchor', 'middle')
+        .attr('font-size', 11).attr('fill', 'var(--color-fg)').text(fmt(v));
+    }));
+  } else {
+    const g = svg.append('g');
+    opts.series.forEach((s, i) => {
+      const pts = rows.filter(r => Number.isFinite(r[s.key]));
+      const line = d3.line().x(r => x(r.ano) + x.bandwidth() / 2).y(r => y(r[s.key]));
+      g.append('path').attr('d', line(pts)).attr('fill', 'none').attr('stroke', s.color).attr('stroke-width', 2)
+        .attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round');
+      g.selectAll(null).data(pts).join('circle').attr('class', 'br-pt').attr('data-ano', r => r.ano)
+        .attr('cx', r => x(r.ano) + x.bandwidth() / 2).attr('cy', r => y(r[s.key])).attr('r', 3.5)
+        .attr('fill', s.color).attr('stroke', 'var(--color-panel)').attr('stroke-width', 1.5);
+      if (showLabels) g.selectAll(null).data(pts).join('text')
+        .attr('x', r => x(r.ano) + x.bandwidth() / 2).attr('y', r => y(r[s.key]) - 9).attr('text-anchor', 'middle')
+        .attr('font-size', 11).attr('fill', 'var(--color-fg)').text(r => fmt(r[s.key]));
+    });
+  }
+  // legend
+  if (n > 1) {
+    const lg = svg.append('g').attr('transform', `translate(${mL},${H - 4})`);
+    let lx = 0;
+    opts.series.forEach(s => {
+      lg.append('rect').attr('x', lx).attr('y', -9).attr('width', 10).attr('height', 10).attr('rx', 2).attr('fill', s.color);
+      const t = lg.append('text').attr('x', lx + 14).attr('y', 0).attr('font-size', 11).attr('fill', 'var(--color-fg-muted)').text(s.label);
+      lx += 14 + t.node().getComputedTextLength() + 14;
+    });
+  }
+  // hover
+  const hover = svg.append('line').attr('stroke', 'var(--cds-chart-reference)').attr('stroke-width', 1).attr('y1', 14).attr('y2', H - 34).style('display', 'none');
+  svg.append('rect').attr('x', mL).attr('y', 0).attr('width', W - mL - mR).attr('height', H - 34).attr('fill', 'transparent')
+    .on('mousemove', function (ev) {
+      const [mx, my] = d3.pointer(ev, this);
+      const i = Math.max(0, Math.min(xs.length - 1, Math.floor((mx - mL) / ((W - mL - mR) / xs.length))));
+      const r = rows[i]; if (!r) return;
+      const cx = x(r.ano) + x.bandwidth() / 2;
+      hover.attr('x1', cx).attr('x2', cx).style('display', null);
+      svg.selectAll('.br-bar').attr('stroke', d => null).filter(function () { return this.getAttribute('data-ano') == r.ano; }).attr('stroke', 'var(--color-fg)').attr('stroke-width', 1);
+      svg.selectAll('.br-pt').attr('r', 3.5).filter(function () { return this.getAttribute('data-ano') == r.ano; }).attr('r', 5.5);
+      tip.html('');
+      tip.append('div').attr('class', 'br-tip-x').text(r.ano + (r.estimado === 'sim' ? ' (estimado)' : ''));
+      opts.series.forEach(s => {
+        if (!Number.isFinite(r[s.key])) return;
+        const row = tip.append('div').attr('class', 'br-tip-row');
+        if (n > 1) row.append('span').attr('class', 'br-sw').style('background', s.color);
+        row.append('span').text((n > 1 ? s.label + ': ' : '') + fmt(r[s.key]) + (opts.unit ? ' ' + opts.unit : ''));
+      });
+      const bw2 = box.clientWidth; const tw = tip.node().offsetWidth || 120;
+      const px = (cx / W) * bw2;
+      tip.style('display', 'block').style('left', Math.min(bw2 - tw - 4, Math.max(4, px - tw / 2)) + 'px').style('top', Math.max(4, (my / H) * box.clientHeight - 48) + 'px');
+    })
+    .on('mouseleave', () => { tip.style('display', 'none'); hover.style('display', 'none'); svg.selectAll('.br-bar').attr('stroke', null); svg.selectAll('.br-pt').attr('r', 3.5); });
+}
+
+/* ---------- state for toggles ---------- */
+const state = { pobreza: 'taxas', mvi: 'taxa', prodes: 'ambos', ideb: 'todas', vacinas: 'todas', vida: 'ev', fiscal: 'dbgg', fogo: 'area', dengue: 'casos', piso: 'nominal', sm: 'reajuste', fila: 'req', periodo: '2022-2026' };
+const JAN = { '2022-2026': [2022, 2026], '2018-2022': [2017, 2022], '2018-2026': [2017, 2026] };
+const winRows = id => { const [lo, hi] = JAN[state.periodo]; return rowsOf(id).filter(r => r.ano >= lo && r.ano <= hi); };
+document.querySelectorAll('.br-seg').forEach(seg => {
+  const key = seg.id.replace('seg-', '');
+  seg.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+    state[key] = b.dataset.v;
+    seg.querySelectorAll('button').forEach(o => o.setAttribute('aria-pressed', String(o === b)));
+    render();
+  }));
+});
+
+/* ---------- fill marked values ---------- */
+function fillMarks() {
+  document.querySelectorAll('[data-source][data-field]').forEach(el => {
+    const id = el.dataset.source, field = el.dataset.field;
+    const d = dash.data(id);
+    el.classList.remove('dash-skeleton');
+    if (d.status !== 'ok') { el.textContent = '—'; return; }
+    let v;
+    if (el.dataset.where) {
+      const [k, val] = el.dataset.where.split('=');
+      const row = (d.data || []).find(r => String(r[k]) === val);
+      v = row ? row[field] : undefined;
+    } else if (el.dataset.row !== undefined) {
+      const row = (d.data || [])[Number(el.dataset.row)];
+      v = row ? row[field] : undefined;
+    } else {
+      v = (d.data && typeof d.data === 'object') ? d.data[field] : undefined;
+    }
+    if (v === undefined || v === '' || v === null || v === 'null') { el.textContent = '—'; return; }
+    const nv = el.dataset.abs ? Math.abs(Number(v)) : Number(v);
+    if (!Number.isFinite(nv)) { el.textContent = String(v); return; }
+    const abs = Math.abs(nv);
+    if (/^(ano|.*_ano_|.*ano_inicio|.*ano_fim|ano_pico)/.test(field) || field === 'anos') el.textContent = String(nv);
+    else if (field === 'gini') el.textContent = brNum(nv, 3);
+    else if (/_reais$/.test(field) || field === 'piso_real_jan2026') el.textContent = brNum(nv, Number.isInteger(nv) ? 0 : 2);
+    else if ((id === 'ideb' || id === 'c_ideb') && !/^delta|^gap/.test(field)) el.textContent = brNum(nv, 1);
+    else { const dec = (String(v).split('.')[1] || '').length; el.textContent = dec === 0 ? brInt(nv) : brNum(nv, Math.min(dec, 3)); }
+  });
+}
+
+/* ---------- render ---------- */
+function stateOf(box, id) {
+  const d = dash.data(id);
+  if (d.status === 'ok') { box.classList.remove('dash-skeleton'); return true; }
+  if (d.status === 'error' || d.status === 'connect' || d.status === 'declined' || d.status === 'missing') {
+    box.classList.remove('dash-skeleton'); box.textContent = '';
+    const f = document.createElement('div'); f.className = 'br-fail'; f.textContent = 'Failed to load'; box.appendChild(f);
+  }
+  return false;
+}
+const C = dash.colors;
+function visible(box) { return box && box.closest('.br-tab') && !box.closest('.br-tab').hidden; }
+function applyPeriod() {
+  const p = state.periodo;
+  document.querySelector('.br-page').setAttribute('data-periodo', p);
+  document.querySelectorAll('#period-note span').forEach(sp => sp.classList.toggle('on', sp.dataset.p === p));
+  document.querySelectorAll('[data-where^="periodo="]').forEach(el => el.setAttribute('data-where', 'periodo=' + p));
+  document.querySelectorAll('.br-tile[data-src]').forEach(t => {
+    const d = dash.data(t.dataset.calc);
+    const row = (d.status === 'ok' && Array.isArray(d.data)) ? d.data.find(r => r.periodo === p) : null;
+    const num = t.querySelector('.br-num');
+    const yr = row ? (t.dataset.pico ? row.ano_pico : row.ano_fim) : null;
+    if (num && yr != null) num.setAttribute('data-where', 'ano=' + yr);
+    const dl = t.querySelector('.br-delta');
+    if (dl && t.dataset.better !== 'none') {
+      const v = row ? Number(row[t.dataset.dfield]) : NaN;
+      dl.classList.remove('good', 'bad');
+      if (Number.isFinite(v) && v !== 0) dl.classList.add((v < 0) === (t.dataset.better === 'down') ? 'good' : 'bad');
+      const sg = t.querySelector('.br-dsign'); if (sg) sg.textContent = (Number.isFinite(v) && v > 0) ? '+' : '';
+      dl.hidden = !(row && row[t.dataset.dfield] !== null && row[t.dataset.dfield] !== undefined);
+    }
+  });
+}
+function applyAutoLines() {
+  const p = state.periodo;
+  document.querySelectorAll('.br-auto').forEach(a => {
+    const m = a.querySelector('[data-field="delta"], [data-field="fem_delta"], [data-field="media"]');
+    const src = m ? m.getAttribute('data-source') : null;
+    const d = src ? dash.data(src) : null;
+    const row = (d && d.status === 'ok' && Array.isArray(d.data)) ? d.data.find(r => r.periodo === p) : null;
+    const f = m ? m.getAttribute('data-field') : 'delta';
+    const ok = row && row[f] !== null && row[f] !== undefined && !(row.ano_inicio === row.ano_fim && f !== 'media');
+    a.querySelector('.br-auto-main').hidden = !ok;
+    a.querySelector('.br-auto-na').hidden = !!ok;
+  });
+}
+function render() {
+  applyPeriod();
+  fillMarks();
+  applyAutoLines();
+  let box;
+  if (visible(document.getElementById('ch-fiscal'))) renderPiorou();
+  if (visible(document.getElementById('ch-piso'))) renderProfessores();
+  if (visible(document.getElementById('ch-sm'))) renderPensionistas();
+  if (!visible(document.getElementById('ch-desemprego'))) return;
+  box = document.getElementById('ch-desemprego');
+  if (stateOf(box, 'desemprego')) drawChart(box, { rows: winRows('desemprego'), type: 'bar', series: [{ key: 'taxa_pct', label: 'Desemprego', color: C[0] }], fmt: v => brNum(v, 1) + '%', yMin: 0 });
+
+  box = document.getElementById('ch-pobreza');
+  if (stateOf(box, 'pobreza')) {
+    const rows = winRows('pobreza');
+    if (state.pobreza === 'gini') drawChart(box, { rows, type: 'line', series: [{ key: 'gini', label: 'Gini', color: C[2] }], fmt: v => brNum(v, 3) });
+    else drawChart(box, { rows, type: 'line', series: [{ key: 'pobreza_pct', label: 'Pobreza', color: C[0] }, { key: 'extrema_pobreza_pct', label: 'Extrema pobreza', color: C[1] }], fmt: v => brNum(v, 1) + '%', yMin: 0 });
+  }
+
+  box = document.getElementById('ch-pib');
+  if (stateOf(box, 'pib')) drawChart(box, { rows: winRows('pib'), type: 'bar', series: [{ key: 'variacao_pct', label: 'PIB', color: C[3] }], fmt: v => brNum(v, 1) + '%', yMin: 0 });
+
+  box = document.getElementById('ch-mvi');
+  if (stateOf(box, 'mvi')) {
+    const rows = winRows('mvi');
+    if (state.mvi === 'taxa') drawChart(box, { rows, type: 'bar', series: [{ key: 'taxa_100k', label: 'Taxa', color: C[0] }], fmt: v => brNum(v, 1), unit: 'por 100 mil', yMin: 0 });
+    else if (state.mvi === 'abs') drawChart(box, { rows, type: 'bar', series: [{ key: 'mvi', label: 'MVI', color: C[0] }], fmt: v => brInt(v), unit: 'vítimas', yMin: 0 });
+    else drawChart(box, { rows, type: 'bar', series: [{ key: 'feminicidios', label: 'Feminicídios', color: 'var(--cds-chart-status-critical)' }], fmt: v => brInt(v), unit: 'vítimas', yMin: 0 });
+  }
+
+  box = document.getElementById('ch-roubos');
+  if (stateOf(box, 'roubos')) drawChart(box, { rows: winRows('roubos'), type: 'bar', series: [{ key: 'roubos_celular', label: 'Roubos de celular', color: C[0] }], fmt: v => brInt(v), unit: 'ocorrências', yMin: 0 });
+
+  box = document.getElementById('ch-prodes');
+  if (stateOf(box, 'prodes')) {
+    const rows = winRows('prodes');
+    const s = [];
+    if (state.prodes !== 'cerrado') s.push({ key: 'amazonia_km2', label: 'Amazônia', color: C[0] });
+    if (state.prodes !== 'amazonia') s.push({ key: 'cerrado_km2', label: 'Cerrado', color: C[4] });
+    drawChart(box, { rows, type: 'bar', series: s, fmt: v => brInt(v), unit: 'km²', yMin: 0 });
+  }
+
+  box = document.getElementById('ch-queimadas');
+  if (stateOf(box, 'queimadas')) drawChart(box, { rows: winRows('queimadas'), type: 'bar', series: [{ key: 'focos', label: 'Focos', color: C[5] }], fmt: v => brInt(v), unit: 'focos', yMin: 0 });
+
+  box = document.getElementById('ch-analf');
+  if (stateOf(box, 'analfabetismo')) drawChart(box, { rows: winRows('analfabetismo'), type: 'bar', series: [{ key: 'taxa_pct', label: 'Analfabetismo', color: C[0] }], fmt: v => brNum(v, 1) + '%', yMin: 0 });
+
+  box = document.getElementById('ch-ideb');
+  if (stateOf(box, 'ideb')) {
+    const rows = winRows('ideb');
+    const all = [
+      { key: 'anos_iniciais', label: 'Anos iniciais', color: C[0], meta: 6.0, v: 'ai' },
+      { key: 'anos_finais', label: 'Anos finais', color: C[1], meta: 5.5, v: 'af' },
+      { key: 'ensino_medio', label: 'Ensino médio', color: C[2], meta: 5.2, v: 'em' }];
+    const s = state.ideb === 'todas' ? all : all.filter(o => o.v === state.ideb);
+    const refs = state.ideb === 'todas' ? [] : [{ y: s[0].meta, label: 'Meta ' + brNum(s[0].meta, 1) }];
+    drawChart(box, { rows, type: 'line', series: s, fmt: v => brNum(v, 1), refs, yMin: 3.5, yMax: 7 });
+  }
+
+  box = document.getElementById('ch-vacinas');
+  if (stateOf(box, 'vacinas')) {
+    const rows = winRows('vacinas');
+    const all = [
+      { key: 'triplice_viral_d1', label: 'Tríplice viral D1', color: C[0], v: 'tv' },
+      { key: 'polio_3dose', label: 'Poliomielite 3ª dose', color: C[1], v: 'polio' },
+      { key: 'pentavalente_3dose', label: 'Pentavalente 3ª dose', color: C[2], v: 'penta' }];
+    const s = state.vacinas === 'todas' ? all : all.filter(o => o.v === state.vacinas);
+    drawChart(box, { rows, type: 'line', series: s, fmt: v => brNum(v, 1) + '%', refs: [{ y: 95, label: 'Meta 95 %' }], yMin: 70, yMax: 100 });
+  }
+
+  box = document.getElementById('ch-vida');
+  if (stateOf(box, 'expectativa')) {
+    const rows = winRows('expectativa');
+    if (state.vida === 'mi') drawChart(box, { rows, type: 'bar', series: [{ key: 'mortalidade_infantil_por_mil', label: 'Mortalidade infantil', color: C[1] }], fmt: v => brNum(v, 1), unit: 'por mil nascidos vivos', yMin: 0 });
+    else drawChart(box, { rows, type: 'line', series: [{ key: 'expectativa_vida_anos', label: 'Expectativa de vida', color: C[0] }], fmt: v => brNum(v, 1), unit: 'anos', yMin: 71, yMax: 78 });
+  }
+}
+
+function renderPiorou() {
+  let box;
+  box = document.getElementById('ch-fiscal');
+  if (stateOf(box, 'fiscal')) {
+    const rows = winRows('fiscal');
+    if (state.fiscal === 'selic') drawChart(box, { rows, type: 'bar', series: [{ key: 'selic_fim_ano_pct', label: 'Selic', color: C[3] }], fmt: v => brNum(v, 2) + '%', unit: 'a.a. (fim do ano)', yMin: 0 });
+    else drawChart(box, { rows, type: 'line', series: [{ key: 'dbgg_pct_pib', label: 'Dívida bruta', color: 'var(--cds-chart-status-critical)' }], fmt: v => brNum(v, 1) + '%', unit: 'do PIB' });
+  }
+  box = document.getElementById('ch-serasa');
+  if (stateOf(box, 'serasa')) drawChart(box, { rows: winRows('serasa'), type: 'bar', series: [{ key: 'inadimplentes_milhoes', label: 'Inadimplentes', color: 'var(--cds-chart-status-critical)' }], fmt: v => brNum(v, 1), unit: 'milhões de pessoas', yMin: 0 });
+  box = document.getElementById('ch-rua');
+  if (stateOf(box, 'poprua')) drawChart(box, { rows: winRows('poprua'), type: 'bar', series: [{ key: 'pessoas', label: 'Pessoas', color: 'var(--cds-chart-status-critical)' }], fmt: v => brInt(v), unit: 'pessoas', yMin: 0 });
+  box = document.getElementById('ch-fem');
+  if (stateOf(box, 'mvi')) drawChart(box, { rows: winRows('mvi'), type: 'bar', series: [{ key: 'feminicidios', label: 'Feminicídios', color: 'var(--cds-chart-status-critical)' }], fmt: v => brInt(v), unit: 'vítimas', yMin: 0 });
+  box = document.getElementById('ch-mdip');
+  if (stateOf(box, 'letalidade')) drawChart(box, { rows: winRows('letalidade'), type: 'bar', series: [{ key: 'mdip', label: 'Mortes por policiais', color: 'var(--cds-chart-status-critical)' }], fmt: v => brInt(v), unit: 'mortes', yMin: 0 });
+  box = document.getElementById('ch-estelionato');
+  if (stateOf(box, 'estelionatos')) drawChart(box, { rows: winRows('estelionatos'), type: 'bar', series: [{ key: 'ocorrencias', label: 'Estelionatos', color: 'var(--cds-chart-status-critical)' }], fmt: v => brInt(v), unit: 'ocorrências', yMin: 0 });
+  box = document.getElementById('ch-fogo');
+  if (state.fogo === 'focos') { if (stateOf(box, 'queimadas')) drawChart(box, { rows: winRows('queimadas'), type: 'bar', series: [{ key: 'focos', label: 'Focos', color: C[5] }], fmt: v => brInt(v), unit: 'focos', yMin: 0 }); }
+  else if (stateOf(box, 'area_queimada')) drawChart(box, { rows: winRows('area_queimada'), type: 'bar', series: [{ key: 'milhoes_ha', label: 'Área queimada', color: C[5] }], fmt: v => brNum(v, 1), unit: 'milhões de ha', yMin: 0 });
+  box = document.getElementById('ch-pisa');
+  if (stateOf(box, 'pisa')) drawChart(box, { rows: winRows('pisa'), type: 'line', series: [{ key: 'leitura', label: 'Leitura', color: C[0] }, { key: 'matematica', label: 'Matemática', color: C[1] }, { key: 'ciencias', label: 'Ciências', color: C[2] }], fmt: v => brInt(v), unit: 'pontos', yMin: 350, yMax: 430 });
+  box = document.getElementById('ch-dengue');
+  if (stateOf(box, 'dengue')) {
+    const rows = winRows('dengue');
+    if (state.dengue === 'obitos') drawChart(box, { rows, type: 'bar', series: [{ key: 'obitos', label: 'Óbitos', color: 'var(--cds-chart-status-critical)' }], fmt: v => brInt(v), unit: 'óbitos', yMin: 0 });
+    else drawChart(box, { rows, type: 'bar', series: [{ key: 'casos_provaveis', label: 'Casos prováveis', color: 'var(--cds-chart-status-critical)' }], fmt: v => brInt(v), unit: 'casos prováveis', yMin: 0 });
+  }
+  box = document.getElementById('ch-obesidade');
+  if (stateOf(box, 'obesidade')) drawChart(box, { rows: winRows('obesidade'), type: 'bar', series: [{ key: 'obesidade_pct', label: 'Obesidade', color: 'var(--cds-chart-status-critical)' }], fmt: v => brNum(v, 1) + '%', unit: 'dos adultos', yMin: 0 });
+}
+
+function renderProfessores() {
+  let box;
+  box = document.getElementById('ch-piso');
+  if (stateOf(box, 'piso')) {
+    const rows = winRows('piso');
+    if (state.piso === 'real') drawChart(box, { rows, type: 'bar', series: [{ key: 'piso_real_jan2026', label: 'Piso real', color: C[0] }], fmt: v => brInt(v), unit: 'R$ de jan/2026', yMin: 0 });
+    else if (state.piso === 'reajuste') drawChart(box, { rows, type: 'bar', series: [{ key: 'reajuste_pct', label: 'Reajuste do piso', color: C[0] }, { key: 'inpc_ano_anterior_pct', label: 'INPC do ano anterior', color: C[3] }], fmt: v => brNum(v, 1) + '%', yMin: 0 });
+    else drawChart(box, { rows, type: 'bar', series: [{ key: 'piso_reais', label: 'Piso', color: C[0] }], fmt: v => brInt(v), unit: 'R$', yMin: 0 });
+  }
+  box = document.getElementById('ch-vinculo');
+  if (stateOf(box, 'vinculo')) drawChart(box, { rows: winRows('vinculo'), type: 'line', series: [{ key: 'efetivos_estaduais_pct', label: 'Redes estaduais', color: C[0] }, { key: 'efetivos_municipais_pct', label: 'Redes municipais', color: C[1] }], fmt: v => brNum(v, 1) + '%', refs: [{ y: 70, label: 'Meta novo PNE 70%' }], yMin: 40, yMax: 80 });
+  box = document.getElementById('ch-remun');
+  if (stateOf(box, 'remuneracao')) drawChart(box, { rows: winRows('remuneracao'), type: 'line', series: [{ key: 'indicador_17a_pct', label: 'Indicador 17A', color: C[0] }], fmt: v => brNum(v, 1) + '%', refs: [{ y: 100, label: 'Meta 100%' }], yMin: 60, yMax: 105 });
+}
+function renderPensionistas() {
+  let box;
+  box = document.getElementById('ch-sm');
+  if (stateOf(box, 'inss_reajustes')) {
+    const rows = winRows('inss_reajustes');
+    if (state.sm === 'sm') drawChart(box, { rows, type: 'bar', series: [{ key: 'salario_minimo_reais', label: 'Salário mínimo', color: C[0] }], fmt: v => brInt(v), unit: 'R$', yMin: 0 });
+    else if (state.sm === 'teto') drawChart(box, { rows, type: 'bar', series: [{ key: 'teto_reais', label: 'Teto do INSS', color: C[2] }], fmt: v => brInt(v), unit: 'R$', yMin: 0 });
+    else drawChart(box, { rows, type: 'bar', series: [{ key: 'reajuste_sm_pct', label: 'Reajuste do mínimo', color: C[0] }, { key: 'reajuste_acima_minimo_pct', label: 'Reajuste acima do mínimo (INPC)', color: C[3] }], fmt: v => brNum(v, 1) + '%', yMin: 0 });
+  }
+  box = document.getElementById('ch-fila');
+  if (stateOf(box, 'fila_inss')) {
+    const rows = winRows('fila_inss');
+    if (state.fila === 'tempo') drawChart(box, { rows, type: 'bar', series: [{ key: 'tempo_medio_dias', label: 'Tempo médio', color: C[1] }], fmt: v => brInt(v), unit: 'dias', yMin: 0 });
+    else drawChart(box, { rows, type: 'bar', series: [{ key: 'requerimentos_milhoes', label: 'Requerimentos', color: 'var(--cds-chart-status-critical)' }], fmt: v => brNum(v, 2), unit: 'milhões', yMin: 0 });
+  }
+  box = document.getElementById('ch-fraude');
+  if (stateOf(box, 'fraude')) {
+    const rows = (dash.data('fraude').data || []).map(r => ({ ano: r.item, valor: num(r.valor_bi_reais) }));
+    drawChart(box, { rows, type: 'bar', series: [{ key: 'valor', label: 'R$ bilhões', color: 'var(--cds-chart-status-critical)' }], fmt: v => brNum(v, 1), unit: 'R$ bilhões', yMin: 0 });
+  }
+}
+dash.onData(render);
+
+
+/* ---------- tabs ---------- */
+function showTab(name) {
+  document.querySelectorAll('.br-tab').forEach(t => { t.hidden = (t.id !== 'tab-' + name); });
+  document.querySelectorAll('.br-tabs button').forEach(b => b.setAttribute('aria-selected', String(b.id === 'tabbtn-' + name)));
+  dash.setLink(name);
+  render();
+}
+document.getElementById('tabbtn-melhorou').addEventListener('click', () => showTab('melhorou'));
+document.getElementById('tabbtn-piorou').addEventListener('click', () => showTab('piorou'));
+document.getElementById('tabbtn-professores').addEventListener('click', () => showTab('professores'));
+document.getElementById('tabbtn-pensionistas').addEventListener('click', () => showTab('pensionistas'));
+(function () {
+  const h = location.hash.slice(1);
+  if (['piorou', 'melhorou', 'professores', 'pensionistas'].includes(h)) showTab(h);
+  else if (['card-piso', 'card-vinculo', 'card-remun', 'card-formacao'].includes(h)) showTab('professores');
+  else if (['card-sm', 'card-fila', 'card-fraude'].includes(h)) showTab('pensionistas');
+  else if (h && h.startsWith('p-')) showTab('piorou');
+})();
+
+/* ---------- links ---------- */
+document.querySelectorAll('.br-nav a').forEach(a => a.addEventListener('click', ev => {
+  ev.preventDefault();
+  const el = document.getElementById(a.getAttribute('href').slice(1));
+  if (el) { el.scrollIntoView({ behavior: 'smooth' }); dash.setLink(el.id); }
+}));
+(function () {
+  const named = document.getElementById(location.hash.slice(1));
+  if (named) setTimeout(() => named.scrollIntoView(), 300);
+})();
+
+/* ---------- fonte ao clicar em qualquer número ---------- */
+(function () {
+  const pop = document.createElement('div'); pop.className = 'src-pop'; pop.setAttribute('role', 'dialog');
+  document.body.appendChild(pop);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  function show(el, ev) {
+    const id = el.getAttribute('data-source').split(' ')[0];
+    const meta = dash.meta()[id]; const calcs = dash.calcs()[id];
+    let html = '<button class="src-close" aria-label="Fechar">×</button>';
+    if (calcs) {
+      html += '<h4>Cálculo: ' + esc(calcs.title || id) + '</h4><p>' + esc(calcs.description || '') + '</p>';
+      html += '<p>Entradas: ' + calcs.inputs.map(i => '<a href="#" data-src-link="' + esc(i) + '">' + esc((dash.meta()[i] || {}).title || i) + '</a>').join(', ') + '</p>';
+      const d = dash.data(id);
+      const where = el.getAttribute('data-where'); const row = el.getAttribute('data-row');
+      let r = null;
+      if (where) { const [k, v] = where.split('='); r = (d.data || []).find(x => String(x[k]) === v); }
+      else if (row != null) r = (d.data || [])[Number(row)];
+      if (r) html += '<div class="src-row">' + esc(JSON.stringify(r, null, 1)) + '</div>';
+      html += '<details><summary>Ver a fórmula (código)</summary><pre>' + esc(calcs.fn.toString()) + '</pre></details>';
+    } else if (meta) {
+      html += '<h4>' + esc(meta.title) + '</h4><p>' + esc(meta.description) + '</p>';
+      const d = dash.data(id); const where = el.getAttribute('data-where'); const field = el.getAttribute('data-field');
+      if (where && d.data) { const [k, v] = where.split('='); const r = d.data.find(x => String(x[k]) === v); if (r) html += '<div class="src-row">' + esc(JSON.stringify(r, null, 1)) + (field ? '\ncampo: ' + esc(field) : '') + '</div>'; }
+      html += '<p><a href="' + esc(meta.file) + '" download>Baixar ' + esc(meta.file.split('/').pop()) + '</a></p>';
+    } else {
+      html += '<h4>' + esc(id) + '</h4>';
+    }
+    pop.innerHTML = html;
+    pop.classList.add('on');
+    const x = Math.min(window.innerWidth - pop.offsetWidth - 12, Math.max(12, ev.clientX - 40));
+    const y = Math.min(window.innerHeight - pop.offsetHeight - 12, Math.max(12, ev.clientY + 16));
+    pop.style.left = x + 'px'; pop.style.top = y + 'px';
+  }
+  document.addEventListener('click', ev => {
+    const link = ev.target.closest('[data-src-link]');
+    if (link) { ev.preventDefault(); const fake = document.createElement('span'); fake.setAttribute('data-source', link.getAttribute('data-src-link')); show(fake, ev); return; }
+    if (ev.target.closest('.src-close')) { pop.classList.remove('on'); return; }
+    if (ev.target.closest('.src-pop')) return;
+    const el = ev.target.closest('[data-source]');
+    if (el && !el.classList.contains('br-chart')) { ev.preventDefault(); show(el, ev); return; }
+    pop.classList.remove('on');
+  });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape') pop.classList.remove('on'); });
+})();
+</script>
+</body>
+</html>
