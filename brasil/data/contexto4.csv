@@ -1,0 +1,22 @@
+chave,valor,unidade,fonte
+beneficiarios_sm_milhoes,21.9,milhões de aposentados e pensionistas que recebem 1 salário mínimo (2026),Ministério da Previdência Social
+beneficiarios_sm_pct,62.5,% dos beneficiários do RGPS que recebem 1 salário mínimo,Ministério da Previdência Social
+beneficiarios_acima_milhoes,13.25,milhões de beneficiários que recebem acima do mínimo (reajuste só pelo INPC),Ministério da Previdência Social
+beneficios_pagos_ago2025_milhoes,41.4,milhões de benefícios pagos em agosto de 2025,INSS
+valor_pago_ago2025_bi,83.7,R$ bilhões pagos em agosto de 2025,INSS
+fila_pico_2026,3.1,milhões de requerimentos no pico (fevereiro de 2026 - recorde),Ministério da Previdência Social - Transparência Previdenciária
+fila_jan2026,3.073,milhões de requerimentos em janeiro de 2026,INSS/Agência Brasil
+fila_mais45dias_ago2026,261000,requerimentos há mais de 45 dias (agosto de 2026),INSS
+concessoes_mes_2026,730000,benefícios concedidos por mês em média (jan-jul/2026 - recorde),INSS
+pericia_fila_nov2025,1230000,pessoas aguardando perícia (novembro de 2025),Perícia Médica Federal
+pericia_fila_ago2026,196615,pessoas aguardando perícia (agosto de 2026),Perícia Médica Federal
+pericia_tempo_ago2023,70,dias de espera média por perícia (agosto de 2023),Perícia Médica Federal
+pericia_tempo_ago2026,17,dias de espera média por perícia (agosto de 2026),Perícia Médica Federal
+fraude_desviado_bi,6.3,R$ bilhões descontados indevidamente entre 2019 e 2024 (estimativa PF/CGU),Polícia Federal/CGU - Operação Sem Desconto
+fraude_devolvido_bi,3.0,R$ bilhões devolvidos às vítimas até abril de 2026,INSS/Ministério da Previdência
+fraude_nao_reconheceram,5971827,pessoas que não reconheceram os descontos ao serem consultadas,INSS - balanço outubro de 2025
+fraude_nao_reconheceram_pct,97.9,% das consultadas que não reconheceram os descontos,INSS - balanço outubro de 2025
+fraude_ressarcidos_milhoes,3.6,milhões de pessoas ressarcidas até outubro de 2025,INSS
+fraude_nao_manifestados_milhoes,4,milhões que ainda não se manifestaram (abril de 2026),Ministério da Previdência
+fraude_processos,52,processos administrativos de responsabilização abertos (CGU/INSS),CGU
+fraude_descontos_2024_bi,2.8,R$ bilhões descontados por entidades só em 2024,INSS

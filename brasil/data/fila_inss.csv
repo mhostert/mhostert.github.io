@@ -1,0 +1,8 @@
+ano,requerimentos_milhoes,tempo_medio_dias,referencia,estimado
+2020,1.76,98,dezembro,nao
+2021,1.80,79,dezembro,sim
+2022,2.07,76,dezembro (tempo: 1º de janeiro de 2023),sim
+2023,1.55,47,dezembro,nao
+2024,2.00,39,dezembro (tempo: novembro),sim
+2025,2.96,42,novembro (tempo: agosto),nao
+2026,1.28,35,agosto (dados parciais),nao

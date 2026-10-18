@@ -1,0 +1,19 @@
+chave,valor,unidade,fonte
+municipios_pagam_piso_2023,68.5,% dos municípios que pagavam o piso em 2023,Todos pela Educação - Anuário 2025
+docente_reais_2024,5481.01,R$ - rendimento bruto médio mensal dos professores da rede pública com nível superior (2024),Inep - Indicador 17A do PNE
+outros_reais_2024,6368.97,R$ - rendimento bruto médio mensal dos demais profissionais com nível superior (2024),Inep - Indicador 17A do PNE
+ufs_meta_17a_2024,11,estados em que o indicador 17A atingiu 100% em 2024,Inep/Dieese
+licenciatura_ead_ingressantes_2023,80.9,% dos ingressantes em licenciaturas na modalidade EaD (2023),Inep - Censo da Educação Superior 2023
+licenciatura_ead_privada_2024,93.8,% dos ingressantes em licenciaturas EaD matriculados em instituições privadas (2024),Inep - Censo da Educação Superior 2024
+sem_formacao_adequada_infantil_2024,35.9,% dos professores da educação infantil sem formação adequada (2024),Inep - Indicador de adequação da formação docente
+sem_formacao_adequada_fundamental_2024,31.2,% dos professores do ensino fundamental sem formação adequada (2024),Inep - Indicador de adequação da formação docente
+sem_formacao_adequada_medio_2024,31.6,% dos professores do ensino médio sem formação adequada (2024),Inep - Indicador de adequação da formação docente
+docentes_2015,2187154,docentes da educação básica em 2015,Inep - Censo Escolar
+docentes_2025,2407049,docentes da educação básica em 2025,Inep - Censo Escolar 2025
+estaduais_efetivos_2013,68.4,% de efetivos nas redes estaduais em 2013,Todos pela Educação (Censo Escolar)
+ufs_mais_temporarios_2023,15,UFs com mais temporários que efetivos na rede estadual (2023),Todos pela Educação
+bahia_efetivos_2025,94.1,% de efetivos na rede estadual da Bahia (2025),Inep - Censo Escolar 2025
+acre_efetivos_2025,16.2,% de efetivos na rede estadual do Acre (2025),Inep - Censo Escolar 2025
+sp_efetivos_2025,45.1,% de efetivos na rede estadual de São Paulo (2025),Inep - Censo Escolar 2025
+municipios_abaixo_70_2025,66.9,% das redes municipais abaixo de 70% de efetivos (2025),Inep - Censo Escolar 2025
+piso_2026_ganho_real,1.5,% de ganho real do piso em 2026 sobre o INPC de 2025,Exame/MEC

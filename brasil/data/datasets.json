@@ -1,0 +1,157 @@
+{
+ "desemprego": {
+  "title": "Taxa de desemprego anual",
+  "description": "Média anual da taxa de desocupação (14 anos ou mais), em %, 2018 a 2025. IBGE, PNAD Contínua; 2018–2021 são os valores publicados na época e 2022–2025 a série reponderada pelo Censo 2022.",
+  "file": "data/desemprego.csv"
+ },
+ "pib": {
+  "title": "Crescimento real do PIB",
+  "description": "Variação real anual do PIB, em %, 2018 a 2025. IBGE, Contas Nacionais Trimestrais (série em vigor na divulgação de março de 2026).",
+  "file": "data/pib.csv"
+ },
+ "pobreza": {
+  "title": "Pobreza, extrema pobreza e Gini",
+  "description": "Proporção da população abaixo das linhas de US$ 6,85 (pobreza, 2019 a 2024) e US$ 2,15 por dia (extrema pobreza, 2021 a 2024), em %, e índice de Gini (2018 a 2024). IBGE, Síntese de Indicadores Sociais 2023 a 2025; a SIS 2025 reponderou a série pelo Censo 2022.",
+  "file": "data/pobreza.csv"
+ },
+ "mvi": {
+  "title": "Mortes violentas intencionais",
+  "description": "MVI em número absoluto, taxa por 100 mil habitantes e feminicídios, 2018 a 2025, cada ano como publicado na edição correspondente do Anuário Brasileiro de Segurança Pública (FBSP). A taxa de 2022 em diante usa a população do Censo 2022; a de 2018–2021, as projeções da época.",
+  "file": "data/mvi.csv"
+ },
+ "roubos": {
+  "title": "Roubos de celular",
+  "description": "Ocorrências de roubo de celular registradas pelas polícias, 2022 a 2025. FBSP, Anuário 2024 e 2026. O valor de 2022 é derivado da variação de -10,1 % entre 2022 e 2023 publicada na edição 2024 (coluna estimado = sim).",
+  "file": "data/roubos.csv"
+ },
+ "prodes": {
+  "title": "Desmatamento PRODES",
+  "description": "Área de corte raso em km² por ano-PRODES (agosto a julho), Amazônia Legal e Cerrado, 2018 a 2025. INPE/PRODES; 2025 é a estimativa oficial de outubro de 2025, os demais são taxas consolidadas.",
+  "file": "data/prodes.csv"
+ },
+ "queimadas": {
+  "title": "Focos de queimadas",
+  "description": "Focos de calor detectados pelo satélite de referência no Brasil, 2018 a 2021 e 2023 a 2025 (2025 até 23 de dezembro). INPE, Programa Queimadas/BDQueimadas. O total de 2022 não foi localizado; o de 2023 é derivado da variação de -29,4 % (coluna estimado = sim).",
+  "file": "data/queimadas.csv"
+ },
+ "analfabetismo": {
+  "title": "Taxa de analfabetismo",
+  "description": "Taxa de analfabetismo da população de 15 anos ou mais, em %, e número de analfabetos em milhões, 2018, 2019 e 2022 a 2025 (a pesquisa não foi realizada em 2020 e 2021). IBGE, PNAD Contínua Educação.",
+  "file": "data/analfabetismo.csv"
+ },
+ "ideb": {
+  "title": "Ideb por etapa",
+  "description": "Índice de Desenvolvimento da Educação Básica (0 a 10), redes pública e privada, anos iniciais e finais do fundamental e ensino médio, edições de 2017 a 2025. Inep/MEC.",
+  "file": "data/ideb.csv"
+ },
+ "vacinas": {
+  "title": "Cobertura vacinal infantil",
+  "description": "Cobertura em % da população-alvo: tríplice viral 1ª dose (2018 a 2024), poliomielite 3ª dose e pentavalente 3ª dose (2022 a 2024). Ministério da Saúde/PNI: 2018–2021 pelo Tabnet/DataSUS (tabela compilada pela CNM), 2022–2024 pelo painel de cobertura por residência.",
+  "file": "data/vacinas.csv"
+ },
+ "zerodose": {
+  "title": "Crianças zero dose",
+  "description": "Número estimado de crianças que não receberam a 1ª dose da vacina com componente DTP, 2023 a 2025. Estimativas OMS/Unicef (WUENIC), julho de 2026.",
+  "file": "data/zerodose.csv"
+ },
+ "expectativa": {
+  "title": "Expectativa de vida",
+  "description": "Expectativa de vida ao nascer em anos (2019 a 2024) e taxa de mortalidade infantil por mil nascidos vivos (2023 e 2024). IBGE, Tábuas Completas de Mortalidade, Projeções 2024.",
+  "file": "data/expectativa.csv"
+ },
+ "contexto": {
+  "title": "Contexto (o que melhorou)",
+  "description": "Números de contexto citados nos textos da aba O que melhorou, um por linha, cada um com unidade e fonte.",
+  "file": "data/contexto.csv"
+ },
+ "fiscal": {
+  "title": "Dívida bruta e Selic",
+  "description": "Dívida Bruta do Governo Geral em % do PIB em dezembro de cada ano (2018 a 2022 na série do Banco Central vigente no início de 2024, conforme o TCU; 2023 a 2025 como publicado em cada divulgação anual) e meta da Selic no fim de cada ano, 2018 a 2025. Banco Central do Brasil.",
+  "file": "data/fiscal.csv"
+ },
+ "serasa": {
+  "title": "Inadimplentes (Serasa)",
+  "description": "Pessoas com CPF negativado, em milhões, dezembro de 2019 a 2025. Serasa, Mapa da Inadimplência. 2019 é derivado da queda de 3,1 % informada para 2020, 2021 é aproximado e 2023 vem da divulgação de janeiro de 2024 (coluna estimado = sim).",
+  "file": "data/serasa.csv"
+ },
+ "letalidade": {
+  "title": "Mortes por intervenção policial",
+  "description": "Mortes decorrentes de intervenção policial, 2018 a 2025, cada ano como publicado na edição correspondente do Anuário Brasileiro de Segurança Pública (FBSP).",
+  "file": "data/letalidade.csv"
+ },
+ "estelionatos": {
+  "title": "Estelionatos registrados",
+  "description": "Ocorrências de estelionato registradas pelas polícias, 2018 e 2022 a 2025. FBSP, Anuário 2024 e 2026. 2022 e 2024 são derivados das variações publicadas (coluna estimado = sim).",
+  "file": "data/estelionatos.csv"
+ },
+ "area_queimada": {
+  "title": "Área queimada (MapBiomas)",
+  "description": "Área queimada no Brasil em milhões de hectares por ano, 2022 a 2025. MapBiomas, Monitor do Fogo (2022 e 2024) e Relatório Anual do Fogo 2026 (2025). O valor de 2023 é derivado da alta de 79 % em 2024 (coluna estimado = sim).",
+  "file": "data/area_queimada.csv"
+ },
+ "dengue": {
+  "title": "Dengue: casos e óbitos",
+  "description": "Casos prováveis de dengue e óbitos confirmados por ano, 2019 a 2025. Ministério da Saúde. Os óbitos de 2025 são derivados da queda de 72 % informada pelo ministério (coluna estimado = sim).",
+  "file": "data/dengue.csv"
+ },
+ "obesidade": {
+  "title": "Obesidade e diabetes (Vigitel)",
+  "description": "Prevalência de obesidade (IMC >= 30) e de diagnóstico de diabetes entre adultos das capitais e do DF, em %, 2006 e 2018 a 2024 (o Vigitel não foi realizado em 2022). Ministério da Saúde, Vigitel.",
+  "file": "data/obesidade.csv"
+ },
+ "poprua": {
+  "title": "População em situação de rua",
+  "description": "Pessoas em situação de rua registradas no Cadastro Único em dezembro, 2020, 2021 e 2023 a 2025. OBPopRua/Polos-UFMG com dados do MDS. O valor de 2023 é derivado da alta de cerca de 25 % em 2024 (coluna estimado = sim).",
+  "file": "data/poprua.csv"
+ },
+ "pisa": {
+  "title": "PISA: notas do Brasil",
+  "description": "Pontuação média dos estudantes brasileiros de 15 anos em leitura, matemática e ciências no PISA de 2015, 2018, 2022 e 2025, e média de 2025 dos 23 países da OCDE comparáveis. OCDE, Resultados do PISA 2025 (Volume I), e Inep.",
+  "file": "data/pisa.csv"
+ },
+ "contexto2": {
+  "title": "Contexto (o que piorou)",
+  "description": "Números de contexto citados nos textos da aba O que piorou, um por linha, cada um com unidade e fonte.",
+  "file": "data/contexto2.csv"
+ },
+ "piso": {
+  "title": "Piso do magistério",
+  "description": "Piso salarial nacional do magistério (40 h semanais), vigente em janeiro de cada ano, 2018 a 2026, em reais correntes; reajuste anual; INPC do ano anterior; índice de preços acumulado (base jan/2018); e o piso em reais de janeiro de 2026. MEC/CNTE e IBGE.",
+  "file": "data/piso.csv"
+ },
+ "vinculo": {
+  "title": "Professores efetivos",
+  "description": "Percentual de vínculos docentes efetivos (concursados) nas redes estaduais (2021, 2023, 2024, 2025) e municipais (2021 e 2025). Inep/Censo Escolar, microdados tabulados por CNTE e Sindipema.",
+  "file": "data/vinculo.csv"
+ },
+ "remuneracao": {
+  "title": "Indicador 17A do PNE",
+  "description": "Rendimento bruto médio dos professores da rede pública com nível superior como % do dos demais assalariados com nível superior, em 2014, 2017, 2022, 2023 e 2024. Inep (Dired) com base na PNAD Contínua/IBGE.",
+  "file": "data/remuneracao.csv"
+ },
+ "inss_reajustes": {
+  "title": "Reajustes do INSS",
+  "description": "Salário mínimo em janeiro de cada ano (2023: maio), reajuste do mínimo, reajuste dos benefícios acima do mínimo (INPC do ano anterior), teto do INSS e índice de preços acumulado pelo INPC (base jan/2018), 2018 a 2026. Ministério da Previdência Social/INSS e IBGE.",
+  "file": "data/inss_reajustes.csv"
+ },
+ "fila_inss": {
+  "title": "Fila do INSS",
+  "description": "Requerimentos aguardando análise (milhões) e tempo médio de concessão (dias), 2020 a 2026, com o mês de referência de cada ponto. Ministério da Previdência Social, INSS e Agência Brasil; 2021, 2022 e 2024 aproximados (coluna estimado = sim).",
+  "file": "data/fila_inss.csv"
+ },
+ "fraude": {
+  "title": "Fraude dos descontos associativos",
+  "description": "Valor descontado indevidamente de aposentados e pensionistas entre 2019 e 2024 (estimativa PF/CGU) e valor devolvido pela União até abril de 2026, em R$ bilhões.",
+  "file": "data/fraude.csv"
+ },
+ "contexto3": {
+  "title": "Contexto (professores)",
+  "description": "Números de contexto citados na aba Professores, um por linha, cada um com unidade e fonte.",
+  "file": "data/contexto3.csv"
+ },
+ "contexto4": {
+  "title": "Contexto (pensionistas)",
+  "description": "Números de contexto citados na aba Pensionistas, um por linha, cada um com unidade e fonte.",
+  "file": "data/contexto4.csv"
+ }
+}

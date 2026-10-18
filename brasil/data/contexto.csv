@@ -1,0 +1,15 @@
+chave,valor,unidade,fonte
+informalidade_2025,38.1,% dos ocupados,IBGE - PNAD Contínua 2025
+extrema_pobreza_sem_beneficios_2023,11.2,% (simulação sem programas sociais),IBGE - Síntese de Indicadores Sociais 2024
+mdip_var_2025,5.4,% de variação vs 2024,FBSP - Anuário 2026
+mdip_share_2025,16.2,% das mortes violentas intencionais,FBSP - Anuário 2026
+ufs_alta_mvi_2025,7,unidades da federação com alta,FBSP - Anuário 2026
+roubos_total_var_2025,-18.3,% de variação vs 2024,FBSP - Anuário 2026
+roubo_veiculos_taxa_var_2025,-20.6,% de variação na taxa por 100 mil veículos,FBSP - Anuário 2026
+analf_15_59_2025,2.6,% da população de 15 a 59 anos,IBGE - PNAD Contínua Educação 2025
+analf_60mais_share_2025,58,% dos analfabetos com 60 anos ou mais,IBGE - PNAD Contínua Educação 2025
+analf_nordeste_2025,10.6,% no Nordeste,IBGE - PNAD Contínua Educação 2025
+deter_amazonia_2026,2874,km² sob alerta (ago/2025 a jul/2026),INPE - DETER
+deter_amazonia_var_2026,-36.9,% de variação vs ciclo anterior,INPE - DETER
+vacinas_na_meta_2025,2,vacinas do calendário com cobertura >= 95% em 2025,Ministério da Saúde/PNI (via Metrópoles)
+evasao_tv_d2_ufs_2023,14,UFs com evasão >50% entre 1ª e 2ª dose,IQC - Anuário VacinaBR 2025
