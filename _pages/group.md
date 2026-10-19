@@ -77,7 +77,7 @@ author_profile: true
       <p>Ph.D. Student</p>
     </div>
   </div>
-
+0
   <div class="group-member">
     <div class="group-member__photo">
       <a href="https://physics.uiowa.edu/people/sean-chisholm">
