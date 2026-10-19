@@ -1,0 +1,23 @@
+From 6a7104340ecb8b09baa150cd46df7583f8e808ae Mon Sep 17 00:00:00 2001
+From: Claude <claude@anthropic.com>
+Date: Sun, 18 Oct 2026 22:48:50 +0000
+Subject: [PATCH 2/2] Add 'Brasil em dados' to the main navigation (optional)
+
+---
+ _data/navigation.yml | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/_data/navigation.yml b/_data/navigation.yml
+index 7054653..225f622 100644
+--- a/_data/navigation.yml
++++ b/_data/navigation.yml
+@@ -20,3 +20,6 @@ main:
+ 
+   - title: "Media & Outreach"
+     url: /media/
++
++  - title: "Brasil em dados"
++    url: /brasil/
+-- 
+2.43.0
+
