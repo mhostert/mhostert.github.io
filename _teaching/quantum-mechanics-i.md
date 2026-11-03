@@ -33,6 +33,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_I/2_time_ordered.pdf">Time Ordered Evolution</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/2_noether_theorem.pdf">Noether Theorem</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/2_harmonic_oscillator.pdf">Harmonic Oscillator</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/2_propagator.pdf">Propagators and Path Integral</a>
 
 <!-- * <a href="https://mhostert.githu`b.io/files/teaching/QM_I/1_time_evolution.pdf">Time evolut`ion</a> -->
 
