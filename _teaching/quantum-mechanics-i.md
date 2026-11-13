@@ -36,7 +36,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_I/2_propagators.pdf">Propagators and Path Integral</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/2_minimal_coupling.pdf">Minimal Coupling to EM fields</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/3_rotation_intro.pdf">Rotations and Angular Momentum</a>
-<!-- * <a href="https://mhostert.githu`b.io/files/teaching/QM_I/1_time_evolution.pdf">Time evolut`ion</a> -->
+* <a href="https://mhostert.github.io/files/teaching/QM_I/3_rotations_two_state.pdf">Quantum Rotations</a>
 
 
 **Homeworks:**
