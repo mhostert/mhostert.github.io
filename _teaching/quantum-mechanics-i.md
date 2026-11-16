@@ -37,6 +37,7 @@ The most up to date information will be available on the UI ICON page.
 * <a href="https://mhostert.github.io/files/teaching/QM_I/2_minimal_coupling.pdf">Minimal Coupling to EM fields</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/3_rotation_intro.pdf">Rotations and Angular Momentum</a>
 * <a href="https://mhostert.github.io/files/teaching/QM_I/3_rotations_two_state.pdf">Quantum Rotations</a>
+* <a href="https://mhostert.github.io/files/teaching/QM_I/review_2.pdf">Review 2</a>
 
 
 **Homeworks:**
