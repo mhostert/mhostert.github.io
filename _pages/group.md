@@ -91,6 +91,24 @@ author_profile: true
   </div>
 </div>
 
+  ---
+
+## Undergraduates
+
+<div class="group-grid">
+  <div class="group-member">
+    <div class="group-member__photo">
+      <a href="https://our.research.uiowa.edu/httpsourresearchuiowaeduaboutcontact-us/yatharth-sirohi">
+        <img src="https://our.research.uiowa.edu/sites/our.research.uiowa.edu/files/styles/square__768_x_768/public/2026-09/yatharth.png?h=b272a29c&itok=j7qdxj_S" alt="Yatharth Sirohi">
+      </a>
+    </div>
+    <div class="group-member__info">
+      <h3><a href="https://our.research.uiowa.edu/httpsourresearchuiowaeduaboutcontact-us/yatharth-sirohi">Yatharth Sirohi</a></h3>
+      <p>Undergraduate Student</p>
+    </div>
+  </div>
+</div>
+
 <!-- --- -->
 
 <p style="margin: 1.5rem 0; padding: 0.9rem 1rem; border-left: 4px solid #0791db; background: #d9f5ff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); font-weight: 700; letter-spacing: 0.02em; border-radius: 0.5rem;">
