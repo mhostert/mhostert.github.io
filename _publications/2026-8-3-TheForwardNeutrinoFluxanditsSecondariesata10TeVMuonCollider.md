@@ -1,6 +1,6 @@
 ---
 title: 'The Forward Neutrino Flux and its Secondaries at a 10 TeV Muon Collider'
-pub_number: 1
+pub_number: 2
 authors:  Ju-Yeol Choi,  Matheus Hostert,  Peiran Li,  Zhen Liu
 collection: publication
 permalink: /publication/2026-8-3-TheForwardNeutrinoFluxanditsSecondariesata10TeVMuonCollider
